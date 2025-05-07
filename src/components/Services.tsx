@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ServiceCard from './ServiceCard';
 
@@ -18,7 +19,7 @@ const Services = () => {
     {
       title: "Carpet Cleaning",
       description: "Revitalize your carpets with our deep cleaning technology",
-      imageSrc: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3",
+      imageSrc: "https://images.unsplash.com/photo-1721322800607-8c38375eef04",
       features: [
         "Hot water extraction cleaning",
         "Low moisture encapsulation method",
