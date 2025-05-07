@@ -13,14 +13,14 @@ const Services = () => {
         "Floor maintenance and polishing",
         "Restroom sanitation and stock",
         "Dust control and allergen reduction",
-        "Trash removal and recycling"
+        "Comprehensive recycling programs"
       ],
       delay: "0s"
     },
     {
       title: "Carpet Cleaning",
       description: "Revitalize your carpets with our deep cleaning technology",
-      imageSrc: "https://images.unsplash.com/photo-1558317374-067fb5f30001?ixlib=rb-4.0.3",
+      imageSrc: "https://images.unsplash.com/photo-1599619585752-c3edb42a414c?ixlib=rb-4.0.3",
       features: [
         "Hot water extraction cleaning",
         "Low moisture encapsulation method",
@@ -33,7 +33,7 @@ const Services = () => {
     {
       title: "Deep Cleaning",
       description: "Thorough cleaning of every surface and corner of your facility",
-      imageSrc: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3",
+      imageSrc: "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?ixlib=rb-4.0.3",
       features: [
         "Detail cleaning of fixtures and fittings",
         "High dusting of vents and ceiling areas",

@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -29,7 +30,7 @@ const Testimonials = () => {
       name: "Sarah Johnson",
       position: "Property Manager",
       company: "Westside Properties",
-      content: "We manage multiple commercial properties and PHL Clean has become our go-to cleaning service. Their flexibility, responsiveness, and quality of work make them a valuable partner in maintaining our buildings.",
+      content: "We manage multiple commercial properties and PHL Clean has become our go-to cleaning service. Having the same dedicated cleaning crew consistently servicing our buildings has made a tremendous difference. Their familiarity with our properties and attention to our specific needs is invaluable.",
       rating: 5
     },
     {

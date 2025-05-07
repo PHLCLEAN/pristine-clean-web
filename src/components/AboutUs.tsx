@@ -11,7 +11,7 @@ const AboutUs = () => {
             <div className="relative">
               <div className="rounded-lg overflow-hidden shadow-xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-4.0.3" 
+                  src="https://images.unsplash.com/photo-1606267524134-7f7a922ce907?ixlib=rb-4.0.3" 
                   alt="Professional Cleaning Team at Work" 
                   className="w-full h-auto"
                 />
