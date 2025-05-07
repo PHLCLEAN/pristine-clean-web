@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,32 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom colors for the cleaning service
+				'cleaner-blue': {
+					'50': '#f0f5ff',
+					'100': '#e6edff',
+					'200': '#ccdcff',
+					'300': '#a6c1ff',
+					'400': '#7a9cff',
+					'500': '#5475ff',
+					'600': '#3956f5',
+					'700': '#1E3A8A', // Main blue color
+					'800': '#1e3a8a',
+					'900': '#172554',
+				},
+				'cleaner-green': {
+					'50': '#ecfdf5',
+					'100': '#d1fae5',
+					'200': '#a7f3d0',
+					'300': '#6ee7b7',
+					'400': '#34d399',
+					'500': '#059669', // Main green color
+					'600': '#047857',
+					'700': '#065f46',
+					'800': '#064e3b',
+					'900': '#022c22',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +110,26 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out'
+			},
+			fontFamily: {
+				sans: ["Inter", "sans-serif"],
+				heading: ["Montserrat", "sans-serif"]
 			}
 		}
 	},
