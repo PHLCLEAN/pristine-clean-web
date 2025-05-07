@@ -7,12 +7,12 @@ const Services = () => {
     {
       title: "Commercial Cleaning",
       description: "Keep your business premises spotless, hygienic, and professional",
-      imageSrc: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3",
+      imageSrc: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3",
       features: [
         "Daily or weekly scheduled cleaning",
         "Floor maintenance and polishing",
         "Restroom sanitation and stock",
-        "Window and glass cleaning",
+        "Dust control and allergen reduction",
         "Trash removal and recycling"
       ],
       delay: "0s"
@@ -20,12 +20,12 @@ const Services = () => {
     {
       title: "Carpet Cleaning",
       description: "Revitalize your carpets with our deep cleaning technology",
-      imageSrc: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3",
+      imageSrc: "https://images.unsplash.com/photo-1558317374-067fb5f30001?ixlib=rb-4.0.3",
       features: [
         "Hot water extraction cleaning",
+        "Low moisture encapsulation method",
         "Stain and odor removal",
         "Allergen removal treatment",
-        "Carpet protection application",
         "Quick-dry technology"
       ],
       delay: "0.2s"
@@ -33,7 +33,7 @@ const Services = () => {
     {
       title: "Deep Cleaning",
       description: "Thorough cleaning of every surface and corner of your facility",
-      imageSrc: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3",
+      imageSrc: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3",
       features: [
         "Detail cleaning of fixtures and fittings",
         "High dusting of vents and ceiling areas",
@@ -67,6 +67,115 @@ const Services = () => {
               delay={service.delay}
             />
           ))}
+        </div>
+
+        <div className="mt-16 bg-white p-8 rounded-lg shadow-md">
+          <h3 className="text-2xl font-bold text-cleaner-blue-800 mb-4">Specialized Facility Cleaning</h3>
+          <div className="h-1 w-16 bg-cleaner-green-500 mb-6"></div>
+          <p className="text-gray-600 mb-6">
+            PHL Clean provides specialized cleaning services for facilities that require unique attention and protocols:
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h4 className="text-xl font-bold text-cleaner-blue-800 mb-3">Medical Facilities</h4>
+              <p className="text-gray-600 mb-4">
+                Our trained professionals follow strict disinfection protocols for medical centers, clinics, and healthcare facilities.
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <span className="mr-2 text-cleaner-green-500 flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </span>
+                  <span className="text-gray-700">OSHA compliant cleaning</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-cleaner-green-500 flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </span>
+                  <span className="text-gray-700">Hospital-grade disinfectants</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-cleaner-green-500 flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </span>
+                  <span className="text-gray-700">Cross-contamination prevention</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h4 className="text-xl font-bold text-cleaner-blue-800 mb-3">Educational Facilities</h4>
+              <p className="text-gray-600 mb-4">
+                Create healthy learning environments with our specialized school and campus cleaning services.
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <span className="mr-2 text-cleaner-green-500 flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </span>
+                  <span className="text-gray-700">Classroom & common area sanitization</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-cleaner-green-500 flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </span>
+                  <span className="text-gray-700">Gym & auditorium cleaning</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-cleaner-green-500 flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </span>
+                  <span className="text-gray-700">Student-safe cleaning products</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h4 className="text-xl font-bold text-cleaner-blue-800 mb-3">Religious Facilities</h4>
+              <p className="text-gray-600 mb-4">
+                Respectful and thorough cleaning services for churches and places of worship throughout the Philadelphia area.
+              </p>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <span className="mr-2 text-cleaner-green-500 flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </span>
+                  <span className="text-gray-700">Sanctuary & worship space cleaning</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-cleaner-green-500 flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </span>
+                  <span className="text-gray-700">Careful handling of religious items</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2 text-cleaner-green-500 flex-shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </span>
+                  <span className="text-gray-700">Event setup & cleanup services</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>

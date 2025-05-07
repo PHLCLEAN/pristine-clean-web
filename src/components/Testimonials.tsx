@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -22,7 +21,7 @@ const Testimonials = () => {
     {
       name: "Michael Rodriguez",
       position: "Facilities Director",
-      company: "Trident Medical Center",
+      company: "Keystone Health Network",
       content: "In the healthcare industry, cleanliness isn't just important - it's essential. PHL Clean understands this and delivers exceptional results. Their deep cleaning services are thorough and their staff is professional and reliable.",
       rating: 5
     },
@@ -35,9 +34,9 @@ const Testimonials = () => {
     },
     {
       name: "David Chen",
-      position: "Restaurant Owner",
-      company: "Fusion Bites",
-      content: "The cleanliness of our restaurant is paramount to our success. PHL Clean provides consistent, thorough cleaning that meets health department standards with ease. Their carpet cleaning services have extended the life of our flooring significantly.",
+      position: "Office Director",
+      company: "Liberty Financial Group",
+      content: "The cleanliness of our office is paramount to our professional image. PHL Clean provides consistent, thorough cleaning that exceeds our expectations. Their carpet cleaning services have significantly improved the appearance and lifespan of our flooring.",
       rating: 4
     }
   ];
