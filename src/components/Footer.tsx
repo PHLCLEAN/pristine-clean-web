@@ -98,6 +98,7 @@ const Footer = () => {
               <p className="text-gray-300 mb-2">Contact Us:</p>
               <p className="text-gray-300">(215) 550-1414</p>
               <p className="text-gray-300">sales@phlclean.com</p>
+              <p className="text-gray-300 text-sm mt-2">621 Bristol Pike, Suite C<br/>Bensalem, PA 19020</p>
             </div>
           </div>
         </div>
