@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const AboutUs = () => {
   return (
@@ -10,11 +11,13 @@ const AboutUs = () => {
           <div className="animate-fade-in">
             <div className="relative">
               <div className="rounded-lg overflow-hidden shadow-xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3" 
-                  alt="Modern Office Workspace" 
-                  className="w-full h-auto"
-                />
+                <AspectRatio ratio={16 / 9}>
+                  <img 
+                    src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                    alt="Sleek Modern Office Workspace" 
+                    className="w-full h-full object-cover"
+                  />
+                </AspectRatio>
               </div>
               <div className="absolute -bottom-6 -right-6 bg-cleaner-blue-700 text-white p-6 rounded-lg shadow-lg hidden md:block">
                 <div className="text-3xl font-bold">5+</div>
