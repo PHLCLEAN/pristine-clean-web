@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ServiceCard from './ServiceCard';
 
@@ -12,21 +11,20 @@ const Services = () => {
         "Daily or weekly scheduled cleaning",
         "Floor maintenance and polishing",
         "Restroom sanitation and stock",
-        "Dust control and allergen reduction",
-        "Comprehensive recycling programs"
+        "Dust control and allergen reduction"
       ],
       delay: "0s"
     },
     {
       title: "Carpet Cleaning",
       description: "Revitalize your carpets with our deep cleaning technology",
-      imageSrc: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3",
+      imageSrc: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3",
       features: [
         "Hot water extraction cleaning",
         "Low moisture encapsulation method",
         "Stain and odor removal",
         "Allergen removal treatment",
-        "Quick-dry technology"
+        "Carpet maintenance"
       ],
       delay: "0.2s"
     },
