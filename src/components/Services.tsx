@@ -19,7 +19,7 @@ const Services = () => {
     {
       title: "Carpet Cleaning",
       description: "Revitalize your carpets with our deep cleaning technology",
-      imageSrc: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?ixlib=rb-4.0.3",
+      imageSrc: "https://images.unsplash.com/photo-1496307653780-42ee777d4833?ixlib=rb-4.0.3",
       features: [
         "Hot water extraction cleaning",
         "Low moisture encapsulation method",
