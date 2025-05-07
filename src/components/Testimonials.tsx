@@ -16,28 +16,28 @@ const Testimonials = () => {
       name: "Jennifer Thompson",
       position: "Office Manager",
       company: "Apex Solutions",
-      content: "PristineClean Pro has transformed our office environment. Their attention to detail and consistency has been remarkable. Our employees have noticed the difference, and visitors always comment on how clean our space is.",
+      content: "PHL Clean has transformed our office environment. Their attention to detail and consistency has been remarkable. Our employees have noticed the difference, and visitors always comment on how clean our space is.",
       rating: 5
     },
     {
       name: "Michael Rodriguez",
       position: "Facilities Director",
       company: "Trident Medical Center",
-      content: "In the healthcare industry, cleanliness isn't just important - it's essential. PristineClean Pro understands this and delivers exceptional results. Their deep cleaning services are thorough and their staff is professional and reliable.",
+      content: "In the healthcare industry, cleanliness isn't just important - it's essential. PHL Clean understands this and delivers exceptional results. Their deep cleaning services are thorough and their staff is professional and reliable.",
       rating: 5
     },
     {
       name: "Sarah Johnson",
       position: "Property Manager",
       company: "Westside Properties",
-      content: "We manage multiple commercial properties and PristineClean Pro has become our go-to cleaning service. Their flexibility, responsiveness, and quality of work make them a valuable partner in maintaining our buildings.",
+      content: "We manage multiple commercial properties and PHL Clean has become our go-to cleaning service. Their flexibility, responsiveness, and quality of work make them a valuable partner in maintaining our buildings.",
       rating: 5
     },
     {
       name: "David Chen",
       position: "Restaurant Owner",
       company: "Fusion Bites",
-      content: "The cleanliness of our restaurant is paramount to our success. PristineClean Pro provides consistent, thorough cleaning that meets health department standards with ease. Their carpet cleaning services have extended the life of our flooring significantly.",
+      content: "The cleanliness of our restaurant is paramount to our success. PHL Clean provides consistent, thorough cleaning that meets health department standards with ease. Their carpet cleaning services have extended the life of our flooring significantly.",
       rating: 4
     }
   ];

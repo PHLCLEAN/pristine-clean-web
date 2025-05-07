@@ -61,7 +61,7 @@ const ContactForm = () => {
             <div className="h-1 w-16 bg-cleaner-green-500 mb-8"></div>
             
             <p className="text-gray-700 mb-8">
-              Ready to experience the difference of professional cleaning services? Fill out the form below to get a customized quote for your specific needs. We'll get back to you within 24 hours.
+              Ready to experience the difference of professional cleaning services across Philadelphia and surrounding counties? Fill out the form below to get a customized quote for your specific needs. We'll get back to you within 24 hours.
             </p>
             
             <div className="space-y-6 mb-8">
@@ -73,7 +73,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg text-gray-800 mb-1">Call Us</h3>
-                  <p className="text-gray-600">(555) 123-4567</p>
+                  <p className="text-gray-600">(215) 550-1414</p>
                 </div>
               </div>
               
@@ -85,20 +85,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg text-gray-800 mb-1">Email Us</h3>
-                  <p className="text-gray-600">info@pristinecleanpro.com</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <div className="bg-cleaner-blue-700 p-3 rounded-full text-white mr-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg text-gray-800 mb-1">Office Address</h3>
-                  <p className="text-gray-600">123 Business Avenue, Suite 200<br />Metropolis, ST 12345</p>
+                  <p className="text-gray-600">sales@phlclean.com</p>
                 </div>
               </div>
             </div>
@@ -143,7 +130,7 @@ const ContactForm = () => {
                     onChange={handleChange}
                     required
                     className="w-full"
-                    placeholder="(555) 123-4567"
+                    placeholder="(215) 550-1414"
                   />
                 </div>
               </div>

@@ -7,7 +7,7 @@ const Services = () => {
     {
       title: "Commercial Cleaning",
       description: "Keep your business premises spotless, hygienic, and professional",
-      imageSrc: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3",
+      imageSrc: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3",
       features: [
         "Daily or weekly scheduled cleaning",
         "Floor maintenance and polishing",
@@ -20,7 +20,7 @@ const Services = () => {
     {
       title: "Carpet Cleaning",
       description: "Revitalize your carpets with our deep cleaning technology",
-      imageSrc: "https://images.unsplash.com/photo-1558317374-067fb5f30001?ixlib=rb-4.0.3",
+      imageSrc: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3",
       features: [
         "Hot water extraction cleaning",
         "Stain and odor removal",
@@ -33,7 +33,7 @@ const Services = () => {
     {
       title: "Deep Cleaning",
       description: "Thorough cleaning of every surface and corner of your facility",
-      imageSrc: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3",
+      imageSrc: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3",
       features: [
         "Detail cleaning of fixtures and fittings",
         "High dusting of vents and ceiling areas",
@@ -52,7 +52,7 @@ const Services = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-cleaner-blue-800 mb-4">Our Professional Services</h2>
           <div className="h-1 w-24 bg-cleaner-green-500 mx-auto mb-6"></div>
           <p className="text-gray-600 text-lg">
-            We deliver exceptional cleaning services tailored to your business needs, ensuring a healthy and impressive environment for your employees and customers.
+            Serving Philadelphia, Montgomery, Delaware, Bucks, and Chester counties with exceptional cleaning services tailored to your business needs, ensuring a healthy and impressive environment for your employees and customers.
           </p>
         </div>
 

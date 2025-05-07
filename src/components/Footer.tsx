@@ -16,7 +16,7 @@ const Footer = () => {
               <span className="ml-1 text-cleaner-green-500 text-2xl">Clean</span>
             </div>
             <p className="text-gray-300 mb-6">
-              Professional cleaning services for businesses of all sizes. We deliver exceptional results that exceed expectations.
+              Professional cleaning services for businesses throughout Philadelphia and surrounding counties. We deliver exceptional results that exceed expectations.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors">
@@ -85,23 +85,20 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-xl font-bold mb-6">Newsletter</h3>
-            <p className="text-gray-300 mb-4">Subscribe to get cleaning tips and exclusive offers.</p>
-            <form className="flex">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="bg-white/10 rounded-l-md border-0 py-2 px-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cleaner-green-500 flex-grow"
-                required
-              />
-              <button
-                type="submit"
-                className="bg-cleaner-green-500 hover:bg-cleaner-green-600 rounded-r-md py-2 px-4 text-white font-medium transition-colors"
-              >
-                Join
-              </button>
-            </form>
-            <p className="text-gray-400 text-xs mt-3">We respect your privacy. Unsubscribe anytime.</p>
+            <h3 className="text-xl font-bold mb-6">Service Areas</h3>
+            <ul className="space-y-3">
+              <li className="text-gray-300">Philadelphia County</li>
+              <li className="text-gray-300">Montgomery County</li>
+              <li className="text-gray-300">Delaware County</li>
+              <li className="text-gray-300">Bucks County</li>
+              <li className="text-gray-300">Chester County</li>
+            </ul>
+            
+            <div className="mt-6">
+              <p className="text-gray-300 mb-2">Contact Us:</p>
+              <p className="text-gray-300">(215) 550-1414</p>
+              <p className="text-gray-300">sales@phlclean.com</p>
+            </div>
           </div>
         </div>
       </div>

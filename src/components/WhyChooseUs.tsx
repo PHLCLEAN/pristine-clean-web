@@ -63,10 +63,10 @@ const WhyChooseUs = () => {
     <section id="why-choose-us" className="section-padding bg-gradient-to-br from-cleaner-blue-700 to-cleaner-blue-900 text-white">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose PristineClean Pro?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose PHL Clean?</h2>
           <div className="h-1 w-24 bg-cleaner-green-500 mx-auto mb-6"></div>
           <p className="text-lg opacity-90">
-            Discover what sets us apart and why hundreds of businesses trust us with their cleaning needs.
+            Discover what sets us apart and why businesses throughout Philadelphia and surrounding counties trust us with their cleaning needs.
           </p>
         </div>
 
