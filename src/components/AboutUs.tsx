@@ -13,8 +13,8 @@ const AboutUs = () => {
               <div className="rounded-lg overflow-hidden shadow-xl">
                 <AspectRatio ratio={16 / 9}>
                   <img 
-                    src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-                    alt="Modern Office Workspace" 
+                    src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                    alt="Sleek Modern Office Workspace" 
                     className="w-full h-full object-cover"
                   />
                 </AspectRatio>
