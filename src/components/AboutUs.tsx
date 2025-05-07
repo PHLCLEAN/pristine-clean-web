@@ -28,7 +28,7 @@ const AboutUs = () => {
             <div className="h-1 w-16 bg-cleaner-green-500 mb-8"></div>
             
             <p className="text-gray-700 mb-6">
-              As a locally owned and operated business based in Philadelphia, PHL Clean is committed to providing exceptional cleaning services to businesses throughout Philadelphia, Montgomery, Delaware, Bucks, and Chester counties. Our passion for excellence has quickly established us as a trusted partner for businesses seeking reliable cleaning solutions.
+              As a locally owned and operated business, PHL Clean is committed to providing exceptional cleaning services to businesses throughout Philadelphia, Montgomery, Delaware, Bucks, and Chester counties. Our passion for excellence has quickly established us as a trusted partner for businesses seeking reliable cleaning solutions.
             </p>
             
             <p className="text-gray-700 mb-6">
