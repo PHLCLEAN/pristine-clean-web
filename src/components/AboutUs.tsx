@@ -24,11 +24,11 @@ const AboutUs = () => {
           </div>
           
           <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <h2 className="text-3xl md:text-4xl font-bold text-cleaner-blue-800 mb-6">About PristineClean Pro</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-cleaner-blue-800 mb-6">About PHL Clean</h2>
             <div className="h-1 w-16 bg-cleaner-green-500 mb-8"></div>
             
             <p className="text-gray-700 mb-6">
-              Founded in 2010, PristineClean Pro has been providing exceptional cleaning services to businesses throughout the region. Our commitment to quality, reliability, and customer satisfaction has made us a trusted partner for hundreds of businesses.
+              Founded in 2010, PHL Clean has been providing exceptional cleaning services to businesses throughout the region. Our commitment to quality, reliability, and customer satisfaction has made us a trusted partner for hundreds of businesses.
             </p>
             
             <p className="text-gray-700 mb-6">

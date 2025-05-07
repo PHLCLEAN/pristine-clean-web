@@ -18,9 +18,9 @@ const Navbar = () => {
           <div className="flex items-center">
             <a href="#" className="flex items-center">
               <span className="text-2xl font-bold text-cleaner-blue-700">
-                PristineClean
+                PHL
               </span>
-              <span className="ml-1 text-cleaner-green-500 text-2xl">Pro</span>
+              <span className="ml-1 text-cleaner-green-500 text-2xl">Clean</span>
             </a>
           </div>
 

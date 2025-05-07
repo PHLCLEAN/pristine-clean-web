@@ -11,9 +11,9 @@ const Footer = () => {
           <div>
             <div className="flex items-center mb-6">
               <span className="text-2xl font-bold text-white">
-                PristineClean
+                PHL
               </span>
-              <span className="ml-1 text-cleaner-green-500 text-2xl">Pro</span>
+              <span className="ml-1 text-cleaner-green-500 text-2xl">Clean</span>
             </div>
             <p className="text-gray-300 mb-6">
               Professional cleaning services for businesses of all sizes. We deliver exceptional results that exceed expectations.
@@ -110,7 +110,7 @@ const Footer = () => {
         <div className="container-custom py-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              &copy; {currentYear} PristineClean Pro. All rights reserved.
+              &copy; {currentYear} PHL Clean. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
