@@ -13,13 +13,6 @@ const ComprehensiveServices = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <div className="h-40 rounded-md overflow-hidden mb-4">
-              <img 
-                src="https://images.unsplash.com/photo-1562664377-709f2c337eb2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                alt="Office Cleaning" 
-                className="w-full h-full object-cover"
-              />
-            </div>
             <h3 className="text-xl font-bold text-cleaner-blue-800 mb-4">Professional Office Cleaning Services</h3>
             <p className="text-gray-600 mb-4">
               Our dedicated team delivers exceptional cleaning results while respecting your workspace and schedule. From daily maintenance to deep cleaning, we ensure your office environment promotes productivity and wellness for your employees and visitors.
@@ -27,13 +20,6 @@ const ComprehensiveServices = () => {
           </div>
           
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <div className="h-40 rounded-md overflow-hidden mb-4">
-              <img 
-                src="https://images.unsplash.com/photo-1603712232358-ca73105e1c9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" 
-                alt="Carpet Cleaning" 
-                className="w-full h-full object-cover"
-              />
-            </div>
             <h3 className="text-xl font-bold text-cleaner-blue-800 mb-4">Advanced Carpet Cleaning & Maintenance</h3>
             <p className="text-gray-600 mb-4">
               Our specialized carpet care programs extend the life of your investment while maintaining a pristine appearance. Using state-of-the-art equipment and proven techniques, we keep your carpets looking professional year-round.
@@ -41,13 +27,6 @@ const ComprehensiveServices = () => {
           </div>
           
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <div className="h-40 rounded-md overflow-hidden mb-4">
-              <img 
-                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                alt="Janitorial Services" 
-                className="w-full h-full object-cover"
-              />
-            </div>
             <h3 className="text-xl font-bold text-cleaner-blue-800 mb-4">Daily/Weekly Janitorial Services</h3>
             <p className="text-gray-600 mb-4">
               Consistent, reliable cleaning services tailored to your facility's needs. Our trained professionals handle everything from restroom sanitation to break room maintenance, ensuring your facility maintains the highest standards of cleanliness.

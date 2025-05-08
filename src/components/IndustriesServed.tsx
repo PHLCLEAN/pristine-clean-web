@@ -9,13 +9,13 @@ const IndustriesServed = () => {
       name: "Corporate Offices",
       icon: <Briefcase className="h-6 w-6" />,
       description: "Creating productive, clean workspaces that impress clients and motivate employees.",
-      image: "https://images.unsplash.com/photo-1577412647305-991150c7d163?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      image: null
     },
     {
       name: "Bank Branches",
       icon: <Building className="h-6 w-6" />,
       description: "Specialized cleaning services for financial institutions with enhanced security protocols, after-hours service to maintain branch operations, secure handling of sensitive areas, meticulous attention to public spaces and teller stations, and ATM vestibule cleaning and maintenance.",
-      image: "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      image: null
     },
     {
       name: "Specialty Fitness Facilities",
@@ -35,25 +35,25 @@ const IndustriesServed = () => {
           description: "Thorough floor maintenance and equipment sanitization."
         }
       ],
-      image: "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      image: null
     },
     {
       name: "Religious Facilities",
       icon: <Shield className="h-6 w-6" />,
       description: "Respectful, thorough cleaning services that honor your sacred spaces and accommodate service schedules.",
-      image: "https://images.unsplash.com/photo-1548690312-e3b507d8c110?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80"
+      image: null
     },
     {
       name: "Childcare Centers & Daycares",
       icon: <Users className="h-6 w-6" />,
       description: "Specialized cleaning protocols that ensure a safe, healthy environment for children, with extra attention to sanitization and disinfection.",
-      image: "https://images.unsplash.com/photo-1526634332515-d56c5fd16991?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      image: null
     },
     {
       name: "Educational Institutions",
       icon: <Building className="h-6 w-6" />,
       description: "Maintaining clean, healthy learning environments that support student success.",
-      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      image: null
     }
   ];
 
@@ -71,15 +71,6 @@ const IndustriesServed = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {industries.map((industry, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-              {industry.image && (
-                <div className="h-48 overflow-hidden rounded-md mb-4">
-                  <img 
-                    src={industry.image}
-                    alt={industry.name} 
-                    className="w-full h-full object-cover" 
-                  />
-                </div>
-              )}
               <div className="flex items-center mb-4">
                 <div className="text-cleaner-blue-700 mr-3">
                   {industry.icon}
