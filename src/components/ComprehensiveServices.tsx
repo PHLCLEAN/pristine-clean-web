@@ -15,7 +15,7 @@ const ComprehensiveServices = () => {
           <div className="bg-white p-6 rounded-lg shadow-md">
             <div className="h-40 rounded-md overflow-hidden mb-4">
               <img 
-                src="https://images.unsplash.com/photo-1604754742629-3e5728249d73?ixlib=rb-4.0.3" 
+                src="https://images.unsplash.com/photo-1562664377-709f2c337eb2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
                 alt="Office Cleaning" 
                 className="w-full h-full object-cover"
               />
@@ -29,7 +29,7 @@ const ComprehensiveServices = () => {
           <div className="bg-white p-6 rounded-lg shadow-md">
             <div className="h-40 rounded-md overflow-hidden mb-4">
               <img 
-                src="https://images.unsplash.com/photo-1558317374-067fb5f30001?ixlib=rb-4.0.3" 
+                src="https://images.unsplash.com/photo-1603712232358-ca73105e1c9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" 
                 alt="Carpet Cleaning" 
                 className="w-full h-full object-cover"
               />
@@ -43,7 +43,7 @@ const ComprehensiveServices = () => {
           <div className="bg-white p-6 rounded-lg shadow-md">
             <div className="h-40 rounded-md overflow-hidden mb-4">
               <img 
-                src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?ixlib=rb-4.0.3" 
+                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
                 alt="Janitorial Services" 
                 className="w-full h-full object-cover"
               />

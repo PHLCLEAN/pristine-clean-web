@@ -15,7 +15,7 @@ const SustainableCleaning = () => {
           <div>
             <div className="rounded-lg overflow-hidden mb-6 shadow-md">
               <img 
-                src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?ixlib=rb-4.0.3" 
+                src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
                 alt="Eco-Friendly Cleaning" 
                 className="w-full h-64 object-cover"
               />
@@ -34,7 +34,7 @@ const SustainableCleaning = () => {
           <div className="bg-white p-8 rounded-lg shadow-md">
             <div className="rounded-lg overflow-hidden mb-6">
               <img 
-                src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?ixlib=rb-4.0.3" 
+                src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" 
                 alt="Low Moisture Carpet Cleaning" 
                 className="w-full h-48 object-cover"
               />
