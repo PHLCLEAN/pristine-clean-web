@@ -122,7 +122,6 @@ const CleaningProcess = () => {
                   "Comprehensive staff screening and background checks",
                   "Secure access management systems",
                   "Confidentiality agreements for all team members",
-                  "Camera-monitored cleaning procedures",
                   "Detailed cleaning logs and documentation",
                   "After-hours service coordination with security systems"
                 ].map((item, index) => (
