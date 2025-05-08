@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ServiceCard from './ServiceCard';
 import { Button } from '@/components/ui/button';
@@ -46,6 +45,7 @@ const Services = () => {
   ];
 
   return (
+    
     <section id="services" className="section-padding bg-gray-50">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">

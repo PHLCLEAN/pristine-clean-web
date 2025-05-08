@@ -36,22 +36,30 @@ const IndustriesServed = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* First row - Standard 3 column layout */}
-          {industries.map((industry, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex items-center mb-4">
-                <div className="text-cleaner-blue-700 mr-3">
-                  {industry.icon}
-                </div>
-                <h3 className="text-xl font-bold text-cleaner-blue-800">{industry.name}</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* First row - Corporate and Bank Branches */}
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="flex items-center mb-4">
+              <div className="text-cleaner-blue-700 mr-3">
+                {industries[0].icon}
               </div>
-              <p className="text-gray-600 mb-4">{industry.description}</p>
+              <h3 className="text-xl font-bold text-cleaner-blue-800">{industries[0].name}</h3>
             </div>
-          ))}
+            <p className="text-gray-600 mb-4">{industries[0].description}</p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="flex items-center mb-4">
+              <div className="text-cleaner-blue-700 mr-3">
+                {industries[1].icon}
+              </div>
+              <h3 className="text-xl font-bold text-cleaner-blue-800">{industries[1].name}</h3>
+            </div>
+            <p className="text-gray-600 mb-4">{industries[1].description}</p>
+          </div>
         </div>
         
-        {/* Second row - Special layout with Specialty Fitness taking 1 column and the other 2 boxes in the second column */}
+        {/* Second row - Specialty Fitness on the left, Religious, Childcare, and Educational on the right */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
           {/* Left column - Specialty Fitness Facilities */}
           <div className="bg-white p-6 rounded-lg shadow-md">
@@ -82,8 +90,19 @@ const IndustriesServed = () => {
             </div>
           </div>
           
-          {/* Right column - Childcare and Educational stacked vertically */}
+          {/* Right column - Religious, Childcare, and Educational stacked vertically */}
           <div className="flex flex-col space-y-8">
+            {/* Religious Facilities */}
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex items-center mb-4">
+                <div className="text-cleaner-blue-700 mr-3">
+                  <Shield className="h-6 w-6" />
+                </div>
+                <h3 className="text-xl font-bold text-cleaner-blue-800">{industries[2].name}</h3>
+              </div>
+              <p className="text-gray-600 mb-4">{industries[2].description}</p>
+            </div>
+            
             {/* Childcare Centers */}
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
