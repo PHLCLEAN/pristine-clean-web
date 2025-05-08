@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Building, Briefcase, Users, Shield, Dumbbell } from 'lucide-react';
+import { Building, Briefcase, Users, Shield, Dumbbell, School } from 'lucide-react';
 
 const IndustriesServed = () => {
   const industries = [
@@ -18,41 +18,9 @@ const IndustriesServed = () => {
       image: null
     },
     {
-      name: "Specialty Fitness Facilities",
-      icon: <Dumbbell className="h-6 w-6" />,
-      description: "We understand the unique needs of fitness facilities where hygiene is paramount for member safety.",
-      fitnessTypes: [
-        {
-          name: "Boxing Gyms",
-          description: "Specialized sanitization of equipment, mats, and high-touch areas."
-        },
-        {
-          name: "MMA Training Centers",
-          description: "Deep cleaning of training areas and locker rooms."
-        },
-        {
-          name: "CrossFit Boxes",
-          description: "Thorough floor maintenance and equipment sanitization."
-        }
-      ],
-      image: null
-    },
-    {
       name: "Religious Facilities",
       icon: <Shield className="h-6 w-6" />,
       description: "Respectful, thorough cleaning services that honor your sacred spaces and accommodate service schedules.",
-      image: null
-    },
-    {
-      name: "Childcare Centers & Daycares",
-      icon: <Users className="h-6 w-6" />,
-      description: "Specialized cleaning protocols that ensure a safe, healthy environment for children, with extra attention to sanitization and disinfection.",
-      image: null
-    },
-    {
-      name: "Educational Institutions",
-      icon: <Building className="h-6 w-6" />,
-      description: "Maintaining clean, healthy learning environments that support student success.",
       image: null
     }
   ];
@@ -68,7 +36,8 @@ const IndustriesServed = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* First row - Standard 3 column layout */}
           {industries.map((industry, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
@@ -78,22 +47,65 @@ const IndustriesServed = () => {
                 <h3 className="text-xl font-bold text-cleaner-blue-800">{industry.name}</h3>
               </div>
               <p className="text-gray-600 mb-4">{industry.description}</p>
-              
-              {industry.fitnessTypes && (
-                <div className="mt-4">
-                  <h4 className="text-lg font-semibold text-cleaner-blue-700 mb-3">Our Specialized Fitness Cleaning:</h4>
-                  <div className="space-y-3">
-                    {industry.fitnessTypes.map((type, i) => (
-                      <div key={i} className="bg-gray-50 p-4 rounded-md">
-                        <h5 className="font-medium text-cleaner-blue-800 mb-1">{type.name}</h5>
-                        <p className="text-gray-600">{type.description}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
             </div>
           ))}
+        </div>
+        
+        {/* Second row - Special layout with Specialty Fitness taking 1 column and the other 2 boxes in the second column */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+          {/* Left column - Specialty Fitness Facilities */}
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="flex items-center mb-4">
+              <div className="text-cleaner-blue-700 mr-3">
+                <Dumbbell className="h-6 w-6" />
+              </div>
+              <h3 className="text-xl font-bold text-cleaner-blue-800">Specialty Fitness Facilities</h3>
+            </div>
+            <p className="text-gray-600 mb-4">We understand the unique needs of fitness facilities where hygiene is paramount for member safety.</p>
+            
+            <div className="mt-4">
+              <h4 className="text-lg font-semibold text-cleaner-blue-700 mb-3">Our Specialized Fitness Cleaning:</h4>
+              <div className="space-y-3">
+                <div className="bg-gray-50 p-4 rounded-md">
+                  <h5 className="font-medium text-cleaner-blue-800 mb-1">Boxing Gyms</h5>
+                  <p className="text-gray-600">Specialized sanitization of equipment, mats, and high-touch areas.</p>
+                </div>
+                <div className="bg-gray-50 p-4 rounded-md">
+                  <h5 className="font-medium text-cleaner-blue-800 mb-1">MMA Training Centers</h5>
+                  <p className="text-gray-600">Deep cleaning of training areas and locker rooms.</p>
+                </div>
+                <div className="bg-gray-50 p-4 rounded-md">
+                  <h5 className="font-medium text-cleaner-blue-800 mb-1">CrossFit Boxes</h5>
+                  <p className="text-gray-600">Thorough floor maintenance and equipment sanitization.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Right column - Childcare and Educational stacked vertically */}
+          <div className="flex flex-col space-y-8">
+            {/* Childcare Centers */}
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex items-center mb-4">
+                <div className="text-cleaner-blue-700 mr-3">
+                  <Users className="h-6 w-6" />
+                </div>
+                <h3 className="text-xl font-bold text-cleaner-blue-800">Childcare Centers & Daycares</h3>
+              </div>
+              <p className="text-gray-600 mb-4">Specialized cleaning protocols that ensure a safe, healthy environment for children, with extra attention to sanitization and disinfection.</p>
+            </div>
+            
+            {/* Educational Institutions */}
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex items-center mb-4">
+                <div className="text-cleaner-blue-700 mr-3">
+                  <School className="h-6 w-6" />
+                </div>
+                <h3 className="text-xl font-bold text-cleaner-blue-800">Educational Institutions</h3>
+              </div>
+              <p className="text-gray-600 mb-4">Maintaining clean, healthy learning environments that support student success.</p>
+            </div>
+          </div>
         </div>
 
         <div className="mt-16">
