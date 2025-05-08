@@ -20,7 +20,7 @@ const Services = () => {
     {
       title: "Carpet Cleaning",
       description: "Revitalize your carpets with our deep cleaning technology",
-      imageSrc: "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      imageSrc: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       features: [
         "Hot water extraction cleaning",
         "Low moisture encapsulation method",
@@ -33,7 +33,7 @@ const Services = () => {
     {
       title: "Deep Cleaning",
       description: "Thorough cleaning of every surface and corner of your facility",
-      imageSrc: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      imageSrc: "https://images.unsplash.com/photo-1584385002340-d886f3a0f097?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       features: [
         "Detail cleaning of fixtures and fittings",
         "High dusting of vents and ceiling areas",
