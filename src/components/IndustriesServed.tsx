@@ -8,32 +8,52 @@ const IndustriesServed = () => {
     {
       name: "Corporate Offices",
       icon: <Briefcase className="h-6 w-6" />,
-      description: "Creating productive, clean workspaces that impress clients and motivate employees."
+      description: "Creating productive, clean workspaces that impress clients and motivate employees.",
+      image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3"
     },
     {
       name: "Bank Branches",
       icon: <Building className="h-6 w-6" />,
-      description: "Specialized cleaning services for financial institutions with enhanced security protocols, after-hours service to maintain branch operations, secure handling of sensitive areas, meticulous attention to public spaces and teller stations, and ATM vestibule cleaning and maintenance."
+      description: "Specialized cleaning services for financial institutions with enhanced security protocols, after-hours service to maintain branch operations, secure handling of sensitive areas, meticulous attention to public spaces and teller stations, and ATM vestibule cleaning and maintenance.",
+      image: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3"
     },
     {
       name: "Specialty Fitness Facilities",
       icon: <Users className="h-6 w-6" />,
-      description: "Boxing Gyms: Specialized sanitization of equipment, mats, and high-touch areas. MMA Training Centers: Deep cleaning of training areas and locker rooms. CrossFit Boxes: Thorough floor maintenance and equipment sanitization. We understand the unique needs of fitness facilities where hygiene is paramount for member safety."
+      description: "We understand the unique needs of fitness facilities where hygiene is paramount for member safety.",
+      fitnessTypes: [
+        {
+          name: "Boxing Gyms",
+          description: "Specialized sanitization of equipment, mats, and high-touch areas."
+        },
+        {
+          name: "MMA Training Centers",
+          description: "Deep cleaning of training areas and locker rooms."
+        },
+        {
+          name: "CrossFit Boxes",
+          description: "Thorough floor maintenance and equipment sanitization."
+        }
+      ],
+      image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-4.0.3"
     },
     {
       name: "Religious Facilities",
       icon: <Shield className="h-6 w-6" />,
-      description: "Respectful, thorough cleaning services that honor your sacred spaces and accommodate service schedules."
+      description: "Respectful, thorough cleaning services that honor your sacred spaces and accommodate service schedules.",
+      image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3"
     },
     {
       name: "Childcare Centers & Daycares",
       icon: <Users className="h-6 w-6" />,
-      description: "Specialized cleaning protocols that ensure a safe, healthy environment for children, with extra attention to sanitization and disinfection."
+      description: "Specialized cleaning protocols that ensure a safe, healthy environment for children, with extra attention to sanitization and disinfection.",
+      image: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?ixlib=rb-4.0.3"
     },
     {
       name: "Educational Institutions",
       icon: <Building className="h-6 w-6" />,
-      description: "Maintaining clean, healthy learning environments that support student success."
+      description: "Maintaining clean, healthy learning environments that support student success.",
+      image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3"
     }
   ];
 
@@ -51,13 +71,36 @@ const IndustriesServed = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {industries.map((industry, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+              {industry.image && (
+                <div className="h-48 overflow-hidden rounded-md mb-4">
+                  <img 
+                    src={industry.image}
+                    alt={industry.name} 
+                    className="w-full h-full object-cover" 
+                  />
+                </div>
+              )}
               <div className="flex items-center mb-4">
                 <div className="text-cleaner-blue-700 mr-3">
                   {industry.icon}
                 </div>
                 <h3 className="text-xl font-bold text-cleaner-blue-800">{industry.name}</h3>
               </div>
-              <p className="text-gray-600">{industry.description}</p>
+              <p className="text-gray-600 mb-4">{industry.description}</p>
+              
+              {industry.fitnessTypes && (
+                <div className="mt-4">
+                  <h4 className="text-lg font-semibold text-cleaner-blue-700 mb-2">Our Specialized Fitness Cleaning:</h4>
+                  <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
+                    {industry.fitnessTypes.map((type, i) => (
+                      <div key={i} className="bg-gray-50 p-3 rounded-md">
+                        <h5 className="font-medium text-cleaner-blue-800">{type.name}</h5>
+                        <p className="text-sm text-gray-600">{type.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           ))}
         </div>

@@ -1,6 +1,7 @@
 
 import React from 'react';
 import ServiceCard from './ServiceCard';
+import { Button } from '@/components/ui/button';
 
 const Services = () => {
   const services = [
@@ -64,8 +65,15 @@ const Services = () => {
               imageSrc={service.imageSrc}
               features={service.features}
               delay={service.delay}
+              hideButton={true}
             />
           ))}
+        </div>
+
+        <div className="mt-10 text-center">
+          <Button asChild size="lg" className="bg-cleaner-blue-700 hover:bg-cleaner-blue-800 py-6 px-12 text-lg">
+            <a href="#contact">Request Our Professional Services</a>
+          </Button>
         </div>
       </div>
     </section>

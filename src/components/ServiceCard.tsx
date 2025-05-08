@@ -9,9 +9,17 @@ interface ServiceCardProps {
   imageSrc: string;
   features: string[];
   delay?: string;
+  hideButton?: boolean;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, imageSrc, features, delay = "0s" }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ 
+  title, 
+  description, 
+  imageSrc, 
+  features, 
+  delay = "0s",
+  hideButton = false
+}) => {
   return (
     <Card className="overflow-hidden h-full shadow-md hover:shadow-lg transition-shadow animate-fade-in" style={{ animationDelay: delay }}>
       <div className="h-48 overflow-hidden">
@@ -39,11 +47,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, imageSrc,
           ))}
         </ul>
       </CardContent>
-      <CardFooter>
-        <Button asChild className="w-full bg-cleaner-blue-700 hover:bg-cleaner-blue-800">
-          <a href="#contact">Request Service</a>
-        </Button>
-      </CardFooter>
+      {!hideButton && (
+        <CardFooter>
+          <Button asChild className="w-full bg-cleaner-blue-700 hover:bg-cleaner-blue-800">
+            <a href="#contact">Request Service</a>
+          </Button>
+        </CardFooter>
+      )}
     </Card>
   );
 };

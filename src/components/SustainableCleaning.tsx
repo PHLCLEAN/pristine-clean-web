@@ -13,6 +13,13 @@ const SustainableCleaning = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
+            <div className="rounded-lg overflow-hidden mb-6 shadow-md">
+              <img 
+                src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?ixlib=rb-4.0.3" 
+                alt="Eco-Friendly Cleaning" 
+                className="w-full h-64 object-cover"
+              />
+            </div>
             <h3 className="text-2xl font-bold text-cleaner-blue-800 mb-4">Eco-Friendly Cleaning Solutions</h3>
             <p className="text-gray-600 mb-6">
               We prioritize your health and the environment by using eco-friendly cleaning products that deliver powerful results without harsh chemicals. Our green cleaning approach creates healthier indoor air quality while maintaining exceptional cleanliness standards.
@@ -25,6 +32,13 @@ const SustainableCleaning = () => {
           </div>
           
           <div className="bg-white p-8 rounded-lg shadow-md">
+            <div className="rounded-lg overflow-hidden mb-6">
+              <img 
+                src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?ixlib=rb-4.0.3" 
+                alt="Low Moisture Carpet Cleaning" 
+                className="w-full h-48 object-cover"
+              />
+            </div>
             <h3 className="text-2xl font-bold text-cleaner-blue-800 mb-4">Low Moisture Encapsulation Carpet Care</h3>
             <p className="text-gray-600 mb-6">
               Our innovative low moisture encapsulation technology represents the future of carpet cleaning. This advanced method:
