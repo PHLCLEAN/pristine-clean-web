@@ -8,7 +8,7 @@ const Services = () => {
     {
       title: "Commercial Cleaning",
       description: "Keep your business premises spotless, hygienic, and professional",
-      imageSrc: "https://images.unsplash.com/photo-1459767129954-1b1c1f9b9ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      imageSrc: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       features: [
         "Daily or weekly scheduled cleaning",
         "Floor maintenance and polishing",
@@ -20,7 +20,7 @@ const Services = () => {
     {
       title: "Carpet Cleaning",
       description: "Revitalize your carpets with our deep cleaning technology",
-      imageSrc: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      imageSrc: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       features: [
         "Hot water extraction cleaning",
         "Low moisture encapsulation method",
