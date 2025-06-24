@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -13,7 +12,7 @@ const AboutUs = () => {
               <div className="rounded-lg overflow-hidden shadow-xl">
                 <AspectRatio ratio={16 / 9}>
                   <img 
-                    src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                    src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
                     alt="Sleek Modern Office Workspace" 
                     className="w-full h-full object-cover"
                   />

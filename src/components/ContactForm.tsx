@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -28,28 +27,55 @@ const ContactForm = () => {
     setFormData(prev => ({ ...prev, serviceType: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // TODO: Replace this mock implementation with actual email sending
+      // To send emails to info@phlclean.com, you'll need to:
+      // 1. Set up a backend service (like Supabase Edge Functions)
+      // 2. Use an email service (like SendGrid, Mailgun, or Resend)
+      // 3. Replace the setTimeout below with actual API call
+      
+      // Example API call structure:
+      // const response = await fetch('/api/send-email', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({
+      //     to: 'info@phlclean.com',
+      //     subject: `New Quote Request from ${formData.name}`,
+      //     formData: formData
+      //   })
+      // });
+      
+      // Simulate form submission for now
+      setTimeout(() => {
+        setLoading(false);
+        toast({
+          title: "Quote Request Received",
+          description: "Thank you for your inquiry. We'll get back to you within 24 hours!",
+        });
+        
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          serviceType: '',
+          message: '',
+        });
+      }, 1000);
+
+    } catch (error) {
       setLoading(false);
       toast({
-        title: "Quote Request Received",
-        description: "Thank you for your inquiry. We'll get back to you within 24 hours!",
+        title: "Error",
+        description: "Failed to send your request. Please try again or call us directly.",
+        variant: "destructive",
       });
-      
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        serviceType: '',
-        message: '',
-      });
-    }, 1000);
+    }
   };
 
   return (
@@ -85,7 +111,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg text-gray-800 mb-1">Email Us</h3>
-                  <p className="text-gray-600">sales@phlclean.com</p>
+                  <p className="text-gray-600">info@phlclean.com</p>
                 </div>
               </div>
               
