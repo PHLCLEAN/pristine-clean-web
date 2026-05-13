@@ -1,10 +1,11 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+
+const WEB3FORMS_ACCESS_KEY = "b93edd5d-c253-48c9-a4a4-db3500758648";
 
 interface FormData {
   name: string;
@@ -40,34 +41,36 @@ const QuoteForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    
+
     try {
-      // TODO: Replace this mock implementation with actual email sending
-      // To send emails to info@phlclean.com, you'll need to:
-      // 1. Set up a backend service (like Supabase Edge Functions)
-      // 2. Use an email service (like SendGrid, Mailgun, or Resend)
-      // 3. Replace the setTimeout below with actual API call
-      
-      // Example API call structure:
-      // const response = await fetch('/api/send-email', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify({
-      //     to: 'info@phlclean.com',
-      //     subject: `New Quote Request from ${formData.name}`,
-      //     formData: formData
-      //   })
-      // });
-      
-      // Simulate form submission for now
-      setTimeout(() => {
-        setLoading(false);
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `New Quote Request from ${formData.name} (${formData.company || "no company"})`,
+          from_name: "PHL Clean Website",
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          service_type: formData.serviceType,
+          message: formData.message,
+          // Honeypot field — Web3Forms ignores submissions with this filled in
+          botcheck: "",
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
         toast({
           title: "Quote Request Received",
           description: "Thank you for your inquiry. We'll get back to you within 24 hours!",
         });
-        
-        // Reset form
         setFormData({
           name: '',
           email: '',
@@ -76,15 +79,17 @@ const QuoteForm = () => {
           serviceType: '',
           message: '',
         });
-      }, 1000);
-
+      } else {
+        throw new Error(result.message || "Submission failed");
+      }
     } catch (error) {
-      setLoading(false);
       toast({
-        title: "Error",
-        description: "Failed to send your request. Please try again or call us directly.",
+        title: "Something went wrong",
+        description: "Please try again, or call us directly at (215) 550-1414.",
         variant: "destructive",
       });
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -172,6 +177,15 @@ const QuoteForm = () => {
             placeholder="Please share any specific requirements or questions"
           />
         </div>
+
+        {/* Honeypot field — hidden from real users, traps spam bots */}
+        <input
+          type="checkbox"
+          name="botcheck"
+          tabIndex={-1}
+          autoComplete="off"
+          style={{ display: "none" }}
+        />
         
         <Button 
           type="submit"
@@ -182,7 +196,7 @@ const QuoteForm = () => {
         </Button>
         
         <p className="text-xs text-gray-500 text-center">
-          By submitting this form, you agree to our privacy policy and terms of service.
+          We'll get back to you within 24 hours. Or call us directly at <a href="tel:+12155501414" className="text-cleaner-blue-700">(215) 550-1414</a>.
         </p>
       </form>
     </div>

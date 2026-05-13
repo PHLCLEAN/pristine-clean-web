@@ -1,8 +1,6 @@
-
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
-import HeroHeading from '../components/HeroHeading';
 import ComprehensiveServices from '../components/ComprehensiveServices';
 import Services from '../components/Services';
 import SustainableCleaning from '../components/SustainableCleaning';
@@ -22,7 +20,6 @@ const Index = () => {
       <Navbar />
       <main>
         <Hero />
-        <HeroHeading />
         <ComprehensiveServices />
         <Services />
         <SustainableCleaning />

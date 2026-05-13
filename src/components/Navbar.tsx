@@ -1,6 +1,6 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
+import { Phone } from "lucide-react";
 import { cn } from '@/lib/utils';
 
 const Navbar = () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="#" className="flex items-center">
+            <a href="/" className="flex items-center">
               <span className="text-2xl font-bold text-cleaner-blue-700">
                 PHL
               </span>
@@ -26,31 +26,45 @@ const Navbar = () => {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#services" className="text-gray-600 hover:text-cleaner-blue-700 transition-colors font-medium">
+            <a href="/#services" className="text-gray-600 hover:text-cleaner-blue-700 transition-colors font-medium">
               Services
             </a>
-            <a href="#about" className="text-gray-600 hover:text-cleaner-blue-700 transition-colors font-medium">
+            <a href="/#about" className="text-gray-600 hover:text-cleaner-blue-700 transition-colors font-medium">
               About Us
             </a>
-            <a href="#why-choose-us" className="text-gray-600 hover:text-cleaner-blue-700 transition-colors font-medium">
+            <a href="/#why-choose-us" className="text-gray-600 hover:text-cleaner-blue-700 transition-colors font-medium">
               Why Choose Us
             </a>
-            <a href="#testimonials" className="text-gray-600 hover:text-cleaner-blue-700 transition-colors font-medium">
+            <a href="/#testimonials" className="text-gray-600 hover:text-cleaner-blue-700 transition-colors font-medium">
               Testimonials
             </a>
           </div>
 
-          {/* Call to action button */}
-          <div className="hidden md:block">
+          {/* Call to action buttons (desktop) */}
+          <div className="hidden md:flex items-center gap-3">
+            <Button asChild variant="outline" className="border-cleaner-blue-700 text-cleaner-blue-700 hover:bg-cleaner-blue-50">
+              <a href="tel:+12155501414">
+                <Phone className="mr-2 h-4 w-4" />
+                (215) 550-1414
+              </a>
+            </Button>
             <Button asChild className="bg-cleaner-blue-700 hover:bg-cleaner-blue-800 text-white">
-              <a href="#contact">Get a Free Quote</a>
+              <a href="/#contact">Get a Free Quote</a>
             </Button>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          {/* Mobile call button + menu button */}
+          <div className="md:hidden flex items-center gap-2">
+            <a
+              href="tel:+12155501414"
+              aria-label="Call PHL Clean"
+              className="p-2 rounded-full bg-cleaner-blue-700 text-white hover:bg-cleaner-blue-800 transition-colors"
+            >
+              <Phone className="h-5 w-5" />
+            </a>
             <button
               onClick={toggleMenu}
+              aria-label="Toggle menu"
               className="p-2 rounded-md text-gray-600 hover:text-cleaner-blue-700 focus:outline-none"
             >
               <svg
@@ -89,35 +103,35 @@ const Navbar = () => {
         >
           <div className="flex flex-col space-y-3 pt-3 pb-4">
             <a
-              href="#services"
+              href="/#services"
               className="text-gray-600 hover:text-cleaner-blue-700 px-3 py-2 rounded-md text-base font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               Services
             </a>
             <a
-              href="#about"
+              href="/#about"
               className="text-gray-600 hover:text-cleaner-blue-700 px-3 py-2 rounded-md text-base font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               About Us
             </a>
             <a
-              href="#why-choose-us"
+              href="/#why-choose-us"
               className="text-gray-600 hover:text-cleaner-blue-700 px-3 py-2 rounded-md text-base font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               Why Choose Us
             </a>
             <a
-              href="#testimonials"
+              href="/#testimonials"
               className="text-gray-600 hover:text-cleaner-blue-700 px-3 py-2 rounded-md text-base font-medium"
               onClick={() => setIsMenuOpen(false)}
             >
               Testimonials
             </a>
             <Button asChild className="bg-cleaner-blue-700 hover:bg-cleaner-blue-800 text-white w-full">
-              <a href="#contact" onClick={() => setIsMenuOpen(false)}>Get a Free Quote</a>
+              <a href="/#contact" onClick={() => setIsMenuOpen(false)}>Get a Free Quote</a>
             </Button>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { Phone } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -22,7 +23,10 @@ const Hero = () => {
               <a href="#contact">Get a Free Quote</a>
             </Button>
             <Button asChild variant="outline" className="border-cleaner-blue-700 text-cleaner-blue-700 hover:bg-cleaner-blue-50 px-8 py-6 text-lg">
-              <a href="#services">Our Services</a>
+              <a href="tel:+12155501414">
+                <Phone className="mr-2 h-5 w-5" />
+                (215) 550-1414
+              </a>
             </Button>
           </div>
         </div>
