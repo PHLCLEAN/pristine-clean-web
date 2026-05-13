@@ -35,19 +35,19 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-6">Services</h3>
             <ul className="space-y-3">
               <li>
-                <a href="/#services" className="text-gray-300 hover:text-white transition-colors">Commercial Cleaning</a>
+                <a href="/services/commercial-cleaning" className="text-gray-300 hover:text-white transition-colors">Commercial Cleaning</a>
               </li>
               <li>
-                <a href="/#services" className="text-gray-300 hover:text-white transition-colors">Carpet Cleaning</a>
+                <a href="/services/carpet-cleaning" className="text-gray-300 hover:text-white transition-colors">Carpet Cleaning</a>
               </li>
               <li>
-                <a href="/#services" className="text-gray-300 hover:text-white transition-colors">Deep Cleaning</a>
+                <a href="/services/deep-cleaning" className="text-gray-300 hover:text-white transition-colors">Deep Cleaning</a>
               </li>
               <li>
-                <a href="/#services" className="text-gray-300 hover:text-white transition-colors">Floor Maintenance</a>
+                <a href="/services/floor-maintenance" className="text-gray-300 hover:text-white transition-colors">Floor Maintenance</a>
               </li>
               <li>
-                <a href="/#services" className="text-gray-300 hover:text-white transition-colors">Medical Facility Cleaning</a>
+                <a href="/services/medical-facility-cleaning" className="text-gray-300 hover:text-white transition-colors">Medical Facility Cleaning</a>
               </li>
             </ul>
           </div>

@@ -1,7 +1,8 @@
-
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 interface ServiceCardProps {
   title: string;
@@ -10,6 +11,7 @@ interface ServiceCardProps {
   features: string[];
   delay?: string;
   hideButton?: boolean;
+  linkTo?: string;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ 
@@ -18,22 +20,39 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   imageSrc, 
   features, 
   delay = "0s",
-  hideButton = false
+  hideButton = false,
+  linkTo,
 }) => {
   return (
-    <Card className="overflow-hidden h-full shadow-md hover:shadow-lg transition-shadow animate-fade-in" style={{ animationDelay: delay }}>
+    <Card className="overflow-hidden h-full shadow-md hover:shadow-lg transition-shadow animate-fade-in flex flex-col" style={{ animationDelay: delay }}>
       <div className="h-48 overflow-hidden">
-        <img 
-          src={imageSrc} 
-          alt={title} 
-          className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-        />
+        {linkTo ? (
+          <Link to={linkTo} aria-label={`Learn more about ${title}`}>
+            <img 
+              src={imageSrc} 
+              alt={title} 
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+            />
+          </Link>
+        ) : (
+          <img 
+            src={imageSrc} 
+            alt={title} 
+            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+          />
+        )}
       </div>
       <CardHeader>
-        <CardTitle className="text-2xl text-cleaner-blue-800">{title}</CardTitle>
+        <CardTitle className="text-2xl text-cleaner-blue-800">
+          {linkTo ? (
+            <Link to={linkTo} className="hover:underline">{title}</Link>
+          ) : (
+            title
+          )}
+        </CardTitle>
         <CardDescription className="text-gray-600">{description}</CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="flex-grow">
         <ul className="space-y-2">
           {features.map((feature, index) => (
             <li key={index} className="flex items-start">
@@ -47,13 +66,21 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           ))}
         </ul>
       </CardContent>
-      {!hideButton && (
+      {linkTo ? (
+        <CardFooter>
+          <Button asChild className="w-full bg-cleaner-blue-700 hover:bg-cleaner-blue-800">
+            <Link to={linkTo}>
+              Learn More <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+        </CardFooter>
+      ) : !hideButton ? (
         <CardFooter>
           <Button asChild className="w-full bg-cleaner-blue-700 hover:bg-cleaner-blue-800">
             <a href="#contact">Request Service</a>
           </Button>
         </CardFooter>
-      )}
+      ) : null}
     </Card>
   );
 };

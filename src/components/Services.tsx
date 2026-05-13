@@ -1,10 +1,12 @@
 import React from 'react';
 import ServiceCard from './ServiceCard';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   const services = [
     {
+      slug: "commercial-cleaning",
       title: "Commercial Cleaning",
       description: "Keep your business premises spotless, hygienic, and professional",
       imageSrc: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -17,6 +19,7 @@ const Services = () => {
       delay: "0s"
     },
     {
+      slug: "carpet-cleaning",
       title: "Carpet Cleaning",
       description: "Revitalize your carpets with our deep cleaning technology",
       imageSrc: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -30,6 +33,7 @@ const Services = () => {
       delay: "0.2s"
     },
     {
+      slug: "deep-cleaning",
       title: "Deep Cleaning",
       description: "Thorough cleaning of every surface and corner of your facility",
       imageSrc: "https://images.unsplash.com/photo-1628177142898-93e36e4e3715?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
@@ -45,7 +49,6 @@ const Services = () => {
   ];
 
   return (
-    
     <section id="services" className="section-padding bg-gray-50">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -65,12 +68,19 @@ const Services = () => {
               imageSrc={service.imageSrc}
               features={service.features}
               delay={service.delay}
-              hideButton={true}
+              linkTo={`/services/${service.slug}`}
             />
           ))}
         </div>
 
-        <div className="mt-10 text-center">
+        <div className="mt-12 text-center space-y-4">
+          <p className="text-gray-600">
+            Also offering{' '}
+            <Link to="/services/floor-maintenance" className="text-cleaner-blue-700 font-medium hover:underline">Floor Maintenance</Link>
+            {' and '}
+            <Link to="/services/medical-facility-cleaning" className="text-cleaner-blue-700 font-medium hover:underline">Medical Facility Cleaning</Link>
+            .
+          </p>
           <Button asChild size="lg" className="bg-cleaner-blue-700 hover:bg-cleaner-blue-800 py-6 px-12 text-lg">
             <a href="#contact">Request Our Professional Services</a>
           </Button>
