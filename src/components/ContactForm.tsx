@@ -17,27 +17,6 @@ const ContactForm = () => {
             </p>
             
             <ContactInfo />
-
-            <div className="mt-6 rounded-lg overflow-hidden shadow-md border border-gray-200">
-              <iframe
-                title="PHL Clean office location — 621 Bristol Pike, Suite C, Bensalem, PA 19020"
-                src="https://www.google.com/maps?q=621+Bristol+Pike,+Suite+C,+Bensalem,+PA+19020&output=embed"
-                width="100%"
-                height="280"
-                style={{ border: 0 }}
-                loading="lazy"
-                allowFullScreen
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=621+Bristol+Pike+Suite+C+Bensalem+PA+19020"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-3 text-sm font-medium text-cleaner-blue-700 hover:text-cleaner-blue-800 underline"
-            >
-              Get directions on Google Maps →
-            </a>
           </div>
           
           <QuoteForm />

@@ -27,7 +27,7 @@ const ContactInfo = () => {
           <p className="text-gray-600">info@phlclean.com</p>
         </div>
       </div>
-      
+
       <div className="flex items-start">
         <div className="bg-cleaner-blue-700 p-3 rounded-full text-white mr-4">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -36,8 +36,8 @@ const ContactInfo = () => {
           </svg>
         </div>
         <div>
-          <h3 className="font-semibold text-lg text-gray-800 mb-1">Our Office</h3>
-          <p className="text-gray-600">621 Bristol Pike, Suite C<br/>Bensalem, PA 19020</p>
+          <h3 className="font-semibold text-lg text-gray-800 mb-1">Service Area</h3>
+          <p className="text-gray-600">Philadelphia, Bucks, Montgomery,<br/>Delaware &amp; Chester counties</p>
         </div>
       </div>
     </div>
