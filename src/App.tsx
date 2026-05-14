@@ -9,6 +9,7 @@ import Team from "./pages/Team";
 import Careers from "./pages/Careers";
 import ServicePage from "./pages/ServicePage";
 import LocationPage from "./pages/LocationPage";
+import StickyCta from "./components/StickyCta";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <StickyCta />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
