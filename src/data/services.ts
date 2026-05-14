@@ -70,7 +70,7 @@ export const services: ServiceData[] = [
     metaTitle: "Commercial Carpet Cleaning Philadelphia | PHL Clean",
     metaDescription: "Professional commercial carpet cleaning serving Philadelphia, Bucks, Montgomery, Delaware, and Chester counties. Hot water extraction, encapsulation, stain & odor removal.",
     heroTagline: "Hot water extraction and low-moisture encapsulation cleaning that lifts dirt, removes stains, and extends the life of your commercial carpet.",
-    heroImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    heroImage: "https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     whatsIncluded: [
       "Hot water extraction (deep-clean steam method)",
       "Low-moisture encapsulation for high-traffic areas",
@@ -118,7 +118,7 @@ export const services: ServiceData[] = [
     metaTitle: "Commercial Deep Cleaning Services Philadelphia | PHL Clean",
     metaDescription: "Top-to-bottom deep cleaning for offices, medical facilities, and commercial buildings in Philadelphia, Bucks, Montgomery, Delaware, and Chester counties. Free quotes.",
     heroTagline: "Floor-to-ceiling deep cleaning that gets to the dust, grime, and surfaces routine cleaning misses. Perfect for move-ins, move-outs, post-construction, or annual refreshes.",
-    heroImage: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    heroImage: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     whatsIncluded: [
       "High dusting — vents, ceiling tiles, light fixtures, ductwork",
       "Detail cleaning of baseboards, doors, frames, and trim",
