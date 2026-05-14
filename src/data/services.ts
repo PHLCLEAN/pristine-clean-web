@@ -18,9 +18,9 @@ export const services: ServiceData[] = [
   {
     slug: "commercial-cleaning",
     shortTitle: "Commercial Cleaning",
-    h1: "Commercial Cleaning Services in Philadelphia & Surrounding Counties",
-    metaTitle: "Commercial Cleaning Services Philadelphia | PHL Clean",
-    metaDescription: "Reliable commercial cleaning for offices, banks, and businesses across Philadelphia, Bucks, Montgomery, Delaware, and Chester counties. Free quotes — call (215) 550-1414.",
+    h1: "Commercial Cleaning & Janitorial Services in Philadelphia & Surrounding Counties",
+    metaTitle: "Commercial Cleaning & Janitorial Services Philadelphia | PHL Clean",
+    metaDescription: "Reliable commercial cleaning and janitorial services for offices, banks, and businesses across Philadelphia, Bucks, Montgomery, Delaware, and Chester counties. Free quotes — call (215) 550-1414.",
     heroTagline: "Daily, weekly, and after-hours office cleaning that keeps your workspace healthy, professional, and ready for business — every single day.",
     heroImage: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     whatsIncluded: [
@@ -35,7 +35,7 @@ export const services: ServiceData[] = [
     ],
     process: [
       { title: "Walkthrough", description: "We visit your facility, assess the space, and ask questions about your real day-to-day needs — not generic checkboxes." },
-      { title: "Custom Quote", description: "You get a written quote with everything spelled out: scope, frequency, supplies, pricing. No hidden fees, no fine print." },
+      { title: "Custom Quote", description: "You get a written quote with everything spelled out: scope, frequency, equipment, pricing. No hidden fees, no fine print." },
       { title: "Trained Crew Assigned", description: "We assign the same crew to your account so you see the same faces each visit — accountability you can put a name to." },
       { title: "Quality Checks", description: "Crew leads and supervisors do unannounced quality inspections so problems get caught before you have to flag them." },
       { title: "Open Communication", description: "Direct phone and email access to ownership. When you need to talk to someone, you talk to someone — not a ticket system." },
@@ -58,7 +58,7 @@ export const services: ServiceData[] = [
     faqs: [
       { question: "What hours do you clean?", answer: "Most clients prefer evening or overnight service so we're out of the way during business hours. We can also do early-morning or daytime cleaning if that works better for you." },
       { question: "Do I need to sign a long contract?", answer: "Most of our commercial agreements are month-to-month. We earn your business each month — we don't lock you in." },
-      { question: "What about supplies?", answer: "We provide all standard cleaning supplies, equipment, and consumables (paper goods, soap, liners) as part of most quotes, but we can also work with whatever your facility prefers." },
+      { question: "What about supplies?", answer: "We provide all the equipment, machines, and cleaning chemicals our team uses on the job. Day-to-day consumables — trash bags, toilet paper, paper towels, hand soap — are typically supplied by your facility. We're happy to discuss alternative arrangements if you'd prefer we handle that too." },
       { question: "Are you insured?", answer: "Yes — fully insured with general liability and workers' compensation. We're happy to provide a Certificate of Insurance on request." },
     ],
     relatedSlugs: ["carpet-cleaning", "deep-cleaning", "floor-maintenance"],
@@ -166,7 +166,7 @@ export const services: ServiceData[] = [
     metaTitle: "Commercial Floor Maintenance Philadelphia | PHL Clean",
     metaDescription: "Strip, wax, buff, and polish for VCT, tile, and hard-surface flooring across Philadelphia, Bucks, Montgomery, Delaware, and Chester counties. Schedule a free walkthrough.",
     heroTagline: "Strip, wax, buff, polish — professional hard-surface floor care that protects your investment and keeps your building looking sharp.",
-    heroImage: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    heroImage: "https://images.unsplash.com/photo-1628177142898-93e36e4e3715?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     whatsIncluded: [
       "Strip and wax (VCT, vinyl, linoleum)",
       "Buffing and burnishing for shine restoration",
@@ -214,7 +214,7 @@ export const services: ServiceData[] = [
     metaTitle: "Medical Facility Cleaning Philadelphia | PHL Clean",
     metaDescription: "Specialized medical office and healthcare facility cleaning serving Philadelphia, Bucks, Montgomery, Delaware, and Chester counties. Hospital-grade disinfection, OSHA-aware, HIPAA-respectful.",
     heroTagline: "Healthcare-grade cleaning for medical offices, dental practices, urgent care clinics, and outpatient facilities — built for infection control, patient safety, and regulatory peace of mind.",
-    heroImage: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    heroImage: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     whatsIncluded: [
       "Hospital-grade disinfection of exam rooms and treatment areas",
       "Color-coded microfiber to prevent cross-contamination",

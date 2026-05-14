@@ -16,7 +16,7 @@ const Hero = () => {
             Professional Cleaning Services for Philadelphia Businesses
           </h1>
           <p className="text-lg md:text-xl text-gray-700 mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            Serving Philadelphia and surrounding counties with exceptional commercial cleaning, carpet cleaning, and deep cleaning services that create healthier work environments.
+            Janitorial and commercial cleaning services for Philadelphia-area businesses — daily office cleaning, carpet care, and deep cleans that create healthier, more professional work environments.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <Button asChild className="bg-cleaner-blue-700 hover:bg-cleaner-blue-800 text-white px-8 py-6 text-lg">

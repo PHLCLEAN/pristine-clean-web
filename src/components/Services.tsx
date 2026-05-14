@@ -7,8 +7,8 @@ const Services = () => {
   const services = [
     {
       slug: "commercial-cleaning",
-      title: "Commercial Cleaning",
-      description: "Keep your business premises spotless, hygienic, and professional",
+      title: "Commercial Cleaning & Janitorial",
+      description: "Daily, weekly, or after-hours office cleaning that keeps your space spotless and professional",
       imageSrc: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       features: [
         "Daily or weekly scheduled cleaning",
@@ -52,7 +52,7 @@ const Services = () => {
     <section id="services" className="section-padding bg-gray-50">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-cleaner-blue-800 mb-4">Our Professional Services</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-cleaner-blue-800 mb-4">Our Cleaning & Janitorial Services</h2>
           <div className="h-1 w-24 bg-cleaner-green-500 mx-auto mb-6"></div>
           <p className="text-gray-600 text-lg">
             Serving Philadelphia, Montgomery, Delaware, Bucks, and Chester counties with exceptional cleaning services tailored to your business needs, ensuring a healthy and impressive environment for your employees and customers.
