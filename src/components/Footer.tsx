@@ -76,11 +76,12 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-6">Service Areas</h3>
             <ul className="space-y-3">
-              <li className="text-gray-300">Philadelphia County</li>
-              <li className="text-gray-300">Montgomery County</li>
-              <li className="text-gray-300">Delaware County</li>
-              <li className="text-gray-300">Bucks County</li>
-              <li className="text-gray-300">Chester County</li>
+              <li><a href="/locations/philadelphia" className="text-gray-300 hover:text-white transition-colors">Philadelphia</a></li>
+              <li><a href="/locations/bensalem" className="text-gray-300 hover:text-white transition-colors">Bensalem</a></li>
+              <li><a href="/locations/bucks-county" className="text-gray-300 hover:text-white transition-colors">Bucks County</a></li>
+              <li><a href="/locations/montgomery-county" className="text-gray-300 hover:text-white transition-colors">Montgomery County</a></li>
+              <li><a href="/locations/delaware-county" className="text-gray-300 hover:text-white transition-colors">Delaware County</a></li>
+              <li><a href="/locations/chester-county" className="text-gray-300 hover:text-white transition-colors">Chester County</a></li>
             </ul>
             
             <div className="mt-6">

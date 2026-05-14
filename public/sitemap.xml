@@ -31,6 +31,36 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://phlclean.com/locations/philadelphia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://phlclean.com/locations/bensalem</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://phlclean.com/locations/bucks-county</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://phlclean.com/locations/montgomery-county</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://phlclean.com/locations/delaware-county</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://phlclean.com/locations/chester-county</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://phlclean.com/team</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
