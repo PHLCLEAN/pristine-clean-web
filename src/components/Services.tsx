@@ -36,7 +36,7 @@ const Services = () => {
       slug: "deep-cleaning",
       title: "Deep Cleaning",
       description: "Thorough cleaning of every surface and corner of your facility",
-      imageSrc: "https://images.unsplash.com/photo-1628177142898-93e36e4e3715?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      imageSrc: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       features: [
         "Detail cleaning of fixtures and fittings",
         "High dusting of vents and ceiling areas",
