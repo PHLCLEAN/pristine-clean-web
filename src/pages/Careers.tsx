@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
+import { trackEvent } from '@/lib/analytics';
 import { Phone, CheckCircle, Clock, DollarSign, GraduationCap, Calendar, Users } from 'lucide-react';
 
 const Careers = () => {
@@ -88,6 +89,11 @@ const Careers = () => {
       const result = await response.json();
 
       if (result.success) {
+        trackEvent("generate_lead", {
+          form_name: "careers_application",
+          position: formData.position || "unspecified",
+          value: 1,
+        });
         toast({
           title: "Application Received",
           description: "Thanks for your interest. We'll be in touch within a few business days.",

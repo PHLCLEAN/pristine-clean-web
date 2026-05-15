@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import { trackEvent } from "@/lib/analytics";
 
 const WEB3FORMS_ACCESS_KEY = "b93edd5d-c253-48c9-a4a4-db3500758648";
 
@@ -67,6 +68,11 @@ const QuoteForm = () => {
       const result = await response.json();
 
       if (result.success) {
+        trackEvent("generate_lead", {
+          form_name: "quote_request",
+          service_type: formData.serviceType || "unspecified",
+          value: 1,
+        });
         toast({
           title: "Quote Request Received",
           description: "Thanks — we got it. We'll be in touch within 24 hours to book a walkthrough.",
