@@ -9,6 +9,7 @@ import { Phone, MapPin, CheckCircle2, ArrowRight } from 'lucide-react';
 import { getLocation, locations } from '../data/locations';
 import { services } from '../data/services';
 import { useSeo } from '../hooks/use-seo';
+import JsonLd from '../components/JsonLd';
 
 const LocationPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -24,11 +25,24 @@ const LocationPage = () => {
     return <Navigate to="/404" replace />;
   }
 
+  // --- Structured data (JSON-LD) ---
+  const locationUrl = `https://phlclean.com/locations/${location.slug}`;
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://phlclean.com/" },
+      { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://phlclean.com/#industries" },
+      { "@type": "ListItem", position: 3, name: location.shortName, item: locationUrl },
+    ],
+  };
+
   const otherLocations = locations.filter(l => l.slug !== location.slug);
 
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
+      <JsonLd data={breadcrumbSchema} />
       <main>
         {/* Hero */}
         <section className="relative bg-white overflow-hidden">

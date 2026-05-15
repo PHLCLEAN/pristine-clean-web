@@ -9,6 +9,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Phone, CheckCircle2, ArrowRight } from 'lucide-react';
 import { getService, services } from '../data/services';
 import { useSeo } from '../hooks/use-seo';
+import JsonLd from '../components/JsonLd';
 
 const ServicePage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -25,6 +26,57 @@ const ServicePage = () => {
     return <Navigate to="/404" replace />;
   }
 
+  // --- Structured data (JSON-LD) ---
+  const serviceUrl = `https://phlclean.com/services/${service.slug}`;
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://phlclean.com/" },
+      { "@type": "ListItem", position: 2, name: "Services", item: "https://phlclean.com/#services" },
+      { "@type": "ListItem", position: 3, name: service.shortTitle, item: serviceUrl },
+    ],
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: service.shortTitle,
+    name: service.h1,
+    description: service.metaDescription,
+    url: serviceUrl,
+    provider: { "@id": "https://phlclean.com/#business" },
+    areaServed: [
+      { "@type": "City", name: "Philadelphia" },
+      { "@type": "AdministrativeArea", name: "Bucks County, PA" },
+      { "@type": "AdministrativeArea", name: "Montgomery County, PA" },
+      { "@type": "AdministrativeArea", name: "Delaware County, PA" },
+      { "@type": "AdministrativeArea", name: "Chester County, PA" },
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: `What's included — ${service.shortTitle}`,
+      itemListElement: service.whatsIncluded.map((item, i) => ({
+        "@type": "Offer",
+        position: i + 1,
+        itemOffered: { "@type": "Service", name: item },
+      })),
+    },
+  };
+
+  const faqSchema = service.faqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: service.faqs.map(f => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: { "@type": "Answer", text: f.answer },
+    })),
+  } : null;
+
+  const allSchemas = [breadcrumbSchema, serviceSchema, ...(faqSchema ? [faqSchema] : [])];
+
   const related = service.relatedSlugs
     .map(rs => services.find(s => s.slug === rs))
     .filter((s): s is NonNullable<typeof s> => s !== undefined);
@@ -32,6 +84,7 @@ const ServicePage = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
+      <JsonLd data={allSchemas} />
       <main>
         {/* Hero */}
         <section className="relative bg-white overflow-hidden">
