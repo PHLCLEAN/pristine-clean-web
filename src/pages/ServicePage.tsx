@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Phone, CheckCircle2, ArrowRight } from 'lucide-react';
 import { getService, services } from '../data/services';
+import { locations } from '../data/locations';
 import { useSeo } from '../hooks/use-seo';
 import JsonLd from '../components/JsonLd';
 
@@ -283,6 +284,33 @@ const ServicePage = () => {
             </div>
           </section>
         )}
+        {/* Location coverage — links to service x location combo pages */}
+        <section className="section-padding bg-gray-50 border-t border-gray-100">
+          <div className="container-custom max-w-4xl">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-bold text-cleaner-blue-800 mb-3">
+                {service.shortTitle} across our coverage area
+              </h2>
+              <div className="h-1 w-16 bg-cleaner-green-500 mx-auto mb-4" />
+              <p className="text-gray-600">
+                Same service, programs adapted to each area we cover.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+              {locations.map(l => (
+                <Link
+                  key={l.slug}
+                  to={`/services/${service.slug}/${l.slug}`}
+                  className="bg-white border border-gray-200 hover:border-cleaner-blue-700 rounded-lg p-4 text-center transition-colors"
+                >
+                  <span className="text-cleaner-blue-700 font-medium">
+                    {service.shortTitle} in {l.shortName}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>

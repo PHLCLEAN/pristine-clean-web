@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Team from "./pages/Team";
 import Careers from "./pages/Careers";
 import ServicePage from "./pages/ServicePage";
+import ComboPage from "./pages/ComboPage";
 import LocationPage from "./pages/LocationPage";
 import StickyCta from "./components/StickyCta";
 import Privacy from "./pages/Privacy";
@@ -44,6 +45,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/team" element={<Team />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/services/:serviceSlug/:locationSlug" element={<ComboPage />} />
           <Route path="/services/:slug" element={<ServicePage />} />
           <Route path="/locations/:slug" element={<LocationPage />} />
           <Route path="/privacy" element={<Privacy />} />

@@ -111,10 +111,12 @@ const LocationPage = () => {
               {services.map(s => (
                 <Link
                   key={s.slug}
-                  to={`/services/${s.slug}`}
+                  to={`/services/${s.slug}/${location.slug}`}
                   className="block bg-white border border-gray-200 hover:border-cleaner-blue-700 rounded-lg p-6 transition-colors group"
                 >
-                  <h3 className="text-xl font-bold text-cleaner-blue-800 mb-2">{s.shortTitle}</h3>
+                  <h3 className="text-xl font-bold text-cleaner-blue-800 mb-2">
+                    {s.shortTitle} in {location.shortName}
+                  </h3>
                   <p className="text-gray-600 text-sm mb-3">{s.heroTagline.slice(0, 110)}...</p>
                   <span className="text-cleaner-blue-700 font-medium inline-flex items-center group-hover:underline">
                     Learn more <ArrowRight className="ml-1 h-4 w-4" />
