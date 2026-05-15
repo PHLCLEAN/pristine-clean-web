@@ -10,6 +10,8 @@ import Careers from "./pages/Careers";
 import ServicePage from "./pages/ServicePage";
 import LocationPage from "./pages/LocationPage";
 import StickyCta from "./components/StickyCta";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 import { trackPageview } from "./lib/analytics";
 
@@ -44,6 +46,8 @@ const App = () => (
           <Route path="/careers" element={<Careers />} />
           <Route path="/services/:slug" element={<ServicePage />} />
           <Route path="/locations/:slug" element={<LocationPage />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

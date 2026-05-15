@@ -97,13 +97,15 @@ const Footer = () => {
       
       <div className="border-t border-white/10">
         <div className="container-custom py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
               &copy; {currentYear} PHL Clean. All rights reserved.
             </p>
-            <p className="text-gray-400 text-sm mt-4 md:mt-0">
-              Locally owned & operated · Bensalem, PA
-            </p>
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-400">
+              <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
+              <span className="hidden sm:inline">Locally owned &amp; operated · Bensalem, PA</span>
+            </div>
           </div>
         </div>
       </div>
