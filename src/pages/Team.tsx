@@ -98,11 +98,11 @@ const Team = () => {
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to work with our team?</h2>
               <p className="text-lg text-blue-100 mb-8">
-                Get a free quote in under a minute, or call us directly and talk to a real person — no phone trees.
+                Book a free on-site walkthrough, or call us directly and talk to a real person — no phone trees.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild className="bg-white text-cleaner-blue-700 hover:bg-gray-100 px-8 py-6 text-lg">
-                  <a href="/#contact">Get a Free Quote</a>
+                  <a href="/#contact">Schedule a Walkthrough</a>
                 </Button>
                 <Button asChild variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg">
                   <a href="tel:+12155501414">

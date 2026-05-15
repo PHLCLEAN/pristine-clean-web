@@ -57,7 +57,7 @@ const LocationPage = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild className="bg-cleaner-blue-700 hover:bg-cleaner-blue-800 text-white px-8 py-6 text-lg">
-                  <a href="#quote">Get a Free Quote</a>
+                  <a href="#quote">Schedule a Walkthrough</a>
                 </Button>
                 <Button asChild variant="outline" className="border-cleaner-blue-700 text-cleaner-blue-700 hover:bg-cleaner-blue-50 px-8 py-6 text-lg">
                   <a href="tel:+12155501414">
@@ -182,7 +182,7 @@ const LocationPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-cleaner-blue-800 mb-6">
-                  Get a Free Quote — {location.shortName}
+                  Schedule a Walkthrough — {location.shortName}
                 </h2>
                 <div className="h-1 w-16 bg-cleaner-green-500 mb-8"></div>
                 <p className="text-gray-700 mb-8">

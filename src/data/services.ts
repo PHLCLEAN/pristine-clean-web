@@ -20,7 +20,7 @@ export const services: ServiceData[] = [
     shortTitle: "Commercial Cleaning",
     h1: "Commercial Cleaning & Janitorial Services in Philadelphia & Surrounding Counties",
     metaTitle: "Commercial Cleaning & Janitorial Services Philadelphia | PHL Clean",
-    metaDescription: "Reliable commercial cleaning and janitorial services for offices, banks, and businesses across Philadelphia, Bucks, Montgomery, Delaware, and Chester counties. Free quotes — call (215) 550-1414.",
+    metaDescription: "Reliable commercial cleaning and janitorial services for offices, banks, and businesses across Philadelphia, Bucks, Montgomery, Delaware, and Chester counties. Book a free on-site walkthrough — (215) 550-1414.",
     heroTagline: "Daily, weekly, and after-hours office cleaning that keeps your workspace healthy, professional, and ready for business — every single day.",
     heroImage: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     whatsIncluded: [
@@ -116,7 +116,7 @@ export const services: ServiceData[] = [
     shortTitle: "Deep Cleaning",
     h1: "Commercial Deep Cleaning Services in Philadelphia & Surrounding Counties",
     metaTitle: "Commercial Deep Cleaning Services Philadelphia | PHL Clean",
-    metaDescription: "Top-to-bottom deep cleaning for offices, medical facilities, and commercial buildings in Philadelphia, Bucks, Montgomery, Delaware, and Chester counties. Free quotes.",
+    metaDescription: "Top-to-bottom deep cleaning for offices, medical facilities, and commercial buildings in Philadelphia, Bucks, Montgomery, Delaware, and Chester counties. Book a free on-site walkthrough.",
     heroTagline: "Floor-to-ceiling deep cleaning that gets to the dust, grime, and surfaces routine cleaning misses. Perfect for move-ins, move-outs, post-construction, or annual refreshes.",
     heroImage: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     whatsIncluded: [

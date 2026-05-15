@@ -10,7 +10,6 @@ import CleaningProcess from '../components/CleaningProcess';
 import SecurityAndTrust from '../components/SecurityAndTrust';
 import WhyChooseUs from '../components/WhyChooseUs';
 import WhyChooseLocal from '../components/WhyChooseLocal';
-import Testimonials from '../components/Testimonials';
 import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
 
@@ -29,7 +28,6 @@ const Index = () => {
         <SecurityAndTrust />
         <WhyChooseUs />
         <WhyChooseLocal />
-        <Testimonials />
         <ContactForm />
       </main>
       <Footer />

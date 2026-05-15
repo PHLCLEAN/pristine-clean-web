@@ -62,9 +62,6 @@ const Footer = () => {
                 <a href="/team" className="text-gray-300 hover:text-white transition-colors">Our Team</a>
               </li>
               <li>
-                <a href="/#testimonials" className="text-gray-300 hover:text-white transition-colors">Testimonials</a>
-              </li>
-              <li>
                 <a href="/careers" className="text-gray-300 hover:text-white transition-colors">Careers</a>
               </li>
               <li>
@@ -92,7 +89,7 @@ const Footer = () => {
               <p className="text-gray-300">
                 <a href="mailto:info@phlclean.com" className="hover:text-white transition-colors">info@phlclean.com</a>
               </p>
-              <p className="text-gray-300 text-sm mt-2">621 Bristol Pike, Suite C<br/>Bensalem, PA 19020</p>
+              <p className="text-gray-300 text-sm mt-2">Serving Philadelphia, Bucks, Montgomery,<br/>Delaware &amp; Chester counties</p>
             </div>
           </div>
         </div>

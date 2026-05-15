@@ -19,7 +19,7 @@ export const locations: LocationData[] = [
     longName: "Philadelphia, PA",
     h1: "Commercial Cleaning Services in Philadelphia, PA",
     metaTitle: "Commercial Cleaning Philadelphia PA | PHL Clean",
-    metaDescription: "Professional commercial and office cleaning services across Philadelphia. Daily janitorial, carpet, deep cleaning, floor care. Locally owned. Free quote: (215) 550-1414.",
+    metaDescription: "Professional commercial and office cleaning services across Philadelphia. Daily janitorial, carpet, deep cleaning, floor care. Locally owned. Book a free walkthrough: (215) 550-1414.",
     heroTagline: "Trusted commercial cleaning for Center City offices, neighborhood businesses, and everything in between. Locally owned and based right next door in Bensalem.",
     intro: "From Center City high-rises to neighborhood storefronts, Philadelphia businesses rely on PHL Clean for consistent, professional cleaning that doesn't disappear after the first month. We've built our service around the rhythms of Philly business — early-morning prep, after-hours service, weekend deep cleans, and the kind of communication you actually get back when you have a question.",
     neighborhoods: [
@@ -55,7 +55,7 @@ export const locations: LocationData[] = [
     metaTitle: "Commercial Cleaning Bensalem PA | PHL Clean",
     metaDescription: "Locally based commercial cleaning, carpet care, and janitorial services in Bensalem, PA and across Bucks County. Free walkthroughs and quotes — (215) 550-1414.",
     heroTagline: "PHL Clean is headquartered in Bensalem. We service the businesses in our backyard with the kind of attention that only comes from being local.",
-    intro: "Our office is at 621 Bristol Pike, Suite C, right here in Bensalem. We service offices, retail, medical practices, and other businesses across Bensalem and the surrounding Bucks County area. Being local means same-day responses, faster walkthroughs, and zero long drives between accounts — so the team that shows up to your account isn't already worn out.",
+    intro: "PHL Clean is based right here in Bensalem. We service offices, retail, medical practices, and other businesses across Bensalem and the surrounding Bucks County area. Being local means same-day responses, faster walkthroughs, and zero long drives between accounts — so the team that shows up to your account isn't already worn out.",
     neighborhoods: [
       "Andalusia",
       "Trevose",
@@ -73,7 +73,7 @@ export const locations: LocationData[] = [
       "Industrial and warehouse offices",
       "Property management portfolios",
     ],
-    whyLocal: "We're based at 621 Bristol Pike — odds are we drive past your business already. Most Bensalem walkthroughs we book within 48 hours.",
+    whyLocal: "We're based right here in Bensalem — odds are we drive past your business already. Most Bensalem walkthroughs we book within 48 hours.",
   },
   {
     slug: "bucks-county",
@@ -81,7 +81,7 @@ export const locations: LocationData[] = [
     longName: "Bucks County, PA",
     h1: "Commercial Cleaning Services in Bucks County, PA",
     metaTitle: "Commercial Cleaning Bucks County PA | PHL Clean",
-    metaDescription: "Reliable commercial cleaning across Bucks County — Doylestown, Newtown, Levittown, Yardley, and surrounding areas. Locally owned. Free quotes: (215) 550-1414.",
+    metaDescription: "Reliable commercial cleaning across Bucks County — Doylestown, Newtown, Levittown, Yardley, and surrounding areas. Locally owned. Book a free walkthrough: (215) 550-1414.",
     heroTagline: "Servicing Bucks County businesses from our Bensalem headquarters — same-county response times, real local accountability.",
     intro: "Bucks County is our home base. From corporate offices in Newtown to medical practices in Doylestown to retail in Levittown, we run consistent cleaning programs across the county. Our crews and supervisors live in Bucks — they know the area, they take pride in serving it, and they can be on-site fast when something needs attention.",
     neighborhoods: [
@@ -149,7 +149,7 @@ export const locations: LocationData[] = [
     longName: "Delaware County, PA",
     h1: "Commercial Cleaning Services in Delaware County, PA",
     metaTitle: "Commercial Cleaning Delaware County PA | PHL Clean",
-    metaDescription: "Commercial cleaning, carpet, and floor care across Delaware County — Media, Springfield, Newtown Square, and surrounding areas. Free quote: (215) 550-1414.",
+    metaDescription: "Commercial cleaning, carpet, and floor care across Delaware County — Media, Springfield, Newtown Square, and surrounding areas. Book a free walkthrough: (215) 550-1414.",
     heroTagline: "Reliable janitorial and commercial cleaning service across Delaware County — supporting offices, medical facilities, and businesses from Media to Chester.",
     intro: "Delaware County businesses range from established corporate offices in Media and Newtown Square to growing professional practices throughout the area. PHL Clean delivers the kind of consistent, accountable service that owners and office managers actually want — same crew, same standards, predictable communication.",
     neighborhoods: [

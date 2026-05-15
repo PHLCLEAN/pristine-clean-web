@@ -4,7 +4,7 @@ import { Phone, Calendar } from 'lucide-react';
 
 /**
  * Sticky bottom CTA bar — mobile only.
- * Desktop already has phone + Get a Quote CTAs in the navbar.
+ * Desktop already has phone + Walkthrough CTAs in the navbar.
  * On mobile, this gives one-tap access to call or jump to the page's quote form.
  */
 const StickyCta = () => {
@@ -41,11 +41,11 @@ const StickyCta = () => {
           </a>
           <a
             href={formHref}
-            aria-label="Get a free quote"
+            aria-label="Schedule a walkthrough"
             className="flex-1 flex items-center justify-center py-4 px-3 bg-cleaner-blue-700 hover:bg-cleaner-blue-800 text-white font-semibold text-sm transition-colors"
           >
             <Calendar className="h-5 w-5 mr-2" />
-            Get a Quote
+            Walkthrough
           </a>
         </div>
       </div>

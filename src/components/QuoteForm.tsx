@@ -69,7 +69,7 @@ const QuoteForm = () => {
       if (result.success) {
         toast({
           title: "Quote Request Received",
-          description: "Thank you for your inquiry. We'll get back to you within 24 hours!",
+          description: "Thanks — we got it. We'll be in touch within 24 hours to book a walkthrough.",
         });
         setFormData({
           name: '',
@@ -160,6 +160,8 @@ const QuoteForm = () => {
               <SelectItem value="commercial">Commercial Cleaning</SelectItem>
               <SelectItem value="carpet">Carpet Cleaning</SelectItem>
               <SelectItem value="deep">Deep Cleaning</SelectItem>
+              <SelectItem value="floor">Floor Maintenance</SelectItem>
+              <SelectItem value="medical">Medical Facility Cleaning</SelectItem>
               <SelectItem value="multiple">Multiple Services</SelectItem>
               <SelectItem value="other">Other</SelectItem>
             </SelectContent>
@@ -192,7 +194,7 @@ const QuoteForm = () => {
           disabled={loading}
           className="w-full bg-cleaner-blue-700 hover:bg-cleaner-blue-800 text-white py-6"
         >
-          {loading ? "Submitting..." : "Get Your Free Quote"}
+          {loading ? "Submitting..." : "Request a Walkthrough"}
         </Button>
         
         <p className="text-xs text-gray-500 text-center">
