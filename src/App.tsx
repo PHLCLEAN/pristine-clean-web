@@ -14,7 +14,7 @@ import StickyCta from "./components/StickyCta";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
-import { trackPageview } from "./lib/analytics";
+import { trackPageview, trackEvent } from "./lib/analytics";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +34,33 @@ const RouteTracker = () => {
   return null;
 };
 
+
+/**
+ * Fires a GA4 generate_lead event whenever any tel: link is clicked,
+ * anywhere on the site. One global listener so we don't have to touch
+ * every component that renders a phone number.
+ */
+const PhoneClickTracker = () => {
+  useEffect(() => {
+    const handleClick = (e: MouseEvent) => {
+      const target = e.target as Element | null;
+      if (!target) return;
+      const anchor = target.closest('a[href^="tel:"]') as HTMLAnchorElement | null;
+      if (!anchor) return;
+      const phone = anchor.getAttribute('href')?.replace(/^tel:/, '') ?? '';
+      trackEvent('generate_lead', {
+        form_name: 'phone_click',
+        phone_number: phone,
+        page_path: window.location.pathname,
+        value: 1,
+      });
+    };
+    document.addEventListener('click', handleClick, true);
+    return () => document.removeEventListener('click', handleClick, true);
+  }, []);
+  return null;
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -41,6 +68,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <RouteTracker />
+        <PhoneClickTracker />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/team" element={<Team />} />
