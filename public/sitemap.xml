@@ -440,4 +440,24 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://phlclean.com/blog/in-house-janitor-vs-outsourced-cleaning-cost</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://phlclean.com/blog/evaluate-commercial-cleaning-company</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://phlclean.com/blog/spring-deep-cleaning-checklist-philadelphia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://phlclean.com/blog/why-philadelphia-businesses-choose-local-cleaning</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

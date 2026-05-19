@@ -227,7 +227,7 @@ const post3: BlogPost = {
   ],
 };
 
-export const blogPosts: BlogPost[] = [post1, post2, post3, post4, post5, post6, post7, post8, post9, post10, post11];
+export const blogPosts: BlogPost[] = [post1, post2, post3, post4, post5, post6, post7, post8, post9, post10, post11, post12, post13, post14, post15];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
@@ -775,5 +775,300 @@ const post11: BlogPost = {
     { type: "paragraph", text: "This is an open-ended question on purpose. The answer tells you what the company values and how they see themselves. Vague answers ('we care about quality') mean nothing. Specific answers ('we assign the same crew to your building every visit and our operations manager does monthly quality audits') tell you they've actually thought about what good service looks like." },
 
     { type: "callout", text: "Ready to ask us these questions? We welcome them. Schedule a walkthrough and we'll answer every one of them in person. Call (215) 550-1414 or fill out our contact form." },
+  ],
+};
+
+// ─────────────────────────────────────────────────────
+// POST 12 (Plan): In-House Janitor vs. Outsourced
+// ─────────────────────────────────────────────────────
+const post12: BlogPost = {
+  slug: "in-house-janitor-vs-outsourced-cleaning-cost",
+  title: "In-House Janitor vs. Outsourced Commercial Cleaning: An Honest Cost Comparison",
+  metaTitle: "In-House Janitor vs. Outsourced Cleaning: Cost Comparison | PHL Clean",
+  metaDescription: "Is it cheaper to hire a janitor or outsource to a cleaning company? An honest breakdown of the real costs — salary, benefits, equipment, management time, and liability.",
+  date: "2026-05-19",
+  author: "PHL Clean",
+  category: "Trust & Authority",
+  readTime: "6 min read",
+  relatedLinks: [
+    { label: "Commercial Cleaning Services", href: "/services/commercial-cleaning" },
+    { label: "Contact Us", href: "/#contact" },
+  ],
+  body: [
+    { type: "paragraph", text: "At some point, every facility manager or business owner runs the same calculation in their head: would it be cheaper to just hire someone in-house? It's a reasonable question. You see the monthly cleaning bill, you look up what a janitor makes, and the in-house number looks smaller. But that quick mental math is almost always missing several real costs that change the comparison significantly." },
+    { type: "paragraph", text: "This isn't a sales pitch for outsourcing — there are genuinely situations where an in-house janitor is the right call. But the decision should be based on complete numbers, not a comparison between a loaded monthly cleaning contract and an unloaded hourly wage." },
+
+    { type: "heading", level: 2, text: "The True Cost of an In-House Janitor" },
+    { type: "paragraph", text: "Let's build the real number. In the Philadelphia metro area, a full-time commercial janitor's base wage ranges from about $14 to $18 per hour. That's the starting point, not the finish line." },
+    {
+      type: "table",
+      headers: ["Cost Component", "Annual Estimate"],
+      rows: [
+        ["Base salary ($16/hr × 2,080 hrs)", "$33,280"],
+        ["Payroll taxes (FICA, FUTA, SUTA — ~10%)", "$3,300"],
+        ["Workers' comp insurance (~5% for janitorial)", "$1,660"],
+        ["Health benefits (if offered)", "$4,000 – $8,000"],
+        ["Paid time off (vacation, sick — 10 days)", "$1,280"],
+        ["Equipment (vacuum, floor machine, supplies)", "$3,000 – $5,000 Year 1, $1,500/yr after"],
+        ["Cleaning chemicals and consumable supplies", "$2,000 – $4,000/yr"],
+        ["Training and onboarding", "$500 – $1,000"],
+        ["Management time (supervision, scheduling, reviews)", "$2,000 – $4,000 (your time has value)"],
+        ["Backup coverage (sick days, vacation)", "$1,500 – $3,000"],
+        ["Total Year 1", "$52,500 – $63,500"],
+        ["Total Ongoing (Year 2+)", "$48,500 – $58,500"],
+      ],
+    },
+    { type: "paragraph", text: "That $16/hour janitor actually costs $25 to $30 per hour when you account for everything. And that's for one person covering one shift. If your building needs evening and weekend coverage, you're looking at a second part-time hire or overtime — both of which push the cost up further." },
+
+    { type: "heading", level: 2, text: "The True Cost of Outsourced Cleaning" },
+    { type: "paragraph", text: "Outsourced commercial cleaning for a typical 10,000 to 15,000-square-foot office in the Philadelphia area runs roughly $2,000 to $4,500 per month, depending on the scope and frequency. That works out to $24,000 to $54,000 per year." },
+    { type: "paragraph", text: "That contract price includes labor (including backup coverage), all equipment and chemicals, insurance and liability, training, supervision, and quality management. There's no Year 1 equipment outlay, no HR overhead, no scrambling for coverage when someone calls out sick." },
+
+    { type: "heading", level: 2, text: "Side-by-Side Comparison" },
+    {
+      type: "table",
+      headers: ["Factor", "In-House Janitor", "Outsourced Cleaning"],
+      rows: [
+        ["Annual cost (10–15K sq ft office)", "$48,500 – $63,500", "$24,000 – $54,000"],
+        ["Equipment and supplies", "You buy and maintain", "Included"],
+        ["Backup when employee is out", "You figure it out", "Included"],
+        ["Insurance/liability", "Your workers' comp policy", "Their policy"],
+        ["Training", "You provide", "They provide"],
+        ["Supervision/management", "Your time", "Their operations team"],
+        ["Specialized work (floors, carpet)", "Usually can't do it", "Often included or add-on"],
+        ["Scalability", "Hire another person", "Adjust the contract"],
+      ],
+    },
+
+    { type: "heading", level: 2, text: "When In-House Makes Sense" },
+    { type: "paragraph", text: "Outsourcing isn't always the winner. In-house janitorial can be the better choice in certain situations:" },
+    { type: "list", ordered: false, items: [
+      "Very large facilities (50,000+ square feet) where you need a full-time, on-site presence throughout the day — not just after-hours cleaning.",
+      "Facilities with highly specialized or sensitive areas where the same person needs to be there every day and deeply understand the space (certain manufacturing, clean rooms, etc.).",
+      "Organizations that already have a facilities team and can absorb janitorial duties into existing management structure without adding overhead.",
+      "When the building requires daytime porter service in addition to after-hours cleaning — having someone on-site all day can justify a full-time hire.",
+    ]},
+
+    { type: "heading", level: 2, text: "When Outsourcing Wins" },
+    { type: "paragraph", text: "For most offices under 20,000 square feet — which covers the vast majority of commercial tenants — outsourcing is more cost-effective and less hassle. The advantages are especially clear in these situations:" },
+    { type: "list", ordered: false, items: [
+      "You don't want to manage another employee (hiring, scheduling, performance reviews, disciplinary issues).",
+      "You need specialized floor care (carpet extraction, VCT strip and wax, hard floor maintenance) that a general janitor isn't equipped or trained to do.",
+      "You want guaranteed coverage — no scrambling when your janitor takes vacation, calls out sick, or quits.",
+      "You want a fixed, predictable monthly cost with no surprise equipment purchases or supply runs.",
+      "You value having a quality management system (inspections, checklists, accountability) that you don't have to build yourself.",
+    ]},
+
+    { type: "heading", level: 2, text: "The Hybrid Approach" },
+    { type: "paragraph", text: "Some facilities find the sweet spot with a hybrid model: a part-time in-house person handling daytime touch-ups (restroom checks, lobby upkeep, spill response) combined with an outsourced crew handling the heavy lifting after hours (full cleaning, floor care, deep work). This gives you daytime responsiveness without the full cost burden of a comprehensive in-house operation." },
+
+    { type: "callout", text: "Want to see what outsourced cleaning would actually cost for your specific space? Schedule a walkthrough and we'll give you an honest, detailed quote. Call (215) 550-1414 or fill out our contact form." },
+  ],
+};
+
+// ─────────────────────────────────────────────────────
+// POST 13 (Plan): How to Evaluate a Cleaning Company
+// ─────────────────────────────────────────────────────
+const post13: BlogPost = {
+  slug: "evaluate-commercial-cleaning-company",
+  title: "How to Evaluate a Commercial Cleaning Company: Red Flags and Green Flags",
+  metaTitle: "How to Evaluate a Commercial Cleaning Company | PHL Clean",
+  metaDescription: "Choosing a commercial cleaning company? Here are the green flags that signal a great provider and the red flags that should send you running.",
+  date: "2026-05-19",
+  author: "PHL Clean",
+  category: "Trust & Authority",
+  readTime: "5 min read",
+  relatedLinks: [
+    { label: "Our Team", href: "/team" },
+    { label: "Contact Us", href: "/#contact" },
+  ],
+  body: [
+    { type: "paragraph", text: "Choosing a commercial cleaning company can feel like a shot in the dark. Everyone's website says the same things — reliable, professional, detail-oriented, committed to excellence. The brochure photos all look great. The initial conversation goes smoothly. Then three months in, you're dealing with missed cleanings, revolving crews, and a 'manager' who takes 48 hours to return your call." },
+    { type: "paragraph", text: "The good news is that the signs of a great cleaning company — and the warning signs of a bad one — are visible before you sign the contract. You just have to know what to look for." },
+
+    { type: "heading", level: 2, text: "Green Flags: Signs of a Good Cleaning Company" },
+
+    { type: "heading", level: 3, text: "They insist on a walkthrough before quoting" },
+    { type: "paragraph", text: "This is the single most reliable indicator of a quality provider. A company that needs to see your space before giving you a price is a company that takes the work seriously. They're evaluating your floor types, restroom count, traffic patterns, and specific challenges so they can build an accurate scope and quote. A company that quotes sight-unseen is guessing — and you'll pay for those guesses later through missed expectations." },
+
+    { type: "heading", level: 3, text: "They provide a detailed, written scope of work" },
+    { type: "paragraph", text: "Not a one-page summary — a detailed task list that spells out exactly what gets done, in which areas, and how often. If you can read the scope of work and know precisely what your building will look like after each visit, they've done it right." },
+
+    { type: "heading", level: 3, text: "They assign consistent crews" },
+    { type: "paragraph", text: "Ask whether the same crew will clean your building each visit. Consistent crews know your space, learn your preferences, and develop accountability. They notice when something's different and adjust without being told. Rotating crews treat your building like just another stop on the route." },
+
+    { type: "heading", level: 3, text: "They have a real quality control process" },
+    { type: "paragraph", text: "Quality isn't a feeling — it's a system. Good companies have documented processes: crew lead walk-throughs after each visit, periodic supervisor inspections, quality scorecards, and a feedback loop that connects your observations to their operations. Ask to see their quality checklist or inspection form." },
+
+    { type: "heading", level: 3, text: "They can produce insurance, references, and training records on request" },
+    { type: "paragraph", text: "A well-run company has this documentation ready to go. If they fumble or delay when you ask for a certificate of insurance, client references, or employee training records, that tells you something about how organized their operation is." },
+
+    { type: "heading", level: 3, text: "Communication is easy and direct" },
+    { type: "paragraph", text: "When you have a question, you should be able to reach a real person quickly — not navigate a phone tree or wait days for an email reply. The best cleaning relationships are the ones where you have direct access to the person responsible for your account. Bonus points if the owner is accessible." },
+
+    { type: "heading", level: 2, text: "Red Flags: Warning Signs to Watch For" },
+
+    { type: "heading", level: 3, text: "They quote without seeing your space" },
+    { type: "paragraph", text: "We've covered this, but it bears repeating. A price-per-square-foot quote based on a phone conversation or email exchange is not a real quote. It's an estimate that will either be too high (padding for unknowns) or too low (and they'll cut corners to make it work)." },
+
+    { type: "heading", level: 3, text: "The price is significantly lower than everyone else" },
+    { type: "paragraph", text: "If one quote is 30 to 40 percent cheaper than the other two, something is off. They're either cutting scope, cutting labor (fewer hours in your building), using cheaper products, or underinsuring their business. The cheapest cleaning company almost always becomes the most expensive one after you factor in the cost of managing problems and eventually replacing them." },
+
+    { type: "heading", level: 3, text: "They push long-term contracts with steep cancellation penalties" },
+    { type: "paragraph", text: "A company that needs a two-year contract to keep you is a company that isn't confident in their ability to retain you through performance. Month-to-month or short-term agreements are a sign that the company stands behind its work." },
+
+    { type: "heading", level: 3, text: "High turnover is visible" },
+    { type: "paragraph", text: "If every time you interact with the company it's a different person — different crew, different account manager, different office contact — that's a sign of an internal problem. High turnover in the cleaning industry is common, but the best companies manage it through better hiring, better training, and better pay. Ask about their employee retention rate." },
+
+    { type: "heading", level: 3, text: "They're vague about what's included" },
+    { type: "paragraph", text: "If you can't get a straight answer about whether floor waxing is included, or how often the kitchen will be cleaned, or who provides the trash liners — that ambiguity will become a problem. Every service, every area, and every frequency should be in writing." },
+
+    { type: "heading", level: 3, text: "They can't explain their training process" },
+    { type: "paragraph", text: "Ask them how a new employee is trained before being sent to a client site. If the answer is vague ('they shadow someone for a day') or nonexistent, the quality you get will be inconsistent at best." },
+
+    { type: "heading", level: 2, text: "How to Use This Framework" },
+    { type: "paragraph", text: "Get quotes from at least three companies. Ask each one the same questions. Compare not just the price, but the quality of the answers — the specificity, the documentation, the willingness to be transparent. The company that does best on this framework is almost always the one that delivers best in practice." },
+
+    { type: "callout", text: "Want to see how we measure up? Schedule a walkthrough and put us through the test. We welcome the comparison. Call (215) 550-1414 or fill out our contact form." },
+  ],
+};
+
+// ─────────────────────────────────────────────────────
+// POST 14 (Plan): Spring Deep Cleaning Checklist
+// ─────────────────────────────────────────────────────
+const post14: BlogPost = {
+  slug: "spring-deep-cleaning-checklist-philadelphia",
+  title: "Spring Deep Cleaning Checklist for Philadelphia Offices",
+  metaTitle: "Spring Deep Cleaning Checklist for Philly Offices | PHL Clean",
+  metaDescription: "Undo winter's damage and reset your office for the year. A comprehensive spring deep cleaning checklist for Philadelphia commercial spaces — from salt removal to HVAC vents.",
+  date: "2026-05-19",
+  author: "PHL Clean",
+  category: "Local & Seasonal",
+  readTime: "5 min read",
+  relatedLinks: [
+    { label: "Deep Cleaning Services", href: "/services/deep-cleaning" },
+    { label: "Deep Cleaning in Philadelphia", href: "/services/deep-cleaning/philadelphia" },
+    { label: "Carpet Cleaning Services", href: "/services/carpet-cleaning" },
+  ],
+  body: [
+    { type: "paragraph", text: "Another Philadelphia winter is behind you. Your building survived the snow, the salt, the gray slush tracked in from the parking lot, and the months of sealed-up, recycled air. But 'survived' isn't the same as 'looks good.' Winter takes a toll on commercial spaces — on the carpets, the floors, the air quality, and the overall feel of the building. Spring is your chance to reset." },
+    { type: "paragraph", text: "A thorough spring deep clean addresses the accumulated damage that daily cleaning doesn't touch. Here's a comprehensive checklist for getting your Philadelphia office back to its best." },
+
+    { type: "heading", level: 2, text: "Carpet and Flooring Reset" },
+    { type: "list", ordered: false, items: [
+      "Full hot water extraction on all carpet — this is the big one. Winter salt residue, embedded grit, and months of soil buildup need to be flushed out. Focus especially on lobbies, hallways, and the first 20 feet past every exterior entrance.",
+      "Spot-treat any stains that appeared over winter. Many are salt-related and respond well to extraction if treated now; wait longer and they can become permanent.",
+      "VCT floors: schedule a scrub-and-recoat at minimum. If the finish took heavy winter damage (dull patches, worn traffic lanes, salt etching), a full strip and wax is the better investment.",
+      "Hard floors (tile, concrete, stone): deep clean grout lines, inspect for salt damage or etching, and reseal if needed.",
+      "Check entrance matting and replace any mats that are worn, saturated, or no longer laying flat.",
+    ]},
+
+    { type: "heading", level: 2, text: "Air Quality and HVAC" },
+    { type: "list", ordered: false, items: [
+      "Clean all HVAC vent covers and diffusers. These collect dust and allergens all winter and redistribute them into the air every time the system runs.",
+      "Wipe down return air grilles — they're usually overlooked in routine cleaning but trap significant dust.",
+      "Replace HVAC filters if not on a regular schedule. After a winter of continuous heating, filters are typically loaded.",
+      "Dust the tops of all ceiling-mounted fixtures (lights, speakers, smoke detectors). This isn't cosmetic — dust buildup on warm light fixtures can affect air quality and trigger smoke detector false alarms.",
+    ]},
+
+    { type: "heading", level: 2, text: "Restrooms and Kitchen" },
+    { type: "list", ordered: false, items: [
+      "Deep clean and disinfect all restroom surfaces, including behind toilets, under sinks, and around urinal bases — areas where daily cleaning doesn't always reach.",
+      "Descale faucets, flush valves, and shower heads (if applicable). Hard water buildup accelerates during winter heating season.",
+      "Deep clean grout in tile restrooms. Restroom grout harbors bacteria year-round, but a spring deep clean is a good reset point.",
+      "Kitchen: degrease all appliance exteriors, clean inside microwaves and refrigerators, deep clean sink and drain areas.",
+    ]},
+
+    { type: "heading", level: 2, text: "Windows, Glass, and Lighting" },
+    { type: "list", ordered: false, items: [
+      "Clean all interior glass — doors, partitions, conference room glass, display cases. Winter fingerprints and film build up gradually and become very noticeable once spring sunlight starts streaming in.",
+      "Wash interior window surfaces. The difference in natural light after cleaning winter film off windows is dramatic.",
+      "Wipe down all light fixtures and lens covers. Dust on lenses reduces light output; cleaning them can make a room feel noticeably brighter without changing a single bulb.",
+    ]},
+
+    { type: "heading", level: 2, text: "Detail Work" },
+    { type: "list", ordered: false, items: [
+      "Wipe down all baseboards. Salt splash and mop residue from winter accumulate at the base of walls throughout the building.",
+      "Dust and wipe all blinds or window coverings. Blinds collect dust all winter while they're mostly closed.",
+      "Clean elevator interiors — walls, doors, tracks, and buttons. Elevators take heavy abuse during winter with wet boots and salt.",
+      "Wipe down all door frames, light switches, and handrails. These high-touch surfaces accumulate a winter's worth of grime.",
+      "Deep clean upholstered furniture in common areas — lobby chairs, conference room seats, break room seating. Upholstery absorbs odors and allergens just like carpet.",
+    ]},
+
+    { type: "heading", level: 2, text: "Your Spring Cleaning Checklist at a Glance" },
+    {
+      type: "table",
+      headers: ["Category", "Key Tasks", "Priority"],
+      rows: [
+        ["Carpet", "Full extraction, salt stain treatment", "High"],
+        ["Hard floors", "Scrub/recoat or strip/wax, grout clean, reseal", "High"],
+        ["HVAC/air quality", "Vent covers, filters, high dusting", "High"],
+        ["Restrooms", "Deep disinfect, descale, grout scrub", "High"],
+        ["Kitchen", "Degrease, appliance deep clean, drain cleaning", "Medium"],
+        ["Windows/glass", "Interior glass, window surfaces, light fixtures", "Medium"],
+        ["Detail work", "Baseboards, blinds, elevator, upholstery", "Medium"],
+        ["Entrance areas", "Mat replacement, lobby deep clean", "High"],
+      ],
+    },
+
+    { type: "heading", level: 2, text: "When to Schedule Your Spring Clean" },
+    { type: "paragraph", text: "In Philadelphia, the ideal window is late March through mid-April — after the last salt-heavy weather but before pollen season hits full force. That said, spring cleaning done in May still delivers major benefits. The important thing is doing it, not doing it on a specific date." },
+    { type: "paragraph", text: "Most spring deep cleans for a mid-size office (5,000 to 15,000 square feet) take one to two days and are best done over a weekend or during off-hours to avoid disrupting your team." },
+
+    { type: "callout", text: "Ready to undo winter and reset your space? Schedule a spring deep cleaning walkthrough — we'll assess what your building needs and get it done. Call (215) 550-1414 or fill out our contact form." },
+  ],
+};
+
+// ─────────────────────────────────────────────────────
+// POST 15 (Plan): Why Philly Businesses Choose Local
+// ─────────────────────────────────────────────────────
+const post15: BlogPost = {
+  slug: "why-philadelphia-businesses-choose-local-cleaning",
+  title: "Why Philadelphia Businesses Are Switching to Local Cleaning Companies",
+  metaTitle: "Why Philly Businesses Choose Local Cleaning Companies | PHL Clean",
+  metaDescription: "National franchise or local cleaning company? Here's why more Philadelphia businesses are choosing local providers — and what the difference actually looks like day to day.",
+  date: "2026-05-19",
+  author: "PHL Clean",
+  category: "Local & Seasonal",
+  readTime: "5 min read",
+  relatedLinks: [
+    { label: "Cleaning in Philadelphia", href: "/locations/philadelphia" },
+    { label: "Cleaning in Bucks County", href: "/locations/bucks-county" },
+    { label: "Our Team", href: "/team" },
+    { label: "Contact Us", href: "/#contact" },
+  ],
+  body: [
+    { type: "paragraph", text: "There's a pattern we've seen play out over and over in the Philadelphia commercial cleaning market. A business signs with a national franchise or a large regional chain. The first few months are fine — the big company puts their best foot forward. Then gradually, things start to slip. The crew changes without notice. Quality becomes inconsistent. When there's a problem, you call a generic 800 number and leave a message. It might get addressed in a few days. It might not." },
+    { type: "paragraph", text: "Eventually, the facility manager or business owner starts looking for an alternative. And increasingly, what they find — and what they switch to — is a locally owned cleaning company. Here's why." },
+
+    { type: "heading", level: 2, text: "You Talk to the People Who Do the Work" },
+    { type: "paragraph", text: "With a local company, the person who answers your call is often the person who runs the business — or is one conversation away from them. There's no customer service layer, no regional manager who has to approve a schedule change, no ticket system sitting in a queue. When you have a concern or a request, it gets heard and acted on immediately." },
+    { type: "paragraph", text: "This might sound like a small thing until you've experienced the alternative. Try getting a national franchise to adjust your cleaning schedule for a special event, or to address a quality issue that's been recurring. The layers of management between you and anyone who can make a decision are the reason problems persist." },
+
+    { type: "heading", level: 2, text: "Consistent Crews Who Know Your Building" },
+    { type: "paragraph", text: "Large companies manage a high volume of accounts with a large, rotating workforce. The crew cleaning your building this week might not be the same crew next week. That means every visit is essentially a first visit — no one remembers that the conference room on the third floor needs extra attention on Fridays, or that the back stairwell gets missed if you're not paying attention." },
+    { type: "paragraph", text: "Local companies typically assign a dedicated crew to each account. The same people show up each time. They learn your building. They know its quirks. They develop pride in keeping their specific accounts looking great — because it's their building, not just another stop on a corporate rotation." },
+
+    { type: "heading", level: 2, text: "Faster Response Time" },
+    { type: "paragraph", text: "When something urgent comes up — a pipe leak that needs immediate cleanup, a last-minute client visit that requires the lobby to look perfect, a weekend event that needs post-event cleaning — response time matters. A local company with a team based in Philadelphia or Bucks County can often respond the same day. A national company has to route the request through their system, check availability across a wider geographic area, and schedule accordingly. That can take days." },
+
+    { type: "heading", level: 2, text: "Accountability You Can See" },
+    { type: "paragraph", text: "When the owner of a local cleaning company lives and works in the same community as their clients, accountability is personal. Their reputation is local. Their referrals come from the same business community they serve. If they do poor work, word gets around in a way that doesn't happen with a faceless national brand." },
+    { type: "paragraph", text: "That personal accountability drives a different kind of service. Problems get fixed faster because letting them linger costs the owner their reputation. Quality stays high because every account matters — there's no corporate safety net to absorb lost clients." },
+
+    { type: "heading", level: 2, text: "Competitive Pricing Without Corporate Overhead" },
+    { type: "paragraph", text: "National franchises carry significant overhead that gets passed on to you: franchise fees, regional management salaries, national marketing budgets, corporate office costs. Local companies have leaner operations, which means more of what you pay goes directly to the labor and supplies that actually clean your building." },
+    { type: "paragraph", text: "That doesn't mean local is always cheaper — and the cheapest option isn't always the best one regardless of company size. But dollar-for-dollar, local companies generally deliver more value because less of your payment is absorbed by corporate overhead." },
+
+    { type: "heading", level: 2, text: "Flexibility That Big Companies Can't Match" },
+    { type: "paragraph", text: "Need to adjust your schedule for a holiday week? Want to add a one-time deep clean before a board meeting? Need to scale up cleaning frequency during flu season and scale back down after? Local companies can make these adjustments with a phone call. Changes at national companies require formal requests, contract amendments, and lead times that don't match the speed of real business." },
+
+    { type: "heading", level: 2, text: "Community Investment" },
+    { type: "paragraph", text: "When you hire a local cleaning company, the money stays in the community. The employees live locally. The supplies are often purchased locally. The owner reinvests in the local economy. There's a real economic multiplier effect when businesses hire other local businesses, and in a city like Philadelphia — where local pride runs deep — that matters to a lot of business owners." },
+
+    { type: "heading", level: 2, text: "The Bottom Line" },
+    { type: "paragraph", text: "Not every local cleaning company is great, and not every national franchise is bad. But the structural advantages of working with a local provider — direct accountability, consistent crews, fast response, flexible service, and competitive pricing — are real and measurable. If you've been frustrated with the impersonal, inconsistent service that comes with a large cleaning operation, a local switch might be exactly what your facility needs." },
+
+    { type: "callout", text: "Want to see what a local cleaning company can do for your space? Schedule a walkthrough — meet the team, see the difference. Call (215) 550-1414 or fill out our contact form." },
   ],
 };
