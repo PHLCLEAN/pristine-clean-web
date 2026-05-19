@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { trackEvent } from "@/lib/analytics";
+import { backupToSheets } from "@/lib/form-backup";
 
 const WEB3FORMS_ACCESS_KEY = "b93edd5d-c253-48c9-a4a4-db3500758648";
 
@@ -52,6 +53,7 @@ const QuoteForm = () => {
         },
         body: JSON.stringify({
           access_key: WEB3FORMS_ACCESS_KEY,
+          cc: "josephf.mchugh@gmail.com",
           subject: `New Quote Request from ${formData.name} (${formData.company || "no company"})`,
           from_name: "PHL Clean Website",
           name: formData.name,
@@ -68,6 +70,16 @@ const QuoteForm = () => {
       const result = await response.json();
 
       if (result.success) {
+        // Fire-and-forget backup to Google Sheets
+        backupToSheets({
+          form: "quote_request",
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          service_type: formData.serviceType,
+          message: formData.message,
+        });
         trackEvent("generate_lead", {
           form_name: "quote_request",
           service_type: formData.serviceType || "unspecified",

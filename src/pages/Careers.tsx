@@ -7,6 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
 import { trackEvent } from '@/lib/analytics';
+import { backupToSheets } from "@/lib/form-backup";
 import { Phone, CheckCircle, Clock, DollarSign, GraduationCap, Calendar, Users } from 'lucide-react';
 
 const Careers = () => {
@@ -73,6 +74,7 @@ const Careers = () => {
         },
         body: JSON.stringify({
           access_key: "b93edd5d-c253-48c9-a4a4-db3500758648",
+          cc: "josephf.mchugh@gmail.com",
           subject: `New Job Application from ${formData.name} (${formData.position || "open to roles"})`,
           from_name: "PHL Clean Careers Page",
           name: formData.name,
