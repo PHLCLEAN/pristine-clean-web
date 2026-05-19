@@ -227,11 +227,7 @@ const post3: BlogPost = {
   ],
 };
 
-export const blogPosts: BlogPost[] = [post1, post2, post3, post4, post5, post6, post7, post8, post9, post10, post11, post12, post13, post14, post15];
-
-export function getBlogPost(slug: string): BlogPost | undefined {
-  return blogPosts.find((p) => p.slug === slug);
-}
+// exports moved to end of file
 
 // ─────────────────────────────────────────────────────
 // POST 3 (Plan): Carpet Cleaning vs. Replacement
@@ -1072,3 +1068,9 @@ const post15: BlogPost = {
     { type: "callout", text: "Want to see what a local cleaning company can do for your space? Schedule a walkthrough — meet the team, see the difference. Call (215) 550-1414 or fill out our contact form." },
   ],
 };
+
+export const blogPosts: BlogPost[] = [post1, post2, post3, post4, post5, post6, post7, post8, post9, post10, post11, post12, post13, post14, post15];
+
+export function getBlogPost(slug: string): BlogPost | undefined {
+  return blogPosts.find((p) => p.slug === slug);
+}
