@@ -35,6 +35,9 @@ const Navbar = () => {
             <a href="/#why-choose-us" className="text-gray-600 hover:text-cleaner-blue-700 transition-colors font-medium">
               Why Choose Us
             </a>
+            <a href="/blog" className="text-gray-600 hover:text-cleaner-blue-700 transition-colors font-medium">
+              Blog
+            </a>
           </div>
 
           {/* Call to action buttons (desktop) */}
@@ -119,6 +122,13 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Why Choose Us
+            </a>
+            <a
+              href="/blog"
+              className="text-gray-600 hover:text-cleaner-blue-700 px-3 py-2 rounded-md text-base font-medium"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Blog
             </a>
             <Button asChild className="bg-cleaner-blue-700 hover:bg-cleaner-blue-800 text-white w-full">
               <a href="/#contact" onClick={() => setIsMenuOpen(false)}>Schedule a Walkthrough</a>
