@@ -227,7 +227,7 @@ const post3: BlogPost = {
   ],
 };
 
-export const blogPosts: BlogPost[] = [post1, post2, post3, post4, post5, post6, post7];
+export const blogPosts: BlogPost[] = [post1, post2, post3, post4, post5, post6, post7, post8, post9, post10, post11];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
@@ -512,5 +512,268 @@ const post7: BlogPost = {
     { type: "paragraph", text: "These aren't nice-to-haves. They're the baseline for any company claiming to provide medical facility cleaning." },
 
     { type: "callout", text: "Need a cleaning partner that understands healthcare? Schedule a walkthrough and we'll assess your facility's specific infection control and cleaning needs. Call (215) 550-1414 or fill out our contact form." },
+  ],
+};
+
+// ─────────────────────────────────────────────────────
+// POST 8 (Plan): Office Cleaning Frequency Guide
+// ─────────────────────────────────────────────────────
+const post8: BlogPost = {
+  slug: "office-cleaning-frequency-guide",
+  title: "How Often Should Your Office Be Professionally Cleaned? A Realistic Guide",
+  metaTitle: "How Often Should an Office Be Professionally Cleaned? | PHL Clean",
+  metaDescription: "A practical breakdown of professional office cleaning frequency — by area, headcount, and building type. From daily restroom care to quarterly deep cleans.",
+  date: "2026-05-19",
+  author: "PHL Clean",
+  category: "Industry Focus",
+  readTime: "5 min read",
+  relatedLinks: [
+    { label: "Commercial Cleaning Services", href: "/services/commercial-cleaning" },
+    { label: "Commercial Cleaning in Philadelphia", href: "/services/commercial-cleaning/philadelphia" },
+    { label: "Deep Cleaning Services", href: "/services/deep-cleaning" },
+  ],
+  body: [
+    { type: "paragraph", text: "It's one of the first questions we hear from new clients: how often does our office actually need to be cleaned? The honest answer is that it depends — but it depends on specific, measurable things, not on guesswork. Your headcount, building traffic, industry, and layout all shape the right answer. Here's a realistic framework to figure out what your space actually needs." },
+
+    { type: "heading", level: 2, text: "Start with the Non-Negotiables" },
+    { type: "paragraph", text: "Some areas need daily attention regardless of office size. Restrooms, kitchens, and break rooms are the big three. These are high-moisture, high-bacteria zones where skipping even one day creates noticeable problems — odors, overflowing trash, and surfaces that go from 'a little used' to 'actively unpleasant' fast." },
+    { type: "paragraph", text: "Trash removal is the other daily must. Overflowing waste bins are one of the first things employees notice, and it's one of the easiest cleanliness problems to prevent." },
+
+    { type: "heading", level: 2, text: "Cleaning Frequency by Area" },
+    {
+      type: "table",
+      headers: ["Area", "Recommended Frequency", "Notes"],
+      rows: [
+        ["Restrooms", "Daily", "Disinfect all surfaces; restock consumables"],
+        ["Kitchen / break room", "Daily", "Sinks, counters, appliance exteriors, floor"],
+        ["Trash & recycling", "Daily", "All bins, liner replacement"],
+        ["Lobby / reception", "Daily", "First impression zone — vacuum, dust, glass"],
+        ["Open office / desks", "2–3x per week", "Vacuum, dust horizontal surfaces, wipe phones"],
+        ["Conference rooms", "2–3x per week", "Table, chairs, glass, tech surfaces"],
+        ["Private offices", "1–2x per week", "Lower traffic justifies less frequency"],
+        ["Windows (interior glass)", "Monthly", "Doors, partitions, interior-facing glass"],
+        ["Deep clean (carpet extraction, floor scrub)", "Quarterly", "Resets accumulated soil"],
+        ["High dusting (vents, lights, high shelves)", "Quarterly", "Often missed — reduces allergens"],
+      ],
+    },
+
+    { type: "heading", level: 2, text: "How Headcount and Traffic Shape the Schedule" },
+    { type: "paragraph", text: "A 20-person office with no public visitors is a completely different cleaning challenge than a 20-person office that sees 50 clients a day. The key variable isn't just how many people work there — it's how many people pass through." },
+    { type: "paragraph", text: "Here's a general framework based on what we see working across our accounts in Philadelphia and the surrounding counties:" },
+    { type: "list", ordered: false, items: [
+      "Small office, low traffic (under 20 people, minimal visitors): 2 to 3 cleanings per week is usually enough, with daily trash service if possible.",
+      "Medium office, moderate traffic (20–75 people, regular visitors): Daily cleaning of restrooms, kitchen, and common areas. Full clean 3 to 5 times per week.",
+      "Large office or high traffic (75+ people, heavy public access): Daily comprehensive cleaning. Consider twice-daily restroom service and midday touch-ups in common areas.",
+    ]},
+
+    { type: "heading", level: 2, text: "The 'We Clean It Ourselves' Question" },
+    { type: "paragraph", text: "Some smaller offices try to handle cleaning in-house — assigning it to whoever's willing, keeping a supply closet stocked, and hoping for the best. It works for a while, until it doesn't. The common failure points are inconsistency (someone forgets or gets too busy), restroom quality (nobody wants to do it, so it gets half-done), and floor care (vacuuming might happen, but deep cleaning and floor maintenance almost never do)." },
+    { type: "paragraph", text: "There's nothing wrong with employees doing basic tidying. But professional cleaning addresses the things that accumulate invisibly — carpet soil, restroom bacteria, allergens in upholstery and ductwork — that DIY efforts consistently miss." },
+
+    { type: "heading", level: 2, text: "Signs Your Current Schedule Isn't Enough" },
+    { type: "list", ordered: false, items: [
+      "Restrooms develop odors between cleanings",
+      "Trash cans overflow before the next service day",
+      "Carpet in high-traffic areas looks noticeably darker than surrounding areas",
+      "Dust is visible on vents, blinds, or high shelves",
+      "Employees are mentioning cleanliness in feedback or complaints",
+      "You find yourself doing 'emergency cleans' before important meetings or client visits",
+    ]},
+    { type: "paragraph", text: "If any of these sound familiar, your cleaning frequency probably needs to increase — or the scope of each visit needs to expand." },
+
+    { type: "heading", level: 2, text: "Building a Custom Schedule" },
+    { type: "paragraph", text: "The tables and guidelines above are starting points. Every office has its own quirks — a big break room that gets heavy use, a carpeted conference room that hosts all-day meetings, a lobby with stone floors that needs different care than the rest of the building. The right schedule is one that's tailored to how your specific space is actually used." },
+    { type: "paragraph", text: "That's why we build every cleaning program around an in-person walkthrough. We see your space, talk about how it's used, and then put together a schedule and scope of work that matches reality — not a generic template." },
+
+    { type: "callout", text: "Want a cleaning schedule built around your office's actual needs? Schedule a free walkthrough and we'll put together a custom plan. Call (215) 550-1414 or fill out our contact form." },
+  ],
+};
+
+// ─────────────────────────────────────────────────────
+// POST 9 (Plan): Restaurant Floor Cleaning
+// ─────────────────────────────────────────────────────
+const post9: BlogPost = {
+  slug: "restaurant-floor-cleaning-compliance",
+  title: "Keeping Restaurant and Food Service Floors Safe and Compliant",
+  metaTitle: "Restaurant Floor Cleaning: Safety & Compliance Guide | PHL Clean",
+  metaDescription: "Grease, slip-and-fall risk, and health code compliance — restaurant floors face unique challenges. Here's how to keep them safe, clean, and inspection-ready.",
+  date: "2026-05-19",
+  author: "PHL Clean",
+  category: "Industry Focus",
+  readTime: "5 min read",
+  relatedLinks: [
+    { label: "Floor Maintenance Services", href: "/services/floor-maintenance" },
+    { label: "Deep Cleaning Services", href: "/services/deep-cleaning" },
+  ],
+  body: [
+    { type: "paragraph", text: "Restaurant floors take more punishment than almost any other commercial surface. Between grease splatter from the kitchen line, foot traffic from staff hustling through service, and customers tracking in whatever's on the sidewalk, the floor never gets a break. Add in health department inspections, slip-and-fall liability, and the fact that customers can see the front-of-house floor from their table, and you've got a surface that needs serious, consistent attention." },
+
+    { type: "heading", level: 2, text: "The Three Zones of Restaurant Floor Care" },
+    { type: "paragraph", text: "Not all restaurant floor space is equal. The care each area needs depends on what it's exposed to." },
+
+    { type: "heading", level: 3, text: "Kitchen and Back-of-House" },
+    { type: "paragraph", text: "This is where the hardest work happens. Kitchen floors — usually quarry tile or sealed concrete — face a daily assault of grease, food particles, water, and cleaning chemicals. Grease is the big one. It builds up in the pores of quarry tile and in grout lines, creating a slippery film that standard mopping can't remove." },
+    { type: "paragraph", text: "Kitchen floors need degreasing, not just cleaning. A commercial degreaser applied with an auto-scrubber or floor machine cuts through the buildup that mops leave behind. This should happen nightly at minimum. Grout lines need periodic deep scrubbing — monthly in high-volume kitchens — because grease trapped in grout is both a slip hazard and a health code issue." },
+
+    { type: "heading", level: 3, text: "Front-of-House (Dining Area)" },
+    { type: "paragraph", text: "The dining room floor is a customer-facing surface, so appearance matters as much as safety. Depending on the restaurant's aesthetic, you might be dealing with hardwood, tile, polished concrete, or luxury vinyl. Each has its own care requirements, but the universal priority is keeping the floor clean, dry, and free of trip hazards throughout service." },
+    { type: "paragraph", text: "During service hours, the focus is on spot-cleaning spills immediately and keeping walkways clear. After hours, the floor gets a full clean — sweep or vacuum first to remove debris, then mop or scrub with the appropriate cleaner for the surface type. The key is not to leave the floor wet at close; standing water damages most flooring materials and creates slip hazards for the morning opening crew." },
+
+    { type: "heading", level: 3, text: "Walk-In Coolers and Storage" },
+    { type: "paragraph", text: "Walk-in cooler floors are often forgotten in the cleaning rotation, but they're a common citation point during health inspections. Cold, damp conditions promote mold and bacterial growth. Food drips, broken packaging, and condensation all contribute to a floor that gets dirty fast." },
+    { type: "paragraph", text: "Walk-in floors should be swept and mopped at least weekly, with a deeper scrub monthly. Use a cleaner that works in cold temperatures — some products lose effectiveness below 50 degrees. And always make sure the floor is dry after cleaning; moisture plus cold equals an ice slick waiting to happen." },
+
+    { type: "heading", level: 2, text: "Slip-and-Fall: The #1 Restaurant Liability" },
+    { type: "paragraph", text: "Floor-related slip-and-fall incidents are the single largest source of insurance claims in the restaurant industry. A single claim can cost anywhere from a few thousand dollars for a minor injury to six figures or more for a serious one. Beyond the financial cost, there's the human cost — an injured employee can't work, and an injured customer isn't coming back." },
+    { type: "paragraph", text: "Prevention comes down to three things: keeping floors clean and dry during service (especially in transition zones between kitchen and dining room), using the right floor finish or treatment to maintain traction, and having a documented cleaning protocol that proves you took reasonable precautions. That documentation matters when an attorney comes calling." },
+
+    { type: "heading", level: 2, text: "Health Code Compliance" },
+    { type: "paragraph", text: "Health inspectors look at floors. Not just for obvious problems like standing grease or food debris, but for signs of a cleaning program — or the lack of one. Grout that's darkened with embedded grease, floor-wall junctions with buildup, and drain areas with biofilm are all potential citation points." },
+    { type: "paragraph", text: "Keeping detailed cleaning logs — what was cleaned, when, and with what product — is one of the simplest ways to demonstrate compliance during an inspection. It's also the thing most independent restaurants don't do. A professional cleaning partner should be providing those logs as part of their service." },
+
+    { type: "heading", level: 2, text: "When to Bring in a Professional" },
+    { type: "paragraph", text: "Most restaurants handle daily floor cleaning in-house, and that makes sense — your kitchen staff knows the space and the routine. Where professional floor care adds value is in the periodic deep work: quarterly kitchen degreasing with commercial equipment, grout deep cleaning and sealing, front-of-house floor restoration (refinishing hardwood, scrub-and-recoat on VCT or sealed concrete), and addressing problem areas that daily cleaning can't resolve." },
+
+    { type: "callout", text: "Need help keeping your restaurant floors safe and inspection-ready? Schedule a walkthrough and we'll assess your kitchen, dining, and storage areas. Call (215) 550-1414 or fill out our contact form." },
+  ],
+};
+
+// ─────────────────────────────────────────────────────
+// POST 10 (Plan): School & Daycare Cleaning PA
+// ─────────────────────────────────────────────────────
+const post10: BlogPost = {
+  slug: "school-daycare-cleaning-standards-pennsylvania",
+  title: "School and Daycare Cleaning Standards in Pennsylvania: What Administrators Need to Know",
+  metaTitle: "School & Daycare Cleaning Standards in PA | PHL Clean",
+  metaDescription: "Pennsylvania schools and daycares face specific cleaning regulations. Here's what administrators need to know about DHS requirements, product safety, and seasonal deep cleaning.",
+  date: "2026-05-19",
+  author: "PHL Clean",
+  category: "Industry Focus",
+  readTime: "6 min read",
+  relatedLinks: [
+    { label: "Commercial Cleaning Services", href: "/services/commercial-cleaning" },
+    { label: "Deep Cleaning Services", href: "/services/deep-cleaning" },
+    { label: "Carpet Cleaning Services", href: "/services/carpet-cleaning" },
+  ],
+  body: [
+    { type: "paragraph", text: "Cleaning a school or daycare isn't like cleaning an office. The occupants are children — often very young children — who touch everything, put things in their mouths, sit on the floor, and have developing immune systems. The cleaning products, methods, and standards that work fine in an adult workplace need to be reconsidered when kids are the primary occupants." },
+    { type: "paragraph", text: "Pennsylvania has specific regulatory requirements for childcare facilities, and while K-12 schools have more flexibility, best practices in school cleaning are well-established. If you're an administrator, facility director, or school board member, here's what you need to know." },
+
+    { type: "heading", level: 2, text: "Pennsylvania DHS Childcare Regulations" },
+    { type: "paragraph", text: "For licensed childcare facilities in Pennsylvania, the Department of Human Services (DHS) sets specific environmental health and safety standards under Title 55 of the Pennsylvania Code. These regulations cover cleaning, sanitization, and disinfection of childcare spaces and are not optional — they're conditions of licensure." },
+    { type: "paragraph", text: "Key requirements include daily cleaning and sanitizing of surfaces that children contact (tables, chairs, countertops, toys, and door handles), immediate cleaning and sanitizing of surfaces contaminated with bodily fluids, sanitizing of food preparation and eating surfaces before and after each use, and regular cleaning of floors, walls, and other environmental surfaces. Napping mats and bedding also have specific cleaning and storage requirements." },
+
+    { type: "heading", level: 2, text: "Product Safety: What Can You Use Around Kids?" },
+    { type: "paragraph", text: "This is where a lot of facilities get tripped up. The same industrial-strength disinfectant that works great in an office building might not be appropriate for a space where toddlers are crawling on the floor. Product choice in schools and daycares needs to balance efficacy with safety." },
+    { type: "list", ordered: false, items: [
+      "EPA Safer Choice products are preferred when available. The Safer Choice label means the product has been evaluated for safety to humans and the environment while still meeting performance standards.",
+      "Bleach solutions (sodium hypochlorite) are widely used for sanitizing in childcare settings and are approved by the CDC for this purpose. The correct dilution for general sanitizing is typically 1 tablespoon of regular unscented bleach per gallon of water, freshly mixed daily.",
+      "Avoid products with strong fragrances, volatile organic compounds (VOCs), or ingredients known to trigger respiratory reactions. Children are more sensitive to airborne chemicals than adults.",
+      "Any disinfectant used must have an EPA registration number and be used according to the label directions — including dilution ratio and dwell time.",
+    ]},
+
+    { type: "heading", level: 2, text: "Carpet vs. Hard Floors in Classrooms" },
+    { type: "paragraph", text: "This is an ongoing debate in school design. Carpet provides a softer surface for children who sit on the floor, reduces noise, and can feel warmer and more inviting. But carpet also traps allergens, dust mites, and moisture — all of which can aggravate asthma and allergies, which affect a significant percentage of school-age children." },
+    { type: "paragraph", text: "If your school or daycare has carpet, more aggressive cleaning is essential. Vacuuming should happen daily with a HEPA-filtered vacuum, deep extraction should happen at least quarterly (monthly in high-use areas like reading corners and nap rooms), and any moisture incidents need to be addressed immediately to prevent mold growth." },
+    { type: "paragraph", text: "Hard floors are generally easier to maintain in a school setting and better for air quality. But they need to be kept clean and dry — a wet floor in a room full of running kids is an obvious hazard. Non-slip finishes and proper maintenance are critical." },
+
+    { type: "heading", level: 2, text: "The Summer Deep Clean Opportunity" },
+    { type: "paragraph", text: "Summer break is the single best opportunity for facility-wide deep cleaning in schools. With the building empty, crews can do work that's difficult or impossible during the school year: full carpet extraction in every room, strip and wax of all VCT floors, deep cleaning of restrooms and cafeterias, high dusting of ceilings, vents, and light fixtures, and window cleaning inside and out." },
+    { type: "paragraph", text: "A well-executed summer deep clean resets the facility for the new school year and extends the life of flooring, furniture, and fixtures. It's the single biggest maintenance investment a school makes all year — and it pays dividends in both appearance and indoor air quality when students return in the fall." },
+
+    { type: "heading", level: 2, text: "Daily Cleaning Checklist for Schools and Daycares" },
+    {
+      type: "table",
+      headers: ["Area", "Tasks", "Frequency"],
+      rows: [
+        ["Classrooms", "Vacuum or mop, wipe desks and chairs, empty trash, disinfect high-touch surfaces", "Daily"],
+        ["Restrooms", "Full clean and disinfect, restock supplies, mop floors", "Daily (minimum)"],
+        ["Cafeteria", "Mop floors, wipe tables and benches, clean serving areas", "After each meal"],
+        ["Hallways & common areas", "Vacuum or dust mop, spot clean walls, clean drinking fountains", "Daily"],
+        ["Gymnasium", "Dust mop or auto-scrub floor, wipe equipment surfaces", "Daily when in use"],
+        ["Nap/rest areas", "Sanitize mats and bedding, vacuum", "Daily"],
+        ["Playground equipment", "Wipe high-touch surfaces", "Daily"],
+      ],
+    },
+
+    { type: "heading", level: 2, text: "Choosing a Cleaning Partner for Your School" },
+    { type: "paragraph", text: "Not every commercial cleaning company is equipped for school or daycare work. When evaluating providers, ask specifically about their experience with educational facilities, their product selection policy (do they use Safer Choice or equivalent products?), their background check and screening process for employees who will be in your building, and whether they can provide the documentation needed for DHS inspections." },
+
+    { type: "callout", text: "Getting ready for the new school year — or need a better cleaning program during the year? Schedule a walkthrough and we'll put together a plan that meets your facility's specific needs and Pennsylvania's regulatory requirements. Call (215) 550-1414 or fill out our contact form." },
+  ],
+};
+
+// ─────────────────────────────────────────────────────
+// POST 11 (Plan): What to Ask Before Signing a Contract
+// ─────────────────────────────────────────────────────
+const post11: BlogPost = {
+  slug: "questions-ask-commercial-cleaning-contract",
+  title: "What to Ask Before Signing a Commercial Cleaning Contract",
+  metaTitle: "15 Questions to Ask Before Signing a Cleaning Contract | PHL Clean",
+  metaDescription: "Hiring a commercial cleaning company? Here are the questions that separate great providers from mediocre ones — and the answers you should be looking for.",
+  date: "2026-05-19",
+  author: "PHL Clean",
+  category: "Trust & Authority",
+  readTime: "6 min read",
+  relatedLinks: [
+    { label: "Commercial Cleaning Services", href: "/services/commercial-cleaning" },
+    { label: "Contact Us", href: "/#contact" },
+  ],
+  body: [
+    { type: "paragraph", text: "Hiring a commercial cleaning company is one of those decisions where the wrong choice costs you twice — once to pay the underperformer, and again to find and onboard their replacement. The good news is that you can avoid most bad outcomes by asking the right questions before you sign anything." },
+    { type: "paragraph", text: "These aren't gotcha questions. They're the things that genuinely separate well-run cleaning companies from the ones that look good on paper but fall apart in practice. Ask every company on your shortlist these questions and compare the answers — the differences will be obvious." },
+
+    { type: "heading", level: 2, text: "Insurance and Liability" },
+    { type: "heading", level: 3, text: "1. Are you insured? Can I see your certificate of insurance?" },
+    { type: "paragraph", text: "This is question number one for a reason. A legitimate commercial cleaning company carries general liability insurance (covering property damage and bodily injury) and workers' compensation insurance (covering their employees if they're injured in your building). Ask for a current certificate of insurance — not just a verbal confirmation. If they hesitate or can't produce one, walk away." },
+
+    { type: "heading", level: 3, text: "2. What happens if something in my building is damaged during cleaning?" },
+    { type: "paragraph", text: "Accidents happen. What matters is how they're handled. A good company has a clear process: report it immediately, assess the damage, file an insurance claim if needed, and make it right. Ask about their damage reporting process and whether they've had to handle claims before. A company that says 'that never happens' either hasn't been in business long or isn't being honest." },
+
+    { type: "heading", level: 2, text: "Scope and Expectations" },
+    { type: "heading", level: 3, text: "3. What exactly is included in the scope of work?" },
+    { type: "paragraph", text: "This is where most cleaning relationships go sideways. You assume the trash in the break room is included; they assumed it wasn't. Get a detailed, written scope of work that lists every task, every area, and the frequency for each. If it's not on the list, it's not getting done — so make sure the list is complete before you sign." },
+
+    { type: "heading", level: 3, text: "4. How do you handle requests outside the normal scope?" },
+    { type: "paragraph", text: "Sometimes you need something extra — a conference room deep-cleaned before a client visit, or the kitchen floor scrubbed after a company event. How are ad-hoc requests handled? Is there an extra charge? How much lead time is needed? A responsive company makes this easy; a rigid one makes it a headache." },
+
+    { type: "heading", level: 3, text: "5. Did you walk through our facility before quoting?" },
+    { type: "paragraph", text: "Any cleaning company that quotes you a price without seeing your space is guessing. Square footage alone doesn't tell you about the floor types, the restroom count, the kitchen situation, or the specific challenges of your building. An in-person walkthrough before quoting is a non-negotiable indicator that the company takes the work seriously." },
+
+    { type: "heading", level: 2, text: "People and Quality" },
+    { type: "heading", level: 3, text: "6. Will we have the same crew each visit?" },
+    { type: "paragraph", text: "Consistency matters. A crew that knows your building — where the light switches are, which doors stick, what the conference room should look like before Monday meetings — does better work than a rotating cast of strangers. Ask whether they assign dedicated crews and how they handle coverage when someone's out." },
+
+    { type: "heading", level: 3, text: "7. What's your employee screening and training process?" },
+    { type: "paragraph", text: "These people will have keys to your building and access to your space after hours. You should know how they're vetted. Ask about background checks, drug screening, and training. What does a new hire learn before they're sent to a client site? How long is the training period? Is there ongoing training?" },
+
+    { type: "heading", level: 3, text: "8. How do you monitor quality?" },
+    { type: "paragraph", text: "Everyone says they do quality work. The question is how they verify it. Look for specifics: do crew leads do walk-throughs after each visit? Are there unannounced supervisor inspections? Do they use a quality checklist or scoring system? What feedback loop exists between you and their management?" },
+
+    { type: "heading", level: 2, text: "Supplies and Equipment" },
+    { type: "heading", level: 3, text: "9. Do you bring your own equipment and supplies?" },
+    { type: "paragraph", text: "Most professional cleaning companies bring their own equipment (vacuums, mops, floor machines) and cleaning chemicals. Your responsibility is typically limited to consumables — paper towels, toilet paper, hand soap, and trash liners. Make sure you're clear on who provides what before the contract starts, so there are no surprises when the soap runs out and nobody refills it." },
+
+    { type: "heading", level: 3, text: "10. What cleaning products do you use?" },
+    { type: "paragraph", text: "This matters more than most people realize. Are they using professional-grade products or the cheapest thing from the big-box store? Do they have Safety Data Sheets (SDS) available for everything they bring into your building? If you have specific requirements — green cleaning, fragrance-free products, healthcare-grade disinfectants — make sure they can accommodate them before you sign." },
+
+    { type: "heading", level: 2, text: "Contract Terms" },
+    { type: "heading", level: 3, text: "11. What's the contract length and cancellation policy?" },
+    { type: "paragraph", text: "Long-term contracts with heavy cancellation penalties should make you cautious. They often exist because the company knows clients would leave if they could. Look for month-to-month agreements or short-term contracts (90 days) with reasonable notice periods. A confident company earns your business each month — they don't need a contract to keep you." },
+
+    { type: "heading", level: 3, text: "12. How is pricing structured?" },
+    { type: "paragraph", text: "Is it a flat monthly rate or per-visit pricing? Are there seasonal adjustments? What triggers a price increase and how much notice will you get? Understand the pricing structure completely and get it in writing. 'We'll work it out as we go' is not a pricing structure." },
+
+    { type: "heading", level: 2, text: "Communication and Problem Resolution" },
+    { type: "heading", level: 3, text: "13. Who do I contact if there's a problem?" },
+    { type: "paragraph", text: "When something goes wrong — a missed cleaning, a quality issue, a broken item — who do you call? And how quickly should you expect a response? The best answer is a specific person with direct contact information and a commitment to same-day response. The worst answer is a generic customer service line or email address." },
+
+    { type: "heading", level: 3, text: "14. Can you provide references from similar clients?" },
+    { type: "paragraph", text: "Ask for references from clients with similar facilities and requirements. And actually call them. Ask about reliability, quality, communication, and how problems are handled. A good cleaning company should have no trouble providing three to five references without hesitation." },
+
+    { type: "heading", level: 3, text: "15. What makes your company different?" },
+    { type: "paragraph", text: "This is an open-ended question on purpose. The answer tells you what the company values and how they see themselves. Vague answers ('we care about quality') mean nothing. Specific answers ('we assign the same crew to your building every visit and our operations manager does monthly quality audits') tell you they've actually thought about what good service looks like." },
+
+    { type: "callout", text: "Ready to ask us these questions? We welcome them. Schedule a walkthrough and we'll answer every one of them in person. Call (215) 550-1414 or fill out our contact form." },
   ],
 };
