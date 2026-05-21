@@ -34,7 +34,7 @@ const AboutUs = () => {
             </p>
             
             <p className="text-gray-700 mb-6">
-              Our team consists of highly trained Philadelphia-area professionals who take pride in their work and understand the importance of maintaining clean, healthy work environments. We use eco-friendly products and advanced equipment to deliver superior results while minimizing environmental impact across the Greater Philadelphia region.
+              Our team consists of highly trained Philadelphia-area professionals who take pride in their work and understand the importance of maintaining clean, healthy work environments. We use professional-grade products and advanced equipment to deliver superior results across the Greater Philadelphia region.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
@@ -69,8 +69,8 @@ const AboutUs = () => {
                   </svg>
                 </span>
                 <div>
-                  <h3 className="font-bold text-gray-800 mb-1">Eco-Friendly</h3>
-                  <p className="text-gray-600">Green cleaning products and methods</p>
+                  <h3 className="font-bold text-gray-800 mb-1">Thorough</h3>
+                  <p className="text-gray-600">Professional-grade products and methods</p>
                 </div>
               </div>
               
