@@ -9,7 +9,7 @@ const Services = () => {
       slug: "commercial-cleaning",
       title: "Commercial Cleaning & Janitorial",
       description: "Daily, weekly, or after-hours office cleaning that keeps your space spotless and professional",
-      imageSrc: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      imageSrc: "/images/office-cleaning.webp",
       features: [
         "Daily or weekly scheduled cleaning",
         "Floor maintenance and polishing",

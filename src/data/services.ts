@@ -22,7 +22,7 @@ export const services: ServiceData[] = [
     metaTitle: "Commercial Cleaning & Janitorial Services Philadelphia | PHL Clean",
     metaDescription: "Reliable commercial cleaning and janitorial services for offices, banks, and businesses across Philadelphia, Bucks, Montgomery, Delaware, and Chester counties. Book a free on-site walkthrough — (215) 550-1414.",
     heroTagline: "Daily, weekly, and after-hours office cleaning that keeps your workspace healthy, professional, and ready for business — every single day.",
-    heroImage: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    heroImage: "/images/office-cleaning.webp",
     whatsIncluded: [
       "Daily, weekly, or bi-weekly scheduled cleaning",
       "Trash removal, recycling, and liner replacement",
@@ -166,7 +166,7 @@ export const services: ServiceData[] = [
     metaTitle: "Commercial Floor Maintenance Philadelphia | PHL Clean",
     metaDescription: "Strip, wax, buff, and polish for VCT, tile, and hard-surface flooring across Philadelphia, Bucks, Montgomery, Delaware, and Chester counties. Schedule a free walkthrough.",
     heroTagline: "Strip, wax, buff, polish — professional hard-surface floor care that protects your investment and keeps your building looking sharp.",
-    heroImage: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    heroImage: "/images/floor-maintenance.webp",
     whatsIncluded: [
       "Strip and wax (VCT, vinyl, linoleum)",
       "Buffing and burnishing for shine restoration",
@@ -212,7 +212,7 @@ export const services: ServiceData[] = [
     metaTitle: "Medical Facility Cleaning Philadelphia | PHL Clean",
     metaDescription: "Specialized medical office and healthcare facility cleaning serving Philadelphia, Bucks, Montgomery, Delaware, and Chester counties. Hospital-grade disinfection, OSHA-aware, HIPAA-respectful.",
     heroTagline: "Healthcare-grade cleaning for medical offices, dental practices, urgent care clinics, and outpatient facilities — built for infection control, patient safety, and regulatory peace of mind.",
-    heroImage: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    heroImage: "/images/office-cleaning.webp",
     whatsIncluded: [
       "Hospital-grade disinfection of exam rooms and treatment areas",
       "Color-coded microfiber to prevent cross-contamination",
