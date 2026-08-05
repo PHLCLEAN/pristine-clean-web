@@ -1404,12 +1404,6 @@ const post23: BlogPost = {
 };
 
 
-export const blogPosts: BlogPost[] = [post1, post2, post3, post4, post5, post6, post7, post8, post9, post10, post11, post12, post13, post14, post15, post17, post18, post19, post20, post21, post22, post23, post24, post25, post26, post27, post28];
-
-export function getBlogPost(slug: string): BlogPost | undefined {
-  return blogPosts.find((p) => p.slug === slug);
-}
-
 // ─────────────────────────────────────────────────────
 // POST 24: Bank & Credit Union Branch Cleaning
 // ─────────────────────────────────────────────────────
@@ -1636,3 +1630,9 @@ const post28: BlogPost = {
     { type: "callout", text: "Ready for a real number instead of a guess? Schedule a free walkthrough and we'll put together a written quote based on your actual space — call (215) 550-1414 or use our contact form." },
   ],
 };
+
+export const blogPosts: BlogPost[] = [post1, post2, post3, post4, post5, post6, post7, post8, post9, post10, post11, post12, post13, post14, post15, post17, post18, post19, post20, post21, post22, post23, post24, post25, post26, post27, post28];
+
+export function getBlogPost(slug: string): BlogPost | undefined {
+  return blogPosts.find((p) => p.slug === slug);
+}
