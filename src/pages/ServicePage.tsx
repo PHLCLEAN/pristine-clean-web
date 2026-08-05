@@ -9,6 +9,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Phone, CheckCircle2, ArrowRight } from 'lucide-react';
 import { getService, services } from '../data/services';
 import { locations } from '../data/locations';
+import { blogPosts } from '../data/blog-posts';
+import { Calendar } from 'lucide-react';
 import { useSeo } from '../hooks/use-seo';
 import JsonLd from '../components/JsonLd';
 
@@ -81,6 +83,11 @@ const ServicePage = () => {
   const related = service.relatedSlugs
     .map(rs => services.find(s => s.slug === rs))
     .filter((s): s is NonNullable<typeof s> => s !== undefined);
+
+  // Blog posts that link back to this exact service page — surfaced as "From the Blog"
+  const relatedPosts = blogPosts
+    .filter(p => p.relatedLinks.some(l => l.href === `/services/${service.slug}`))
+    .slice(0, 3);
 
   return (
     <div className="min-h-screen bg-white">
@@ -284,6 +291,37 @@ const ServicePage = () => {
             </div>
           </section>
         )}
+        {/* From the blog — internal links to relevant articles */}
+        {relatedPosts.length > 0 && (
+          <section className="section-padding bg-gray-50 border-t border-gray-100">
+            <div className="container-custom">
+              <div className="text-center max-w-3xl mx-auto mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-cleaner-blue-800 mb-4">From the Blog</h2>
+                <div className="h-1 w-24 bg-cleaner-green-500 mx-auto mb-6"></div>
+                <p className="text-gray-600">More on {service.shortTitle.toLowerCase()} from our team.</p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                {relatedPosts.map(post => (
+                  <Link
+                    key={post.slug}
+                    to={`/blog/${post.slug}`}
+                    className="block bg-white border border-gray-200 hover:border-cleaner-blue-700 rounded-lg p-6 transition-colors group"
+                  >
+                    <div className="flex items-center gap-2 text-xs text-gray-500 mb-3">
+                      <Calendar className="h-3.5 w-3.5" />
+                      <span>{post.readTime}</span>
+                    </div>
+                    <h3 className="text-lg font-bold text-cleaner-blue-800 mb-2 leading-snug">{post.title}</h3>
+                    <span className="text-cleaner-blue-700 font-medium text-sm inline-flex items-center group-hover:underline">
+                      Read article <ArrowRight className="ml-1 h-4 w-4" />
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Location coverage — links to service x location combo pages */}
         <section className="section-padding bg-gray-50 border-t border-gray-100">
           <div className="container-custom max-w-4xl">

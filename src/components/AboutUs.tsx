@@ -14,6 +14,10 @@ const AboutUs = () => {
                   <img 
                     src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
                     alt="Sleek Modern Office Workspace" 
+                    loading="lazy"
+                    decoding="async"
+                    width={1200}
+                    height={675}
                     className="w-full h-full object-cover"
                   />
                 </AspectRatio>

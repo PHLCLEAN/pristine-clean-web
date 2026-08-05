@@ -31,6 +31,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             <img 
               src={imageSrc} 
               alt={title} 
+              loading="lazy"
+              decoding="async"
+              width={400}
+              height={192}
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
             />
           </Link>
@@ -38,6 +42,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           <img 
             src={imageSrc} 
             alt={title} 
+            loading="lazy"
+            decoding="async"
+            width={400}
+            height={192}
             className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
           />
         )}
