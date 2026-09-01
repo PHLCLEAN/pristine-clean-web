@@ -22,7 +22,7 @@ const ServicePage = () => {
   useSeo({
     title: service?.metaTitle ?? "Service Not Found | PHL Clean",
     description: service?.metaDescription ?? "Page not found",
-    canonical: service ? `https://phlclean.com/services/${service.slug}` : undefined,
+    canonical: service ? `https://phlclean.com/services/${service.slug}/` : undefined,
   });
 
   if (!service) {
@@ -97,9 +97,13 @@ const ServicePage = () => {
         {/* Hero */}
         <section className="relative bg-white overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <div
-              className="bg-cover bg-center h-full w-full opacity-15"
-              style={{ backgroundImage: `url('${service.heroImage}')` }}
+            <img
+              src={service.heroImage}
+              alt={`${service.title} in the Philadelphia area`}
+              className="h-full w-full object-cover object-center opacity-15"
+              loading="eager"
+              width={1600}
+              height={900}
             />
             <div className="absolute inset-0 bg-gradient-to-r from-cleaner-blue-700/30 to-cleaner-green-500/20"></div>
           </div>

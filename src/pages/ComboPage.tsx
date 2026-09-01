@@ -45,7 +45,7 @@ const ComboPage = () => {
     ? `Professional ${service!.shortTitle.toLowerCase()} for businesses in ${location!.longName}. ${service!.heroTagline} Locally owned. Book a free walkthrough — (215) 550-1414.`
     : 'Page not found';
   const canonical = valid
-    ? `https://phlclean.com/services/${service!.slug}/${location!.slug}`
+    ? `https://phlclean.com/services/${service!.slug}/${location!.slug}/`
     : undefined;
 
   useSeo({ title, description, canonical });
@@ -57,7 +57,7 @@ const ComboPage = () => {
   // From here on TypeScript can rely on service + location being defined.
   const svc = service!;
   const loc = location!;
-  const url = `https://phlclean.com/services/${svc.slug}/${loc.slug}`;
+  const url = `https://phlclean.com/services/${svc.slug}/${loc.slug}/`;
 
   // Location-specific intro — mixes service + neighborhoods + industries.
   const neighborhoodList = loc.neighborhoods?.slice(0, 4).join(', ');
@@ -81,7 +81,7 @@ const ComboPage = () => {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://phlclean.com/" },
       { "@type": "ListItem", position: 2, name: "Services", item: "https://phlclean.com/#services" },
-      { "@type": "ListItem", position: 3, name: svc.shortTitle, item: `https://phlclean.com/services/${svc.slug}` },
+      { "@type": "ListItem", position: 3, name: svc.shortTitle, item: `https://phlclean.com/services/${svc.slug}/` },
       { "@type": "ListItem", position: 4, name: loc.shortName, item: url },
     ],
   };
@@ -117,9 +117,13 @@ const ComboPage = () => {
         {/* Hero */}
         <section className="relative bg-white overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <div
-              className="bg-cover bg-center h-full w-full opacity-15"
-              style={{ backgroundImage: `url('${svc.heroImage}')` }}
+            <img
+              src={svc.heroImage}
+              alt={`${svc.title} in ${loc.name}`}
+              className="h-full w-full object-cover object-center opacity-15"
+              loading="eager"
+              width={1600}
+              height={900}
             />
             <div className="absolute inset-0 bg-gradient-to-r from-cleaner-blue-700/30 to-cleaner-green-500/20" />
           </div>

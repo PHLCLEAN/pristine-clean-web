@@ -9,7 +9,7 @@ const Privacy = () => {
     title: "Privacy Policy | PHL Clean",
     description:
       "How PHL Clean collects, uses, and protects the information you share through phlclean.com — including quote requests, job applications, and website analytics.",
-    canonical: "https://phlclean.com/privacy",
+    canonical: "https://phlclean.com/privacy/",
   });
 
   // ISO date format — keep this current when the policy is materially updated.

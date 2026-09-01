@@ -16,7 +16,7 @@ const template = fs.readFileSync(path.join(DIST, 'index.html'), 'utf-8');
 const routes = [];
 
 function addRoute(urlPath, title, description, canonical) {
-  canonical = canonical || `https://phlclean.com${urlPath}`;
+  canonical = canonical || `https://phlclean.com${urlPath}/`;
   routes.push({ urlPath, title, description, canonical });
 }
 
@@ -140,9 +140,27 @@ for (const route of routes) {
     `<meta property="og:description" content="${escapeHtml(route.description)}"`
   );
 
+  // Replace existing canonical from template
   html = html.replace(
-    '</head>',
-    `  <link rel="canonical" href="${route.canonical}" />\n  </head>`
+    /<link rel="canonical" href="[^"]*"/,
+    `<link rel="canonical" href="${route.canonical}"`
+  );
+
+  // Replace og:url from template
+  html = html.replace(
+    /<meta property="og:url" content="[^"]*"/,
+    `<meta property="og:url" content="${route.canonical}"`
+  );
+
+  // Replace twitter:title and twitter:description from template
+  html = html.replace(
+    /<meta name="twitter:title" content="[^"]*"/,
+    `<meta name="twitter:title" content="${escapeHtml(route.title)}"`
+  );
+
+  html = html.replace(
+    /<meta name="twitter:description" content="[^"]*"/,
+    `<meta name="twitter:description" content="${escapeHtml(route.description)}"`
   );
 
   const outDir = path.join(DIST, route.urlPath);

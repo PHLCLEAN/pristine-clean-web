@@ -12,7 +12,7 @@ const Blog = () => {
     title: "Cleaning Tips & Insights for Facility Managers | PHL Clean Blog",
     description:
       "Practical advice on commercial carpet cleaning, floor maintenance, and facility care from PHL Clean — serving Philadelphia, Bucks County, and surrounding areas.",
-    canonical: "https://phlclean.com/blog",
+    canonical: "https://phlclean.com/blog/",
   });
 
   const breadcrumbSchema = {
@@ -20,7 +20,7 @@ const Blog = () => {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://phlclean.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://phlclean.com/blog" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://phlclean.com/blog/" },
     ],
   };
 

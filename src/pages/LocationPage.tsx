@@ -18,7 +18,7 @@ const LocationPage = () => {
   useSeo({
     title: location?.metaTitle ?? "Location Not Found | PHL Clean",
     description: location?.metaDescription ?? "Page not found",
-    canonical: location ? `https://phlclean.com/locations/${location.slug}` : undefined,
+    canonical: location ? `https://phlclean.com/locations/${location.slug}/` : undefined,
   });
 
   if (!location) {

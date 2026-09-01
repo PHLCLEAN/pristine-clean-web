@@ -125,7 +125,7 @@ const BlogPostPage = () => {
   useSeo({
     title: post?.metaTitle ?? "Post Not Found | PHL Clean",
     description: post?.metaDescription ?? "Page not found",
-    canonical: post ? `https://phlclean.com/blog/${post.slug}` : undefined,
+    canonical: post ? `https://phlclean.com/blog/${post.slug}/` : undefined,
   });
 
   if (!post) {
@@ -162,7 +162,7 @@ const BlogPostPage = () => {
       name: "PHL Clean",
       url: "https://phlclean.com",
     },
-    mainEntityOfPage: `https://phlclean.com/blog/${post.slug}`,
+    mainEntityOfPage: `https://phlclean.com/blog/${post.slug}/`,
   };
 
   const breadcrumbSchema = {
@@ -170,12 +170,12 @@ const BlogPostPage = () => {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://phlclean.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://phlclean.com/blog" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://phlclean.com/blog/" },
       {
         "@type": "ListItem",
         position: 3,
         name: post.title,
-        item: `https://phlclean.com/blog/${post.slug}`,
+        item: `https://phlclean.com/blog/${post.slug}/`,
       },
     ],
   };

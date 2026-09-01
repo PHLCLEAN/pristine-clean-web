@@ -9,7 +9,7 @@ const Terms = () => {
     title: "Terms of Service | PHL Clean",
     description:
       "The terms that govern your use of phlclean.com and the relationship between PHL Clean and visitors, prospective customers, and applicants.",
-    canonical: "https://phlclean.com/terms",
+    canonical: "https://phlclean.com/terms/",
   });
 
   const effectiveDate = "May 14, 2026";
