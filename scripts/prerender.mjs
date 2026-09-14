@@ -83,8 +83,8 @@ for (const svc of services) {
 
 // Blog index
 addRoute('/blog',
-  'Cleaning Tips & Insights for Facility Managers | PHL Clean Blog',
-  'Practical advice on commercial carpet cleaning, floor maintenance, and facility care from PHL Clean — serving Philadelphia, Bucks County, and surrounding areas.'
+  'Field Notes — Commercial Floor Care Insights | PHL Clean',
+  'Practical, technical writing on commercial carpet, tile and grout, and hard surface floor care from PHL Clean — serving Philadelphia, Bucks County and surrounding areas.'
 );
 
 // Blog posts
@@ -95,11 +95,11 @@ for (const post of blogPosts) {
 // Static pages
 addRoute('/team',
   'Our Team — PHL Clean',
-  'Meet the PHL Clean team. Locally owned commercial cleaning and janitorial services in Philadelphia, Bucks County, and surrounding areas. (215) 550-1414.'
+  'Meet the PHL Clean team. Locally owned commercial floor care — carpet, tile and grout, and hard surface — in Philadelphia, Bucks County and surrounding areas. (215) 550-1414.'
 );
 addRoute('/careers',
-  'Careers at PHL Clean — Join Our Cleaning Team',
-  'Now hiring experienced commercial cleaners in Philadelphia and Bucks County. Competitive pay, consistent hours, growth opportunities. Apply today.'
+  'Careers at PHL Clean — Floor Care Technicians',
+  'Now hiring carpet and hard surface floor care technicians in Philadelphia and Bucks County. Competitive pay, consistent hours, real training. Apply today.'
 );
 addRoute('/privacy',
   'Privacy Policy | PHL Clean',

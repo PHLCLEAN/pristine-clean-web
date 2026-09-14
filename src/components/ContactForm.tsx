@@ -1,24 +1,31 @@
-
 import React from 'react';
 import ContactInfo from './ContactInfo';
 import QuoteForm from './QuoteForm';
 
 const ContactForm = () => {
   return (
-    <section id="contact" className="section-padding bg-white">
+    <section id="contact" className="section-padding bg-phl-ground">
       <div className="container-custom">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold text-cleaner-blue-800 mb-6">Schedule a Walkthrough</h2>
-            <div className="h-1 w-16 bg-cleaner-green-500 mb-8"></div>
-            
-            <p className="text-gray-700 mb-8">
-              Ready to bring on a reliable, locally owned cleaning team? Tell us a little about your space and we'll set up a free on-site walkthrough — that's how we put together an accurate quote you can actually rely on. We'll get back to you within 24 hours.
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+          <div>
+            <p className="spec-label mb-3">Get started</p>
+            <h2 className="text-[clamp(1.6rem,3.4vw,2.35rem)] text-phl-ink">
+              Schedule a walkthrough
+            </h2>
+            <p className="mt-4 text-phl-ink-2 leading-relaxed max-w-[50ch]">
+              Tell us what surfaces you have and roughly how much of them. We&rsquo;ll come out, walk
+              the floor, and give you a written scope and a real number — plus an honest read on
+              anything that is past cleaning and into restoration.
             </p>
-            
-            <ContactInfo />
+            <p className="mt-4 text-[13.5px] text-phl-muted max-w-[50ch]">
+              We reply within one business day. If it&rsquo;s urgent, the phone is faster than the form.
+            </p>
+
+            <div className="mt-8 pt-8 border-t border-phl-rule">
+              <ContactInfo />
+            </div>
           </div>
-          
+
           <QuoteForm />
         </div>
       </div>

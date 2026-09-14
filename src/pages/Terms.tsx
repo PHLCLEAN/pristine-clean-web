@@ -7,36 +7,35 @@ import { useSeo } from '../hooks/use-seo';
 const Terms = () => {
   useSeo({
     title: "Terms of Service | PHL Clean",
-    description:
-      "The terms that govern your use of phlclean.com and the relationship between PHL Clean and visitors, prospective customers, and applicants.",
+    description:"The terms that govern your use of phlclean.com and the relationship between PHL Clean and visitors, prospective customers, and applicants.",
     canonical: "https://phlclean.com/terms/",
   });
 
   const effectiveDate = "May 14, 2026";
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-phl-ground">
       <Navbar />
       <main>
-        <section className="bg-cleaner-blue-50/40 border-b border-cleaner-blue-100">
+        <section className="bg-phl-surface/40 border-b border-phl-rule">
           <div className="container-custom py-12 md:py-16">
-            <div className="text-sm text-gray-600 mb-3">
-              <Link to="/" className="hover:text-cleaner-blue-700">Home</Link>
+            <div className="text-sm text-phl-ink-2 mb-3">
+              <Link to="/" className="hover:text-phl-blue">Home</Link>
               <span className="mx-2">/</span>
-              <span className="text-cleaner-blue-700">Terms of Service</span>
+              <span className="text-phl-blue">Terms of Service</span>
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-cleaner-blue-800 mb-3">
+            <h1 className="text-3xl md:text-4xl font-bold text-phl-ink mb-3">
               Terms of Service
             </h1>
-            <p className="text-gray-600">
+            <p className="text-phl-ink-2">
               Effective date: {effectiveDate}
             </p>
           </div>
         </section>
 
-        <section className="section-padding bg-white">
+        <section className="section-padding bg-phl-surface">
           <div className="container-custom max-w-3xl">
-            <div className="text-gray-700 leading-relaxed space-y-6">
+            <div className="text-phl-ink-2 leading-relaxed space-y-6">
               <p>
                 These Terms of Service ("Terms") govern your access to and use of
                 phlclean.com (the "Site"), operated by PHL Clean ("PHL Clean," "we," "us,"
@@ -50,17 +49,17 @@ const Terms = () => {
                 replace that agreement.
               </p>
 
-              <h2 className="text-2xl font-bold text-cleaner-blue-800 mt-10 mb-3">
+              <h2 className="text-2xl font-bold text-phl-ink mt-10 mb-3">
                 1. About PHL Clean
               </h2>
               <p>
-                PHL Clean is a commercial cleaning and janitorial services company based
+                PHL Clean is a commercial floor care company — carpet, tile and grout, and hard surface — based
                 in Bensalem, Pennsylvania, serving Philadelphia and the surrounding
                 counties (Bucks, Montgomery, Delaware, and Chester). The Site is an
                 informational and marketing channel for our services.
               </p>
 
-              <h2 className="text-2xl font-bold text-cleaner-blue-800 mt-10 mb-3">
+              <h2 className="text-2xl font-bold text-phl-ink mt-10 mb-3">
                 2. Walkthroughs, quotes, and service agreements
               </h2>
               <p>
@@ -76,7 +75,7 @@ const Terms = () => {
                 parties sign a separate written service agreement.
               </p>
 
-              <h2 className="text-2xl font-bold text-cleaner-blue-800 mt-10 mb-3">
+              <h2 className="text-2xl font-bold text-phl-ink mt-10 mb-3">
                 3. Job applications
               </h2>
               <p>
@@ -86,7 +85,7 @@ const Terms = () => {
                 decisions, when made, are documented through a separate written offer.
               </p>
 
-              <h2 className="text-2xl font-bold text-cleaner-blue-800 mt-10 mb-3">
+              <h2 className="text-2xl font-bold text-phl-ink mt-10 mb-3">
                 4. Acceptable use of the Site
               </h2>
               <p>You agree not to:</p>
@@ -98,7 +97,7 @@ const Terms = () => {
                 <li>Copy or republish substantial portions of the Site's content without our written permission.</li>
               </ul>
 
-              <h2 className="text-2xl font-bold text-cleaner-blue-800 mt-10 mb-3">
+              <h2 className="text-2xl font-bold text-phl-ink mt-10 mb-3">
                 5. Intellectual property
               </h2>
               <p>
@@ -109,12 +108,11 @@ const Terms = () => {
                 distribute, or use the content for commercial purposes without our written
                 permission.
               </p>
-              <p>
-                "PHL Clean" and the PHL Clean logo are trademarks of PHL Clean and may not
+              <p>"PHL Clean" and the PHL Clean logo are trademarks of PHL Clean and may not
                 be used without permission.
               </p>
 
-              <h2 className="text-2xl font-bold text-cleaner-blue-800 mt-10 mb-3">
+              <h2 className="text-2xl font-bold text-phl-ink mt-10 mb-3">
                 6. Third-party links
               </h2>
               <p>
@@ -125,7 +123,7 @@ const Terms = () => {
                 Linking to a third party doesn't imply endorsement.
               </p>
 
-              <h2 className="text-2xl font-bold text-cleaner-blue-800 mt-10 mb-3">
+              <h2 className="text-2xl font-bold text-phl-ink mt-10 mb-3">
                 7. Disclaimers
               </h2>
               <p>
@@ -138,7 +136,7 @@ const Terms = () => {
                 binding offer.
               </p>
 
-              <h2 className="text-2xl font-bold text-cleaner-blue-800 mt-10 mb-3">
+              <h2 className="text-2xl font-bold text-phl-ink mt-10 mb-3">
                 8. Limitation of liability
               </h2>
               <p>
@@ -155,7 +153,7 @@ const Terms = () => {
                 limited to one hundred U.S. dollars ($100).
               </p>
 
-              <h2 className="text-2xl font-bold text-cleaner-blue-800 mt-10 mb-3">
+              <h2 className="text-2xl font-bold text-phl-ink mt-10 mb-3">
                 9. Indemnification
               </h2>
               <p>
@@ -165,7 +163,7 @@ const Terms = () => {
                 or your misuse of the Site.
               </p>
 
-              <h2 className="text-2xl font-bold text-cleaner-blue-800 mt-10 mb-3">
+              <h2 className="text-2xl font-bold text-phl-ink mt-10 mb-3">
                 10. Governing law and venue
               </h2>
               <p>
@@ -176,46 +174,45 @@ const Terms = () => {
                 consent to the jurisdiction of those courts.
               </p>
 
-              <h2 className="text-2xl font-bold text-cleaner-blue-800 mt-10 mb-3">
+              <h2 className="text-2xl font-bold text-phl-ink mt-10 mb-3">
                 11. Changes to these Terms
               </h2>
               <p>
-                We may update these Terms from time to time. When we do, we'll change the
-                "Effective date" at the top of the page. Significant changes will be
+                We may update these Terms from time to time. When we do, we'll change the"Effective date" at the top of the page. Significant changes will be
                 announced by a notice on the Site. Your continued use after a change means
                 you accept the updated Terms.
               </p>
 
-              <h2 className="text-2xl font-bold text-cleaner-blue-800 mt-10 mb-3">
+              <h2 className="text-2xl font-bold text-phl-ink mt-10 mb-3">
                 12. Severability and entire agreement
               </h2>
               <p>
                 If any part of these Terms is found to be unenforceable, the rest stays in
                 effect. These Terms, together with our{' '}
-                <Link to="/privacy" className="text-cleaner-blue-700 underline">Privacy Policy</Link>
+                <Link to="/privacy" className="text-phl-blue underline">Privacy Policy</Link>
                 , are the entire agreement between you and PHL Clean about your use of the
                 Site. Any other agreements between us (including service agreements with
                 customers) are separate and govern their own subject matter.
               </p>
 
-              <h2 className="text-2xl font-bold text-cleaner-blue-800 mt-10 mb-3">
+              <h2 className="text-2xl font-bold text-phl-ink mt-10 mb-3">
                 13. Contact us
               </h2>
               <p>
                 <strong>PHL Clean</strong><br />
                 Email:{' '}
-                <a href="mailto:info@phlclean.com" className="text-cleaner-blue-700 underline">
+                <a href="mailto:info@phlclean.com" className="text-phl-blue underline">
                   info@phlclean.com
                 </a>
                 <br />
                 Phone:{' '}
-                <a href="tel:+12155501414" className="text-cleaner-blue-700 underline">
+                <a href="tel:+12155501414" className="text-phl-blue underline">
                   (215) 550-1414
                 </a>
               </p>
 
-              <p className="text-sm text-gray-500 mt-10 border-t border-gray-200 pt-6">
-                See also our <Link to="/privacy" className="text-cleaner-blue-700 underline">Privacy Policy</Link>.
+              <p className="text-sm text-phl-muted mt-10 border-t border-phl-rule pt-6">
+                See also our <Link to="/privacy" className="text-phl-blue underline">Privacy Policy</Link>.
               </p>
             </div>
           </div>

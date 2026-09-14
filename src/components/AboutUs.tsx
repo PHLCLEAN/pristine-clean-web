@@ -1,99 +1,75 @@
 import React from 'react';
-import { Button } from "@/components/ui/button";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+
+const POINTS = [
+  { title: "Owner on site", body: "Joe runs the walkthroughs. You're talking to the person who prices the job and answers for it." },
+  { title: "Insured & background-checked", body: "General liability and workers' comp. Certificate of Insurance on request, every time." },
+  { title: "Month to month", body: "No multi-year lock-in. We'd rather earn the renewal than enforce a contract." },
+  { title: "We bring the equipment", body: "Machines and chemistry are ours. You supply nothing to get a floor done." },
+];
 
 const AboutUs = () => {
   return (
-    <section id="about" className="section-padding bg-white">
+    <section id="about" className="section-padding bg-phl-ground border-b border-phl-rule">
       <div className="container-custom">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="animate-fade-in">
-            <div className="relative">
-              <div className="rounded-lg overflow-hidden shadow-xl">
-                <AspectRatio ratio={16 / 9}>
-                  <img 
-                    src="/images/floor-maintenance.webp" 
-                    alt="Sleek Modern Office Workspace" 
-                    loading="lazy"
-                    decoding="async"
-                    width={1200}
-                    height={675}
-                    className="w-full h-full object-cover"
-                  />
-                </AspectRatio>
-              </div>
-              <div className="absolute -bottom-6 -right-6 bg-cleaner-blue-700 text-white p-6 rounded-lg shadow-lg hidden md:block">
-                <div className="text-3xl font-bold">5+</div>
-                <div className="text-sm">Years of Experience</div>
-              </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+          <div className="order-2 lg:order-1">
+            <p className="spec-label mb-3">About</p>
+            <h2 className="text-[clamp(1.6rem,3.4vw,2.35rem)] text-phl-ink">
+              We used to clean everything.<br />Now we clean floors.
+            </h2>
+
+            <div className="mt-5 space-y-4 text-phl-ink-2 leading-relaxed">
+              <p>
+                PHL Clean started as a general commercial cleaning company out of Bensalem, and for
+                a while we did what everyone in that business does — a bit of everything, for anyone
+                who asked.
+              </p>
+              <p>
+                The work we were consistently best at, and the work clients kept calling us back
+                for specifically, was the floors. So we stopped doing the rest. Today we do
+                commercial carpet and hard surfaces — tile and grout, VCT, concrete, terrazzo — and
+                nothing else.
+              </p>
+              <p>
+                <strong className="text-phl-ink font-semibold">
+                  That is a smaller business on purpose.
+                </strong>{' '}
+                A generalist has to be adequate at twenty things. We would rather know two surfaces
+                down to the substrate, and be the people who can tell you why your grout keeps
+                cracking in the same line.
+              </p>
             </div>
+
+            <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-5 mt-8 pt-7 border-t border-phl-rule">
+              {POINTS.map(p => (
+                <div key={p.title}>
+                  <dt className="text-[14px] font-semibold text-phl-ink mb-1">{p.title}</dt>
+                  <dd className="text-[13px] text-phl-ink-2 leading-relaxed">{p.body}</dd>
+                </div>
+              ))}
+            </dl>
+
+            <a href="#contact" className="btn-primary px-6 py-3 text-[15px] mt-8">
+              Schedule a Walkthrough
+            </a>
           </div>
-          
-          <div className="animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <h2 className="text-3xl md:text-4xl font-bold text-cleaner-blue-800 mb-6">About PHL Clean</h2>
-            <div className="h-1 w-16 bg-cleaner-green-500 mb-8"></div>
-            
-            <p className="text-gray-700 mb-6">
-              As a locally owned and operated business, PHL Clean is committed to providing exceptional cleaning services to businesses throughout Philadelphia, Montgomery, Delaware, Bucks, and Chester counties. Our passion for excellence has quickly established us as a trusted partner for businesses seeking reliable cleaning solutions.
-            </p>
-            
-            <p className="text-gray-700 mb-6">
-              Our team consists of highly trained Philadelphia-area professionals who take pride in their work and understand the importance of maintaining clean, healthy work environments. We use professional-grade products and advanced equipment to deliver superior results across the Greater Philadelphia region.
-            </p>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-              <div className="flex items-start">
-                <span className="text-cleaner-green-500 mr-3 mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </span>
-                <div>
-                  <h3 className="font-bold text-gray-800 mb-1">Professional Team</h3>
-                  <p className="text-gray-600">Fully trained, background-checked staff</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <span className="text-cleaner-green-500 mr-3 mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </span>
-                <div>
-                  <h3 className="font-bold text-gray-800 mb-1">Quality Guaranteed</h3>
-                  <p className="text-gray-600">Satisfaction guaranteed on every service</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <span className="text-cleaner-green-500 mr-3 mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </span>
-                <div>
-                  <h3 className="font-bold text-gray-800 mb-1">Thorough</h3>
-                  <p className="text-gray-600">Professional-grade products and methods</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <span className="text-cleaner-green-500 mr-3 mt-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </span>
-                <div>
-                  <h3 className="font-bold text-gray-800 mb-1">Insured & Bonded</h3>
-                  <p className="text-gray-600">Fully insured services for your peace of mind</p>
-                </div>
-              </div>
-            </div>
-            
-            <Button asChild className="bg-cleaner-blue-700 hover:bg-cleaner-blue-800 text-white px-8 py-6">
-              <a href="#contact">Schedule a Consultation</a>
-            </Button>
+
+          <div className="order-1 lg:order-2">
+            <figure className="border border-phl-rule rounded-sm overflow-hidden bg-phl-surface">
+              <img
+                src="/images/commercial.webp"
+                alt="A PHL Clean technician running a hot water extraction wand across commercial carpet tile in an office"
+                width={768}
+                height={512}
+                loading="lazy"
+                decoding="async"
+                className="w-full h-auto block"
+              />
+              <figcaption className="font-mono text-[10.5px] text-phl-muted p-3 border-t border-phl-rule">
+                Extraction wand, commercial carpet tile. The overlapping passes are deliberate —
+                a single dry stroke after each wet one is what actually takes the water back out.
+              </figcaption>
+            </figure>
           </div>
         </div>
       </div>

@@ -21,9 +21,6 @@ export type ContentBlock =
   | { type: "callout"; text: string }
   | { type: "list"; ordered: boolean; items: string[] };
 
-// ─────────────────────────────────────────────────────
-// POST 1: Commercial Carpet Cleaning Frequency
-// ─────────────────────────────────────────────────────
 const post1: BlogPost = {
   slug: "how-often-clean-commercial-carpet",
   title: "How Often Should You Clean Commercial Carpet? A Facility Manager's Guide",
@@ -34,7 +31,7 @@ const post1: BlogPost = {
   category: "Carpet & Floor Care",
   readTime: "6 min read",
   relatedLinks: [
-    { label: "Carpet Cleaning Services", href: "/services/carpet-cleaning" },
+    { label: "Commercial Carpet Cleaning", href: "/services/carpet-cleaning" },
     { label: "Carpet Cleaning in Philadelphia", href: "/services/carpet-cleaning/philadelphia" },
     { label: "Carpet Cleaning in Bucks County", href: "/services/carpet-cleaning/bucks-county" },
   ],
@@ -89,9 +86,7 @@ const post1: BlogPost = {
   ],
 };
 
-// ─────────────────────────────────────────────────────
-// POST 2: VCT Floor Maintenance 101
-// ─────────────────────────────────────────────────────
+
 const post2: BlogPost = {
   slug: "vct-floor-maintenance-strip-wax-polish",
   title: "VCT Floor Maintenance 101: Strip, Wax, and Polish Schedules for Commercial Buildings",
@@ -102,9 +97,9 @@ const post2: BlogPost = {
   category: "Carpet & Floor Care",
   readTime: "8 min read",
   relatedLinks: [
-    { label: "Floor Maintenance Services", href: "/services/floor-maintenance" },
-    { label: "Floor Maintenance in Philadelphia", href: "/services/floor-maintenance/philadelphia" },
-    { label: "Floor Maintenance in Bucks County", href: "/services/floor-maintenance/bucks-county" },
+    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance" },
+    { label: "Hard Surface Floor Care in Philadelphia", href: "/services/floor-maintenance/philadelphia" },
+    { label: "Hard Surface Floor Care in Bucks County", href: "/services/floor-maintenance/bucks-county" },
   ],
   body: [
     { type: "paragraph", text: "Vinyl Composition Tile — VCT — is one of the most common flooring materials in commercial buildings across Philadelphia. You'll find it in schools, hospitals, retail stores, office lobbies, and just about every government building you've ever walked through. It's popular for good reason: it's durable, affordable, and it looks great when it's properly maintained." },
@@ -161,7 +156,7 @@ const post2: BlogPost = {
     ]},
 
     { type: "heading", level: 2, text: "When to Call a Professional" },
-    { type: "paragraph", text: "Daily maintenance is something most in-house janitorial teams can handle. Scrub-and-recoat work is doable in-house if you have the right equipment and trained staff. But full strip and wax? That's where professional floor care teams earn their keep." },
+    { type: "paragraph", text: "Daily maintenance is something most in-house facilities teams can handle. Scrub-and-recoat work is doable in-house if you have the right equipment and trained staff. But full strip and wax? That's where professional floor care teams earn their keep." },
     { type: "paragraph", text: "A proper strip and wax requires commercial-grade equipment (auto scrubbers, wet vacs, finish mops), the right chemistry, and experienced operators who know how to lay down a smooth, even finish without lap marks or bubbles. It also usually needs to be done during off-hours so the floor has uninterrupted cure time." },
     { type: "paragraph", text: "If your floors are showing signs of heavy wear — deep scratches, yellowing, finish buildup in corners, visible traffic patterns that don't respond to scrub-and-recoat — it's time for a professional strip and wax." },
 
@@ -169,9 +164,7 @@ const post2: BlogPost = {
   ],
 };
 
-// ─────────────────────────────────────────────────────
-// POST 4: Hidden Cost of Neglecting Commercial Floors
-// ─────────────────────────────────────────────────────
+
 const post3: BlogPost = {
   slug: "hidden-cost-neglecting-commercial-floors",
   title: "The Hidden Cost of Neglecting Your Commercial Floors",
@@ -182,12 +175,12 @@ const post3: BlogPost = {
   category: "Carpet & Floor Care",
   readTime: "5 min read",
   relatedLinks: [
-    { label: "Floor Maintenance Services", href: "/services/floor-maintenance" },
-    { label: "Carpet Cleaning Services", href: "/services/carpet-cleaning" },
-    { label: "Deep Cleaning Services", href: "/services/deep-cleaning" },
+    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance" },
+    { label: "Commercial Carpet Cleaning", href: "/services/carpet-cleaning" },
+    { label: "Carpet Maintenance Programs", href: "/services/carpet-maintenance-programs" },
   ],
   body: [
-    { type: "paragraph", text: "Nobody sets out to neglect their floors. It usually starts small — pushing back a scheduled cleaning to save a little money this quarter, skipping a strip-and-wax cycle because the floor 'still looks okay,' or cutting the janitorial budget because it's an easy line item to trim. But the costs of that neglect add up quietly, and by the time they become visible, you're usually looking at a much bigger bill than the maintenance would have cost." },
+    { type: "paragraph", text: "Nobody sets out to neglect their floors. It usually starts small — pushing back a scheduled cleaning to save a little money this quarter, skipping a strip-and-wax cycle because the floor 'still looks okay,' or cutting the floor care line because it's an easy one to trim. But the costs of that neglect add up quietly, and by the time they become visible, you're usually looking at a much bigger bill than the maintenance would have cost." },
 
     { type: "heading", level: 2, text: "The Replacement Trap" },
     { type: "paragraph", text: "Let's start with the most obvious cost. Commercial carpet runs $3 to $6 per square foot installed. VCT flooring is $2 to $5 per square foot. For a 15,000-square-foot facility, premature floor replacement can easily hit $45,000 to $90,000 — and that's before you factor in the cost of moving furniture, temporary closures, and business disruption." },
@@ -229,9 +222,7 @@ const post3: BlogPost = {
 
 // exports moved to end of file
 
-// ─────────────────────────────────────────────────────
-// POST 3 (Plan): Carpet Cleaning vs. Replacement
-// ─────────────────────────────────────────────────────
+
 const post4: BlogPost = {
   slug: "carpet-cleaning-vs-replacement",
   title: "Carpet Cleaning vs. Replacement: When to Save Your Office Carpet and When to Let It Go",
@@ -242,8 +233,8 @@ const post4: BlogPost = {
   category: "Carpet & Floor Care",
   readTime: "5 min read",
   relatedLinks: [
-    { label: "Carpet Cleaning Services", href: "/services/carpet-cleaning" },
-    { label: "Deep Cleaning Services", href: "/services/deep-cleaning" },
+    { label: "Commercial Carpet Cleaning", href: "/services/carpet-cleaning" },
+    { label: "Carpet Maintenance Programs", href: "/services/carpet-maintenance-programs" },
   ],
   body: [
     { type: "paragraph", text: "You're staring at your office carpet and something's off. Maybe it's the traffic lanes that look permanently gray. Maybe it's a cluster of stains in the break room that nobody's been able to get out. The question bouncing around your head is: do I pay to have this cleaned, or is it time to rip it out and start over?" },
@@ -295,9 +286,7 @@ const post4: BlogPost = {
   ],
 };
 
-// ─────────────────────────────────────────────────────
-// POST 5 (Plan): Hard Floor Care Guide
-// ─────────────────────────────────────────────────────
+
 const post5: BlogPost = {
   slug: "hard-floor-care-guide-commercial",
   title: "Hard Floor Care Guide: Maintaining Concrete, Tile, and Stone in Commercial Properties",
@@ -308,9 +297,9 @@ const post5: BlogPost = {
   category: "Carpet & Floor Care",
   readTime: "7 min read",
   relatedLinks: [
-    { label: "Floor Maintenance Services", href: "/services/floor-maintenance" },
-    { label: "Floor Maintenance in Philadelphia", href: "/services/floor-maintenance/philadelphia" },
-    { label: "Floor Maintenance in Bucks County", href: "/services/floor-maintenance/bucks-county" },
+    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance" },
+    { label: "Hard Surface Floor Care in Philadelphia", href: "/services/floor-maintenance/philadelphia" },
+    { label: "Hard Surface Floor Care in Bucks County", href: "/services/floor-maintenance/bucks-county" },
   ],
   body: [
     { type: "paragraph", text: "Not every commercial floor is VCT or carpet. Walk through enough buildings in Philadelphia and the surrounding counties and you'll see polished concrete in modern offices and breweries, ceramic and porcelain tile in restrooms and lobbies, and natural stone in upscale lobbies and financial institutions. Each one looks great when it's maintained — and each one has its own set of rules." },
@@ -383,9 +372,7 @@ const post5: BlogPost = {
   ],
 };
 
-// ─────────────────────────────────────────────────────
-// POST 6 (Plan): Winter Floor Care in Philadelphia
-// ─────────────────────────────────────────────────────
+
 const post6: BlogPost = {
   slug: "winter-floor-care-philadelphia",
   title: "Winter Floor Care in Philadelphia: How to Protect Your Floors from Salt and Slush",
@@ -396,9 +383,9 @@ const post6: BlogPost = {
   category: "Carpet & Floor Care",
   readTime: "5 min read",
   relatedLinks: [
-    { label: "Floor Maintenance Services", href: "/services/floor-maintenance" },
-    { label: "Carpet Cleaning Services", href: "/services/carpet-cleaning" },
-    { label: "Cleaning in Philadelphia", href: "/locations/philadelphia" },
+    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance" },
+    { label: "Commercial Carpet Cleaning", href: "/services/carpet-cleaning" },
+    { label: "Floor Care in Philadelphia", href: "/locations/philadelphia" },
   ],
   body: [
     { type: "paragraph", text: "If you manage a commercial building in Philadelphia, you already know what winter does to your floors. From December through March, every person who walks through your door brings a little bit of the outside in with them — rock salt, calcium chloride, slush, sand, and moisture. It piles up in entryways, gets tracked down hallways, and grinds into carpet fibers and floor finishes all day long." },
@@ -453,141 +440,7 @@ const post6: BlogPost = {
   ],
 };
 
-// ─────────────────────────────────────────────────────
-// POST 7 (Plan): Medical Facility Cleaning
-// ─────────────────────────────────────────────────────
-const post7: BlogPost = {
-  slug: "medical-facility-cleaning-different",
-  title: "Medical Facility Cleaning: What Makes Healthcare Cleaning Different",
-  metaTitle: "Medical Facility Cleaning: What Makes It Different | PHL Clean",
-  metaDescription: "Healthcare cleaning isn't regular commercial cleaning with extra hand sanitizer. Learn what makes medical facility cleaning different — from compliance requirements to specialized protocols.",
-  date: "2026-05-19",
-  author: "PHL Clean",
-  category: "Industry Focus",
-  readTime: "6 min read",
-  relatedLinks: [
-    { label: "Medical Facility Cleaning Services", href: "/services/medical-facility-cleaning" },
-    { label: "Medical Facility Cleaning in Philadelphia", href: "/services/medical-facility-cleaning/philadelphia" },
-    { label: "Deep Cleaning Services", href: "/services/deep-cleaning" },
-  ],
-  body: [
-    { type: "paragraph", text: "A lot of cleaning companies say they can clean medical facilities. They see it as just another commercial account — same mops, same chemicals, maybe a little extra attention to the restrooms. That misunderstanding is exactly how healthcare facilities end up with cleaning problems that put patients and staff at risk." },
-    { type: "paragraph", text: "Medical facility cleaning is a fundamentally different discipline. The standards are higher, the consequences of mistakes are more serious, and the protocols exist for reasons that go well beyond appearances. If you manage a medical office, dental practice, urgent care center, or any facility where patients are treated, here's what you should understand about what proper healthcare cleaning actually involves." },
 
-    { type: "heading", level: 2, text: "It's About Infection Control, Not Just Cleanliness" },
-    { type: "paragraph", text: "In a standard office, cleaning is primarily about aesthetics and general hygiene — making the space look and smell clean, removing trash, maintaining floors. In a medical facility, the primary objective is infection prevention. Every surface, every protocol, and every product choice is driven by the goal of reducing the risk of healthcare-associated infections (HAIs)." },
-    { type: "paragraph", text: "HAIs are a serious issue. The CDC estimates that on any given day, about 1 in 31 hospital patients has at least one healthcare-associated infection. While most of those occur in acute care settings, outpatient facilities — medical offices, surgical centers, dental practices — have their own infection risks that proper environmental cleaning helps control." },
-
-    { type: "heading", level: 2, text: "What's Different About the Protocols" },
-    { type: "heading", level: 3, text: "EPA-Registered Disinfectants" },
-    { type: "paragraph", text: "Medical facilities can't just use any cleaner. Disinfectants must be EPA-registered with specific kill claims for the pathogens relevant to the facility — things like MRSA, VRE, C. diff, influenza, and tuberculosis. The product needs to be applied at the correct dilution ratio and left on the surface for the manufacturer's specified dwell time (usually 1 to 10 minutes) to actually work. Spray-and-wipe doesn't cut it." },
-
-    { type: "heading", level: 3, text: "High-Touch Surface Focus" },
-    { type: "paragraph", text: "In healthcare, certain surfaces get far more attention than they would in a standard commercial clean. Door handles, light switches, exam table surfaces, chair arms in waiting rooms, check-in counter surfaces, handrails, elevator buttons, and restroom fixtures all need to be disinfected — not just wiped — on every cleaning pass. These high-touch points are the primary vectors for pathogen transmission between patients." },
-
-    { type: "heading", level: 3, text: "Color-Coded Microfiber Systems" },
-    { type: "paragraph", text: "Cross-contamination is one of the biggest risks in healthcare cleaning. Using the same cloth to wipe a toilet and then a door handle defeats the entire purpose of disinfecting. Professional medical cleaning operations use color-coded microfiber systems — red cloths for restrooms only, blue for general surfaces, green for food areas, yellow for isolation or high-risk zones. The colors are universal in the industry so any trained crew member knows immediately which cloth goes where." },
-
-    { type: "heading", level: 3, text: "Daily Cleaning vs. Terminal Cleaning" },
-    { type: "paragraph", text: "Most medical facilities need at least two types of cleaning. Daily (or 'maintenance') cleaning covers the routine work: trash, restrooms, floors, and high-touch surface disinfection. Terminal cleaning is a deeper, more thorough procedure typically done at the end of the day or after a specific event — for example, after a patient with a known infection has been in an exam room. Terminal cleaning covers every surface in the space, including ones that daily cleaning doesn't touch: walls, light fixtures, the undersides of furniture, and medical equipment surfaces." },
-
-    { type: "heading", level: 2, text: "Compliance and Documentation" },
-    { type: "paragraph", text: "Medical facility cleaning isn't just about doing the work — it's about proving you did the work. Regulatory bodies like OSHA, state health departments, and accreditation organizations (like the Joint Commission) can and do inspect cleaning practices. That means your cleaning provider should be documenting what was cleaned, when, with what products, and by whom." },
-    { type: "paragraph", text: "If your current cleaning company can't produce cleaning logs, product Safety Data Sheets (SDS), or training records for their staff, that's a red flag. Compliance documentation protects both the cleaning company and the facility in the event of an inspection or an incident." },
-
-    { type: "heading", level: 2, text: "Staff Training Matters" },
-    { type: "paragraph", text: "You can't hand someone a bottle of disinfectant and a mop and call them a healthcare cleaner. Proper medical cleaning requires training in bloodborne pathogen safety (OSHA's BBP standard), chemical handling and hazard communication, proper personal protective equipment (PPE) use, infection control procedures, and waste handling — including the separate protocols for regulated medical waste versus standard trash." },
-    { type: "paragraph", text: "When you're evaluating a cleaning company for your medical facility, ask about their training program. What topics does it cover? How often is it refreshed? Are their employees OSHA-trained? The answers will tell you whether they're genuinely equipped for healthcare work or just saying they are." },
-
-    { type: "heading", level: 2, text: "Floor Care in Medical Facilities" },
-    { type: "paragraph", text: "Floors in medical facilities face unique challenges. Exam rooms and treatment areas need to support easy disinfection — which means hard, sealed surfaces are preferred over carpet. VCT and sheet vinyl are the most common choices, and they need the same strip-and-wax maintenance as any commercial VCT floor, with the added requirement that all products used must be compatible with the facility's infection control protocols." },
-    { type: "paragraph", text: "Waiting rooms and administrative areas may have carpet, which needs more aggressive cleaning in a medical setting. Quarterly deep extraction (instead of the semi-annual schedule an office might follow) is typical, along with anti-microbial treatment to address the higher bioburden these spaces see." },
-
-    { type: "heading", level: 2, text: "Choosing the Right Cleaning Partner" },
-    { type: "paragraph", text: "If you run a medical facility, the most important question to ask a potential cleaning provider isn't about price — it's about competency. Do they have healthcare-specific training? Do they use EPA-registered disinfectants with documented kill claims? Do they maintain cleaning logs? Do they have a color-coded microfiber system? Can they handle both daily and terminal cleaning?" },
-    { type: "paragraph", text: "These aren't nice-to-haves. They're the baseline for any company claiming to provide medical facility cleaning." },
-
-    { type: "callout", text: "Need a cleaning partner that understands healthcare? Schedule a walkthrough and we'll assess your facility's specific infection control and cleaning needs. Call (215) 550-1414 or fill out our contact form." },
-  ],
-};
-
-// ─────────────────────────────────────────────────────
-// POST 8 (Plan): Office Cleaning Frequency Guide
-// ─────────────────────────────────────────────────────
-const post8: BlogPost = {
-  slug: "office-cleaning-frequency-guide",
-  title: "How Often Should Your Office Be Professionally Cleaned? A Realistic Guide",
-  metaTitle: "How Often Should an Office Be Professionally Cleaned? | PHL Clean",
-  metaDescription: "A practical breakdown of professional office cleaning frequency — by area, headcount, and building type. From daily restroom care to quarterly deep cleans.",
-  date: "2026-05-19",
-  author: "PHL Clean",
-  category: "Industry Focus",
-  readTime: "5 min read",
-  relatedLinks: [
-    { label: "Commercial Cleaning Services", href: "/services/commercial-cleaning" },
-    { label: "Commercial Cleaning in Philadelphia", href: "/services/commercial-cleaning/philadelphia" },
-    { label: "Deep Cleaning Services", href: "/services/deep-cleaning" },
-  ],
-  body: [
-    { type: "paragraph", text: "It's one of the first questions we hear from new clients: how often does our office actually need to be cleaned? The honest answer is that it depends — but it depends on specific, measurable things, not on guesswork. Your headcount, building traffic, industry, and layout all shape the right answer. Here's a realistic framework to figure out what your space actually needs." },
-
-    { type: "heading", level: 2, text: "Start with the Non-Negotiables" },
-    { type: "paragraph", text: "Some areas need daily attention regardless of office size. Restrooms, kitchens, and break rooms are the big three. These are high-moisture, high-bacteria zones where skipping even one day creates noticeable problems — odors, overflowing trash, and surfaces that go from 'a little used' to 'actively unpleasant' fast." },
-    { type: "paragraph", text: "Trash removal is the other daily must. Overflowing waste bins are one of the first things employees notice, and it's one of the easiest cleanliness problems to prevent." },
-
-    { type: "heading", level: 2, text: "Cleaning Frequency by Area" },
-    {
-      type: "table",
-      headers: ["Area", "Recommended Frequency", "Notes"],
-      rows: [
-        ["Restrooms", "Daily", "Disinfect all surfaces; restock consumables"],
-        ["Kitchen / break room", "Daily", "Sinks, counters, appliance exteriors, floor"],
-        ["Trash & recycling", "Daily", "All bins, liner replacement"],
-        ["Lobby / reception", "Daily", "First impression zone — vacuum, dust, glass"],
-        ["Open office / desks", "2–3x per week", "Vacuum, dust horizontal surfaces, wipe phones"],
-        ["Conference rooms", "2–3x per week", "Table, chairs, glass, tech surfaces"],
-        ["Private offices", "1–2x per week", "Lower traffic justifies less frequency"],
-        ["Windows (interior glass)", "Monthly", "Doors, partitions, interior-facing glass"],
-        ["Deep clean (carpet extraction, floor scrub)", "Quarterly", "Resets accumulated soil"],
-        ["High dusting (vents, lights, high shelves)", "Quarterly", "Often missed — reduces allergens"],
-      ],
-    },
-
-    { type: "heading", level: 2, text: "How Headcount and Traffic Shape the Schedule" },
-    { type: "paragraph", text: "A 20-person office with no public visitors is a completely different cleaning challenge than a 20-person office that sees 50 clients a day. The key variable isn't just how many people work there — it's how many people pass through." },
-    { type: "paragraph", text: "Here's a general framework based on what we see working across our accounts in Philadelphia and the surrounding counties:" },
-    { type: "list", ordered: false, items: [
-      "Small office, low traffic (under 20 people, minimal visitors): 2 to 3 cleanings per week is usually enough, with daily trash service if possible.",
-      "Medium office, moderate traffic (20–75 people, regular visitors): Daily cleaning of restrooms, kitchen, and common areas. Full clean 3 to 5 times per week.",
-      "Large office or high traffic (75+ people, heavy public access): Daily comprehensive cleaning. Consider twice-daily restroom service and midday touch-ups in common areas.",
-    ]},
-
-    { type: "heading", level: 2, text: "The 'We Clean It Ourselves' Question" },
-    { type: "paragraph", text: "Some smaller offices try to handle cleaning in-house — assigning it to whoever's willing, keeping a supply closet stocked, and hoping for the best. It works for a while, until it doesn't. The common failure points are inconsistency (someone forgets or gets too busy), restroom quality (nobody wants to do it, so it gets half-done), and floor care (vacuuming might happen, but deep cleaning and floor maintenance almost never do)." },
-    { type: "paragraph", text: "There's nothing wrong with employees doing basic tidying. But professional cleaning addresses the things that accumulate invisibly — carpet soil, restroom bacteria, allergens in upholstery and ductwork — that DIY efforts consistently miss." },
-
-    { type: "heading", level: 2, text: "Signs Your Current Schedule Isn't Enough" },
-    { type: "list", ordered: false, items: [
-      "Restrooms develop odors between cleanings",
-      "Trash cans overflow before the next service day",
-      "Carpet in high-traffic areas looks noticeably darker than surrounding areas",
-      "Dust is visible on vents, blinds, or high shelves",
-      "Employees are mentioning cleanliness in feedback or complaints",
-      "You find yourself doing 'emergency cleans' before important meetings or client visits",
-    ]},
-    { type: "paragraph", text: "If any of these sound familiar, your cleaning frequency probably needs to increase — or the scope of each visit needs to expand." },
-
-    { type: "heading", level: 2, text: "Building a Custom Schedule" },
-    { type: "paragraph", text: "The tables and guidelines above are starting points. Every office has its own quirks — a big break room that gets heavy use, a carpeted conference room that hosts all-day meetings, a lobby with stone floors that needs different care than the rest of the building. The right schedule is one that's tailored to how your specific space is actually used." },
-    { type: "paragraph", text: "That's why we build every cleaning program around an in-person walkthrough. We see your space, talk about how it's used, and then put together a schedule and scope of work that matches reality — not a generic template." },
-
-    { type: "callout", text: "Want a cleaning schedule built around your office's actual needs? Schedule a free walkthrough and we'll put together a custom plan. Call (215) 550-1414 or fill out our contact form." },
-  ],
-};
-
-// ─────────────────────────────────────────────────────
-// POST 9 (Plan): Restaurant Floor Cleaning
-// ─────────────────────────────────────────────────────
 const post9: BlogPost = {
   slug: "restaurant-floor-cleaning-compliance",
   title: "Keeping Restaurant and Food Service Floors Safe and Compliant",
@@ -598,8 +451,8 @@ const post9: BlogPost = {
   category: "Industry Focus",
   readTime: "5 min read",
   relatedLinks: [
-    { label: "Floor Maintenance Services", href: "/services/floor-maintenance" },
-    { label: "Deep Cleaning Services", href: "/services/deep-cleaning" },
+    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance" },
+    { label: "Carpet Maintenance Programs", href: "/services/carpet-maintenance-programs" },
   ],
   body: [
     { type: "paragraph", text: "Restaurant floors take more punishment than almost any other commercial surface. Between grease splatter from the kitchen line, foot traffic from staff hustling through service, and customers tracking in whatever's on the sidewalk, the floor never gets a break. Add in health department inspections, slip-and-fall liability, and the fact that customers can see the front-of-house floor from their table, and you've got a surface that needs serious, consistent attention." },
@@ -634,515 +487,22 @@ const post9: BlogPost = {
   ],
 };
 
-// ─────────────────────────────────────────────────────
-// POST 10 (Plan): School & Daycare Cleaning PA
-// ─────────────────────────────────────────────────────
-const post10: BlogPost = {
-  slug: "school-daycare-cleaning-standards-pennsylvania",
-  title: "School and Daycare Cleaning Standards in Pennsylvania: What Administrators Need to Know",
-  metaTitle: "School & Daycare Cleaning Standards in PA | PHL Clean",
-  metaDescription: "Pennsylvania schools and daycares face specific cleaning regulations. Here's what administrators need to know about DHS requirements, product safety, and seasonal deep cleaning.",
-  date: "2026-05-19",
-  author: "PHL Clean",
-  category: "Industry Focus",
-  readTime: "6 min read",
-  relatedLinks: [
-    { label: "Commercial Cleaning Services", href: "/services/commercial-cleaning" },
-    { label: "Deep Cleaning Services", href: "/services/deep-cleaning" },
-    { label: "Carpet Cleaning Services", href: "/services/carpet-cleaning" },
-  ],
-  body: [
-    { type: "paragraph", text: "Cleaning a school or daycare isn't like cleaning an office. The occupants are children — often very young children — who touch everything, put things in their mouths, sit on the floor, and have developing immune systems. The cleaning products, methods, and standards that work fine in an adult workplace need to be reconsidered when kids are the primary occupants." },
-    { type: "paragraph", text: "Pennsylvania has specific regulatory requirements for childcare facilities, and while K-12 schools have more flexibility, best practices in school cleaning are well-established. If you're an administrator, facility director, or school board member, here's what you need to know." },
 
-    { type: "heading", level: 2, text: "Pennsylvania DHS Childcare Regulations" },
-    { type: "paragraph", text: "For licensed childcare facilities in Pennsylvania, the Department of Human Services (DHS) sets specific environmental health and safety standards under Title 55 of the Pennsylvania Code. These regulations cover cleaning, sanitization, and disinfection of childcare spaces and are not optional — they're conditions of licensure." },
-    { type: "paragraph", text: "Key requirements include daily cleaning and sanitizing of surfaces that children contact (tables, chairs, countertops, toys, and door handles), immediate cleaning and sanitizing of surfaces contaminated with bodily fluids, sanitizing of food preparation and eating surfaces before and after each use, and regular cleaning of floors, walls, and other environmental surfaces. Napping mats and bedding also have specific cleaning and storage requirements." },
-
-    { type: "heading", level: 2, text: "Product Safety: What Can You Use Around Kids?" },
-    { type: "paragraph", text: "This is where a lot of facilities get tripped up. The same industrial-strength disinfectant that works great in an office building might not be appropriate for a space where toddlers are crawling on the floor. Product choice in schools and daycares needs to balance efficacy with safety." },
-    { type: "list", ordered: false, items: [
-      "EPA Safer Choice products are preferred when available. The Safer Choice label means the product has been evaluated for safety to humans and the environment while still meeting performance standards.",
-      "Bleach solutions (sodium hypochlorite) are widely used for sanitizing in childcare settings and are approved by the CDC for this purpose. The correct dilution for general sanitizing is typically 1 tablespoon of regular unscented bleach per gallon of water, freshly mixed daily.",
-      "Avoid products with strong fragrances, volatile organic compounds (VOCs), or ingredients known to trigger respiratory reactions. Children are more sensitive to airborne chemicals than adults.",
-      "Any disinfectant used must have an EPA registration number and be used according to the label directions — including dilution ratio and dwell time.",
-    ]},
-
-    { type: "heading", level: 2, text: "Carpet vs. Hard Floors in Classrooms" },
-    { type: "paragraph", text: "This is an ongoing debate in school design. Carpet provides a softer surface for children who sit on the floor, reduces noise, and can feel warmer and more inviting. But carpet also traps allergens, dust mites, and moisture — all of which can aggravate asthma and allergies, which affect a significant percentage of school-age children." },
-    { type: "paragraph", text: "If your school or daycare has carpet, more aggressive cleaning is essential. Vacuuming should happen daily with a HEPA-filtered vacuum, deep extraction should happen at least quarterly (monthly in high-use areas like reading corners and nap rooms), and any moisture incidents need to be addressed immediately to prevent mold growth." },
-    { type: "paragraph", text: "Hard floors are generally easier to maintain in a school setting and better for air quality. But they need to be kept clean and dry — a wet floor in a room full of running kids is an obvious hazard. Non-slip finishes and proper maintenance are critical." },
-
-    { type: "heading", level: 2, text: "The Summer Deep Clean Opportunity" },
-    { type: "paragraph", text: "Summer break is the single best opportunity for facility-wide deep cleaning in schools. With the building empty, crews can do work that's difficult or impossible during the school year: full carpet extraction in every room, strip and wax of all VCT floors, deep cleaning of restrooms and cafeterias, high dusting of ceilings, vents, and light fixtures, and window cleaning inside and out." },
-    { type: "paragraph", text: "A well-executed summer deep clean resets the facility for the new school year and extends the life of flooring, furniture, and fixtures. It's the single biggest maintenance investment a school makes all year — and it pays dividends in both appearance and indoor air quality when students return in the fall." },
-
-    { type: "heading", level: 2, text: "Daily Cleaning Checklist for Schools and Daycares" },
-    {
-      type: "table",
-      headers: ["Area", "Tasks", "Frequency"],
-      rows: [
-        ["Classrooms", "Vacuum or mop, wipe desks and chairs, empty trash, disinfect high-touch surfaces", "Daily"],
-        ["Restrooms", "Full clean and disinfect, restock supplies, mop floors", "Daily (minimum)"],
-        ["Cafeteria", "Mop floors, wipe tables and benches, clean serving areas", "After each meal"],
-        ["Hallways & common areas", "Vacuum or dust mop, spot clean walls, clean drinking fountains", "Daily"],
-        ["Gymnasium", "Dust mop or auto-scrub floor, wipe equipment surfaces", "Daily when in use"],
-        ["Nap/rest areas", "Sanitize mats and bedding, vacuum", "Daily"],
-        ["Playground equipment", "Wipe high-touch surfaces", "Daily"],
-      ],
-    },
-
-    { type: "heading", level: 2, text: "Choosing a Cleaning Partner for Your School" },
-    { type: "paragraph", text: "Not every commercial cleaning company is equipped for school or daycare work. When evaluating providers, ask specifically about their experience with educational facilities, their product selection policy (do they use Safer Choice or equivalent products?), their background check and screening process for employees who will be in your building, and whether they can provide the documentation needed for DHS inspections." },
-
-    { type: "callout", text: "Getting ready for the new school year — or need a better cleaning program during the year? Schedule a walkthrough and we'll put together a plan that meets your facility's specific needs and Pennsylvania's regulatory requirements. Call (215) 550-1414 or fill out our contact form." },
-  ],
-};
-
-// ─────────────────────────────────────────────────────
-// POST 11 (Plan): What to Ask Before Signing a Contract
-// ─────────────────────────────────────────────────────
-const post11: BlogPost = {
-  slug: "questions-ask-commercial-cleaning-contract",
-  title: "What to Ask Before Signing a Commercial Cleaning Contract",
-  metaTitle: "15 Questions to Ask Before Signing a Cleaning Contract | PHL Clean",
-  metaDescription: "Hiring a commercial cleaning company? Here are the questions that separate great providers from mediocre ones — and the answers you should be looking for.",
-  date: "2026-05-19",
-  author: "PHL Clean",
-  category: "Trust & Authority",
-  readTime: "6 min read",
-  relatedLinks: [
-    { label: "Commercial Cleaning Services", href: "/services/commercial-cleaning" },
-    { label: "Contact Us", href: "/#contact" },
-  ],
-  body: [
-    { type: "paragraph", text: "Hiring a commercial cleaning company is one of those decisions where the wrong choice costs you twice — once to pay the underperformer, and again to find and onboard their replacement. The good news is that you can avoid most bad outcomes by asking the right questions before you sign anything." },
-    { type: "paragraph", text: "These aren't gotcha questions. They're the things that genuinely separate well-run cleaning companies from the ones that look good on paper but fall apart in practice. Ask every company on your shortlist these questions and compare the answers — the differences will be obvious." },
-
-    { type: "heading", level: 2, text: "Insurance and Liability" },
-    { type: "heading", level: 3, text: "1. Are you insured? Can I see your certificate of insurance?" },
-    { type: "paragraph", text: "This is question number one for a reason. A legitimate commercial cleaning company carries general liability insurance (covering property damage and bodily injury) and workers' compensation insurance (covering their employees if they're injured in your building). Ask for a current certificate of insurance — not just a verbal confirmation. If they hesitate or can't produce one, walk away." },
-
-    { type: "heading", level: 3, text: "2. What happens if something in my building is damaged during cleaning?" },
-    { type: "paragraph", text: "Accidents happen. What matters is how they're handled. A good company has a clear process: report it immediately, assess the damage, file an insurance claim if needed, and make it right. Ask about their damage reporting process and whether they've had to handle claims before. A company that says 'that never happens' either hasn't been in business long or isn't being honest." },
-
-    { type: "heading", level: 2, text: "Scope and Expectations" },
-    { type: "heading", level: 3, text: "3. What exactly is included in the scope of work?" },
-    { type: "paragraph", text: "This is where most cleaning relationships go sideways. You assume the trash in the break room is included; they assumed it wasn't. Get a detailed, written scope of work that lists every task, every area, and the frequency for each. If it's not on the list, it's not getting done — so make sure the list is complete before you sign." },
-
-    { type: "heading", level: 3, text: "4. How do you handle requests outside the normal scope?" },
-    { type: "paragraph", text: "Sometimes you need something extra — a conference room deep-cleaned before a client visit, or the kitchen floor scrubbed after a company event. How are ad-hoc requests handled? Is there an extra charge? How much lead time is needed? A responsive company makes this easy; a rigid one makes it a headache." },
-
-    { type: "heading", level: 3, text: "5. Did you walk through our facility before quoting?" },
-    { type: "paragraph", text: "Any cleaning company that quotes you a price without seeing your space is guessing. Square footage alone doesn't tell you about the floor types, the restroom count, the kitchen situation, or the specific challenges of your building. An in-person walkthrough before quoting is a non-negotiable indicator that the company takes the work seriously." },
-
-    { type: "heading", level: 2, text: "People and Quality" },
-    { type: "heading", level: 3, text: "6. Will we have the same crew each visit?" },
-    { type: "paragraph", text: "Consistency matters. A crew that knows your building — where the light switches are, which doors stick, what the conference room should look like before Monday meetings — does better work than a rotating cast of strangers. Ask whether they assign dedicated crews and how they handle coverage when someone's out." },
-
-    { type: "heading", level: 3, text: "7. What's your employee screening and training process?" },
-    { type: "paragraph", text: "These people will have keys to your building and access to your space after hours. You should know how they're vetted. Ask about background checks, drug screening, and training. What does a new hire learn before they're sent to a client site? How long is the training period? Is there ongoing training?" },
-
-    { type: "heading", level: 3, text: "8. How do you monitor quality?" },
-    { type: "paragraph", text: "Everyone says they do quality work. The question is how they verify it. Look for specifics: do crew leads do walk-throughs after each visit? Are there unannounced supervisor inspections? Do they use a quality checklist or scoring system? What feedback loop exists between you and their management?" },
-
-    { type: "heading", level: 2, text: "Supplies and Equipment" },
-    { type: "heading", level: 3, text: "9. Do you bring your own equipment and supplies?" },
-    { type: "paragraph", text: "Most professional cleaning companies bring their own equipment (vacuums, mops, floor machines) and cleaning chemicals. Your responsibility is typically limited to consumables — paper towels, toilet paper, hand soap, and trash liners. Make sure you're clear on who provides what before the contract starts, so there are no surprises when the soap runs out and nobody refills it." },
-
-    { type: "heading", level: 3, text: "10. What cleaning products do you use?" },
-    { type: "paragraph", text: "This matters more than most people realize. Are they using professional-grade products or the cheapest thing from the big-box store? Do they have Safety Data Sheets (SDS) available for everything they bring into your building? If you have specific requirements — fragrance-free products, healthcare-grade disinfectants, particular chemical sensitivities — make sure they can accommodate them before you sign." },
-
-    { type: "heading", level: 2, text: "Contract Terms" },
-    { type: "heading", level: 3, text: "11. What's the contract length and cancellation policy?" },
-    { type: "paragraph", text: "Long-term contracts with heavy cancellation penalties should make you cautious. They often exist because the company knows clients would leave if they could. Look for month-to-month agreements or short-term contracts (90 days) with reasonable notice periods. A confident company earns your business each month — they don't need a contract to keep you." },
-
-    { type: "heading", level: 3, text: "12. How is pricing structured?" },
-    { type: "paragraph", text: "Is it a flat monthly rate or per-visit pricing? Are there seasonal adjustments? What triggers a price increase and how much notice will you get? Understand the pricing structure completely and get it in writing. 'We'll work it out as we go' is not a pricing structure." },
-
-    { type: "heading", level: 2, text: "Communication and Problem Resolution" },
-    { type: "heading", level: 3, text: "13. Who do I contact if there's a problem?" },
-    { type: "paragraph", text: "When something goes wrong — a missed cleaning, a quality issue, a broken item — who do you call? And how quickly should you expect a response? The best answer is a specific person with direct contact information and a commitment to same-day response. The worst answer is a generic customer service line or email address." },
-
-    { type: "heading", level: 3, text: "14. Can you provide references from similar clients?" },
-    { type: "paragraph", text: "Ask for references from clients with similar facilities and requirements. And actually call them. Ask about reliability, quality, communication, and how problems are handled. A good cleaning company should have no trouble providing three to five references without hesitation." },
-
-    { type: "heading", level: 3, text: "15. What makes your company different?" },
-    { type: "paragraph", text: "This is an open-ended question on purpose. The answer tells you what the company values and how they see themselves. Vague answers ('we care about quality') mean nothing. Specific answers ('we assign the same crew to your building every visit and our operations manager does monthly quality audits') tell you they've actually thought about what good service looks like." },
-
-    { type: "callout", text: "Ready to ask us these questions? We welcome them. Schedule a walkthrough and we'll answer every one of them in person. Call (215) 550-1414 or fill out our contact form." },
-  ],
-};
-
-// ─────────────────────────────────────────────────────
-// POST 12 (Plan): In-House Janitor vs. Outsourced
-// ─────────────────────────────────────────────────────
-const post12: BlogPost = {
-  slug: "in-house-janitor-vs-outsourced-cleaning-cost",
-  title: "In-House Janitor vs. Outsourced Commercial Cleaning: An Honest Cost Comparison",
-  metaTitle: "In-House Janitor vs. Outsourced Cleaning: Cost Comparison | PHL Clean",
-  metaDescription: "Is it cheaper to hire a janitor or outsource to a cleaning company? An honest breakdown of the real costs — salary, benefits, equipment, management time, and liability.",
-  date: "2026-05-19",
-  author: "PHL Clean",
-  category: "Trust & Authority",
-  readTime: "6 min read",
-  relatedLinks: [
-    { label: "Commercial Cleaning Services", href: "/services/commercial-cleaning" },
-    { label: "Contact Us", href: "/#contact" },
-  ],
-  body: [
-    { type: "paragraph", text: "At some point, every facility manager or business owner runs the same calculation in their head: would it be cheaper to just hire someone in-house? It's a reasonable question. You see the monthly cleaning bill, you look up what a janitor makes, and the in-house number looks smaller. But that quick mental math is almost always missing several real costs that change the comparison significantly." },
-    { type: "paragraph", text: "This isn't a sales pitch for outsourcing — there are genuinely situations where an in-house janitor is the right call. But the decision should be based on complete numbers, not a comparison between a loaded monthly cleaning contract and an unloaded hourly wage." },
-
-    { type: "heading", level: 2, text: "The True Cost of an In-House Janitor" },
-    { type: "paragraph", text: "Let's build the real number. In the Philadelphia metro area, a full-time commercial janitor's base wage ranges from about $14 to $18 per hour. That's the starting point, not the finish line." },
-    {
-      type: "table",
-      headers: ["Cost Component", "Annual Estimate"],
-      rows: [
-        ["Base salary ($16/hr × 2,080 hrs)", "$33,280"],
-        ["Payroll taxes (FICA, FUTA, SUTA — ~10%)", "$3,300"],
-        ["Workers' comp insurance (~5% for janitorial)", "$1,660"],
-        ["Health benefits (if offered)", "$4,000 – $8,000"],
-        ["Paid time off (vacation, sick — 10 days)", "$1,280"],
-        ["Equipment (vacuum, floor machine, supplies)", "$3,000 – $5,000 Year 1, $1,500/yr after"],
-        ["Cleaning chemicals and consumable supplies", "$2,000 – $4,000/yr"],
-        ["Training and onboarding", "$500 – $1,000"],
-        ["Management time (supervision, scheduling, reviews)", "$2,000 – $4,000 (your time has value)"],
-        ["Backup coverage (sick days, vacation)", "$1,500 – $3,000"],
-        ["Total Year 1", "$52,500 – $63,500"],
-        ["Total Ongoing (Year 2+)", "$48,500 – $58,500"],
-      ],
-    },
-    { type: "paragraph", text: "That $16/hour janitor actually costs $25 to $30 per hour when you account for everything. And that's for one person covering one shift. If your building needs evening and weekend coverage, you're looking at a second part-time hire or overtime — both of which push the cost up further." },
-
-    { type: "heading", level: 2, text: "The True Cost of Outsourced Cleaning" },
-    { type: "paragraph", text: "Outsourced commercial cleaning for a typical 10,000 to 15,000-square-foot office in the Philadelphia area runs roughly $2,000 to $4,500 per month, depending on the scope and frequency. That works out to $24,000 to $54,000 per year." },
-    { type: "paragraph", text: "That contract price includes labor (including backup coverage), all equipment and chemicals, insurance and liability, training, supervision, and quality management. There's no Year 1 equipment outlay, no HR overhead, no scrambling for coverage when someone calls out sick." },
-
-    { type: "heading", level: 2, text: "Side-by-Side Comparison" },
-    {
-      type: "table",
-      headers: ["Factor", "In-House Janitor", "Outsourced Cleaning"],
-      rows: [
-        ["Annual cost (10–15K sq ft office)", "$48,500 – $63,500", "$24,000 – $54,000"],
-        ["Equipment and supplies", "You buy and maintain", "Included"],
-        ["Backup when employee is out", "You figure it out", "Included"],
-        ["Insurance/liability", "Your workers' comp policy", "Their policy"],
-        ["Training", "You provide", "They provide"],
-        ["Supervision/management", "Your time", "Their operations team"],
-        ["Specialized work (floors, carpet)", "Usually can't do it", "Often included or add-on"],
-        ["Scalability", "Hire another person", "Adjust the contract"],
-      ],
-    },
-
-    { type: "heading", level: 2, text: "When In-House Makes Sense" },
-    { type: "paragraph", text: "Outsourcing isn't always the winner. In-house janitorial can be the better choice in certain situations:" },
-    { type: "list", ordered: false, items: [
-      "Very large facilities (50,000+ square feet) where you need a full-time, on-site presence throughout the day — not just after-hours cleaning.",
-      "Facilities with highly specialized or sensitive areas where the same person needs to be there every day and deeply understand the space (certain manufacturing, clean rooms, etc.).",
-      "Organizations that already have a facilities team and can absorb janitorial duties into existing management structure without adding overhead.",
-      "When the building requires daytime porter service in addition to after-hours cleaning — having someone on-site all day can justify a full-time hire.",
-    ]},
-
-    { type: "heading", level: 2, text: "When Outsourcing Wins" },
-    { type: "paragraph", text: "For most offices under 20,000 square feet — which covers the vast majority of commercial tenants — outsourcing is more cost-effective and less hassle. The advantages are especially clear in these situations:" },
-    { type: "list", ordered: false, items: [
-      "You don't want to manage another employee (hiring, scheduling, performance reviews, disciplinary issues).",
-      "You need specialized floor care (carpet extraction, VCT strip and wax, hard floor maintenance) that a general janitor isn't equipped or trained to do.",
-      "You want guaranteed coverage — no scrambling when your janitor takes vacation, calls out sick, or quits.",
-      "You want a fixed, predictable monthly cost with no surprise equipment purchases or supply runs.",
-      "You value having a quality management system (inspections, checklists, accountability) that you don't have to build yourself.",
-    ]},
-
-    { type: "heading", level: 2, text: "The Hybrid Approach" },
-    { type: "paragraph", text: "Some facilities find the sweet spot with a hybrid model: a part-time in-house person handling daytime touch-ups (restroom checks, lobby upkeep, spill response) combined with an outsourced crew handling the heavy lifting after hours (full cleaning, floor care, deep work). This gives you daytime responsiveness without the full cost burden of a comprehensive in-house operation." },
-
-    { type: "callout", text: "Want to see what outsourced cleaning would actually cost for your specific space? Schedule a walkthrough and we'll give you an honest, detailed quote. Call (215) 550-1414 or fill out our contact form." },
-  ],
-};
-
-// ─────────────────────────────────────────────────────
-// POST 13 (Plan): How to Evaluate a Cleaning Company
-// ─────────────────────────────────────────────────────
-const post13: BlogPost = {
-  slug: "evaluate-commercial-cleaning-company",
-  title: "How to Evaluate a Commercial Cleaning Company: Red Flags and Green Flags",
-  metaTitle: "How to Evaluate a Commercial Cleaning Company | PHL Clean",
-  metaDescription: "Choosing a commercial cleaning company? Here are the green flags that signal a great provider and the red flags that should send you running.",
-  date: "2026-05-19",
-  author: "PHL Clean",
-  category: "Trust & Authority",
-  readTime: "5 min read",
-  relatedLinks: [
-    { label: "Our Team", href: "/team" },
-    { label: "Contact Us", href: "/#contact" },
-  ],
-  body: [
-    { type: "paragraph", text: "Choosing a commercial cleaning company can feel like a shot in the dark. Everyone's website says the same things — reliable, professional, detail-oriented, committed to excellence. The brochure photos all look great. The initial conversation goes smoothly. Then three months in, you're dealing with missed cleanings, revolving crews, and a 'manager' who takes 48 hours to return your call." },
-    { type: "paragraph", text: "The good news is that the signs of a great cleaning company — and the warning signs of a bad one — are visible before you sign the contract. You just have to know what to look for." },
-
-    { type: "heading", level: 2, text: "Green Flags: Signs of a Good Cleaning Company" },
-
-    { type: "heading", level: 3, text: "They insist on a walkthrough before quoting" },
-    { type: "paragraph", text: "This is the single most reliable indicator of a quality provider. A company that needs to see your space before giving you a price is a company that takes the work seriously. They're evaluating your floor types, restroom count, traffic patterns, and specific challenges so they can build an accurate scope and quote. A company that quotes sight-unseen is guessing — and you'll pay for those guesses later through missed expectations." },
-
-    { type: "heading", level: 3, text: "They provide a detailed, written scope of work" },
-    { type: "paragraph", text: "Not a one-page summary — a detailed task list that spells out exactly what gets done, in which areas, and how often. If you can read the scope of work and know precisely what your building will look like after each visit, they've done it right." },
-
-    { type: "heading", level: 3, text: "They assign consistent crews" },
-    { type: "paragraph", text: "Ask whether the same crew will clean your building each visit. Consistent crews know your space, learn your preferences, and develop accountability. They notice when something's different and adjust without being told. Rotating crews treat your building like just another stop on the route." },
-
-    { type: "heading", level: 3, text: "They have a real quality control process" },
-    { type: "paragraph", text: "Quality isn't a feeling — it's a system. Good companies have documented processes: crew lead walk-throughs after each visit, periodic supervisor inspections, quality scorecards, and a feedback loop that connects your observations to their operations. Ask to see their quality checklist or inspection form." },
-
-    { type: "heading", level: 3, text: "They can produce insurance, references, and training records on request" },
-    { type: "paragraph", text: "A well-run company has this documentation ready to go. If they fumble or delay when you ask for a certificate of insurance, client references, or employee training records, that tells you something about how organized their operation is." },
-
-    { type: "heading", level: 3, text: "Communication is easy and direct" },
-    { type: "paragraph", text: "When you have a question, you should be able to reach a real person quickly — not navigate a phone tree or wait days for an email reply. The best cleaning relationships are the ones where you have direct access to the person responsible for your account. Bonus points if the owner is accessible." },
-
-    { type: "heading", level: 2, text: "Red Flags: Warning Signs to Watch For" },
-
-    { type: "heading", level: 3, text: "They quote without seeing your space" },
-    { type: "paragraph", text: "We've covered this, but it bears repeating. A price-per-square-foot quote based on a phone conversation or email exchange is not a real quote. It's an estimate that will either be too high (padding for unknowns) or too low (and they'll cut corners to make it work)." },
-
-    { type: "heading", level: 3, text: "The price is significantly lower than everyone else" },
-    { type: "paragraph", text: "If one quote is 30 to 40 percent cheaper than the other two, something is off. They're either cutting scope, cutting labor (fewer hours in your building), using cheaper products, or underinsuring their business. The cheapest cleaning company almost always becomes the most expensive one after you factor in the cost of managing problems and eventually replacing them." },
-
-    { type: "heading", level: 3, text: "They push long-term contracts with steep cancellation penalties" },
-    { type: "paragraph", text: "A company that needs a two-year contract to keep you is a company that isn't confident in their ability to retain you through performance. Month-to-month or short-term agreements are a sign that the company stands behind its work." },
-
-    { type: "heading", level: 3, text: "High turnover is visible" },
-    { type: "paragraph", text: "If every time you interact with the company it's a different person — different crew, different account manager, different office contact — that's a sign of an internal problem. High turnover in the cleaning industry is common, but the best companies manage it through better hiring, better training, and better pay. Ask about their employee retention rate." },
-
-    { type: "heading", level: 3, text: "They're vague about what's included" },
-    { type: "paragraph", text: "If you can't get a straight answer about whether floor waxing is included, or how often the kitchen will be cleaned, or who provides the trash liners — that ambiguity will become a problem. Every service, every area, and every frequency should be in writing." },
-
-    { type: "heading", level: 3, text: "They can't explain their training process" },
-    { type: "paragraph", text: "Ask them how a new employee is trained before being sent to a client site. If the answer is vague ('they shadow someone for a day') or nonexistent, the quality you get will be inconsistent at best." },
-
-    { type: "heading", level: 2, text: "How to Use This Framework" },
-    { type: "paragraph", text: "Get quotes from at least three companies. Ask each one the same questions. Compare not just the price, but the quality of the answers — the specificity, the documentation, the willingness to be transparent. The company that does best on this framework is almost always the one that delivers best in practice." },
-
-    { type: "callout", text: "Want to see how we measure up? Schedule a walkthrough and put us through the test. We welcome the comparison. Call (215) 550-1414 or fill out our contact form." },
-  ],
-};
-
-// ─────────────────────────────────────────────────────
-// POST 14 (Plan): Spring Deep Cleaning Checklist
-// ─────────────────────────────────────────────────────
-const post14: BlogPost = {
-  slug: "spring-deep-cleaning-checklist-philadelphia",
-  title: "Spring Deep Cleaning Checklist for Philadelphia Offices",
-  metaTitle: "Spring Deep Cleaning Checklist for Philly Offices | PHL Clean",
-  metaDescription: "Undo winter's damage and reset your office for the year. A comprehensive spring deep cleaning checklist for Philadelphia commercial spaces — from salt removal to HVAC vents.",
-  date: "2026-05-19",
-  author: "PHL Clean",
-  category: "Local & Seasonal",
-  readTime: "5 min read",
-  relatedLinks: [
-    { label: "Deep Cleaning Services", href: "/services/deep-cleaning" },
-    { label: "Deep Cleaning in Philadelphia", href: "/services/deep-cleaning/philadelphia" },
-    { label: "Carpet Cleaning Services", href: "/services/carpet-cleaning" },
-  ],
-  body: [
-    { type: "paragraph", text: "Another Philadelphia winter is behind you. Your building survived the snow, the salt, the gray slush tracked in from the parking lot, and the months of sealed-up, recycled air. But 'survived' isn't the same as 'looks good.' Winter takes a toll on commercial spaces — on the carpets, the floors, the air quality, and the overall feel of the building. Spring is your chance to reset." },
-    { type: "paragraph", text: "A thorough spring deep clean addresses the accumulated damage that daily cleaning doesn't touch. Here's a comprehensive checklist for getting your Philadelphia office back to its best." },
-
-    { type: "heading", level: 2, text: "Carpet and Flooring Reset" },
-    { type: "list", ordered: false, items: [
-      "Full hot water extraction on all carpet — this is the big one. Winter salt residue, embedded grit, and months of soil buildup need to be flushed out. Focus especially on lobbies, hallways, and the first 20 feet past every exterior entrance.",
-      "Spot-treat any stains that appeared over winter. Many are salt-related and respond well to extraction if treated now; wait longer and they can become permanent.",
-      "VCT floors: schedule a scrub-and-recoat at minimum. If the finish took heavy winter damage (dull patches, worn traffic lanes, salt etching), a full strip and wax is the better investment.",
-      "Hard floors (tile, concrete, stone): deep clean grout lines, inspect for salt damage or etching, and reseal if needed.",
-      "Check entrance matting and replace any mats that are worn, saturated, or no longer laying flat.",
-    ]},
-
-    { type: "heading", level: 2, text: "Air Quality and HVAC" },
-    { type: "list", ordered: false, items: [
-      "Clean all HVAC vent covers and diffusers. These collect dust and allergens all winter and redistribute them into the air every time the system runs.",
-      "Wipe down return air grilles — they're usually overlooked in routine cleaning but trap significant dust.",
-      "Replace HVAC filters if not on a regular schedule. After a winter of continuous heating, filters are typically loaded.",
-      "Dust the tops of all ceiling-mounted fixtures (lights, speakers, smoke detectors). This isn't cosmetic — dust buildup on warm light fixtures can affect air quality and trigger smoke detector false alarms.",
-    ]},
-
-    { type: "heading", level: 2, text: "Restrooms and Kitchen" },
-    { type: "list", ordered: false, items: [
-      "Deep clean and disinfect all restroom surfaces, including behind toilets, under sinks, and around urinal bases — areas where daily cleaning doesn't always reach.",
-      "Descale faucets, flush valves, and shower heads (if applicable). Hard water buildup accelerates during winter heating season.",
-      "Deep clean grout in tile restrooms. Restroom grout harbors bacteria year-round, but a spring deep clean is a good reset point.",
-      "Kitchen: degrease all appliance exteriors, clean inside microwaves and refrigerators, deep clean sink and drain areas.",
-    ]},
-
-    { type: "heading", level: 2, text: "Windows, Glass, and Lighting" },
-    { type: "list", ordered: false, items: [
-      "Clean all interior glass — doors, partitions, conference room glass, display cases. Winter fingerprints and film build up gradually and become very noticeable once spring sunlight starts streaming in.",
-      "Wash interior window surfaces. The difference in natural light after cleaning winter film off windows is dramatic.",
-      "Wipe down all light fixtures and lens covers. Dust on lenses reduces light output; cleaning them can make a room feel noticeably brighter without changing a single bulb.",
-    ]},
-
-    { type: "heading", level: 2, text: "Detail Work" },
-    { type: "list", ordered: false, items: [
-      "Wipe down all baseboards. Salt splash and mop residue from winter accumulate at the base of walls throughout the building.",
-      "Dust and wipe all blinds or window coverings. Blinds collect dust all winter while they're mostly closed.",
-      "Clean elevator interiors — walls, doors, tracks, and buttons. Elevators take heavy abuse during winter with wet boots and salt.",
-      "Wipe down all door frames, light switches, and handrails. These high-touch surfaces accumulate a winter's worth of grime.",
-      "Deep clean upholstered furniture in common areas — lobby chairs, conference room seats, break room seating. Upholstery absorbs odors and allergens just like carpet.",
-    ]},
-
-    { type: "heading", level: 2, text: "Your Spring Cleaning Checklist at a Glance" },
-    {
-      type: "table",
-      headers: ["Category", "Key Tasks", "Priority"],
-      rows: [
-        ["Carpet", "Full extraction, salt stain treatment", "High"],
-        ["Hard floors", "Scrub/recoat or strip/wax, grout clean, reseal", "High"],
-        ["HVAC/air quality", "Vent covers, filters, high dusting", "High"],
-        ["Restrooms", "Deep disinfect, descale, grout scrub", "High"],
-        ["Kitchen", "Degrease, appliance deep clean, drain cleaning", "Medium"],
-        ["Windows/glass", "Interior glass, window surfaces, light fixtures", "Medium"],
-        ["Detail work", "Baseboards, blinds, elevator, upholstery", "Medium"],
-        ["Entrance areas", "Mat replacement, lobby deep clean", "High"],
-      ],
-    },
-
-    { type: "heading", level: 2, text: "When to Schedule Your Spring Clean" },
-    { type: "paragraph", text: "In Philadelphia, the ideal window is late March through mid-April — after the last salt-heavy weather but before pollen season hits full force. That said, spring cleaning done in May still delivers major benefits. The important thing is doing it, not doing it on a specific date." },
-    { type: "paragraph", text: "Most spring deep cleans for a mid-size office (5,000 to 15,000 square feet) take one to two days and are best done over a weekend or during off-hours to avoid disrupting your team." },
-
-    { type: "callout", text: "Ready to undo winter and reset your space? Schedule a spring deep cleaning walkthrough — we'll assess what your building needs and get it done. Call (215) 550-1414 or fill out our contact form." },
-  ],
-};
-
-// ─────────────────────────────────────────────────────
-// POST 15 (Plan): Why Philly Businesses Choose Local
-// ─────────────────────────────────────────────────────
-const post15: BlogPost = {
-  slug: "why-philadelphia-businesses-choose-local-cleaning",
-  title: "Why Philadelphia Businesses Are Switching to Local Cleaning Companies",
-  metaTitle: "Why Philly Businesses Choose Local Cleaning Companies | PHL Clean",
-  metaDescription: "National franchise or local cleaning company? Here's why more Philadelphia businesses are choosing local providers — and what the difference actually looks like day to day.",
-  date: "2026-05-19",
-  author: "PHL Clean",
-  category: "Local & Seasonal",
-  readTime: "5 min read",
-  relatedLinks: [
-    { label: "Cleaning in Philadelphia", href: "/locations/philadelphia" },
-    { label: "Cleaning in Bucks County", href: "/locations/bucks-county" },
-    { label: "Our Team", href: "/team" },
-    { label: "Contact Us", href: "/#contact" },
-  ],
-  body: [
-    { type: "paragraph", text: "There's a pattern we've seen play out over and over in the Philadelphia commercial cleaning market. A business signs with a national franchise or a large regional chain. The first few months are fine — the big company puts their best foot forward. Then gradually, things start to slip. The crew changes without notice. Quality becomes inconsistent. When there's a problem, you call a generic 800 number and leave a message. It might get addressed in a few days. It might not." },
-    { type: "paragraph", text: "Eventually, the facility manager or business owner starts looking for an alternative. And increasingly, what they find — and what they switch to — is a locally owned cleaning company. Here's why." },
-
-    { type: "heading", level: 2, text: "You Talk to the People Who Do the Work" },
-    { type: "paragraph", text: "With a local company, the person who answers your call is often the person who runs the business — or is one conversation away from them. There's no customer service layer, no regional manager who has to approve a schedule change, no ticket system sitting in a queue. When you have a concern or a request, it gets heard and acted on immediately." },
-    { type: "paragraph", text: "This might sound like a small thing until you've experienced the alternative. Try getting a national franchise to adjust your cleaning schedule for a special event, or to address a quality issue that's been recurring. The layers of management between you and anyone who can make a decision are the reason problems persist." },
-
-    { type: "heading", level: 2, text: "Consistent Crews Who Know Your Building" },
-    { type: "paragraph", text: "Large companies manage a high volume of accounts with a large, rotating workforce. The crew cleaning your building this week might not be the same crew next week. That means every visit is essentially a first visit — no one remembers that the conference room on the third floor needs extra attention on Fridays, or that the back stairwell gets missed if you're not paying attention." },
-    { type: "paragraph", text: "Local companies typically assign a dedicated crew to each account. The same people show up each time. They learn your building. They know its quirks. They develop pride in keeping their specific accounts looking great — because it's their building, not just another stop on a corporate rotation." },
-
-    { type: "heading", level: 2, text: "Faster Response Time" },
-    { type: "paragraph", text: "When something urgent comes up — a pipe leak that needs immediate cleanup, a last-minute client visit that requires the lobby to look perfect, a weekend event that needs post-event cleaning — response time matters. A local company with a team based in Philadelphia or Bucks County can often respond the same day. A national company has to route the request through their system, check availability across a wider geographic area, and schedule accordingly. That can take days." },
-
-    { type: "heading", level: 2, text: "Accountability You Can See" },
-    { type: "paragraph", text: "When the owner of a local cleaning company lives and works in the same community as their clients, accountability is personal. Their reputation is local. Their referrals come from the same business community they serve. If they do poor work, word gets around in a way that doesn't happen with a faceless national brand." },
-    { type: "paragraph", text: "That personal accountability drives a different kind of service. Problems get fixed faster because letting them linger costs the owner their reputation. Quality stays high because every account matters — there's no corporate safety net to absorb lost clients." },
-
-    { type: "heading", level: 2, text: "Competitive Pricing Without Corporate Overhead" },
-    { type: "paragraph", text: "National franchises carry significant overhead that gets passed on to you: franchise fees, regional management salaries, national marketing budgets, corporate office costs. Local companies have leaner operations, which means more of what you pay goes directly to the labor and supplies that actually clean your building." },
-    { type: "paragraph", text: "That doesn't mean local is always cheaper — and the cheapest option isn't always the best one regardless of company size. But dollar-for-dollar, local companies generally deliver more value because less of your payment is absorbed by corporate overhead." },
-
-    { type: "heading", level: 2, text: "Flexibility That Big Companies Can't Match" },
-    { type: "paragraph", text: "Need to adjust your schedule for a holiday week? Want to add a one-time deep clean before a board meeting? Need to scale up cleaning frequency during flu season and scale back down after? Local companies can make these adjustments with a phone call. Changes at national companies require formal requests, contract amendments, and lead times that don't match the speed of real business." },
-
-    { type: "heading", level: 2, text: "Community Investment" },
-    { type: "paragraph", text: "When you hire a local cleaning company, the money stays in the community. The employees live locally. The supplies are often purchased locally. The owner reinvests in the local economy. There's a real economic multiplier effect when businesses hire other local businesses, and in a city like Philadelphia — where local pride runs deep — that matters to a lot of business owners." },
-
-    { type: "heading", level: 2, text: "The Bottom Line" },
-    { type: "paragraph", text: "Not every local cleaning company is great, and not every national franchise is bad. But the structural advantages of working with a local provider — direct accountability, consistent crews, fast response, flexible service, and competitive pricing — are real and measurable. If you've been frustrated with the impersonal, inconsistent service that comes with a large cleaning operation, a local switch might be exactly what your facility needs." },
-
-    { type: "callout", text: "Want to see what a local cleaning company can do for your space? Schedule a walkthrough — meet the team, see the difference. Call (215) 550-1414 or fill out our contact form." },
-  ],
-};
-
-
-// ─────────────────────────────────────────────────────
-// POST 17: Post-Construction Cleaning Guide
-// ─────────────────────────────────────────────────────
-const post17: BlogPost = {
-  slug: "post-construction-cleaning-guide",
-  title: "Post-Construction Cleaning: What to Expect and How to Plan for It",
-  metaTitle: "Post-Construction Cleaning Guide for Commercial Buildings | PHL Clean",
-  metaDescription: "Everything you need to know about post-construction cleaning for commercial spaces — phases, timelines, what to look for, and how to avoid costly mistakes.",
-  date: "2026-05-20",
-  author: "PHL Clean",
-  category: "Specialized Cleaning",
-  readTime: "7 min read",
-  relatedLinks: [
-    { label: "Deep Cleaning Services", href: "/services/deep-cleaning" },
-    { label: "Floor Maintenance", href: "/services/floor-maintenance" },
-  ],
-  body: [
-    { type: "paragraph", text: "You've just finished a renovation or new build-out of your commercial space. The contractors have packed up, the inspections are done, and you're ready to move in. There's just one problem: the place is covered in a fine layer of construction dust, there are adhesive smears on the windows, scuff marks on every hard surface, and the air smells like joint compound and paint fumes." },
-    { type: "paragraph", text: "Post-construction cleaning is the step that bridges the gap between 'construction complete' and 'ready for business.' It's more involved than regular commercial cleaning, and skipping it or doing it poorly can cause problems for months." },
-
-    { type: "heading", level: 2, text: "The Three Phases of Post-Construction Cleaning" },
-    { type: "paragraph", text: "Professional post-construction cleaning typically happens in three passes, each one more detailed than the last." },
-
-    { type: "heading", level: 3, text: "Phase 1: Rough Clean" },
-    { type: "paragraph", text: "This happens while construction is still wrapping up or immediately after. The focus is removing the big stuff: chunks of drywall, wood scraps, packaging materials, and the bulk of the dust. It's not about making things look good — it's about clearing the space so finish work and detailed cleaning can happen." },
-
-    { type: "heading", level: 3, text: "Phase 2: Detail Clean" },
-    { type: "paragraph", text: "This is the heavy-lift cleaning phase. Every surface gets wiped down — walls, ceilings, light fixtures, window frames, door hardware. Windows are scraped clean of paint and adhesive. Floors are swept, mopped, or scrubbed depending on the material. Restrooms are deep-cleaned. HVAC vents are wiped out. Cabinet interiors get cleaned. This phase takes the longest and requires the most labor." },
-
-    { type: "heading", level: 3, text: "Phase 3: Final Touch-Up" },
-    { type: "paragraph", text: "After the detail clean, you do a final walkthrough and address anything that was missed or that got dirty again during the gap between cleaning and occupancy. This is also when you'll catch things like fingerprints on glass from final inspections, dust that settled from the HVAC system running, or spots on the floor from last-minute touch-up work." },
-
-    { type: "heading", level: 2, text: "Why Construction Dust Is a Bigger Deal Than You Think" },
-    { type: "paragraph", text: "Construction dust isn't like regular dust. It's finer, more abrasive, and it gets everywhere — including inside your HVAC system. If you don't address it thoroughly, that dust will circulate through your building for weeks or months, settling on surfaces that were already cleaned, triggering respiratory issues in occupants, and potentially damaging sensitive equipment." },
-    { type: "paragraph", text: "This is why HVAC cleaning or at minimum filter replacement should be part of any post-construction cleaning plan. The ductwork collected dust during the entire construction period, and running the system without addressing that just spreads the problem." },
-
-    { type: "heading", level: 2, text: "Common Mistakes to Avoid" },
-    { type: "list", ordered: false, items: [
-      "Starting too early — if contractors are still doing punch list work, you'll have to re-clean areas they touch.",
-      "Using your regular janitorial crew — post-construction cleaning requires different equipment, chemicals, and techniques than routine maintenance.",
-      "Skipping the HVAC — the dust in your ductwork will undo your surface cleaning within days.",
-      "Not protecting finished floors — construction crews walking on freshly cleaned floors will scratch and scuff them. Coordinate timing carefully.",
-      "Rushing the timeline — a proper post-construction clean takes two to five days for a typical commercial space, depending on size and scope.",
-    ]},
-
-    { type: "heading", level: 2, text: "What It Costs" },
-    { type: "paragraph", text: "Post-construction cleaning is priced differently than ongoing janitorial service. Most companies charge by the square foot, with rates typically running between $0.15 and $0.50 per square foot depending on the condition of the space, the type of construction (new build vs. renovation), and the level of finish detail required. For a 5,000-square-foot office renovation, expect to budget $750 to $2,500." },
-
-    { type: "heading", level: 2, text: "Planning Ahead" },
-    { type: "paragraph", text: "The best time to line up post-construction cleaning is before construction starts — or at least well before it ends. Build the cleaning timeline into your project schedule so there's no gap between construction completion and occupancy. A good cleaning company will walk the site before construction ends to assess scope and give you an accurate quote." },
-
-    { type: "callout", text: "Have a renovation or build-out wrapping up? PHL Clean handles post-construction cleaning for commercial spaces across Philadelphia and Bucks County. Call (215) 550-1414 to schedule a site assessment." },
-  ],
-};
-
-// ─────────────────────────────────────────────────────
-// POST 18: Warehouse & Industrial Facility Cleaning
-// ─────────────────────────────────────────────────────
 const post18: BlogPost = {
   slug: "warehouse-industrial-facility-cleaning",
-  title: "Warehouse and Industrial Facility Cleaning: What Most Companies Get Wrong",
-  metaTitle: "Warehouse & Industrial Facility Cleaning Guide | PHL Clean",
-  metaDescription: "How to maintain a clean, safe warehouse or industrial facility — common mistakes, OSHA considerations, and a practical cleaning framework.",
+  title: "Warehouse and Industrial Floor Care: What Most Companies Get Wrong",
+  metaTitle: "Warehouse & Industrial Concrete Floor Care | PHL Clean",
+  metaDescription: "Sealed concrete and epoxy warehouse floors are a safety system, not a surface. Auto-scrubbing, tire marks, floor markings and OSHA housekeeping — what actually matters.",
   date: "2026-05-20",
   author: "PHL Clean",
-  category: "Specialized Cleaning",
+  category: "Concrete & Industrial",
   readTime: "6 min read",
   relatedLinks: [
-    { label: "Commercial Cleaning Services", href: "/services/commercial-cleaning" },
-    { label: "Floor Maintenance", href: "/services/floor-maintenance" },
+    { label: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning" },
+    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance" },
   ],
   body: [
-    { type: "paragraph", text: "Warehouses and industrial facilities have fundamentally different cleaning needs than office buildings, but they often get treated like large offices with concrete floors. That approach misses the point. Industrial environments deal with challenges that office cleaning never encounters: heavy machinery residue, forklift tire marks, shipping debris, pallet dust, loading dock contamination, and safety-critical floor markings that need to stay visible." },
+    { type: "paragraph", text: "A warehouse floor gets treated as a surface when it is really a safety system. Sealed concrete and epoxy in an industrial building deal with things no office floor ever encounters: machinery residue, forklift tire transfer, pallet dust, loading dock contamination, and safety-critical floor markings that have to stay visible to be worth anything." },
 
     { type: "heading", level: 2, text: "Why Warehouse Cleaning Matters Beyond Appearances" },
     { type: "paragraph", text: "In an office, a dirty floor looks bad. In a warehouse, a dirty floor is a safety hazard. Dust and debris on a concrete floor reduce traction for both foot traffic and forklifts. Spills that aren't cleaned promptly create slip hazards. Obscured floor markings — pedestrian walkways, forklift lanes, emergency exits — put people at risk." },
@@ -1150,19 +510,18 @@ const post18: BlogPost = {
 
     { type: "heading", level: 2, text: "The Common Mistakes" },
     { type: "paragraph", text: "The biggest mistake is treating warehouse cleaning as an afterthought. Many facilities assign cleaning duties to warehouse staff during downtime, which sounds efficient but rarely works. Warehouse employees aren't trained in cleaning methods, they're pulled away for operational needs, and 'cleaning when there's time' means it rarely happens consistently." },
-    { type: "paragraph", text: "The second mistake is using the wrong equipment. You can't mop a 50,000-square-foot warehouse floor — you need an auto-scrubber. You can't dust 30-foot racking with a household duster — you need specialized high-reach tools. And you can't address oil and grease stains with general-purpose cleaner — you need degreasers rated for industrial use." },
+    { type: "paragraph", text: "The second mistake is equipment. You cannot mop a 50,000-square-foot floor — that needs an auto-scrubber, which applies solution, scrubs mechanically and recovers the dirty water in a single pass. And you cannot lift oil or grease off sealed concrete with a general-purpose cleaner; that needs a degreaser rated for industrial use, followed by a rinse so the degreaser itself does not stay behind and attract more." },
 
     { type: "heading", level: 2, text: "A Practical Cleaning Framework" },
     {
       type: "table",
-      headers: ["Area", "Frequency", "Key Tasks"],
+      headers: ["Area", "Frequency", "What it involves"],
       rows: [
         ["Warehouse floor", "Daily sweep, weekly scrub", "Sweep debris, auto-scrub main aisles, spot-treat spills immediately"],
         ["Loading docks", "Daily", "Sweep debris, remove weather contamination, clean dock plates"],
-        ["Restrooms / break rooms", "Daily", "Full sanitation, restock supplies, empty trash"],
-        ["Office areas within facility", "3-5x per week", "Standard office cleaning: vacuum, dust, trash, restrooms"],
-        ["Racking and shelving", "Monthly", "Dust accessible surfaces, remove debris, check for damage"],
-        ["High areas (lights, beams)", "Quarterly", "High-reach dusting, cobweb removal, light fixture cleaning"],
+        ["Floor markings", "Weekly check", "Confirm walkways, forklift lanes and exits are still legible"],
+        ["Tire paths and pivot points", "Weekly", "Aggressive pad or dedicated tire mark removal where buildup is heavy"],
+        ["Sealed concrete", "Annually or as wear dictates", "Reseal — a worn seal makes every subsequent clean less effective"],
       ],
     },
 
@@ -1173,59 +532,11 @@ const post18: BlogPost = {
     { type: "heading", level: 2, text: "Working Around Operations" },
     { type: "paragraph", text: "The biggest practical challenge in warehouse cleaning is scheduling around active operations. Forklifts, receiving, shipping, and inventory management don't stop because the floor needs cleaning. The best approach is a zone-based schedule that cleans different areas on different days or shifts, coordinated with the facility manager to minimize operational disruption." },
 
-    { type: "callout", text: "PHL Clean services warehouses and industrial facilities throughout Philadelphia and Bucks County. We work around your operations schedule. Call (215) 550-1414 for a facility walkthrough." },
+    { type: "callout", text: "PHL Clean handles concrete and epoxy floor care for warehouses and industrial facilities across Philadelphia and Bucks County, scheduled around your operation. Call (215) 550-1414 for a walkthrough." },
   ],
 };
 
-// ─────────────────────────────────────────────────────
-// POST 19: Office Break Room and Kitchen Cleaning
-// ─────────────────────────────────────────────────────
-const post19: BlogPost = {
-  slug: "office-break-room-kitchen-cleaning-guide",
-  title: "Office Break Room and Kitchen Cleaning: The Area Your Employees Judge Most",
-  metaTitle: "Office Break Room & Kitchen Cleaning Guide | PHL Clean",
-  metaDescription: "How to keep your office break room and kitchen clean, safe, and morale-boosting — cleaning frequencies, trouble spots, and what your janitorial crew should cover.",
-  date: "2026-05-20",
-  author: "PHL Clean",
-  category: "Office Cleaning",
-  readTime: "5 min read",
-  relatedLinks: [
-    { label: "Commercial Cleaning Services", href: "/services/commercial-cleaning" },
-    { label: "Deep Cleaning Services", href: "/services/deep-cleaning" },
-  ],
-  body: [
-    { type: "paragraph", text: "Ask any employee what area of the office they notice most when it's dirty, and the answer is almost always the break room or kitchen. It's where people eat, relax, and recharge — and when it's grimy, it sends a message about how much the company values the people who work there." },
-    { type: "paragraph", text: "Break rooms are also the highest-risk area in most offices for pest attraction, bacterial growth, and odor problems. A clean break room isn't just about morale — it's about facility hygiene." },
 
-    { type: "heading", level: 2, text: "What Daily Cleaning Should Cover" },
-    { type: "paragraph", text: "Your janitorial crew should hit the break room every service visit. The daily checklist should include wiping down all countertops and tables, cleaning the exterior of the microwave (and the interior at least weekly), emptying all trash and replacing liners, cleaning the sink and faucet, wiping cabinet handles and appliance touch points, and sweeping and mopping the floor." },
-    { type: "paragraph", text: "The key word is 'touch points.' Break room surfaces accumulate bacteria faster than almost any other area in an office because every employee touches them — often right before or after handling food. Handles, switches, buttons, and faucets need daily disinfection, not just a wipe-down." },
-
-    { type: "heading", level: 2, text: "The Trouble Spots Everyone Misses" },
-    { type: "list", ordered: false, items: [
-      "The microwave interior — food splatters bake onto surfaces and become a bacterial breeding ground if left uncleaned.",
-      "Under and behind the refrigerator — crumbs and spills accumulate and attract pests.",
-      "Coffee maker drip trays and water dispenser drains — standing water plus organic residue equals mold.",
-      "The underside of cabinet handles — people touch them constantly but they rarely get wiped.",
-      "Trash can exteriors — drips and splashes from bag changes accumulate and cause odors.",
-    ]},
-
-    { type: "heading", level: 2, text: "Weekly and Monthly Tasks" },
-    { type: "paragraph", text: "Beyond daily cleaning, break rooms need periodic deeper attention. Weekly tasks should include cleaning the refrigerator interior (with a posted policy about removing old food), deep-cleaning the microwave interior, sanitizing the coffee maker, and scrubbing the sink drain. Monthly, you should clean behind and under all appliances, wipe down walls near cooking areas (splatter zones), deep-clean grout if the floor is tiled, and sanitize any shared utensil drawers." },
-
-    { type: "heading", level: 2, text: "The Refrigerator Problem" },
-    { type: "paragraph", text: "Every office has this issue: the communal refrigerator slowly fills with forgotten lunches, expired condiments, and mystery containers that no one claims. Left unchecked, it becomes a health hazard and a morale killer. The best solution is a weekly clean-out policy — pick a day (Friday is standard), post the rule, and have your cleaning crew empty and wipe down the interior. Everything left behind gets tossed. It sounds harsh until you've opened a three-week-old container of pad thai." },
-
-    { type: "heading", level: 2, text: "Pest Prevention Starts Here" },
-    { type: "paragraph", text: "If your building has a pest problem, the break room is usually ground zero. Crumbs under appliances, sticky residue on counters, improperly sealed trash, and food left in the open all attract insects and rodents. A thorough daily cleaning program is the first and most effective line of pest defense — far more effective than reactive pest treatment after a problem develops." },
-
-    { type: "callout", text: "PHL Clean's janitorial programs include comprehensive break room cleaning on every visit. Call (215) 550-1414 or schedule a walkthrough to see our approach." },
-  ],
-};
-
-// ─────────────────────────────────────────────────────
-// POST 20: Indoor Air Quality and Commercial Cleaning
-// ─────────────────────────────────────────────────────
 const post20: BlogPost = {
   slug: "indoor-air-quality-commercial-cleaning-connection",
   title: "The Connection Between Commercial Cleaning and Indoor Air Quality",
@@ -1236,8 +547,8 @@ const post20: BlogPost = {
   category: "Industry Knowledge",
   readTime: "6 min read",
   relatedLinks: [
-    { label: "Commercial Cleaning Services", href: "/services/commercial-cleaning" },
-    { label: "Medical Facility Cleaning", href: "/services/medical-facility-cleaning" },
+    { label: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning" },
+    { label: "Grout Restoration & Re-Grout", href: "/services/grout-restoration" },
   ],
   body: [
     { type: "paragraph", text: "Most people think of cleaning as a visual thing — surfaces look cleaner, floors shine, trash disappears. But cleaning has a direct and measurable impact on something you can't see at all: the air your employees breathe for eight or more hours a day." },
@@ -1269,248 +580,7 @@ const post20: BlogPost = {
   ],
 };
 
-// ─────────────────────────────────────────────────────
-// POST 21: After-Hours and Evening Cleaning
-// ─────────────────────────────────────────────────────
-const post21: BlogPost = {
-  slug: "after-hours-evening-commercial-cleaning",
-  title: "After-Hours Commercial Cleaning: Why Most Businesses Clean at Night",
-  metaTitle: "After-Hours & Evening Commercial Cleaning | PHL Clean",
-  metaDescription: "Why most commercial cleaning happens after hours, how evening cleaning works, and what to consider when setting up a night cleaning schedule.",
-  date: "2026-05-20",
-  author: "PHL Clean",
-  category: "Office Cleaning",
-  readTime: "5 min read",
-  relatedLinks: [
-    { label: "Commercial Cleaning Services", href: "/services/commercial-cleaning" },
-    { label: "Office Cleaning in Philadelphia", href: "/services/commercial-cleaning/philadelphia" },
-  ],
-  body: [
-    { type: "paragraph", text: "Walk into almost any office building at 7 PM on a weeknight and you'll find the same scene: the daytime employees are gone, and a cleaning crew is working its way through the building. There's a reason the vast majority of commercial cleaning happens after hours, and it goes beyond simple convenience." },
 
-    { type: "heading", level: 2, text: "Why After-Hours Cleaning Is the Standard" },
-    { type: "paragraph", text: "The primary reason is access. Cleaning crews need unobstructed access to every surface — desks, floors, restrooms, break rooms, conference rooms. When employees are present, large sections of the building are in use and can't be properly cleaned. Vacuuming in an occupied office is disruptive. Mopping wet floors creates safety hazards for people walking through. Restroom cleaning requires temporary closure. Evening cleaning eliminates all of these conflicts." },
-    { type: "paragraph", text: "There's also a quality factor. Crews working in an empty building can be more thorough and more efficient. They're not working around people, waiting for conference rooms to empty, or trying to vacuum around occupied desks. The result is more consistent, higher-quality cleaning in less time." },
-
-    { type: "heading", level: 2, text: "Typical After-Hours Cleaning Schedule" },
-    { type: "paragraph", text: "Most commercial cleaning contracts specify service between 6 PM and midnight, though the exact window depends on when the last employees leave and when the first arrive the next morning. Some businesses prefer late-night service (10 PM to 6 AM) to create maximum separation between cleaning and occupancy." },
-    {
-      type: "table",
-      headers: ["Schedule Type", "Window", "Best For"],
-      rows: [
-        ["Evening", "6 PM – 10 PM", "Offices that close by 5–6 PM with no overnight operations"],
-        ["Late night", "10 PM – 4 AM", "Facilities that want maximum drying time before morning occupancy"],
-        ["Early morning", "4 AM – 7 AM", "Buildings where security or logistics prefer early-morning access"],
-        ["Day cleaning", "During business hours", "Some retail, medical offices, or high-traffic facilities needing visible maintenance"],
-      ],
-    },
-
-    { type: "heading", level: 2, text: "Security and Access Considerations" },
-    { type: "paragraph", text: "The most common concern businesses have about after-hours cleaning is security. Your cleaning crew will be in your building when no one else is there, with access to offices, desks, and potentially sensitive areas. This is a legitimate concern, and it's one of the reasons choosing a reputable cleaning company matters." },
-    { type: "paragraph", text: "A professional cleaning company will carry liability insurance and bonding, conduct background checks on employees, use a consistent crew assignment so the same people clean your building each visit, follow your building's key and alarm protocols, and provide a supervisor point of contact in case of any issues during the cleaning shift." },
-
-    { type: "heading", level: 2, text: "When Day Cleaning Makes More Sense" },
-    { type: "paragraph", text: "Not every facility benefits from after-hours cleaning. Medical offices that close by mid-afternoon may prefer same-day cleaning that's finished before the next morning's patients arrive. Retail spaces need ongoing maintenance during operating hours because customers generate mess continuously. And some businesses simply prefer the visibility of seeing their cleaning crew at work — it builds confidence in the service." },
-
-    { type: "heading", level: 2, text: "What to Expect From Your Crew" },
-    { type: "paragraph", text: "A good after-hours crew operates like they're invisible. You arrive in the morning to a clean building — trash emptied, surfaces wiped, floors vacuumed, restrooms restocked — with no disruption to your workday and no signs of the crew's presence other than the results. Any issues or notes (supply requests, maintenance concerns spotted during cleaning) should be communicated through a logbook or digital system, not left for you to discover." },
-
-    { type: "callout", text: "PHL Clean provides after-hours cleaning for offices and commercial facilities across Philadelphia and Bucks County. Same crew every visit, background-checked, fully insured. Call (215) 550-1414." },
-  ],
-};
-
-// ─────────────────────────────────────────────────────
-// POST 22: Commercial Move-In / Move-Out Cleaning
-// ─────────────────────────────────────────────────────
-const post22: BlogPost = {
-  slug: "commercial-move-in-move-out-cleaning",
-  title: "Commercial Move-In and Move-Out Cleaning: Getting the Space Right",
-  metaTitle: "Commercial Move-In & Move-Out Cleaning | PHL Clean",
-  metaDescription: "What commercial move-in and move-out cleaning involves, why it matters for your lease and first impressions, and how to plan for it.",
-  date: "2026-05-20",
-  author: "PHL Clean",
-  category: "Specialized Cleaning",
-  readTime: "5 min read",
-  relatedLinks: [
-    { label: "Deep Cleaning Services", href: "/services/deep-cleaning" },
-    { label: "Commercial Cleaning Services", href: "/services/commercial-cleaning" },
-  ],
-  body: [
-    { type: "paragraph", text: "Moving into or out of a commercial space is stressful enough without worrying about the condition of the building. But the cleanliness of the space matters — for your lease terms, for your security deposit, for your employees' first impression of a new workplace, and for the image you present to clients and visitors from day one." },
-
-    { type: "heading", level: 2, text: "Move-Out Cleaning: Protecting Your Deposit" },
-    { type: "paragraph", text: "Most commercial leases include a clause requiring the tenant to return the space in 'broom clean' condition or better. What exactly that means varies by lease, but at minimum it typically includes removing all debris, personal property, and equipment; cleaning all surfaces, fixtures, and appliances left behind; cleaning carpets and hard floors; cleaning restrooms thoroughly; removing any marks, adhesive, or damage from walls; and ensuring the HVAC system filters are clean or replaced." },
-    { type: "paragraph", text: "A professional move-out cleaning gives you documentation that the space was returned in good condition, which can be critical if there's a dispute about the security deposit. Take photos of the cleaned space before handing over keys — it's cheap insurance." },
-
-    { type: "heading", level: 2, text: "Move-In Cleaning: Starting Fresh" },
-    { type: "paragraph", text: "Even if the previous tenant cleaned the space, you should still do a move-in cleaning before your people start working there. Construction dust from build-out work, accumulated dust from vacancy, residue from the previous tenant's operations, and whatever got tracked in during your move can all leave the space less than ready for occupancy." },
-    { type: "paragraph", text: "A move-in cleaning also gives you a baseline. You know the space is clean when you start, which means your ongoing janitorial service is maintaining a known standard rather than gradually trying to improve an unknown one." },
-
-    { type: "heading", level: 2, text: "What's Included" },
-    { type: "paragraph", text: "Commercial move-in/move-out cleaning typically covers all the surfaces your regular janitorial crew handles, plus a deeper level of attention to things that only matter during transitions. This includes interior window cleaning (both sides), cleaning inside cabinets and closets, light fixture and ceiling vent cleaning, baseboard and trim detail, wall washing or spot cleaning, hard floor stripping and refinishing (if applicable), and carpet deep extraction." },
-
-    { type: "heading", level: 2, text: "Timing and Coordination" },
-    { type: "paragraph", text: "The tricky part of move-in/move-out cleaning is scheduling. For move-outs, the cleaning needs to happen after all furniture and equipment is removed but before the lease handover date. For move-ins, it should happen after any build-out or renovation work is complete but before furniture delivery and employee occupancy." },
-    { type: "paragraph", text: "Build two to three days into your timeline for cleaning. Rushing it leads to corners being cut, and you don't want to start your tenure in a new space with dirty baseboards or dusty light fixtures." },
-
-    { type: "heading", level: 2, text: "Cost Factors" },
-    { type: "paragraph", text: "Move-in/move-out cleaning is typically priced as a one-time project based on square footage, condition of the space, and scope of work. A standard move-out cleaning for a 5,000-square-foot office runs between $500 and $1,500. Spaces that need floor refinishing, extensive wall cleaning, or post-renovation cleaning will be at the higher end." },
-
-    { type: "callout", text: "Moving into or out of a commercial space in Philadelphia or Bucks County? PHL Clean handles the cleaning so you can focus on the move. Call (215) 550-1414 for a walkthrough and quote." },
-  ],
-};
-
-// ─────────────────────────────────────────────────────
-// POST 23: Commercial Restroom Cleaning & Maintenance
-// ─────────────────────────────────────────────────────
-const post23: BlogPost = {
-  slug: "commercial-restroom-cleaning-maintenance",
-  title: "Commercial Restroom Cleaning: The Standard Your Building Is Judged By",
-  metaTitle: "Commercial Restroom Cleaning & Maintenance Guide | PHL Clean",
-  metaDescription: "How to maintain commercial restrooms that reflect well on your business — cleaning standards, supply management, and the details that matter most.",
-  date: "2026-05-20",
-  author: "PHL Clean",
-  category: "Office Cleaning",
-  readTime: "6 min read",
-  relatedLinks: [
-    { label: "Commercial Cleaning Services", href: "/services/commercial-cleaning" },
-    { label: "Deep Cleaning Services", href: "/services/deep-cleaning" },
-  ],
-  body: [
-    { type: "paragraph", text: "No area of your building creates stronger impressions faster than your restrooms. A client visiting your office, a patient walking into your medical practice, a prospective employee interviewing — they all visit the restroom, and what they find there shapes how they perceive your entire operation. Clean, well-stocked restrooms communicate professionalism and attention to detail. Dirty, neglected restrooms communicate the opposite." },
-
-    { type: "heading", level: 2, text: "What Daily Restroom Cleaning Should Include" },
-    { type: "paragraph", text: "Commercial restroom cleaning isn't just wiping the sink and emptying the trash. A proper daily service should cover every touchable surface: toilet seats, flush handles, door handles, lock hardware, faucet handles, soap dispensers, and light switches. These are high-touch, high-risk surfaces that need disinfection — not just a wipe — on every visit." },
-    { type: "paragraph", text: "Beyond touch points, the daily checklist should include cleaning and disinfecting all toilet bowls and urinals inside and out, wiping down countertops and mirrors, mopping floors with a disinfectant solution, emptying and relining all trash receptacles, restocking paper towels, toilet paper, and soap, and spot-cleaning walls and partitions as needed." },
-
-    { type: "heading", level: 2, text: "The Difference Between Clean and Disinfected" },
-    { type: "paragraph", text: "This distinction matters in restrooms more than anywhere else. Cleaning removes visible dirt and debris. Disinfecting kills pathogens — bacteria, viruses, and fungi. You can have a visually clean restroom that's covered in bacteria, and you can have a disinfected surface that still has visible grime. Proper restroom care requires both, in the right order: clean first to remove the organic matter, then disinfect to kill what's left." },
-    { type: "paragraph", text: "The disinfectant also needs adequate dwell time — the amount of time the chemical must remain wet on the surface to be effective. Most EPA-registered disinfectants require one to ten minutes of dwell time. Spraying and immediately wiping is cleaning, not disinfecting, regardless of what product you're using." },
-
-    { type: "heading", level: 2, text: "Supply Management" },
-    { type: "paragraph", text: "Running out of soap, paper towels, or toilet paper in a commercial restroom is one of the fastest ways to generate complaints and erode confidence in your facility management. Your cleaning company should be monitoring supply levels on every visit and restocking as part of the standard service — not waiting for you to report that something ran out." },
-    { type: "paragraph", text: "For high-traffic restrooms, a midday supply check (separate from the main evening cleaning) may be necessary. Some facilities address this with oversized dispensers, dual-roll toilet paper holders, or automated monitoring systems that alert when supplies are low." },
-
-    { type: "heading", level: 2, text: "Deep Cleaning: Going Beyond Daily" },
-    { type: "paragraph", text: "Daily cleaning maintains the baseline, but restrooms also need periodic deep cleaning to address things that daily service doesn't cover. This includes scrubbing grout lines on tile floors and walls, descaling fixtures (faucets, flush valves, showerheads if applicable), cleaning inside and behind toilet bases, cleaning exhaust fan covers and vents, and polishing stainless steel fixtures and partitions." },
-    { type: "paragraph", text: "A monthly deep clean is standard for most commercial restrooms. High-traffic facilities — restaurants, medical offices, retail — may need it bi-weekly." },
-
-    { type: "heading", level: 2, text: "Odor Control" },
-    { type: "paragraph", text: "Persistent restroom odor is almost always a cleaning problem, not an air freshener problem. Odors come from bacteria, and bacteria accumulate in places that don't get properly cleaned: the base of toilets, grout lines, urinal drain traps, and floor drains. Masking the odor with air freshener without addressing the source is like putting a bandage on a leak." },
-    { type: "paragraph", text: "If a restroom smells despite regular cleaning, the crew needs to focus on the floor-to-fixture junction points, the underside of toilet rims, and the grout — these are the three most common odor sources in commercial restrooms." },
-
-    { type: "callout", text: "PHL Clean's janitorial programs include full restroom sanitation on every visit — not just a surface wipe. Call (215) 550-1414 to schedule a walkthrough." },
-  ],
-};
-
-
-// ─────────────────────────────────────────────────────
-// POST 24: Bank & Credit Union Branch Cleaning
-// ─────────────────────────────────────────────────────
-const post24: BlogPost = {
-  slug: "bank-credit-union-branch-cleaning",
-  title: "Bank and Credit Union Branch Cleaning: What After-Hours Service Actually Requires",
-  metaTitle: "Bank & Credit Union Branch Cleaning Guide | PHL Clean",
-  metaDescription: "What makes bank branch cleaning different from a standard office — security protocols, teller station care, ATM vestibules, and after-hours scheduling. A guide for branch and facility managers.",
-  date: "2026-06-24",
-  author: "PHL Clean",
-  category: "Industry Focus",
-  readTime: "6 min read",
-  relatedLinks: [
-    { label: "Commercial Cleaning Services", href: "/services/commercial-cleaning" },
-    { label: "Commercial Cleaning in Philadelphia", href: "/services/commercial-cleaning/philadelphia" },
-    { label: "Commercial Cleaning in Bensalem", href: "/services/commercial-cleaning/bensalem" },
-  ],
-  body: [
-    { type: "paragraph", text: "Bank branches and credit union offices look like standard commercial space from the street, but they run on a different set of rules once you're inside. Cash handling, alarm systems, camera coverage, and a public that expects to feel secure the moment they walk through the door all shape what a cleaning program needs to look like. Treat a branch like a generic office account and you'll miss the details that actually matter to a branch manager." },
-
-    { type: "heading", level: 2, text: "Why Bank Branches Aren't Just Another Office" },
-    { type: "paragraph", text: "A corporate office might have twenty employees moving through it during the day. A branch has that plus a steady stream of customers handling cash, checks, and personal documents at counters that need to look — and be — spotless by opening. On top of that, most branches run on armed alarm systems, timed vault access, and camera monitoring, all of which affect when and how a cleaning crew can be on-site." },
-
-    { type: "heading", level: 2, text: "Security Comes First" },
-    { type: "paragraph", text: "This is the single biggest difference between cleaning a bank branch and cleaning a typical office suite. A reputable cleaning company assigns the same background-checked crew to a branch account every time — not a rotating pool of whoever's available that night. Branch managers should expect a cleaning partner to work within the branch's alarm and access protocols, sign in and out consistently, and never be left unsupervised in areas like the vault vestibule or safe deposit box room without prior arrangement." },
-    { type: "paragraph", text: "Some branches prefer cleaning crews to arrive before the alarm is set for the night and finish before a designated cutoff, rather than working the true overnight hours a typical office account might use. That's a scheduling detail worth confirming directly with the branch's security protocol, not something a cleaning company should assume." },
-
-    { type: "heading", level: 2, text: "The Areas That Need the Most Attention" },
-    { type: "paragraph", text: "A few zones inside a branch get far more customer contact — and far more scrutiny — than the rest of the building:" },
-    { type: "list", ordered: false, items: [
-      "Teller counters and stations — high-touch surfaces that need daily disinfection, not just a wipe-down",
-      "ATM vestibules — interior and exterior glass, keypad sanitizing, and floor care since these areas often stay accessible 24/7",
-      "Entrance doors and lobby glass — the first thing a customer notices walking in",
-      "Waiting and seating areas — chairs, tables, and counters where customers wait between appointments",
-      "Restrooms — held to the same standard as the public-facing lobby, not treated as an afterthought",
-    ]},
-
-    { type: "heading", level: 2, text: "Scheduling Around Bank Hours" },
-    { type: "paragraph", text: "Most branches want cleaning done after close and finished well before the next business day, so nothing interferes with morning cash drawer counts or opening procedures. That said, ATM vestibules and exterior glass often need a midday touch-up since they see traffic all day, every day — a detail that's easy to overlook if a cleaning company only thinks in terms of one nightly visit." },
-
-    { type: "heading", level: 2, text: "What to Ask Before Hiring a Cleaner for a Branch" },
-    { type: "paragraph", text: "Branch and facility managers should confirm a cleaning company's insurance coverage, background-check process for assigned staff, and whether the same crew will be dedicated to the account long-term. It's worth reviewing our broader guide on [what to ask before signing a commercial cleaning contract](/blog/questions-ask-commercial-cleaning-contract) — the same questions apply here, with security and consistency weighted even more heavily than they would be for a standard office." },
-
-    { type: "callout", text: "PHL Clean assigns consistent, background-checked crews to every branch account and works within your alarm and access protocols. Schedule a walkthrough to talk through your branch's specific security requirements — call (215) 550-1414." },
-  ],
-};
-
-// ─────────────────────────────────────────────────────
-// POST 25: Gym & Fitness Studio Cleaning
-// ─────────────────────────────────────────────────────
-const post25: BlogPost = {
-  slug: "gym-fitness-studio-cleaning-guide",
-  title: "Cleaning a Gym or Fitness Studio: What Standard Janitorial Service Misses",
-  metaTitle: "Gym & Fitness Studio Cleaning Guide | PHL Clean",
-  metaDescription: "Why gyms, boxing and MMA facilities, and CrossFit boxes need a different cleaning approach than a standard office — equipment sanitization, mat care, and locker room maintenance.",
-  date: "2026-06-25",
-  author: "PHL Clean",
-  category: "Industry Focus",
-  readTime: "6 min read",
-  relatedLinks: [
-    { label: "Commercial Cleaning Services", href: "/services/commercial-cleaning" },
-    { label: "Deep Cleaning Services", href: "/services/deep-cleaning" },
-    { label: "Commercial Cleaning in Philadelphia", href: "/services/commercial-cleaning/philadelphia" },
-  ],
-  body: [
-    { type: "paragraph", text: "A gym isn't an office with a few extra treadmills. Shared equipment, exposed skin, sweat, and mat space that dozens of people touch with bare hands and feet every day create a hygiene environment that a standard janitorial checklist just isn't built for. This is especially true for boxing gyms, MMA centers, and CrossFit boxes, where mat contact and shared equipment are constant rather than occasional." },
-
-    { type: "heading", level: 2, text: "Why Gyms Need a Different Cleaning Approach" },
-    { type: "paragraph", text: "Standard office cleaning is built around dust, trash, and general surface wiping. A fitness facility deals with a much higher concentration of bacteria and moisture, transferred directly from person to person through equipment and mats. The cleaning approach has to shift from \"tidy and presentable\" to \"actively reducing what's on every touched surface\" — and it has to happen on a schedule that matches how heavily the space gets used, not just once at closing." },
-
-    { type: "heading", level: 2, text: "Equipment Sanitization Isn't Optional" },
-    { type: "paragraph", text: "Dumbbells, barbells, machine handles, and bench surfaces get touched by dozens of sweaty hands in a single day. Wipe-down stations for members between sets help, but they're not a substitute for a real disinfection pass by a trained cleaning crew. Shared mat space in particular — the kind you'll find in a boxing gym, wrestling room, or MMA facility — carries a real risk of skin infections like ringworm and staph if it isn't disinfected on a consistent schedule, not just spot-cleaned when something looks visibly dirty." },
-
-    { type: "heading", level: 2, text: "Mats and Flooring Need Special Handling" },
-    { type: "paragraph", text: "Different mat and flooring types in a fitness facility need different care, and using the wrong product can damage the surface as fast as neglecting it:" },
-    { type: "list", ordered: false, items: [
-      "Rubber gym flooring — needs a neutral-pH cleaner; harsh chemicals can dry out and crack rubber over time",
-      "Wrestling and grappling mats — need a disinfectant rated for direct skin contact, applied with proper dwell time, not just a quick spray",
-      "Turf and functional training areas — need regular vacuuming or sweeping to pull debris out of the fibers before it works down to the subfloor",
-      "Locker room and shower flooring — needs slip-resistant cleaning products, since standard floor finish can make wet tile dangerously slick",
-    ]},
-
-    { type: "heading", level: 2, text: "Locker Rooms and Showers: The Trickiest Area" },
-    { type: "paragraph", text: "Moisture is the enemy in any locker room. Standing water and poor ventilation create the conditions mold and mildew need to take hold in grout lines, shower drains, and the corners behind fixtures. A proper cleaning program treats locker rooms as their own category — daily disinfection of benches, lockers, and shower stalls, with a deeper attack on drains and grout on a regular cycle rather than only when someone complains about a smell." },
-
-    { type: "heading", level: 2, text: "Building a Realistic Cleaning Schedule" },
-    {
-      type: "table",
-      headers: ["Area", "Daily", "Weekly", "Monthly"],
-      rows: [
-        ["Equipment & mats", "Disinfect high-contact surfaces", "Deep disinfect all mat surfaces", "—"],
-        ["Locker rooms / showers", "Wipe down & disinfect fixtures", "Drain and grout attention", "Deep grout and drain cleaning"],
-        ["Floors (rubber / turf)", "Sweep or vacuum", "Damp mop with neutral cleaner", "—"],
-        ["General areas (lobby, front desk)", "Standard cleaning", "—", "Deep clean / detail dusting"],
-      ],
-    },
-
-    { type: "heading", level: 2, text: "Getting a Program That Fits Your Facility" },
-    { type: "paragraph", text: "Every fitness facility is laid out differently and carries a different mix of equipment, mats, and traffic patterns. A boxing gym and a corporate wellness center need very different cleaning programs even though they're both technically \"gyms.\" The right approach starts with a walkthrough of your specific space, not a generic package." },
-
-    { type: "callout", text: "Schedule a free walkthrough and we'll build a cleaning program around your equipment, mats, and locker rooms — not a one-size-fits-all checklist. Call (215) 550-1414." },
-  ],
-};
-
-// ─────────────────────────────────────────────────────
-// POST 26: Retail & Showroom Cleaning
-// ─────────────────────────────────────────────────────
 const post26: BlogPost = {
   slug: "retail-showroom-cleaning-guide",
   title: "Retail Store and Showroom Cleaning: The First Impression Your Floors and Glass Make",
@@ -1521,9 +591,9 @@ const post26: BlogPost = {
   category: "Industry Focus",
   readTime: "5 min read",
   relatedLinks: [
-    { label: "Floor Maintenance Services", href: "/services/floor-maintenance" },
-    { label: "Commercial Cleaning Services", href: "/services/commercial-cleaning" },
-    { label: "Floor Maintenance in Philadelphia", href: "/services/floor-maintenance/philadelphia" },
+    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance" },
+    { label: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning" },
+    { label: "Hard Surface Floor Care in Philadelphia", href: "/services/floor-maintenance/philadelphia" },
   ],
   body: [
     { type: "paragraph", text: "A customer walking into a retail store or showroom forms an opinion of your business before they've looked at a single product. Streaked glass, dull floors, or a smudged display case send a message just as loud as your merchandise does — and unlike an office, where the only people who notice a cleaning slip are your own employees, every retail cleaning shortfall is on display to a paying customer." },
@@ -1547,91 +617,324 @@ const post26: BlogPost = {
   ],
 };
 
-// ─────────────────────────────────────────────────────
-// POST 27: Property Management Portfolio Cleaning
-// ─────────────────────────────────────────────────────
-const post27: BlogPost = {
-  slug: "property-management-portfolio-cleaning",
-  title: "Managing Cleaning Across a Property Management Portfolio: One Point of Contact, Consistent Standards",
-  metaTitle: "Property Management Portfolio Cleaning | PHL Clean",
-  metaDescription: "How property managers can consolidate cleaning across multiple buildings without sacrificing quality — consistent crews, common-area standards, and tenant turnover cleans.",
-  date: "2026-06-29",
+
+const post11: BlogPost = {
+  slug: "questions-ask-commercial-cleaning-contract",
+  title: "What to Ask Before Signing a Commercial Floor Care Contract",
+  metaTitle: "What to Ask Before Signing a Floor Care Contract | PHL Clean",
+  metaDescription: "Ten questions that separate a floor care contractor who knows what they are doing from one who is guessing — and the answers that should make you keep looking.",
+  date: "2026-09-14",
   author: "PHL Clean",
-  category: "Industry Focus",
-  readTime: "6 min read",
+  category: "Buying Floor Care",
+  readTime: "8 min read",
   relatedLinks: [
-    { label: "Commercial Cleaning Services", href: "/services/commercial-cleaning" },
-    { label: "Deep Cleaning Services", href: "/services/deep-cleaning" },
-    { label: "Commercial Cleaning in Bucks County", href: "/services/commercial-cleaning/bucks-county" },
+    { label: "Commercial Carpet Cleaning", href: "/services/carpet-cleaning" },
+    { label: "Carpet Maintenance Programs", href: "/services/carpet-maintenance-programs" },
+    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance" },
   ],
   body: [
-    { type: "paragraph", text: "Managing cleaning across a portfolio of buildings creates a problem most single-site facility managers never have to deal with: keeping quality consistent across properties you can't personally walk through every day. A lobby that looks great in one building and mediocre in another isn't just an inconsistency — it's a tenant complaint waiting to happen, and it makes the property manager's job harder no matter whose fault it actually is." },
+    { type: "paragraph", text: "Floor care proposals are unusually easy to get wrong, because most of them describe an outcome rather than a process. 'Clean and restore carpet' is not a scope. It is a hope. The questions below are the ones that reliably tell you whether the person quoting has actually assessed your floor or is pricing off a square footage number and a hunch." },
 
-    { type: "heading", level: 2, text: "The Real Problem Property Managers Face" },
-    { type: "paragraph", text: "Many portfolios end up with a patchwork of cleaning vendors — one company for the downtown building, a different one for the suburban office park, maybe an in-house crew for a third property. Each vendor has its own standards, its own point of contact, and its own way of handling a complaint. When something goes wrong, the property manager is the one fielding the tenant call, chasing down whichever vendor is responsible, and hoping the fix actually sticks." },
+    { type: "heading", level: 2, text: "1. What method, specifically?" },
+    { type: "paragraph", text: "There is no such thing as just cleaning. There is hot water extraction, low-moisture encapsulation, bonnet, rotary shampoo, and several hard surface processes that have nothing in common with each other. Ask which one, and why that one for your floor. If the answer is the same method for every floor in the building, you are talking to someone who owns one machine." },
 
-    { type: "heading", level: 2, text: "What Consistent Standards Across Buildings Actually Means" },
-    { type: "paragraph", text: "Consolidating to a single cleaning partner across a portfolio only pays off if that partner can actually deliver the same standard at every site — not just the same company name on the invoice. That means the same crew training, the same documented checklist adjusted for each building's layout, and the same escalation path when something needs attention. A single point of contact who can speak to every property, rather than a different account rep per site, is what turns \"one vendor\" into an actual operational advantage instead of a line item consolidation." },
+    { type: "heading", level: 2, text: "2. How did you arrive at that frequency?" },
+    { type: "paragraph", text: "A frequency should come from something: traffic counts, entry matting, how close the area is to a door, the carpet construction, how visible the space is to customers. If the proposal says quarterly for the entire building with no variation between the reception lane and a back office, nobody measured anything. Those two areas do not wear at remotely the same rate, and paying the same attention to both means overpaying for one and neglecting the other." },
 
-    { type: "heading", level: 2, text: "Common Areas vs. Tenant Spaces" },
-    { type: "paragraph", text: "Portfolio cleaning almost always splits into two different scopes: common areas the property manager controls directly — lobbies, hallways, elevators, shared restrooms, parking structure entries — and individual tenant suites, which may or may not be part of the same contract depending on the lease structure. Getting this scope boundary clearly documented per building avoids the awkward situation where a tenant assumes their suite is covered and it isn't, or a cleaning crew is unsure whether they have access to a space." },
+    { type: "heading", level: 2, text: "3. What is the return-to-service time, in hours?" },
+    { type: "paragraph", text: "Not 'overnight'. Hours. Extraction, encapsulation, a scrub and recoat and a full strip and finish have very different windows, and the finish coats in particular need genuine cure time between them. A contractor who will not commit to a number either does not know or is planning to rush the cure, and a rushed cure is why some floors scuff within a month of being done." },
 
-    { type: "heading", level: 2, text: "Turnover Cleans Between Tenants" },
-    { type: "paragraph", text: "Every vacancy is an opportunity to reset a space before a new tenant moves in, and it's one of the most common reasons property managers call a cleaning company outside the standard recurring schedule. A proper turnover clean covers everything a [move-in and move-out clean](/blog/commercial-move-in-move-out-cleaning) typically involves — and having a cleaning partner who already knows your buildings means faster turnaround between a tenant moving out and the next one moving in." },
+    { type: "heading", level: 2, text: "4. What will not come clean?" },
+    { type: "paragraph", text: "This is the single most revealing question on the list. Every commercial floor has something that will not fully recover: abraded traffic lanes where grit has physically scratched the fiber, grout that has absorbed stain deep into a porous joint, tile that was etched years ago by the wrong chemical. A contractor who tells you everything will come out has either not looked properly or is setting up an argument for later." },
+    { type: "callout", text: "If the answer to 'what will not come clean?' is 'nothing, we will get it all', keep looking. You are being sold an outcome nobody can deliver, and you will be the one holding the invoice when it is not delivered." },
 
-    { type: "heading", level: 2, text: "What to Look for When Consolidating Vendors" },
-    { type: "paragraph", text: "Before moving a whole portfolio to a single cleaning company, it's worth confirming they can genuinely staff every property with trained, background-checked crews — not just the flagship building — and that they're willing to put per-building scope and standards in writing. A vendor who can't clearly answer how they'd staff and manage five buildings the same way they manage one probably isn't ready for a portfolio-sized account yet." },
+    { type: "heading", level: 2, text: "5. Who supplies the equipment and chemistry?" },
+    { type: "paragraph", text: "For floor work the contractor should be bringing everything: machines, pads, chemistry, airmovers. If a proposal expects you to provide product or equipment, that is not a floor care contract, and the pricing is not comparable to one that is." },
 
-    { type: "callout", text: "PHL Clean works with property managers to build one consistent cleaning standard across every building in a portfolio, with a single point of contact for the whole account. Call (215) 550-1414 to talk through your portfolio." },
-  ],
-};
+    { type: "heading", level: 2, text: "6. Is the scope written per surface and per square foot?" },
+    { type: "paragraph", text: "You want the areas named, the surfaces identified, the square footage stated and the method attached to each. This is what makes two quotes comparable, and it is what stops a disagreement six months in about whether the corridor VCT was ever included." },
 
-// ─────────────────────────────────────────────────────
-// POST 28: What Affects Commercial Cleaning Cost in Philadelphia
-// ─────────────────────────────────────────────────────
-const post28: BlogPost = {
-  slug: "commercial-cleaning-cost-philadelphia",
-  title: "What Affects the Cost of Commercial Cleaning in Philadelphia",
-  metaTitle: "What Affects Commercial Cleaning Cost in Philadelphia | PHL Clean",
-  metaDescription: "There's no single price for commercial cleaning — here's what actually drives cost: square footage, frequency, facility type, and scope. A straightforward guide for business owners.",
-  date: "2026-07-01",
-  author: "PHL Clean",
-  category: "Trust & Authority",
-  readTime: "6 min read",
-  relatedLinks: [
-    { label: "Commercial Cleaning Services", href: "/services/commercial-cleaning" },
-    { label: "Commercial Cleaning in Philadelphia", href: "/services/commercial-cleaning/philadelphia" },
-  ],
-  body: [
-    { type: "paragraph", text: "\"How much does commercial cleaning cost?\" is one of the first questions almost every business owner asks, and it's also one of the hardest to answer honestly with a single number. Anyone who quotes you a flat per-square-foot rate without seeing your space is guessing — and that guess can go badly wrong once someone actually walks the building. Here's what genuinely drives the cost, so you know what you're being quoted on when a real number comes in." },
+    { type: "heading", level: 2, text: "7. What happens if we are not happy with the result?" },
+    { type: "paragraph", text: "Ask before signing, not after. A reasonable answer sounds like: we walk it with you at the end, and anything that is not to the agreed standard gets re-addressed before we invoice. An unreasonable answer involves a lot of qualifiers about the age and condition of the floor — qualifiers that should have been raised at the walkthrough." },
 
-    { type: "heading", level: 2, text: "Why There's No Flat Rate for Commercial Cleaning" },
-    { type: "paragraph", text: "Two buildings with the exact same square footage can require completely different amounts of labor. A 5,000-square-foot open-plan office with a small breakroom is a very different job than a 5,000-square-foot medical suite with a dozen exam rooms, biohazard protocols, and disinfection requirements. Square footage alone tells you almost nothing about how long a cleaning crew will actually be on-site." },
+    { type: "heading", level: 2, text: "8. Are you insured, and can I see the certificate before you start?" },
+    { type: "paragraph", text: "General liability and workers compensation, with a Certificate of Insurance issued to you, before anyone plugs a machine in. This matters more on floor work than on general cleaning: stripping machines, water and slip hazards create real exposure, and you do not want to discover a coverage gap after an incident." },
 
-    { type: "heading", level: 2, text: "The Factors That Actually Drive Price" },
-    { type: "list", ordered: false, items: [
-      "Square footage and layout — open floor plans clean faster than spaces broken into many small rooms",
-      "Frequency — nightly service costs more in total than twice-weekly, but per-visit cost usually drops as frequency goes up",
-      "Facility type — a medical office, restaurant kitchen, or gym requires different products, training, and time than a standard office",
-      "Level of service — routine janitorial (trash, restrooms, surfaces) versus a full deep clean are two different scopes entirely",
-      "Floor type — carpet, VCT, tile, and hard flooring all carry different maintenance costs and schedules",
-      "Access and timing — after-hours work with security protocols or limited access windows can affect scheduling and staffing",
+    { type: "heading", level: 2, text: "9. What is the term, and how do I get out?" },
+    { type: "paragraph", text: "Multi-year floor care agreements with automatic renewal and a narrow cancellation window are common and rarely in your favor. Month to month is entirely workable for this kind of work. If a long term is being asked for, ask what you get in exchange for it." },
+
+    { type: "heading", level: 2, text: "10. Will you tell me when I do not need something?" },
+    { type: "paragraph", text: "The best answer to this question is a specific example. Stripping a floor is the most profitable job in hard surface care and the hardest on your tile; a contractor who has never once recommended a scrub and recoat instead is not making that call on technical grounds." },
+
+    { type: "heading", level: 2, text: "The short version" },
+    { type: "table", headers: ["Question", "Answer you want", "Answer that should worry you"], rows: [
+      ["What method?", "Named method, with a reason tied to your floor", "\"Deep cleaning\" or the same method everywhere"],
+      ["Why that frequency?", "Derived from traffic and entry points", "One frequency for the whole building"],
+      ["Return to service?", "A number in hours, per job type", "\"It will be fine by morning\""],
+      ["What will not come clean?", "Specific areas named at the walkthrough", "\"Nothing, we will get it all\""],
+      ["Scope detail", "Per surface, per area, per square foot", "A lump sum with no breakdown"],
+      ["Term", "Month to month, or a real trade-off for longer", "Multi-year with auto-renewal"],
     ]},
 
-    { type: "heading", level: 2, text: "Per-Square-Foot vs. Flat Monthly Pricing" },
-    { type: "paragraph", text: "Most commercial cleaning contracts in the industry land on one of two general pricing structures: a rate calculated from square footage and frequency, or a flat monthly fee based on an agreed scope of work. Neither is automatically better — a per-square-foot rate is simple to understand, while a flat monthly rate can make budgeting easier since the number doesn't shift month to month. What matters more than the pricing structure is whether the scope behind it is written down clearly, so both sides know exactly what's included." },
-
-    { type: "heading", level: 2, text: "Why Estimates Without a Walkthrough Are Unreliable" },
-    { type: "paragraph", text: "We don't publish flat pricing on our site, and we're upfront about why: an accurate quote depends on seeing your actual space — square footage, layout, floor types, current condition, and what your team specifically needs. A number given over the phone without a walkthrough is a guess dressed up as a quote, and it tends to change (usually upward) once a cleaning crew actually shows up and sees what they're working with." },
-
-    { type: "heading", level: 2, text: "How to Compare Quotes Apples-to-Apples" },
-    { type: "paragraph", text: "The best way to compare two cleaning proposals isn't to compare the bottom-line number — it's to compare what's actually included at that number. Our guide on [what to ask before signing a commercial cleaning contract](/blog/questions-ask-commercial-cleaning-contract) and our breakdown of [how to evaluate a commercial cleaning company](/blog/evaluate-commercial-cleaning-company) both walk through the specifics worth confirming — scope, frequency, supplies, insurance — before you sign anything based on price alone." },
-
-    { type: "callout", text: "Ready for a real number instead of a guess? Schedule a free walkthrough and we'll put together a written quote based on your actual space — call (215) 550-1414 or use our contact form." },
+    { type: "paragraph", text: "None of these questions require you to know anything about floor care. They only require the person answering to know a great deal about it — which is exactly what you are trying to find out." },
   ],
 };
 
-export const blogPosts: BlogPost[] = [post1, post2, post3, post4, post5, post6, post7, post8, post9, post10, post11, post12, post13, post14, post15, post17, post18, post19, post20, post21, post22, post23, post24, post25, post26, post27, post28];
+const post10: BlogPost = {
+  slug: "school-daycare-cleaning-standards-pennsylvania",
+  title: "School Floor Care in Pennsylvania: How to Plan the Summer Window",
+  metaTitle: "School Floor Care Pennsylvania — Planning the Summer Window | PHL Clean",
+  metaDescription: "A year of corridor traffic has to be undone in one summer. How Pennsylvania school administrators should sequence VCT stripping, carpet extraction and cure time before the building reopens.",
+  date: "2026-09-14",
+  author: "PHL Clean",
+  category: "Schools & Institutions",
+  readTime: "7 min read",
+  relatedLinks: [
+    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance" },
+    { label: "Commercial Carpet Cleaning", href: "/services/carpet-cleaning" },
+    { label: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning" },
+  ],
+  body: [
+    { type: "paragraph", text: "School flooring has the hardest duty cycle of any building type we work in. Corridor VCT takes ten months of concentrated foot traffic, road salt gets tracked in for a third of that, cafeteria tile absorbs a year of spills, and then all of it has to be restored inside a summer window that is shorter every year because of camps, construction and staff returning early." },
+    { type: "paragraph", text: "The buildings that come through this well are not the ones that spend the most. They are the ones that sequence the work properly and are realistic about cure time." },
+
+    { type: "heading", level: 2, text: "Start by deciding what actually needs stripping" },
+    { type: "paragraph", text: "The default assumption in a lot of districts is that every VCT floor gets stripped every summer. It is worth challenging. Stripping removes finish down to the tile and is the harshest process in hard surface care; done annually on a floor that did not need it, it wears the tile itself and shortens the life of the flooring you are trying to protect." },
+    { type: "paragraph", text: "A corridor that has been burnished consistently through the year often needs only a scrub and recoat, which takes less time, costs less, and is gentler on the tile. Classrooms with moderate traffic frequently fall into the same category. Walk the building in May and sort the floors into three piles: strip, scrub and recoat, and leave alone." },
+    { type: "callout", text: "A floor that has been burnished on a regular cycle can often go several years between full strips. The money spent on interim burnishing during the school year is what buys you a shorter, cheaper summer." },
+
+    { type: "heading", level: 2, text: "Sequence around cure time, not around convenience" },
+    { type: "paragraph", text: "The most common summer failure is not bad work. It is good work that gets walked on too early. Floor finish is applied in multiple thin coats and each one needs to cure before the next goes down; the completed floor then needs to harden before it takes traffic or furniture." },
+    { type: "paragraph", text: "That means the order of operations matters enormously. Furniture out, floors done, cure, furniture back — with the cure as a fixed block in the schedule that nothing else is allowed to eat into. When a district compresses that window because deliveries arrived early, the finish gets marked in its first week and the whole job looks a year old by October." },
+
+    { type: "heading", level: 2, text: "A realistic summer sequence" },
+    { type: "table", headers: ["Window", "Work", "Why then"], rows: [
+      ["Late spring", "Walk the building, sort floors, book the work", "Contractors fill their summer calendar by April"],
+      ["Week 1 of break", "Furniture out, classroom carpet extraction", "Carpet needs the longest dry time and the least coordination"],
+      ["Weeks 2-3", "Corridor and cafeteria hard surface, strip or recoat", "Largest areas, needs the building genuinely empty"],
+      ["Week 4", "Restrooms and locker room tile and grout", "Wet areas, often the worst condition, best done uninterrupted"],
+      ["Final 2 weeks", "Cure, furniture back, touch-up", "Protects everything done in the preceding four"],
+    ]},
+
+    { type: "heading", level: 2, text: "Cafeterias, gyms and slip resistance" },
+    { type: "paragraph", text: "Cafeteria and corridor floors in a school are walked on wet more often than almost any other commercial floor, which makes slip resistance a genuine safety question rather than a box-ticking one. ANSI A137.1 sets a benchmark dynamic coefficient of friction of 0.42 or above for level interior tile expected to be walked on when wet. It is a reasonable standard to hold your finished floors to, and a reasonable thing to ask a contractor about before they select a finish." },
+    { type: "paragraph", text: "Gym floors are a separate trade. If your gym is wood, it needs a hardwood specialist, not a commercial floor contractor — and anyone who tells you otherwise should not be doing your floors." },
+
+    { type: "heading", level: 2, text: "Product selection where children are present" },
+    { type: "paragraph", text: "Pennsylvania childcare facilities are licensed under the Department of Human Services, and sanitation requirements form part of licensure. For floor work specifically, the practical points are straightforward: any product used should be EPA-registered and applied according to its label directions, and areas should be fully ventilated and cured before children return. Strippers and finishes in particular carry solvent odor during application, which is another argument for getting them done early in the break rather than in the last week." },
+
+    { type: "heading", level: 2, text: "Classroom and library carpet" },
+    { type: "paragraph", text: "Carpet in classrooms and libraries is usually in better condition than the people who walk on it every day assume, because the traffic is diffuse rather than concentrated in lanes. A full restorative extraction over the summer, plus consistent vacuuming through the year, is generally the whole program. Where you do see genuine lane wear is at classroom doorways and in the library's main run — worth flagging for interim attention during winter break rather than waiting for summer." },
+
+    { type: "paragraph", text: "The districts that stay ahead of this treat floor care as a twelve-month program with a summer peak, rather than as a summer project. It costs less across the year and the buildings look materially better in February, which is when anyone visiting actually sees them." },
+  ],
+};
+
+const post21: BlogPost = {
+  slug: "after-hours-evening-commercial-cleaning",
+  title: "After-Hours Floor Work: What \"Ready by Open\" Actually Means",
+  metaTitle: "After-Hours Commercial Floor Work & Cure Times | PHL Clean",
+  metaDescription: "Why commercial floor work happens overnight, how long each job really needs before it takes traffic, and what to get in writing so the floor is genuinely ready when you open.",
+  date: "2026-09-14",
+  author: "PHL Clean",
+  category: "Scheduling & Operations",
+  readTime: "6 min read",
+  relatedLinks: [
+    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance" },
+    { label: "Commercial Carpet Cleaning", href: "/services/carpet-cleaning" },
+    { label: "Carpet Maintenance Programs", href: "/services/carpet-maintenance-programs" },
+  ],
+  body: [
+    { type: "paragraph", text: "Almost all commercial floor work happens at night, and not for the reason most people assume. It is not mainly about staying out of the way. It is that floors need to be left alone after they are worked on, and the only reliable block of time when nobody walks across a building is the middle of the night." },
+
+    { type: "heading", level: 2, text: "The constraint is cure time, not cleaning time" },
+    { type: "paragraph", text: "The actual work on a floor is often the shorter half of the job. Extraction puts water into carpet that has to come back out. Floor finish goes down in multiple coats, each needing to cure before the next. Grout sealer and color seal both need to harden before anything wet touches them. None of that is negotiable by working faster, and a contractor who agrees to compress it is agreeing to give you a floor that fails early." },
+
+    { type: "heading", level: 2, text: "Realistic windows by job type" },
+    { type: "table", headers: ["Job", "On-site time", "Before traffic", "Practical scheduling"], rows: [
+      ["Encapsulation, carpet", "Fast", "20-60 minutes", "Can be done during business hours in most buildings"],
+      ["Hot water extraction, carpet", "Moderate", "2-6 hours walkable", "Evening, back in service next morning"],
+      ["Tile and grout cleaning", "Moderate", "1-2 hours", "Evening, minimal disruption"],
+      ["Grout color seal", "Moderate", "24 hours before wet", "Friday evening, back Monday"],
+      ["Scrub and recoat, VCT", "Moderate", "8-12 hours", "Overnight, tight but routine"],
+      ["Full strip and finish, VCT", "Long", "Overnight plus", "Weekend or a closure, not a weeknight"],
+    ]},
+    { type: "callout", text: "A full strip and finish squeezed into a single weeknight is the most common cause of a floor that scuffs within weeks. If the building genuinely cannot close, the honest answer is to do it in sections across several nights rather than to rush the whole floor once." },
+
+    { type: "heading", level: 2, text: "What to sort out before the first night" },
+    { type: "list", ordered: false, items: [
+      "Access: who holds keys or fobs, what the alarm procedure is, and who is called if it trips at 2am",
+      "Power and water: where the outlets are on the circuit you are allowed to load, and where the nearest usable tap is",
+      "Elevator access, if the work is above the ground floor and equipment has to come up",
+      "Where furniture goes overnight, and who moves it back",
+      "Which areas must be usable first thing, so they can be sequenced first",
+      "Who signs off the work, and when they will walk it",
+    ]},
+
+    { type: "heading", level: 2, text: "Signage is not optional" },
+    { type: "paragraph", text: "Wet floor signage and physical barriers need to stay up for the whole cure window, not just while the crew is standing there. The risk period for a slip is precisely the gap between the crew leaving and the floor being genuinely ready — an early arriver at 6am walking onto a floor that needed another two hours. Agree in advance who removes the signage and when." },
+
+    { type: "heading", level: 2, text: "Working in sections" },
+    { type: "paragraph", text: "For buildings that never fully close — hotels, medical facilities, twenty-four hour operations — sectioning is what makes the work possible at all. Half a corridor at a time, one wing per night, with a clear barrier and a marked route around it. It takes longer in total and it costs a little more, but it is the difference between a properly cured floor and a rushed one." },
+
+    { type: "heading", level: 2, text: "What to get in writing" },
+    { type: "paragraph", text: "One line, and it prevents most disputes: the time the floor will be ready for traffic, stated in hours from completion, for each area. Not 'by morning'. A number. Everything else on the schedule can flex around that, but the cure cannot, and having it written down means nobody has to negotiate it at six in the morning." },
+  ],
+};
+
+const post29: BlogPost = {
+  slug: "why-grout-wont-come-clean",
+  title: "Why Your Grout Won't Come Clean — And What Actually Fixes It",
+  metaTitle: "Why Grout Won't Come Clean & What Fixes It | PHL Clean",
+  metaDescription: "Your tile looks fine and the grout keeps getting darker. Here is the physical reason mopping cannot fix it, and the three things that actually can.",
+  date: "2026-09-14",
+  author: "PHL Clean",
+  category: "Tile & Grout",
+  readTime: "7 min read",
+  relatedLinks: [
+    { label: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning" },
+    { label: "Grout Restoration & Re-Grout", href: "/services/grout-restoration" },
+    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance" },
+  ],
+  body: [
+    { type: "paragraph", text: "It is one of the most common calls we get. The tile looks perfectly acceptable. The grout between it has gone from light gray to something closer to brown, and it has been getting worse for years despite the floor being mopped several times a week. The building manager assumes the cleaners are cutting corners. Usually they are not." },
+
+    { type: "heading", level: 2, text: "The joint sits below the tile" },
+    { type: "paragraph", text: "This is the whole problem, and once you see it you cannot unsee it. A grout joint is recessed a fraction of an inch below the face of the tile. A flat mop head passes over the top of that recess. It cleans the tile beautifully and never makes meaningful contact with the bottom of the joint, which is exactly where soil settles." },
+    { type: "paragraph", text: "Worse, mopping actively makes it worse. The water in the bucket picks up soil from the first part of the floor and carries it to the rest. By the end of the job the mop is distributing dirty water, and that water drains off the tile face and collects in — precisely — the recessed joint. Every mopping cycle deposits a little more." },
+
+    { type: "heading", level: 2, text: "Grout is porous, and that is by design" },
+    { type: "paragraph", text: "Cement-based grout is absorbent. Liquids soak in rather than sitting on top, which means coffee, grease, cleaning residue and the dirty mop water all penetrate below the surface. Surface cleaning removes what is on top. It does not reach what has already been absorbed." },
+    { type: "paragraph", text: "Epoxy grout behaves completely differently — it is effectively non-porous and does not absorb stains the same way. If your grout has stayed clean for fifteen years with minimal effort, there is a good chance it is epoxy. Most commercial floors are not." },
+
+    { type: "heading", level: 2, text: "What actually removes it" },
+    { type: "paragraph", text: "Getting soil out of a joint takes three things working together: an alkaline pre-treatment given genuine dwell time to break the soil down inside the porous grout, mechanical agitation directed along the joint rather than across the tile face, and high-pressure hot water extraction with simultaneous vacuum recovery so the dirty slurry leaves the building instead of being pushed into the next joint." },
+    { type: "paragraph", text: "That last part is what separates it from every other approach. A pressure washer without recovery just relocates the problem and makes a mess. The recovery is the job." },
+
+    { type: "heading", level: 2, text: "When cleaning is finished and it still looks wrong" },
+    { type: "paragraph", text: "Sometimes a joint is genuinely clean and still looks bad, and an honest contractor will tell you when you have reached that point. Two causes: the grout absorbed a stain deeply enough that it is now part of the material, or the grout was never a consistent color to begin with — inconsistent mixing or water content at installation produces patchy grout that no amount of cleaning will even out." },
+    { type: "paragraph", text: "That is the moment to talk about color sealing rather than booking the same clean again next quarter and expecting a different result." },
+
+    { type: "table", headers: ["What you have", "What fixes it", "What does not"], rows: [
+      ["Soil built up in a sound joint", "Pressure extraction with vacuum recovery", "More frequent mopping"],
+      ["Clean but permanently stained grout", "Pigmented color seal", "Repeat cleaning"],
+      ["Patchy color from installation", "Pigmented color seal", "Any cleaning method"],
+      ["Cracked, hollow or missing grout", "Cut out and re-grout", "Sealing over the top"],
+      ["Recurring cracks in the same line", "Correct flexible joint in that location", "Re-grouting it again"],
+    ]},
+
+    { type: "heading", level: 2, text: "Do not seal dirty grout" },
+    { type: "callout", text: "Sealing traps whatever is in the joint underneath the sealer. If the grout is not genuinely clean first, you have permanently locked the problem in and you will pay again later to strip the sealer back off." },
+    { type: "paragraph", text: "A penetrating sealer is worth applying to clean cement-based grout in a wet or high-traffic area — it slows absorption and buys you time to wipe up spills before they soak in. It is not a substitute for cleaning, it does not last forever, and it does nothing useful on epoxy grout." },
+
+    { type: "heading", level: 2, text: "One warning about natural stone" },
+    { type: "paragraph", text: "If your floor is marble, travertine, limestone or another calcareous stone, the acidic products routinely used to clean ceramic tile grout will permanently etch it. Etching is not a stain — it is physical damage to the stone surface, and it does not clean off. Identifying the material correctly is the first thing any competent contractor does, and if nobody has asked what your floor is made of, that is a bad sign." },
+  ],
+};
+
+const post30: BlogPost = {
+  slug: "encapsulation-vs-hot-water-extraction",
+  title: "Encapsulation vs. Hot Water Extraction: Which One Your Building Needs",
+  metaTitle: "Encapsulation vs Hot Water Extraction for Commercial Carpet | PHL Clean",
+  metaDescription: "The two main commercial carpet cleaning methods do different jobs. How each one works, when each is right, and why using only one of them eventually fails.",
+  date: "2026-09-14",
+  author: "PHL Clean",
+  category: "Carpet & Floor Care",
+  readTime: "7 min read",
+  relatedLinks: [
+    { label: "Commercial Carpet Cleaning", href: "/services/carpet-cleaning" },
+    { label: "Carpet Maintenance Programs", href: "/services/carpet-maintenance-programs" },
+    { label: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning" },
+  ],
+  body: [
+    { type: "paragraph", text: "These two methods get presented as competitors, usually by a contractor who only offers one of them. They are not competitors. They do different jobs, and a building that uses only one of them for years will eventually have a problem that the other one exists to solve." },
+
+    { type: "heading", level: 2, text: "How hot water extraction works" },
+    { type: "paragraph", text: "An alkaline pre-spray is applied and left to dwell, breaking the bond between soil and fiber. The carpet is agitated mechanically to work it in. Then hot water under pressure is injected and immediately vacuumed back out, carrying soil, chemistry and moisture with it. A neutralizing acid rinse follows so no alkaline residue is left behind." },
+    { type: "paragraph", text: "It is the restorative method. It is the only one that genuinely removes soil from the base of the pile, which is where the abrasive grit sits and does its damage. It also puts real water into the carpet, which is why dry time is measured in hours rather than minutes." },
+
+    { type: "heading", level: 2, text: "How encapsulation works" },
+    { type: "paragraph", text: "A polymer solution is applied and agitated into the pile. The polymer surrounds each soil particle and, as it dries, crystallizes into a brittle shell that releases the soil from the fiber. That crystallized soil is then removed by routine vacuuming over the following days." },
+    { type: "paragraph", text: "It uses a fraction of the water, dries in well under an hour, and can be done in an occupied building without closing anything. It is genuinely effective on surface and mid-pile soil. What it does not do is remove what has already worked its way down to the backing." },
+
+    { type: "heading", level: 2, text: "Side by side" },
+    { type: "table", headers: ["", "Hot water extraction", "Encapsulation"], rows: [
+      ["Role", "Restorative — the reset", "Interim — between resets"],
+      ["Moisture", "High", "Low"],
+      ["Back in service", "2-6 hours walkable", "20-60 minutes"],
+      ["Reaches base of pile", "Yes", "Not fully"],
+      ["Needs building closed", "Usually evening work", "Can run during hours"],
+      ["Typical frequency", "One to two times a year", "Monthly to quarterly on lanes"],
+    ]},
+
+    { type: "heading", level: 2, text: "What happens if you only encapsulate" },
+    { type: "paragraph", text: "This is the common failure, and it takes a couple of years to show. Encapsulation leaves polymer in the carpet by design. Without a periodic restorative extraction to flush it, that residue accumulates along with the soil it never fully lifted. The carpet starts looking dull in a way that another encap pass does not fix, and by then you have deep soil sitting against the backing that has been grinding away underfoot the whole time." },
+    { type: "callout", text: "Encapsulation extends the interval between restorative cleans. It does not replace them. Any program built on encapsulation alone is deferring a problem rather than preventing one." },
+
+    { type: "heading", level: 2, text: "What happens if you only extract" },
+    { type: "paragraph", text: "The opposite problem, and it is mostly economic. Extraction is more disruptive and more expensive, so buildings that rely on it alone tend to do it too infrequently. Between visits the traffic lanes look bad for months, and the grit that arrives on day one of that gap spends the whole period abrading fiber. You end up paying for the more expensive method and still getting permanent lane wear." },
+
+    { type: "heading", level: 2, text: "What a sensible program looks like" },
+    { type: "paragraph", text: "Interim encapsulation on the lanes and entry zones — the ten to twenty percent of the floor that takes most of the traffic — at a frequency matched to how busy those areas actually are. Restorative extraction across the whole floor once or twice a year depending on the building. Consistent vacuuming throughout, which is what actually removes the crystallized soil after an encap pass and is the cheapest intervention available." },
+    { type: "paragraph", text: "The frequencies should come from your building rather than from a template. A reception lane inside a busy entrance behaves nothing like a private office down a corridor, and any proposal that treats them identically has not looked at your floor." },
+
+    { type: "heading", level: 2, text: "A note on bonnet cleaning" },
+    { type: "paragraph", text: "There is a third method you will be offered, usually at an attractive price. Bonnet cleaning spins an absorbent pad over the carpet surface. It improves appearance quickly and it has a legitimate place for touch-ups before an event. It is not cleaning in any meaningful sense — it works the top of the pile only, and used as a primary method it can distort fiber over time. We will tell you when it is the right tool. It is rarely the right tool." },
+  ],
+};
+
+const post31: BlogPost = {
+  slug: "color-seal-vs-regrout",
+  title: "Color Sealing vs. Re-Grouting: How to Tell Which One You Need",
+  metaTitle: "Color Sealing vs Re-Grouting Commercial Floors | PHL Clean",
+  metaDescription: "One is cosmetic, one is structural, and the price difference is large. A simple test to work out which your grout actually needs before anyone quotes you.",
+  date: "2026-09-14",
+  author: "PHL Clean",
+  category: "Tile & Grout",
+  readTime: "6 min read",
+  relatedLinks: [
+    { label: "Grout Restoration & Re-Grout", href: "/services/grout-restoration" },
+    { label: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning" },
+    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance" },
+  ],
+  body: [
+    { type: "paragraph", text: "These two get quoted against each other constantly, and they are not alternatives. One is a cosmetic treatment for a sound joint. The other is a repair for a failed one. Working out which you have takes about five minutes and saves you either a lot of money or a job that fails in six months." },
+
+    { type: "heading", level: 2, text: "The test" },
+    { type: "paragraph", text: "Take a screwdriver handle or a key and run it along the grout joint, pressing firmly, in a few different areas — including at least one wet area and one high-traffic run. You are checking for four things: does it feel solid, is it level with the surrounding grout, does it sound solid rather than hollow, and does anything come away." },
+    { type: "paragraph", text: "Solid, level, intact and merely ugly is a color seal. Cracked, crumbling, hollow-sounding or missing in places is a failed joint, and it needs cutting out and replacing." },
+
+    { type: "heading", level: 2, text: "What color sealing actually is" },
+    { type: "paragraph", text: "A pigmented coating that bonds to the surface of cement-based grout. It does two useful things at once. It makes the color completely uniform, which cleaning alone cannot achieve on grout that is stained or was never consistent to start with. And it forms a barrier, so spills sit on top rather than soaking into the porous joint." },
+    { type: "paragraph", text: "In commercial use it typically holds for several years, with wear appearing first in the heaviest traffic lanes. Those lanes can be touched up on their own rather than redoing the whole floor. The one non-negotiable is that the grout must be genuinely clean first — sealing over soil locks it in permanently." },
+
+    { type: "heading", level: 2, text: "What re-grouting involves" },
+    { type: "paragraph", text: "The failed grout is cut out to a proper depth — not scraped at the surface — and replaced with new grout matched to the existing color and joint width. It is slower and more expensive than sealing, and it is the only thing that fixes a joint that has actually gone." },
+    { type: "paragraph", text: "It is still dramatically cheaper than replacing a floor, which is the alternative most people are weighing it against. When the tile itself is sound and only the joints have failed, restoration gets you a floor that reads as new for a fraction of the cost and a small fraction of the disruption." },
+
+    { type: "table", headers: ["Symptom", "What it means", "The fix"], rows: [
+      ["Uniform but stained or dingy", "Sound joint, cosmetic problem", "Clean, then color seal"],
+      ["Patchy color across the floor", "Inconsistent mix at installation", "Color seal"],
+      ["Crumbles when you press it", "Grout has failed", "Cut out and re-grout"],
+      ["Sounds hollow", "Loss of bond underneath", "Investigate, then re-grout"],
+      ["Missing in places", "Failed joint", "Cut out and re-grout"],
+      ["Cracks in the same line repeatedly", "Wrong material in a movement joint", "Replace with a flexible joint"],
+    ]},
+
+    { type: "heading", level: 2, text: "The recurring crack nobody fixes properly" },
+    { type: "paragraph", text: "If a crack keeps coming back in the same line no matter how often it is refilled, that line is almost certainly doing a job rigid grout cannot do. Tile assemblies move — thermal expansion, deflection in the subfloor, the change of plane where a floor meets a wall — and those locations are supposed to be filled with a flexible material rather than grout." },
+    { type: "paragraph", text: "Filling a movement joint with grout at installation is a common error, and the result is a crack that reappears indefinitely. Fixing it properly means cutting out and replacing it with the correct flexible joint. Anyone who offers to simply re-grout it again is selling you the same failure on a schedule." },
+    { type: "callout", text: "Color sealing a cracked or hollow joint hides it for a few months and changes nothing underneath. If a contractor offers to seal over a failure, that tells you most of what you need to know about the rest of their advice." },
+
+    { type: "heading", level: 2, text: "Cure time" },
+    { type: "paragraph", text: "Both treatments need genuine cure time before the area gets wet or takes heavy traffic, and the exact window depends on the specific product. Plan the work around a closure or a weekend, and get the real number in writing rather than an optimistic estimate — a color seal walked on too early wears unevenly from the first week." },
+  ],
+};
+
+export const blogPosts: BlogPost[] = [
+  post1, post2, post3, post4, post5, post6, post9, post18, post20, post26,
+  post11, post10, post21, post29, post30, post31,
+];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);

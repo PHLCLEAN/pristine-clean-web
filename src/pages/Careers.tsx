@@ -25,32 +25,32 @@ const Careers = () => {
 
   const benefits = [
     {
-      icon: <DollarSign className="h-7 w-7 text-cleaner-green-500" />,
+      icon: <DollarSign className="h-7 w-7 text-phl-blue" />,
       title: "Competitive Pay",
       description: "Fair hourly rates that recognize experience and reliability. Raises tied to performance, not tenure."
     },
     {
-      icon: <Calendar className="h-7 w-7 text-cleaner-green-500" />,
+      icon: <Calendar className="h-7 w-7 text-phl-blue" />,
       title: "Consistent Schedule",
       description: "Set hours at the same accounts each week. No last-minute schedule chaos or scrambled shifts."
     },
     {
-      icon: <Clock className="h-7 w-7 text-cleaner-green-500" />,
+      icon: <Clock className="h-7 w-7 text-phl-blue" />,
       title: "Flexible Shifts",
       description: "Evening, overnight, and early-morning shifts available. Great fit for parents, students, and second-job seekers."
     },
     {
-      icon: <GraduationCap className="h-7 w-7 text-cleaner-green-500" />,
+      icon: <GraduationCap className="h-7 w-7 text-phl-blue" />,
       title: "Paid Training",
       description: "Get trained — and paid — on the techniques and equipment that make our team stand out."
     },
     {
-      icon: <Users className="h-7 w-7 text-cleaner-green-500" />,
+      icon: <Users className="h-7 w-7 text-phl-blue" />,
       title: "Respect on the Job",
       description: "We treat crew members the way we treat customers. No nickel-and-diming, no unreasonable expectations."
     },
     {
-      icon: <CheckCircle className="h-7 w-7 text-cleaner-green-500" />,
+      icon: <CheckCircle className="h-7 w-7 text-phl-blue" />,
       title: "Room to Grow",
       description: "Crew leads, supervisors, and account managers all started as cleaners. Show up, do good work, advance."
     }
@@ -68,9 +68,7 @@ const Careers = () => {
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json",
+        headers: {"Content-Type": "application/json","Accept": "application/json",
         },
         body: JSON.stringify({
           access_key: "b93edd5d-c253-48c9-a4a4-db3500758648",
@@ -124,23 +122,23 @@ const Careers = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-phl-ground">
       <Navbar />
       <main>
         {/* Hero */}
-        <section className="relative bg-white overflow-hidden">
+        <section className="relative bg-phl-surface overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-gradient-to-r from-cleaner-blue-700/10 to-cleaner-green-500/10"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-phl-blue/10 to-phl-blue/10"></div>
           </div>
           <div className="container-custom relative z-10 py-20 md:py-28">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-cleaner-blue-800 mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold text-phl-ink mb-6">
                 Join the PHL Clean Team
               </h1>
-              <p className="text-lg md:text-xl text-gray-700 mb-8">
+              <p className="text-lg md:text-xl text-phl-ink-2 mb-8">
                 We're hiring reliable, hard-working people who take pride in a job well done. Steady hours, fair pay, real respect.
               </p>
-              <Button asChild size="lg" className="bg-cleaner-blue-700 hover:bg-cleaner-blue-800 text-white px-8 py-6 text-lg">
+              <Button asChild size="lg" className="bg-phl-blue hover:bg-phl-navy text-white px-8 py-6 text-lg">
                 <a href="#apply">Apply Now</a>
               </Button>
             </div>
@@ -148,21 +146,21 @@ const Careers = () => {
         </section>
 
         {/* Benefits */}
-        <section className="section-padding bg-gray-50">
+        <section className="section-padding bg-phl-ground">
           <div className="container-custom">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-cleaner-blue-800 mb-4">Why Work With Us</h2>
-              <div className="h-1 w-24 bg-cleaner-green-500 mx-auto mb-6"></div>
-              <p className="text-gray-600 text-lg">
+              <h2 className="text-3xl md:text-4xl font-bold text-phl-ink mb-4">Why Work With Us</h2>
+              <div className="h-1 w-24 bg-phl-blue mx-auto mb-6"></div>
+              <p className="text-phl-ink-2 text-lg">
                 Cleaning is honest work, and we treat it that way. Here's what you get when you join the PHL Clean team.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((b, i) => (
-                <div key={i} className="bg-white p-6 rounded-lg shadow-sm">
+                <div key={i} className="bg-phl-surface p-6 rounded-lg ">
                   <div className="mb-4">{b.icon}</div>
-                  <h3 className="text-lg font-bold text-cleaner-blue-800 mb-2">{b.title}</h3>
-                  <p className="text-gray-600 text-sm">{b.description}</p>
+                  <h3 className="text-lg font-bold text-phl-ink mb-2">{b.title}</h3>
+                  <p className="text-phl-ink-2 text-sm">{b.description}</p>
                 </div>
               ))}
             </div>
@@ -170,76 +168,76 @@ const Careers = () => {
         </section>
 
         {/* Open positions */}
-        <section className="section-padding bg-white">
+        <section className="section-padding bg-phl-surface">
           <div className="container-custom">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-cleaner-blue-800 mb-4">Open Positions</h2>
-              <div className="h-1 w-24 bg-cleaner-green-500 mx-auto mb-6"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-phl-ink mb-4">Open Positions</h2>
+              <div className="h-1 w-24 bg-phl-blue mx-auto mb-6"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              <div className="border border-gray-200 rounded-lg p-6 hover:border-cleaner-blue-700 transition-colors">
-                <h3 className="text-xl font-bold text-cleaner-blue-800 mb-2">Commercial Cleaning Crew</h3>
-                <p className="text-sm text-gray-500 mb-3">Part-time / Full-time · Philadelphia, Bucks, Montgomery Counties</p>
-                <p className="text-gray-600 mb-4">Evening or early-morning shifts cleaning offices, banks, and other commercial facilities. Experience preferred but we'll train the right person.</p>
-                <a href="#apply" className="text-cleaner-blue-700 font-medium hover:underline">Apply for this role &rarr;</a>
+              <div className="border border-phl-rule rounded-lg p-6 hover:border-phl-rule transition-colors">
+                <h3 className="text-xl font-bold text-phl-ink mb-2">Floor Care Technician</h3>
+                <p className="text-sm text-phl-muted mb-3">Part-time / Full-time · Philadelphia, Bucks, Montgomery Counties</p>
+                <p className="text-phl-ink-2 mb-4">Evening or early-morning shifts cleaning offices, banks, and other commercial facilities. Experience preferred but we'll train the right person.</p>
+                <a href="#apply" className="text-phl-blue font-medium hover:underline">Apply for this role &rarr;</a>
               </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:border-cleaner-blue-700 transition-colors">
-                <h3 className="text-xl font-bold text-cleaner-blue-800 mb-2">Carpet & Floor Care Technician</h3>
-                <p className="text-sm text-gray-500 mb-3">Full-time · Day shifts</p>
-                <p className="text-gray-600 mb-4">Specialty work using truck-mounted and portable extraction equipment. Carpet, tile, hard-surface experience preferred.</p>
-                <a href="#apply" className="text-cleaner-blue-700 font-medium hover:underline">Apply for this role &rarr;</a>
+              <div className="border border-phl-rule rounded-lg p-6 hover:border-phl-rule transition-colors">
+                <h3 className="text-xl font-bold text-phl-ink mb-2">Carpet & Floor Care Technician</h3>
+                <p className="text-sm text-phl-muted mb-3">Full-time · Day shifts</p>
+                <p className="text-phl-ink-2 mb-4">Specialty work using truck-mounted and portable extraction equipment. Carpet, tile, hard-surface experience preferred.</p>
+                <a href="#apply" className="text-phl-blue font-medium hover:underline">Apply for this role &rarr;</a>
               </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:border-cleaner-blue-700 transition-colors">
-                <h3 className="text-xl font-bold text-cleaner-blue-800 mb-2">Crew Lead / Supervisor</h3>
-                <p className="text-sm text-gray-500 mb-3">Full-time · Evening shift</p>
-                <p className="text-gray-600 mb-4">Lead a small crew across multiple accounts. Quality control, training, customer communication. Prior cleaning leadership experience required.</p>
-                <a href="#apply" className="text-cleaner-blue-700 font-medium hover:underline">Apply for this role &rarr;</a>
+              <div className="border border-phl-rule rounded-lg p-6 hover:border-phl-rule transition-colors">
+                <h3 className="text-xl font-bold text-phl-ink mb-2">Crew Lead / Supervisor</h3>
+                <p className="text-sm text-phl-muted mb-3">Full-time · Evening shift</p>
+                <p className="text-phl-ink-2 mb-4">Lead a small crew across multiple accounts. Quality control, training, customer communication. Prior cleaning leadership experience required.</p>
+                <a href="#apply" className="text-phl-blue font-medium hover:underline">Apply for this role &rarr;</a>
               </div>
-              <div className="border border-gray-200 rounded-lg p-6 hover:border-cleaner-blue-700 transition-colors">
-                <h3 className="text-xl font-bold text-cleaner-blue-800 mb-2">Don't see your role?</h3>
-                <p className="text-sm text-gray-500 mb-3">All experience levels</p>
-                <p className="text-gray-600 mb-4">We're always interested in meeting reliable people. Send us your info and we'll reach out when something matches.</p>
-                <a href="#apply" className="text-cleaner-blue-700 font-medium hover:underline">Tell us about yourself &rarr;</a>
+              <div className="border border-phl-rule rounded-lg p-6 hover:border-phl-rule transition-colors">
+                <h3 className="text-xl font-bold text-phl-ink mb-2">Don't see your role?</h3>
+                <p className="text-sm text-phl-muted mb-3">All experience levels</p>
+                <p className="text-phl-ink-2 mb-4">We're always interested in meeting reliable people. Send us your info and we'll reach out when something matches.</p>
+                <a href="#apply" className="text-phl-blue font-medium hover:underline">Tell us about yourself &rarr;</a>
               </div>
             </div>
           </div>
         </section>
 
         {/* Application form */}
-        <section id="apply" className="section-padding bg-gray-50">
+        <section id="apply" className="section-padding bg-phl-ground">
           <div className="container-custom">
             <div className="max-w-3xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-cleaner-blue-800 mb-4">Apply Now</h2>
-                <div className="h-1 w-24 bg-cleaner-green-500 mx-auto mb-6"></div>
-                <p className="text-gray-600 text-lg">
-                  Fill out the form and we'll get back to you within a few business days. Or call us directly at <a href="tel:+12155501414" className="text-cleaner-blue-700 font-medium">(215) 550-1414</a>.
+                <h2 className="text-3xl md:text-4xl font-bold text-phl-ink mb-4">Apply Now</h2>
+                <div className="h-1 w-24 bg-phl-blue mx-auto mb-6"></div>
+                <p className="text-phl-ink-2 text-lg">
+                  Fill out the form and we'll get back to you within a few business days. Or call us directly at <a href="tel:+12155501414" className="text-phl-blue font-medium">(215) 550-1414</a>.
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-sm p-8 space-y-6">
+              <form onSubmit={handleSubmit} className="bg-phl-surface rounded-lg  p-8 space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Full Name*</label>
+                    <label htmlFor="name" className="block text-sm font-medium text-phl-ink-2 mb-1">Full Name*</label>
                     <Input id="name" name="name" value={formData.name} onChange={handleChange} required placeholder="Your name" />
                   </div>
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number*</label>
+                    <label htmlFor="phone" className="block text-sm font-medium text-phl-ink-2 mb-1">Phone Number*</label>
                     <Input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} required placeholder="(215) 555-0000" />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email*</label>
+                  <label htmlFor="email" className="block text-sm font-medium text-phl-ink-2 mb-1">Email*</label>
                   <Input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required placeholder="you@email.com" />
                 </div>
 
                 <div>
-                  <label htmlFor="position" className="block text-sm font-medium text-gray-700 mb-1">Position You're Interested In*</label>
+                  <label htmlFor="position" className="block text-sm font-medium text-phl-ink-2 mb-1">Position You're Interested In*</label>
                   <Select value={formData.position} onValueChange={(v) => setFormData(p => ({ ...p, position: v }))} required>
                     <SelectTrigger><SelectValue placeholder="Select a position" /></SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="commercial-cleaning-crew">Commercial Cleaning Crew</SelectItem>
+                      <SelectItem value="carpet-technician">Carpet Cleaning Technician</SelectItem>
                       <SelectItem value="carpet-floor-care">Carpet & Floor Care Technician</SelectItem>
                       <SelectItem value="crew-lead">Crew Lead / Supervisor</SelectItem>
                       <SelectItem value="other">Other / Open to opportunities</SelectItem>
@@ -249,7 +247,7 @@ const Careers = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="experience" className="block text-sm font-medium text-gray-700 mb-1">Years of Cleaning Experience</label>
+                    <label htmlFor="experience" className="block text-sm font-medium text-phl-ink-2 mb-1">Years of Cleaning Experience</label>
                     <Select value={formData.experience} onValueChange={(v) => setFormData(p => ({ ...p, experience: v }))}>
                       <SelectTrigger><SelectValue placeholder="Select" /></SelectTrigger>
                       <SelectContent>
@@ -262,7 +260,7 @@ const Careers = () => {
                     </Select>
                   </div>
                   <div>
-                    <label htmlFor="availability" className="block text-sm font-medium text-gray-700 mb-1">Availability</label>
+                    <label htmlFor="availability" className="block text-sm font-medium text-phl-ink-2 mb-1">Availability</label>
                     <Select value={formData.availability} onValueChange={(v) => setFormData(p => ({ ...p, availability: v }))}>
                       <SelectTrigger><SelectValue placeholder="Select" /></SelectTrigger>
                       <SelectContent>
@@ -277,16 +275,16 @@ const Careers = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Anything else we should know?</label>
+                  <label htmlFor="message" className="block text-sm font-medium text-phl-ink-2 mb-1">Anything else we should know?</label>
                   <Textarea id="message" name="message" value={formData.message} onChange={handleChange} className="min-h-[100px]" placeholder="Past employers, special skills, transportation, certifications, etc." />
                 </div>
 
-                <Button type="submit" disabled={loading} className="w-full bg-cleaner-blue-700 hover:bg-cleaner-blue-800 text-white py-6 text-lg">
+                <Button type="submit" disabled={loading} className="w-full bg-phl-blue hover:bg-phl-navy text-white py-6 text-lg">
                   {loading ? "Submitting..." : "Submit Application"}
                 </Button>
 
-                <p className="text-xs text-gray-500 text-center">
-                  Or call us directly at <a href="tel:+12155501414" className="text-cleaner-blue-700">(215) 550-1414</a> — we're happy to talk.
+                <p className="text-xs text-phl-muted text-center">
+                  Or call us directly at <a href="tel:+12155501414" className="text-phl-blue">(215) 550-1414</a> — we're happy to talk.
                 </p>
               </form>
             </div>

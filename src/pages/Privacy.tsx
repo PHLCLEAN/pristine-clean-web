@@ -7,8 +7,7 @@ import { useSeo } from '../hooks/use-seo';
 const Privacy = () => {
   useSeo({
     title: "Privacy Policy | PHL Clean",
-    description:
-      "How PHL Clean collects, uses, and protects the information you share through phlclean.com — including quote requests, job applications, and website analytics.",
+    description:"How PHL Clean collects, uses, and protects the information you share through phlclean.com — including quote requests, job applications, and website analytics.",
     canonical: "https://phlclean.com/privacy/",
   });
 
@@ -16,46 +15,46 @@ const Privacy = () => {
   const effectiveDate = "May 14, 2026";
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-phl-ground">
       <Navbar />
       <main>
-        <section className="bg-cleaner-blue-50/40 border-b border-cleaner-blue-100">
+        <section className="bg-phl-surface/40 border-b border-phl-rule">
           <div className="container-custom py-12 md:py-16">
-            <div className="text-sm text-gray-600 mb-3">
-              <Link to="/" className="hover:text-cleaner-blue-700">Home</Link>
+            <div className="text-sm text-phl-ink-2 mb-3">
+              <Link to="/" className="hover:text-phl-blue">Home</Link>
               <span className="mx-2">/</span>
-              <span className="text-cleaner-blue-700">Privacy Policy</span>
+              <span className="text-phl-blue">Privacy Policy</span>
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-cleaner-blue-800 mb-3">
+            <h1 className="text-3xl md:text-4xl font-bold text-phl-ink mb-3">
               Privacy Policy
             </h1>
-            <p className="text-gray-600">
+            <p className="text-phl-ink-2">
               Effective date: {effectiveDate}
             </p>
           </div>
         </section>
 
-        <section className="section-padding bg-white">
+        <section className="section-padding bg-phl-surface">
           <div className="container-custom max-w-3xl">
-            <div className="prose-content text-gray-700 leading-relaxed space-y-6">
+            <div className="prose-content text-phl-ink-2 leading-relaxed space-y-6">
               <p>
                 This policy explains what information PHL Clean collects when you use
                 phlclean.com, how we use it, who we share it with, and the choices you have.
                 We try to keep this short, accurate, and human-readable. If anything here
-                isn't clear, email <a href="mailto:info@phlclean.com" className="text-cleaner-blue-700 underline">info@phlclean.com</a> and we'll
+                isn't clear, email <a href="mailto:info@phlclean.com" className="text-phl-blue underline">info@phlclean.com</a> and we'll
                 walk you through it.
               </p>
 
-              <h2 className="text-2xl font-bold text-cleaner-blue-800 mt-10 mb-3">
+              <h2 className="text-2xl font-bold text-phl-ink mt-10 mb-3">
                 1. Who we are
               </h2>
               <p>
-                PHL Clean is a commercial cleaning and janitorial services company based in
+                PHL Clean is a commercial floor care company — carpet, tile and grout, and hard surface — based in
                 Bensalem, Pennsylvania, serving Philadelphia and the surrounding counties.
                 When this policy says "we," "us," or "PHL Clean," that's who we mean.
               </p>
 
-              <h2 className="text-2xl font-bold text-cleaner-blue-800 mt-10 mb-3">
+              <h2 className="text-2xl font-bold text-phl-ink mt-10 mb-3">
                 2. Information we collect
               </h2>
               <p>
@@ -85,7 +84,7 @@ const Privacy = () => {
                 in section 5 (Cookies and analytics).
               </p>
 
-              <h2 className="text-2xl font-bold text-cleaner-blue-800 mt-10 mb-3">
+              <h2 className="text-2xl font-bold text-phl-ink mt-10 mb-3">
                 3. How we use your information
               </h2>
               <p>We use the information you give us to:</p>
@@ -100,7 +99,7 @@ const Privacy = () => {
                 purposes. We don't add you to a marketing list unless you've asked us to.
               </p>
 
-              <h2 className="text-2xl font-bold text-cleaner-blue-800 mt-10 mb-3">
+              <h2 className="text-2xl font-bold text-phl-ink mt-10 mb-3">
                 4. Who we share information with
               </h2>
               <p>
@@ -112,14 +111,14 @@ const Privacy = () => {
                   <strong>Web3Forms</strong> processes form submissions on our behalf and
                   delivers them to our email inbox. Your data passes through their service
                   and is subject to{' '}
-                  <a href="https://web3forms.com/privacy" target="_blank" rel="noopener noreferrer" className="text-cleaner-blue-700 underline">
+                  <a href="https://web3forms.com/privacy" target="_blank" rel="noopener noreferrer" className="text-phl-blue underline">
                     Web3Forms' privacy policy
                   </a>.
                 </li>
                 <li>
                   <strong>Google Analytics 4</strong> collects anonymized usage data about
                   how people navigate the site. It's subject to{' '}
-                  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-cleaner-blue-700 underline">
+                  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-phl-blue underline">
                     Google's privacy policy
                   </a>.
                 </li>
@@ -134,7 +133,7 @@ const Privacy = () => {
                 rights, your safety, or the safety of others.
               </p>
 
-              <h2 className="text-2xl font-bold text-cleaner-blue-800 mt-10 mb-3">
+              <h2 className="text-2xl font-bold text-phl-ink mt-10 mb-3">
                 5. Cookies and analytics
               </h2>
               <p>
@@ -149,14 +148,14 @@ const Privacy = () => {
                   href="https://tools.google.com/dlpage/gaoptout"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-cleaner-blue-700 underline"
+                  className="text-phl-blue underline"
                 >
                   Google Analytics Opt-out Browser Add-on
                 </a>
                 , or by using browser settings or extensions that block tracking cookies.
               </p>
 
-              <h2 className="text-2xl font-bold text-cleaner-blue-800 mt-10 mb-3">
+              <h2 className="text-2xl font-bold text-phl-ink mt-10 mb-3">
                 6. How long we keep your information
               </h2>
               <p>
@@ -172,7 +171,7 @@ const Privacy = () => {
                 You can ask us to delete your information at any time (see section 8).
               </p>
 
-              <h2 className="text-2xl font-bold text-cleaner-blue-800 mt-10 mb-3">
+              <h2 className="text-2xl font-bold text-phl-ink mt-10 mb-3">
                 7. How we protect your information
               </h2>
               <p>
@@ -184,7 +183,7 @@ const Privacy = () => {
                 take it seriously.
               </p>
 
-              <h2 className="text-2xl font-bold text-cleaner-blue-800 mt-10 mb-3">
+              <h2 className="text-2xl font-bold text-phl-ink mt-10 mb-3">
                 8. Your rights
               </h2>
               <p>
@@ -198,7 +197,7 @@ const Privacy = () => {
               </ul>
               <p>
                 To exercise any of these rights, email us at{' '}
-                <a href="mailto:info@phlclean.com" className="text-cleaner-blue-700 underline">info@phlclean.com</a>
+                <a href="mailto:info@phlclean.com" className="text-phl-blue underline">info@phlclean.com</a>
                 {' '}from the email address you originally used to contact us. We'll respond
                 within 30 days. We may need to verify your identity before acting on the
                 request. We won't charge you a fee or retaliate against you for making one.
@@ -210,7 +209,7 @@ const Privacy = () => {
                 discriminated against for exercising your rights. Email us as above.
               </p>
 
-              <h2 className="text-2xl font-bold text-cleaner-blue-800 mt-10 mb-3">
+              <h2 className="text-2xl font-bold text-phl-ink mt-10 mb-3">
                 9. Children's privacy
               </h2>
               <p>
@@ -220,7 +219,7 @@ const Privacy = () => {
                 we'll delete it.
               </p>
 
-              <h2 className="text-2xl font-bold text-cleaner-blue-800 mt-10 mb-3">
+              <h2 className="text-2xl font-bold text-phl-ink mt-10 mb-3">
                 10. Links to other websites
               </h2>
               <p>
@@ -230,17 +229,16 @@ const Privacy = () => {
                 review their policies before sharing personal information with them.
               </p>
 
-              <h2 className="text-2xl font-bold text-cleaner-blue-800 mt-10 mb-3">
+              <h2 className="text-2xl font-bold text-phl-ink mt-10 mb-3">
                 11. Changes to this policy
               </h2>
               <p>
-                We may update this policy from time to time. When we do, we'll change the
-                "Effective date" at the top of the page. Significant changes will be
+                We may update this policy from time to time. When we do, we'll change the"Effective date" at the top of the page. Significant changes will be
                 communicated by posting a notice on the website. Your continued use of
                 phlclean.com after a change means you accept the updated policy.
               </p>
 
-              <h2 className="text-2xl font-bold text-cleaner-blue-800 mt-10 mb-3">
+              <h2 className="text-2xl font-bold text-phl-ink mt-10 mb-3">
                 12. Contact us
               </h2>
               <p>
@@ -249,18 +247,18 @@ const Privacy = () => {
               <p>
                 <strong>PHL Clean</strong><br />
                 Email:{' '}
-                <a href="mailto:info@phlclean.com" className="text-cleaner-blue-700 underline">
+                <a href="mailto:info@phlclean.com" className="text-phl-blue underline">
                   info@phlclean.com
                 </a>
                 <br />
                 Phone:{' '}
-                <a href="tel:+12155501414" className="text-cleaner-blue-700 underline">
+                <a href="tel:+12155501414" className="text-phl-blue underline">
                   (215) 550-1414
                 </a>
               </p>
 
-              <p className="text-sm text-gray-500 mt-10 border-t border-gray-200 pt-6">
-                See also our <Link to="/terms" className="text-cleaner-blue-700 underline">Terms of Service</Link>.
+              <p className="text-sm text-phl-muted mt-10 border-t border-phl-rule pt-6">
+                See also our <Link to="/terms" className="text-phl-blue underline">Terms of Service</Link>.
               </p>
             </div>
           </div>

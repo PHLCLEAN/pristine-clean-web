@@ -1,50 +1,48 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@300;400;500;600&family=Saira+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/*
+  PHL Clean — "Substrate"
+  Dark ground derived from the brand navy (#0A255A); accent is the brand
+  blue (#0887FF) exactly. Amber (#F0B429) is instrument ink: it appears
+  only inside technical figures to mark measurements and callouts, never
+  in buttons, links or navigation.
+*/
+
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 213 43% 8%;
+    --foreground: 213 30% 93%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 214 37% 11%;
+    --card-foreground: 213 30% 93%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 214 37% 11%;
+    --popover-foreground: 213 30% 93%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 209 100% 51%;
+    --primary-foreground: 214 74% 8%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 214 33% 15%;
+    --secondary-foreground: 213 30% 93%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 214 33% 15%;
+    --muted-foreground: 212 17% 58%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 214 33% 15%;
+    --accent-foreground: 213 30% 93%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 213 30% 93%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 213 24% 20%;
+    --input: 213 24% 20%;
+    --ring: 209 100% 51%;
 
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --radius: 0.25rem;
   }
 }
 
@@ -53,19 +51,84 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-phl-ground text-phl-ink font-sans antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading;
+    @apply font-heading uppercase;
+    font-weight: 700;
+    line-height: 0.98;
+    letter-spacing: 0.005em;
+    text-wrap: balance;
+  }
+
+  /* Keyboard focus has to stay obvious on a dark ground */
+  :focus-visible {
+    outline: 2px solid #0887FF;
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: #0887FF;
+    color: #061428;
   }
 }
 
-.section-padding {
-  @apply py-16 md:py-24 px-4 md:px-8;
+@layer components {
+  .section-padding {
+    @apply py-16 md:py-24 px-4 md:px-8;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Monospace label for every measurement, spec and eyebrow.
+     The mono does real work here: it marks which text is data. */
+  .spec-label {
+    @apply font-mono text-[11px] tracking-[0.14em] uppercase text-phl-muted;
+  }
+
+  /* Section eyebrow with a trailing rule */
+  .rack-head {
+    @apply flex items-baseline gap-4 mb-5 font-mono text-[11px] tracking-[0.14em] uppercase text-phl-muted;
+  }
+  .rack-head::after {
+    content: "";
+    @apply flex-1 h-px bg-phl-rule;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center font-heading uppercase font-semibold tracking-wide
+           bg-phl-blue text-phl-navy-deep border border-phl-blue rounded-sm
+           transition-colors hover:bg-phl-blue-soft hover:border-phl-blue-soft;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center font-heading uppercase font-semibold tracking-wide
+           bg-transparent text-phl-ink border border-phl-rule rounded-sm
+           transition-colors hover:border-phl-blue hover:text-phl-blue;
+  }
+
+  .prose-substrate {
+    @apply text-phl-ink-2 leading-relaxed;
+  }
+  .prose-substrate strong {
+    @apply text-phl-ink font-semibold;
+  }
 }
 
-.container-custom {
-  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -63,30 +63,22 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom colors for the cleaning service
-				'cleaner-blue': {
-					'50': '#f0f5ff',
-					'100': '#e6edff',
-					'200': '#ccdcff',
-					'300': '#a6c1ff',
-					'400': '#7a9cff',
-					'500': '#5475ff',
-					'600': '#3956f5',
-					'700': '#1E3A8A', // Main blue color
-					'800': '#1e3a8a',
-					'900': '#172554',
-				},
-				'cleaner-green': {
-					'50': '#ecfdf5',
-					'100': '#d1fae5',
-					'200': '#a7f3d0',
-					'300': '#6ee7b7',
-					'400': '#34d399',
-					'500': '#059669', // Main green color
-					'600': '#047857',
-					'700': '#065f46',
-					'800': '#064e3b',
-					'900': '#022c22',
+				// PHL Clean brand system — sampled from the logo.
+				// navy #0A255A, electric blue #0887FF.
+				phl: {
+					'ground': '#0B121C',   // page background — brand navy, desaturated
+					'surface': '#121B27',  // cards, figures, panels
+					'raised': '#1A2533',   // hover / elevated surface
+					'rule': '#26323F',     // hairlines and borders
+					'ink': '#E8EDF3',      // headings and body
+					'ink-2': '#94A4B6',    // secondary text
+					'muted': '#69788A',    // labels, captions
+					'blue': '#0887FF',     // brand blue — exact
+					'blue-soft': '#4FA8FF',// hover state
+					'navy': '#0A255A',     // brand navy — exact
+					'navy-deep': '#061428',// text on blue fills
+					'amber': '#F0B429',    // instrument ink — figures only
+					'soil': '#6B5334',     // diagrams only
 				},
 			},
 			borderRadius: {
@@ -128,8 +120,9 @@ export default {
 				'fade-in': 'fade-in 0.5s ease-out'
 			},
 			fontFamily: {
-				sans: ["Inter", "sans-serif"],
-				heading: ["Montserrat", "sans-serif"]
+				sans: ["Saira", "system-ui", "sans-serif"],
+				heading: ["Saira Condensed", "Saira", "sans-serif"],
+				mono: ["IBM Plex Mono", "ui-monospace", "monospace"]
 			}
 		}
 	},

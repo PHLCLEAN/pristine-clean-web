@@ -1,0 +1,50 @@
+# PHL Clean — 301s from the 2026-09 repositioning.
+# Janitorial, deep cleaning and medical facility cleaning were retired;
+# every retired URL points at its closest surviving equivalent so no
+# existing link or ranking lands on a 404.
+
+# --- retired service pages ---
+/services/commercial-cleaning            /services/carpet-cleaning/            301
+/services/commercial-cleaning/           /services/carpet-cleaning/            301
+/services/deep-cleaning            /services/carpet-cleaning/            301
+/services/deep-cleaning/           /services/carpet-cleaning/            301
+/services/medical-facility-cleaning            /services/floor-maintenance/            301
+/services/medical-facility-cleaning/           /services/floor-maintenance/            301
+
+# --- retired service x location combos (placeholder keeps the location) ---
+/services/commercial-cleaning/:loc       /services/carpet-cleaning/:loc        301
+/services/deep-cleaning/:loc       /services/carpet-cleaning/:loc        301
+/services/medical-facility-cleaning/:loc       /services/floor-maintenance/:loc        301
+
+# --- retired blog posts ---
+/blog/medical-facility-cleaning-different                /services/floor-maintenance/   301
+/blog/medical-facility-cleaning-different/               /services/floor-maintenance/   301
+/blog/office-cleaning-frequency-guide                /blog/how-often-clean-commercial-carpet/   301
+/blog/office-cleaning-frequency-guide/               /blog/how-often-clean-commercial-carpet/   301
+/blog/in-house-janitor-vs-outsourced-cleaning-cost                /blog/questions-ask-commercial-cleaning-contract/   301
+/blog/in-house-janitor-vs-outsourced-cleaning-cost/               /blog/questions-ask-commercial-cleaning-contract/   301
+/blog/evaluate-commercial-cleaning-company                /blog/questions-ask-commercial-cleaning-contract/   301
+/blog/evaluate-commercial-cleaning-company/               /blog/questions-ask-commercial-cleaning-contract/   301
+/blog/spring-deep-cleaning-checklist-philadelphia                /blog/how-often-clean-commercial-carpet/   301
+/blog/spring-deep-cleaning-checklist-philadelphia/               /blog/how-often-clean-commercial-carpet/   301
+/blog/why-philadelphia-businesses-choose-local-cleaning                /locations/philadelphia/   301
+/blog/why-philadelphia-businesses-choose-local-cleaning/               /locations/philadelphia/   301
+/blog/post-construction-cleaning-guide                /services/floor-maintenance/   301
+/blog/post-construction-cleaning-guide/               /services/floor-maintenance/   301
+/blog/office-break-room-kitchen-cleaning-guide                /services/tile-grout-cleaning/   301
+/blog/office-break-room-kitchen-cleaning-guide/               /services/tile-grout-cleaning/   301
+/blog/commercial-move-in-move-out-cleaning                /services/carpet-cleaning/   301
+/blog/commercial-move-in-move-out-cleaning/               /services/carpet-cleaning/   301
+/blog/commercial-restroom-cleaning-maintenance                /services/tile-grout-cleaning/   301
+/blog/commercial-restroom-cleaning-maintenance/               /services/tile-grout-cleaning/   301
+/blog/bank-credit-union-branch-cleaning                /services/carpet-cleaning/   301
+/blog/bank-credit-union-branch-cleaning/               /services/carpet-cleaning/   301
+/blog/gym-fitness-studio-cleaning-guide                /services/tile-grout-cleaning/   301
+/blog/gym-fitness-studio-cleaning-guide/               /services/tile-grout-cleaning/   301
+/blog/property-management-portfolio-cleaning                /services/carpet-maintenance-programs/   301
+/blog/property-management-portfolio-cleaning/               /services/carpet-maintenance-programs/   301
+/blog/commercial-cleaning-cost-philadelphia                /blog/questions-ask-commercial-cleaning-contract/   301
+/blog/commercial-cleaning-cost-philadelphia/               /blog/questions-ask-commercial-cleaning-contract/   301
+
+# --- SPA fallback: must stay last so it never shadows the rules above ---
+/*                             /index.html                 200

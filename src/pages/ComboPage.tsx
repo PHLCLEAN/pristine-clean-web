@@ -4,45 +4,35 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import QuoteForm from '../components/QuoteForm';
 import ContactInfo from '../components/ContactInfo';
+import TechnicalFigure from '../components/TechnicalFigure';
 import JsonLd from '../components/JsonLd';
-import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Phone, CheckCircle2 } from 'lucide-react';
+import { Phone, Check } from 'lucide-react';
 import { getService, services } from '../data/services';
 import { getLocation, locations } from '../data/locations';
 import { useSeo } from '../hooks/use-seo';
 
 /**
- * Service x Location combo page — e.g. /services/commercial-cleaning/bensalem.
+ * Service x Location combo page — e.g. /services/tile-grout-cleaning/bensalem.
  *
- * Strategy: each page must have enough unique-per-page content that Google
- * doesn't flag the set of 30 as doorway/thin pages. We get uniqueness from:
- *  - H1, meta title, meta description (auto-interpolated)
- *  - A location-specific intro paragraph using neighborhoods + industries
- *  - The neighborhoods list and industries-served list (genuinely different per city)
- *  - One city-specific FAQ prepended to the standard service FAQs
- *  - The location.whyLocal blurb (already city-specific)
- *
- * Everything else (what's included, process, why-choose) is shared service
- * content — reusing it is fine because the rest of the page is unique.
+ * Each page needs enough genuinely unique content that Google doesn't treat
+ * the set as doorway pages. Uniqueness comes from: the H1 and meta, the
+ * location's own intro (which describes the actual building stock there),
+ * the neighborhood list, the location-specific FAQ, and whyLocal. The
+ * service's method content is shared, which is fine — it is the same method.
  */
 const ComboPage = () => {
-  const { serviceSlug, locationSlug } = useParams<{
-    serviceSlug: string;
-    locationSlug: string;
-  }>();
+  const { serviceSlug, locationSlug } = useParams<{ serviceSlug: string; locationSlug: string }>();
 
   const service = serviceSlug ? getService(serviceSlug) : undefined;
   const location = locationSlug ? getLocation(locationSlug) : undefined;
-
   const valid = !!service && !!location;
 
-  // Hooks must run unconditionally; compute SEO inputs with safe fallbacks.
   const title = valid
     ? `${service!.shortTitle} in ${location!.shortName} | PHL Clean`
     : 'Service Not Found | PHL Clean';
   const description = valid
-    ? `Professional ${service!.shortTitle.toLowerCase()} for businesses in ${location!.longName}. ${service!.heroTagline} Locally owned. Book a free walkthrough — (215) 550-1414.`
+    ? `${service!.shortTitle} for commercial buildings in ${location!.longName}. ${service!.heroTagline} Free on-site walkthrough — (215) 550-1414.`
     : 'Page not found';
   const canonical = valid
     ? `https://phlclean.com/services/${service!.slug}/${location!.slug}/`
@@ -54,27 +44,20 @@ const ComboPage = () => {
     return <Navigate to="/404" replace />;
   }
 
-  // From here on TypeScript can rely on service + location being defined.
   const svc = service!;
   const loc = location!;
   const url = `https://phlclean.com/services/${svc.slug}/${loc.slug}/`;
 
-  // Location-specific intro — mixes service + neighborhoods + industries.
-  const neighborhoodList = loc.neighborhoods?.slice(0, 4).join(', ');
-  const industryList = loc.industries.slice(0, 3).join(', ').toLowerCase();
-
-  // City-specific FAQ prepended to standard service FAQs.
   const cityFaq = {
     question: `Do you cover all of ${loc.shortName}?`,
-    answer: `Yes — we run ${svc.shortTitle.toLowerCase()} programs across ${loc.shortName}${
+    answer: `Yes — we run ${svc.shortTitle.toLowerCase()} across ${loc.shortName}${
       loc.neighborhoods && loc.neighborhoods.length
         ? ` including ${loc.neighborhoods.slice(0, 5).join(', ')}`
         : ''
-    }. We assign the same crew to your account so the team that services your facility learns your space and your standards.`,
+    }. On a maintenance account the same crew is assigned to your building, so the team learns your layout, your access procedure and your standards instead of rediscovering them every visit.`,
   };
   const allFaqs = [cityFaq, ...svc.faqs];
 
-  // --- Structured data ---
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -107,124 +90,65 @@ const ComboPage = () => {
     })),
   };
 
-  const allSchemas = [breadcrumbSchema, serviceSchema, faqSchema];
+  const otherServices = services.filter(s => s.slug !== svc.slug);
+  const otherLocations = locations.filter(l => l.slug !== loc.slug).slice(0, 8);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-phl-ground">
       <Navbar />
-      <JsonLd data={allSchemas} />
+      <JsonLd data={[breadcrumbSchema, serviceSchema, faqSchema]} />
       <main>
         {/* Hero */}
-        <section className="relative bg-white overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <img
-              src={svc.heroImage}
-              alt={`${svc.title} in ${loc.name}`}
-              className="h-full w-full object-cover object-center opacity-15"
-              loading="eager"
-              width={1600}
-              height={900}
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-cleaner-blue-700/30 to-cleaner-green-500/20" />
-          </div>
+        <section className="border-b border-phl-rule">
+          <div className="container-custom py-10 md:py-16">
+            <nav aria-label="Breadcrumb" className="font-mono text-[11px] uppercase tracking-[0.1em] text-phl-muted mb-6">
+              <Link to="/" className="hover:text-phl-blue transition-colors">Home</Link>
+              <span className="mx-2">/</span>
+              <Link to={`/services/${svc.slug}`} className="hover:text-phl-blue transition-colors">{svc.shortTitle}</Link>
+              <span className="mx-2">/</span>
+              <span className="text-phl-ink-2">{loc.shortName}</span>
+            </nav>
 
-          <div className="container-custom relative z-10 py-14 md:py-20">
-            <div className="max-w-3xl">
-              <div className="text-sm text-gray-600 mb-4">
-                <Link to="/" className="hover:text-cleaner-blue-700">Home</Link>
-                <span className="mx-2">/</span>
-                <Link to={`/services/${svc.slug}`} className="hover:text-cleaner-blue-700">{svc.shortTitle}</Link>
-                <span className="mx-2">/</span>
-                <span className="text-cleaner-blue-700">{loc.shortName}</span>
-              </div>
-
-              <h1 className="text-3xl md:text-5xl font-bold text-cleaner-blue-800 leading-tight mb-6">
-                {svc.shortTitle} in {loc.longName}
-              </h1>
-
-              <p className="text-lg md:text-xl text-gray-700 mb-6">
-                When {loc.shortName} businesses need reliable {svc.shortTitle.toLowerCase()}, they call PHL Clean.
-                {neighborhoodList && (
-                  <> We service {neighborhoodList}, and have run {svc.shortTitle.toLowerCase()} programs for {industryList} across the area.</>
-                )}
-              </p>
-              <p className="text-base md:text-lg text-gray-700 mb-8">
-                {loc.whyLocal}
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild className="bg-cleaner-blue-700 hover:bg-cleaner-blue-800 text-white px-8 py-6 text-lg">
-                  <a href="#quote">Schedule a Walkthrough</a>
-                </Button>
-                <Button asChild variant="outline" className="border-cleaner-blue-700 text-cleaner-blue-700 hover:bg-cleaner-blue-50 px-8 py-6 text-lg">
-                  <a href="tel:+12155501414">
-                    <Phone className="mr-2 h-5 w-5" />
+            <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] gap-10 lg:gap-14 items-center">
+              <div>
+                <h1 className="text-[clamp(1.9rem,4.2vw,2.9rem)] text-phl-ink">
+                  {svc.shortTitle} in {loc.longName}
+                </h1>
+                <p className="mt-5 text-phl-ink-2 leading-relaxed max-w-[48ch]">{svc.heroTagline}</p>
+                <div className="flex flex-wrap gap-3 mt-7">
+                  <a href="#quote" className="btn-primary px-6 py-3 text-[15px]">Schedule a Walkthrough</a>
+                  <a href="tel:+12155501414" className="btn-ghost px-6 py-3 text-[15px] gap-2">
+                    <Phone className="h-[17px] w-[17px]" />
                     (215) 550-1414
                   </a>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* What's included */}
-        <section className="section-padding bg-white">
-          <div className="container-custom max-w-4xl">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-cleaner-blue-800 mb-4">
-                What's Included
-              </h2>
-              <div className="h-1 w-24 bg-cleaner-green-500 mx-auto" />
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
-              {svc.whatsIncluded.map((item, i) => (
-                <div key={i} className="flex items-start">
-                  <CheckCircle2 className="h-6 w-6 text-cleaner-green-500 mr-3 flex-shrink-0 mt-0.5" />
-                  <span className="text-gray-700">{item}</span>
                 </div>
-              ))}
+              </div>
+
+              <TechnicalFigure kind={svc.figure} />
             </div>
           </div>
         </section>
 
-        {/* Location-specific service area */}
-        <section className="section-padding bg-gray-50">
-          <div className="container-custom max-w-5xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        {/* Local context — the genuinely unique part of the page */}
+        <section className="section-padding border-b border-phl-rule">
+          <div className="container-custom">
+            <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] gap-12 lg:gap-16">
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-cleaner-blue-800 mb-4">
-                  Serving {loc.shortName} & the surrounding area
-                </h2>
-                <div className="h-1 w-16 bg-cleaner-green-500 mb-6" />
-                {loc.neighborhoods && loc.neighborhoods.length > 0 && (
-                  <>
-                    <p className="text-gray-700 mb-4">
-                      Crews regularly service {svc.shortTitle.toLowerCase()} accounts in:
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {loc.neighborhoods.map((n) => (
-                        <span key={n} className="bg-white border border-gray-200 px-3 py-1 rounded-full text-sm text-gray-700">
-                          {n}
-                        </span>
-                      ))}
-                    </div>
-                  </>
-                )}
+                <div className="rack-head">{svc.shortTitle} in {loc.shortName}</div>
+                <p className="text-phl-ink-2 leading-relaxed text-[15px]">{loc.intro}</p>
+                <div className="mt-8 bg-phl-surface border-l-2 border-phl-blue rounded-sm p-5">
+                  <p className="spec-label mb-2">Why local matters here</p>
+                  <p className="text-[14px] text-phl-ink-2 leading-relaxed">{loc.whyLocal}</p>
+                </div>
               </div>
 
               <div>
-                <h2 className="text-2xl md:text-3xl font-bold text-cleaner-blue-800 mb-4">
-                  Common in {loc.shortName}
-                </h2>
-                <div className="h-1 w-16 bg-cleaner-green-500 mb-6" />
-                <p className="text-gray-700 mb-4">
-                  Typical {svc.shortTitle.toLowerCase()} accounts in {loc.shortName} include:
-                </p>
-                <ul className="space-y-2">
-                  {loc.industries.map((ind) => (
-                    <li key={ind} className="flex items-start text-gray-700">
-                      <CheckCircle2 className="h-5 w-5 text-cleaner-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                      <span>{ind}</span>
+                <div className="rack-head">What&rsquo;s included</div>
+                <ul className="space-y-2.5">
+                  {svc.whatsIncluded.map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <Check className="h-[16px] w-[16px] text-phl-blue shrink-0 mt-1" aria-hidden="true" />
+                      <span className="text-[14px] text-phl-ink-2 leading-relaxed">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -233,68 +157,34 @@ const ComboPage = () => {
           </div>
         </section>
 
-        {/* Our process */}
-        <section className="section-padding bg-white">
-          <div className="container-custom max-w-4xl">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-cleaner-blue-800 mb-4">
-                How we run a {svc.shortTitle.toLowerCase()} program in {loc.shortName}
-              </h2>
-              <div className="h-1 w-24 bg-cleaner-green-500 mx-auto" />
+        {/* Neighborhoods */}
+        {loc.neighborhoods && loc.neighborhoods.length > 0 && (
+          <section className="section-padding border-b border-phl-rule">
+            <div className="container-custom">
+              <div className="rack-head">Covered around {loc.shortName}</div>
+              <ul className="flex flex-wrap gap-2.5">
+                {loc.neighborhoods.map(n => (
+                  <li key={n} className="bg-phl-surface border border-phl-rule rounded-sm px-3.5 py-2 text-[13px] text-phl-ink-2">
+                    {n}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div className="space-y-6">
-              {svc.process.map((step, i) => (
-                <div key={i} className="flex items-start">
-                  <div className="bg-cleaner-blue-700 text-white rounded-full h-9 w-9 flex items-center justify-center font-bold mr-4 flex-shrink-0">
-                    {i + 1}
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-cleaner-blue-800 mb-1">{step.title}</h3>
-                    <p className="text-gray-700">{step.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+          </section>
+        )}
 
-        {/* Why choose us */}
-        <section className="section-padding bg-gray-50">
+        {/* FAQ */}
+        <section className="section-padding border-b border-phl-rule">
           <div className="container-custom max-w-4xl">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-cleaner-blue-800 mb-4">
-                Why {loc.shortName} businesses choose PHL Clean
-              </h2>
-              <div className="h-1 w-24 bg-cleaner-green-500 mx-auto" />
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {svc.whyChoose.map((wc, i) => (
-                <div key={i} className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="text-xl font-bold text-cleaner-blue-800 mb-2">{wc.title}</h3>
-                  <p className="text-gray-700">{wc.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* FAQs */}
-        <section className="section-padding bg-white">
-          <div className="container-custom max-w-3xl">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-cleaner-blue-800 mb-4">
-                {svc.shortTitle} FAQ — {loc.shortName}
-              </h2>
-              <div className="h-1 w-24 bg-cleaner-green-500 mx-auto" />
-            </div>
-            <Accordion type="single" collapsible className="bg-white">
-              {allFaqs.map((f, i) => (
-                <AccordionItem key={i} value={`faq-${i}`}>
-                  <AccordionTrigger className="text-left text-cleaner-blue-800 hover:bg-gray-50 px-2">
-                    {f.question}
+            <div className="rack-head">Questions we actually get</div>
+            <Accordion type="single" collapsible className="w-full">
+              {allFaqs.map((faq, i) => (
+                <AccordionItem key={i} value={`item-${i}`} className="border-phl-rule">
+                  <AccordionTrigger className="text-left text-[16px] font-medium text-phl-ink hover:text-phl-blue hover:no-underline">
+                    {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-700 px-2">
-                    {f.answer}
+                  <AccordionContent className="text-[14px] text-phl-ink-2 leading-relaxed">
+                    {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
               ))}
@@ -302,67 +192,58 @@ const ComboPage = () => {
           </div>
         </section>
 
-        {/* CTA / Quote form */}
-        <section id="quote" className="section-padding bg-gray-50">
+        {/* Quote */}
+        <section id="quote" className="section-padding border-b border-phl-rule">
           <div className="container-custom">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-cleaner-blue-800 mb-4">
-                  Schedule a Walkthrough — {loc.shortName}
+                <p className="spec-label mb-3">Get started</p>
+                <h2 className="text-[clamp(1.5rem,3vw,2.1rem)] text-phl-ink">
+                  {svc.shortTitle} in {loc.shortName} — book a walkthrough
                 </h2>
-                <div className="h-1 w-16 bg-cleaner-green-500 mb-6" />
-                <p className="text-gray-700 mb-6">
-                  Tell us a little about your space and we'll book a free on-site walkthrough — that's how we put together a {svc.shortTitle.toLowerCase()} program that actually fits your building, hours, and budget.
+                <p className="mt-4 text-phl-ink-2 leading-relaxed max-w-[50ch]">
+                  We won&rsquo;t price a floor we haven&rsquo;t stood on. Free, under an hour, and you
+                  get an honest read on what will and won&rsquo;t come back.
                 </p>
-                <ContactInfo />
+                <div className="mt-8 pt-8 border-t border-phl-rule">
+                  <ContactInfo />
+                </div>
               </div>
               <QuoteForm />
             </div>
           </div>
         </section>
 
-        {/* Cross-link to other services in same city + other locations for same service */}
-        <section className="section-padding bg-white border-t border-gray-100">
-          <div className="container-custom max-w-5xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              <div>
-                <h3 className="text-xl font-bold text-cleaner-blue-800 mb-4">
-                  Other services we offer in {loc.shortName}
-                </h3>
-                <ul className="space-y-2">
-                  {services
-                    .filter(s => s.slug !== svc.slug)
-                    .map(s => (
-                      <li key={s.slug}>
-                        <Link
-                          to={`/services/${s.slug}/${loc.slug}`}
-                          className="text-cleaner-blue-700 hover:text-cleaner-blue-800 underline"
-                        >
-                          {s.shortTitle} in {loc.shortName}
-                        </Link>
-                      </li>
-                    ))}
-                </ul>
+        {/* Cross links */}
+        <section className="section-padding">
+          <div className="container-custom space-y-10">
+            <div>
+              <div className="rack-head">Other work in {loc.shortName}</div>
+              <div className="flex flex-wrap gap-2.5">
+                {otherServices.map(s => (
+                  <Link
+                    key={s.slug}
+                    to={`/services/${s.slug}/${loc.slug}`}
+                    className="bg-phl-surface border border-phl-rule hover:border-phl-blue hover:text-phl-blue rounded-sm px-4 py-2.5 text-[13.5px] text-phl-ink-2 transition-colors"
+                  >
+                    {s.shortTitle} in {loc.shortName}
+                  </Link>
+                ))}
               </div>
+            </div>
 
-              <div>
-                <h3 className="text-xl font-bold text-cleaner-blue-800 mb-4">
-                  {svc.shortTitle} in nearby areas
-                </h3>
-                <ul className="space-y-2">
-                  {locations
-                    .filter(l => l.slug !== loc.slug)
-                    .map(l => (
-                      <li key={l.slug}>
-                        <Link
-                          to={`/services/${svc.slug}/${l.slug}`}
-                          className="text-cleaner-blue-700 hover:text-cleaner-blue-800 underline"
-                        >
-                          {svc.shortTitle} in {l.shortName}
-                        </Link>
-                      </li>
-                    ))}
-                </ul>
+            <div>
+              <div className="rack-head">{svc.shortTitle} elsewhere</div>
+              <div className="flex flex-wrap gap-2.5">
+                {otherLocations.map(l => (
+                  <Link
+                    key={l.slug}
+                    to={`/services/${svc.slug}/${l.slug}`}
+                    className="bg-phl-surface border border-phl-rule hover:border-phl-blue hover:text-phl-blue rounded-sm px-4 py-2.5 text-[13.5px] text-phl-ink-2 transition-colors"
+                  >
+                    {l.shortName}
+                  </Link>
+                ))}
               </div>
             </div>
           </div>

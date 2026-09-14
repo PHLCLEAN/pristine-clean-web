@@ -5,13 +5,13 @@ import Services from '../components/Services';
 import IndustriesServed from '../components/IndustriesServed';
 import AboutUs from '../components/AboutUs';
 import WhyChooseUs from '../components/WhyChooseUs';
-import SecurityAndTrust from '../components/SecurityAndTrust';
+import Walkthrough from '../components/Walkthrough';
 import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-phl-ground">
       <Navbar />
       <main>
         <Hero />
@@ -19,7 +19,7 @@ const Index = () => {
         <IndustriesServed />
         <AboutUs />
         <WhyChooseUs />
-        <SecurityAndTrust />
+        <Walkthrough />
         <ContactForm />
       </main>
       <Footer />

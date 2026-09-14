@@ -1,113 +1,116 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Instagram } from 'lucide-react';
+import { services } from '@/data/services';
+
+const LOCATIONS = [
+  ["philadelphia", "Philadelphia"],
+  ["bensalem", "Bensalem"],
+  ["bucks-county", "Bucks County"],
+  ["montgomery-county", "Montgomery County"],
+  ["delaware-county", "Delaware County"],
+  ["chester-county", "Chester County"],
+] as const;
+
+const COMPANY = [
+  ["/#about", "About"],
+  ["/team", "Our Team"],
+  ["/careers", "Careers"],
+  ["/blog", "Field Notes"],
+  ["/#contact", "Contact"],
+] as const;
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-  
+  const year = new Date().getFullYear();
+
   return (
-    <footer className="bg-cleaner-blue-900 text-white">
-      <div className="container-custom py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="bg-phl-surface border-t border-phl-rule text-phl-ink-2">
+      <div className="container-custom py-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <div className="flex items-center mb-6">
-              <span className="text-2xl font-bold text-white">
-                PHL
-              </span>
-              <span className="ml-1 text-cleaner-green-500 text-2xl">Clean</span>
-            </div>
-            <p className="text-gray-300 mb-6">
-              Professional cleaning services for businesses throughout Philadelphia and surrounding counties. We deliver exceptional results that exceed expectations.
+            <img
+              src="/images/logo.webp"
+              alt="PHL Clean"
+              width={760}
+              height={443}
+              loading="lazy"
+              className="h-12 w-auto mb-5"
+            />
+            <p className="text-[13.5px] leading-relaxed max-w-[34ch]">
+              Commercial carpet and hard-surface floor care across Philadelphia and the surrounding
+              counties. Carpet, tile and grout, VCT, concrete and terrazzo — and nothing else.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="https://instagram.com/phl.clean"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Follow PHL Clean on Instagram"
-                className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
-            </div>
+            <a
+              href="https://instagram.com/phl.clean"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Follow PHL Clean on Instagram"
+              className="inline-flex mt-5 p-2 rounded-sm border border-phl-rule hover:border-phl-blue hover:text-phl-blue transition-colors"
+            >
+              <Instagram className="h-[18px] w-[18px]" />
+            </a>
           </div>
-          
+
           <div>
-            <h3 className="text-xl font-bold mb-6">Services</h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="/services/commercial-cleaning" className="text-gray-300 hover:text-white transition-colors">Commercial Cleaning & Janitorial</a>
-              </li>
-              <li>
-                <a href="/services/carpet-cleaning" className="text-gray-300 hover:text-white transition-colors">Carpet Cleaning</a>
-              </li>
-              <li>
-                <a href="/services/deep-cleaning" className="text-gray-300 hover:text-white transition-colors">Deep Cleaning</a>
-              </li>
-              <li>
-                <a href="/services/floor-maintenance" className="text-gray-300 hover:text-white transition-colors">Floor Maintenance</a>
-              </li>
-              <li>
-                <a href="/services/medical-facility-cleaning" className="text-gray-300 hover:text-white transition-colors">Medical Facility Cleaning</a>
-              </li>
+            <h3 className="spec-label mb-4">Services</h3>
+            <ul className="space-y-2.5 text-[13.5px]">
+              {services.map(s => (
+                <li key={s.slug}>
+                  <Link to={`/services/${s.slug}`} className="hover:text-phl-blue transition-colors">
+                    {s.shortTitle}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
-          
+
           <div>
-            <h3 className="text-xl font-bold mb-6">Company</h3>
-            <ul className="space-y-3">
-              <li>
-                <a href="/#about" className="text-gray-300 hover:text-white transition-colors">About Us</a>
-              </li>
-              <li>
-                <a href="/team" className="text-gray-300 hover:text-white transition-colors">Our Team</a>
-              </li>
-              <li>
-                <a href="/careers" className="text-gray-300 hover:text-white transition-colors">Careers</a>
-              </li>
-              <li>
-                <a href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</a>
-              </li>
-              <li>
-                <a href="/#contact" className="text-gray-300 hover:text-white transition-colors">Contact Us</a>
-              </li>
+            <h3 className="spec-label mb-4">Company</h3>
+            <ul className="space-y-2.5 text-[13.5px]">
+              {COMPANY.map(([href, label]) => (
+                <li key={href}>
+                  <a href={href} className="hover:text-phl-blue transition-colors">{label}</a>
+                </li>
+              ))}
             </ul>
           </div>
-          
+
           <div>
-            <h3 className="text-xl font-bold mb-6">Service Areas</h3>
-            <ul className="space-y-3">
-              <li><a href="/locations/philadelphia" className="text-gray-300 hover:text-white transition-colors">Philadelphia</a></li>
-              <li><a href="/locations/bensalem" className="text-gray-300 hover:text-white transition-colors">Bensalem</a></li>
-              <li><a href="/locations/bucks-county" className="text-gray-300 hover:text-white transition-colors">Bucks County</a></li>
-              <li><a href="/locations/montgomery-county" className="text-gray-300 hover:text-white transition-colors">Montgomery County</a></li>
-              <li><a href="/locations/delaware-county" className="text-gray-300 hover:text-white transition-colors">Delaware County</a></li>
-              <li><a href="/locations/chester-county" className="text-gray-300 hover:text-white transition-colors">Chester County</a></li>
+            <h3 className="spec-label mb-4">Service areas</h3>
+            <ul className="space-y-2.5 text-[13.5px]">
+              {LOCATIONS.map(([slug, label]) => (
+                <li key={slug}>
+                  <Link to={`/locations/${slug}`} className="hover:text-phl-blue transition-colors">
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
-            
-            <div className="mt-6">
-              <p className="text-gray-300 mb-2">Contact Us:</p>
-              <p className="text-gray-300">
-                <a href="tel:+12155501414" className="hover:text-white transition-colors">(215) 550-1414</a>
+
+            <div className="mt-6 pt-5 border-t border-phl-rule space-y-1.5 text-[13.5px]">
+              <p>
+                <a href="tel:+12155501414" className="font-mono text-phl-blue hover:text-phl-blue-soft transition-colors">
+                  (215) 550-1414
+                </a>
               </p>
-              <p className="text-gray-300">
-                <a href="mailto:info@phlclean.com" className="hover:text-white transition-colors">info@phlclean.com</a>
+              <p>
+                <a href="mailto:info@phlclean.com" className="hover:text-phl-blue transition-colors">
+                  info@phlclean.com
+                </a>
               </p>
-              <p className="text-gray-300 text-sm mt-2">Serving Philadelphia, Bucks, Montgomery,<br/>Delaware &amp; Chester counties</p>
             </div>
           </div>
         </div>
       </div>
-      
-      <div className="border-t border-white/10">
-        <div className="container-custom py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm">
-              &copy; {currentYear} PHL Clean. All rights reserved.
-            </p>
-            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-400">
-              <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
-              <span className="hidden sm:inline">Locally owned &amp; operated · Bensalem, PA</span>
+
+      <div className="border-t border-phl-rule">
+        <div className="container-custom py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-3 text-[12.5px] text-phl-muted">
+            <p>&copy; {year} PHL Clean LLC. All rights reserved.</p>
+            <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+              <Link to="/privacy" className="hover:text-phl-blue transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="hover:text-phl-blue transition-colors">Terms of Service</Link>
+              <span>Locally owned · Bensalem, PA</span>
             </div>
           </div>
         </div>
