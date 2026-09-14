@@ -109,7 +109,7 @@ const ComboPage = () => {
               <span className="text-phl-ink-2">{loc.shortName}</span>
             </nav>
 
-            <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] gap-10 lg:gap-14 items-center">
+            <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] gap-10 xl:gap-14 items-center">
               <div>
                 <h1 className="text-[clamp(1.9rem,4.2vw,2.9rem)] text-phl-ink">
                   {svc.shortTitle} in {loc.longName}

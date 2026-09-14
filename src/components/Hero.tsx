@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <section className="bg-phl-ground border-b border-phl-rule">
       <div className="container-custom py-12 md:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] gap-10 lg:gap-14 items-center">
+        <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)] gap-10 xl:gap-14 items-center">
           <div>
             <div className="flex items-center gap-2.5 mb-4">
               <span className="w-6 h-px bg-phl-blue" aria-hidden="true" />

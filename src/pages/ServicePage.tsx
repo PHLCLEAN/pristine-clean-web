@@ -101,7 +101,7 @@ const ServicePage = () => {
               <span className="text-phl-ink-2">{service.shortTitle}</span>
             </nav>
 
-            <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] gap-10 lg:gap-14 items-center">
+            <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] gap-10 xl:gap-14 items-center">
               <div>
                 <h1 className="text-[clamp(1.9rem,4.4vw,3rem)] text-phl-ink">{service.h1}</h1>
                 <p className="mt-5 max-w-[48ch] text-phl-ink-2 leading-relaxed">{service.heroTagline}</p>

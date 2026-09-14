@@ -290,11 +290,12 @@ const TechnicalFigure = ({ kind, className = "" }: Props) => {
 
   return (
     <figure className={`bg-phl-surface border border-phl-rule rounded-sm p-4 pb-3 ${className}`}>
-      {/* Below ~640px the annotation labels would scale down to an unreadable
-          size, so the diagram gets its own scroll container rather than
-          shrinking into decoration. */}
-      <div className="overflow-x-auto -mx-1 px-1">
-        <div className="min-w-[620px]">
+      {/* On phones the annotation labels would scale down to an unreadable
+          size, so below sm the diagram scrolls in its own container instead of
+          shrinking into decoration. At sm and up it fits its column, and the
+          minimum is dropped so no scrollbar appears. */}
+      <div className="overflow-x-auto">
+        <div className="min-w-[620px] sm:min-w-0">
           <Figure />
         </div>
       </div>
