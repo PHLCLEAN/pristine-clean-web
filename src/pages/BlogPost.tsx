@@ -150,6 +150,8 @@ const BlogPostPage = () => {
     description: post.metaDescription,
     datePublished: post.date,
     dateModified: post.date,
+    articleSection: post.category,
+    image: ["https://phlclean.com/og-image.png"],
     author: {"@type": "Organization",
       name: "PHL Clean",
       url: "https://phlclean.com",
@@ -157,6 +159,10 @@ const BlogPostPage = () => {
     publisher: {"@type": "Organization",
       name: "PHL Clean",
       url: "https://phlclean.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://phlclean.com/images/logo-navy.png",
+      },
     },
     mainEntityOfPage: `https://phlclean.com/blog/${post.slug}/`,
   };

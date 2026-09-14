@@ -27,11 +27,11 @@ const BLURBS: Record<string, { line: string; method: string }> = {
 };
 
 const METHODS = [
-  { name: "Hot water extraction", moisture: "High", rts: "2–6 hr", where: "Restorative. The reset, once or twice a year." },
-  { name: "Encapsulation", moisture: "Low", rts: "20–60 min", where: "Interim. Traffic lanes, between resets, open buildings." },
-  { name: "Bonnet", moisture: "Low", rts: "20–40 min", where: "Appearance only. We'll say so rather than sell it as cleaning." },
-  { name: "Grout color seal", moisture: "—", rts: "24 hr cure", where: "After cleaning, when the grout is sound but permanently stained." },
-  { name: "Cut-out & re-grout", moisture: "—", rts: "24–72 hr", where: "When the joint has failed. Sealing a failed joint just hides it." },
+  { name: "Hot water extraction", slug: "carpet-cleaning", moisture: "High", rts: "2–6 hr", where: "Restorative. The reset, once or twice a year." },
+  { name: "Encapsulation", slug: "carpet-maintenance-programs", moisture: "Low", rts: "20–60 min", where: "Interim. Traffic lanes, between resets, open buildings." },
+  { name: "Bonnet", slug: "", moisture: "Low", rts: "20–40 min", where: "Appearance only. We'll say so rather than sell it as cleaning." },
+  { name: "Grout color seal", slug: "grout-restoration", moisture: "—", rts: "24 hr cure", where: "After cleaning, when the grout is sound but permanently stained." },
+  { name: "Cut-out & re-grout", slug: "grout-restoration", moisture: "—", rts: "24–72 hr", where: "When the joint has failed. Sealing a failed joint just hides it." },
 ];
 
 const Services = () => {
@@ -94,7 +94,11 @@ const Services = () => {
               <tbody>
                 {METHODS.map(m => (
                   <tr key={m.name}>
-                    <td className="py-3 pr-4 border-b border-phl-rule text-phl-ink font-medium align-top">{m.name}</td>
+                    <td className="py-3 pr-4 border-b border-phl-rule text-phl-ink font-medium align-top">
+                      {m.slug
+                        ? <Link to={`/services/${m.slug}`} className="hover:text-phl-blue transition-colors underline decoration-phl-rule underline-offset-4">{m.name}</Link>
+                        : m.name}
+                    </td>
                     <td className="py-3 pr-4 border-b border-phl-rule text-phl-ink-2 align-top font-mono text-[12px] whitespace-nowrap">{m.moisture}</td>
                     <td className="py-3 pr-4 border-b border-phl-rule text-phl-ink-2 align-top font-mono text-[12px] tabular-nums whitespace-nowrap">{m.rts}</td>
                     <td className="py-3 pr-4 border-b border-phl-rule text-phl-ink-2 align-top">{m.where}</td>

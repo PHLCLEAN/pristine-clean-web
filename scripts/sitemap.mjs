@@ -25,6 +25,20 @@ function slugsFrom(file) {
   return [...content.matchAll(/^ {2,4}slug:\s*"([^"]+)"/gm)].map(m => m[1]);
 }
 
+/**
+ * Blog posts carry their own publish date. Use it for lastmod rather than
+ * claiming every post changed today — a sitemap that says everything is
+ * always fresh is one Google learns to ignore.
+ */
+function postDates() {
+  const content = fs.readFileSync(path.join(SRC, 'data', 'blog-posts.ts'), 'utf-8');
+  const out = {};
+  for (const m of content.matchAll(/slug:\s*"([^"]+)"[\s\S]{0,600}?date:\s*"(\d{4}-\d{2}-\d{2})"/g)) {
+    out[m[1]] = m[2];
+  }
+  return out;
+}
+
 const services = slugsFrom('services.ts');
 const locations = slugsFrom('locations.ts');
 const posts = slugsFrom('blog-posts.ts');
@@ -36,6 +50,7 @@ if (!services.length || !locations.length || !posts.length) {
 }
 
 const today = new Date().toISOString().slice(0, 10);
+const DATES = postDates();
 
 /** [path, changefreq, priority] */
 const urls = [
@@ -46,15 +61,15 @@ const urls = [
   ...services.map(s => [`/services/${s}/`, 'monthly', '0.9']),
   ...locations.map(l => [`/locations/${l}/`, 'monthly', '0.7']),
   ...services.flatMap(s => locations.map(l => [`/services/${s}/${l}/`, 'monthly', '0.6'])),
-  ...posts.map(p => [`/blog/${p}/`, 'monthly', '0.6']),
+  ...posts.map(p => [`/blog/${p}/`, 'monthly', '0.6', DATES[p]]),
   ['/privacy/', 'yearly', '0.3'],
   ['/terms/', 'yearly', '0.3'],
 ];
 
-const entries = urls.map(([loc, changefreq, priority]) => [
+const entries = urls.map(([loc, changefreq, priority, lastmod]) => [
   '  <url>',
   `    <loc>${ORIGIN}${loc}</loc>`,
-  `    <lastmod>${today}</lastmod>`,
+  `    <lastmod>${lastmod || today}</lastmod>`,
   `    <changefreq>${changefreq}</changefreq>`,
   `    <priority>${priority}</priority>`,
   '  </url>',
