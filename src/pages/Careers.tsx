@@ -138,7 +138,7 @@ const Careers = () => {
               <p className="text-lg md:text-xl text-phl-ink-2 mb-8">
                 We're hiring technicians for commercial carpet, tile and grout, and hard surface work across Philadelphia and Bucks. Paid training, work scheduled in advance, and equipment that isn't held together with tape.
               </p>
-              <Button asChild size="lg" className="bg-phl-blue hover:bg-phl-navy text-white px-8 py-6 text-lg">
+              <Button asChild size="lg" className="btn-primary px-8 py-6 text-lg">
                 <a href="#apply">Apply Now</a>
               </Button>
             </div>
@@ -279,7 +279,7 @@ const Careers = () => {
                   <Textarea id="message" name="message" value={formData.message} onChange={handleChange} className="min-h-[100px]" placeholder="Past employers, special skills, transportation, certifications, etc." />
                 </div>
 
-                <Button type="submit" disabled={loading} className="w-full bg-phl-blue hover:bg-phl-navy text-white py-6 text-lg">
+                <Button type="submit" disabled={loading} className="btn-primary w-full py-6 text-lg">
                   {loading ? "Submitting..." : "Submit Application"}
                 </Button>
 

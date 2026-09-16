@@ -72,7 +72,7 @@ export default {
 					'rule': '#26323F',     // hairlines and borders
 					'ink': '#E8EDF3',      // headings and body
 					'ink-2': '#94A4B6',    // secondary text
-					'muted': '#69788A',    // labels, captions
+					'muted': '#7D8C9E',    // labels, captions — WCAG AA on ground and surface
 					'blue': '#0887FF',     // brand blue — exact
 					'blue-soft': '#4FA8FF',// hover state
 					'navy': '#0A255A',     // brand navy — exact

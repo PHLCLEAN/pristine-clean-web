@@ -16,7 +16,7 @@ function renderInlineLinks(text: string): React.ReactNode {
     if (match) {
       const [, label, href] = match;
       return (
-        <Link key={i} to={href} className="text-phl-blue underline hover:text-phl-navy">
+        <Link key={i} to={href} className="text-phl-blue underline underline-offset-2 hover:text-phl-blue-soft transition-colors">
           {label}
         </Link>
       );
@@ -50,7 +50,7 @@ function renderBlock(block: ContentBlock, index: number) {
         <div key={index} className="overflow-x-auto mb-6 rounded-lg border border-phl-rule">
           <table className="w-full text-sm">
             <thead>
-              <tr className="bg-phl-blue text-white">
+              <tr className="bg-phl-blue text-phl-navy-deep">
                 {block.headers.map((h, i) => (
                   <th key={i} className="px-4 py-3 text-left font-semibold">
                     {h}
@@ -80,7 +80,7 @@ function renderBlock(block: ContentBlock, index: number) {
         >
           <p className="text-phl-ink font-medium leading-relaxed">{block.text}</p>
           <div className="mt-4 flex flex-wrap gap-3">
-            <Button asChild className="bg-phl-blue hover:bg-phl-navy text-white">
+            <Button asChild className="btn-primary">
               <a href="/#contact">Schedule a Walkthrough</a>
             </Button>
             <Button asChild variant="outline" className="border-phl-rule text-phl-blue hover:bg-phl-surface">

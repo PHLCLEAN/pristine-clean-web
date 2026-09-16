@@ -3,20 +3,32 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import Index from "./pages/Index";
-import Team from "./pages/Team";
-import Careers from "./pages/Careers";
-import ServicePage from "./pages/ServicePage";
-import ComboPage from "./pages/ComboPage";
-import LocationPage from "./pages/LocationPage";
 import StickyCta from "./components/StickyCta";
-import Privacy from "./pages/Privacy";
-import Terms from "./pages/Terms";
-import NotFound from "./pages/NotFound";
-import Blog from "./pages/Blog";
-import BlogPost from "./pages/BlogPost";
 import { trackPageview, trackEvent } from "./lib/analytics";
+
+/**
+ * Only the homepage ships in the initial bundle. Everything else — including
+ * the blog data, which is the single largest module on the site — is split
+ * into its own chunk and fetched on navigation. Each route is also
+ * prerendered to static HTML, so crawlers and first-time visitors still get
+ * real content immediately; the chunk only has to arrive before the page
+ * becomes interactive.
+ */
+const Team = lazy(() => import("./pages/Team"));
+const Careers = lazy(() => import("./pages/Careers"));
+const ServicePage = lazy(() => import("./pages/ServicePage"));
+const ComboPage = lazy(() => import("./pages/ComboPage"));
+const LocationPage = lazy(() => import("./pages/LocationPage"));
+const Privacy = lazy(() => import("./pages/Privacy"));
+const Terms = lazy(() => import("./pages/Terms"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const Blog = lazy(() => import("./pages/Blog"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
+
+/** Matches the page ground so a chunk fetch never flashes a different colour. */
+const RouteFallback = () => <div className="min-h-screen bg-phl-ground" aria-hidden="true" />;
 
 const queryClient = new QueryClient();
 
@@ -71,6 +83,7 @@ const App = () => (
       <BrowserRouter>
         <RouteTracker />
         <PhoneClickTracker />
+        <Suspense fallback={<RouteFallback />}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/team" element={<Team />} />
@@ -85,6 +98,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </Suspense>
         <StickyCta />
       </BrowserRouter>
     </TooltipProvider>
