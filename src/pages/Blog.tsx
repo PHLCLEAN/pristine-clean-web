@@ -55,10 +55,10 @@ const Blog = () => {
                 <Link
                   key={post.slug}
                   to={`/blog/${post.slug}`}
-                  className="group bg-phl-surface rounded-xl  hover: transition-shadow overflow-hidden flex flex-col"
+                  className="group bg-phl-surface border border-phl-rule hover:border-phl-blue rounded-sm transition-colors overflow-hidden flex flex-col"
                 >
                   {/* Color bar */}
-                  <div className="h-2 bg-phl-blue group-hover:bg-phl-blue transition-colors" />
+                  <div className="h-1 bg-phl-blue" />
 
                   <div className="p-6 flex flex-col flex-1">
                     {/* Category */}
@@ -67,17 +67,17 @@ const Blog = () => {
                     </span>
 
                     {/* Title */}
-                    <h2 className="text-lg font-bold text-gray-900 group-hover:text-phl-blue transition-colors mb-3 line-clamp-3">
+                    <h2 className="text-[17px] font-heading normal-case leading-snug text-phl-ink group-hover:text-phl-blue transition-colors mb-3">
                       {post.title}
                     </h2>
 
                     {/* Excerpt — first paragraph, truncated */}
-                    <p className="text-phl-ink-2 text-sm mb-4 line-clamp-3 flex-1">
+                    <p className="text-phl-ink-2 text-[13.5px] leading-relaxed mb-4 line-clamp-3">
                       {post.body.find((b) => b.type === "paragraph")?.text ?? ""}
                     </p>
 
                     {/* Meta */}
-                    <div className="flex items-center gap-4 text-xs text-phl-muted mt-auto pt-3 border-t border-phl-rule">
+                    <div className="flex items-center gap-4 font-mono text-[10.5px] uppercase tracking-[0.06em] text-phl-muted mt-auto pt-3 border-t border-phl-rule">
                       <span className="flex items-center gap-1">
                         <Calendar className="h-3.5 w-3.5" />
                         {formatted}

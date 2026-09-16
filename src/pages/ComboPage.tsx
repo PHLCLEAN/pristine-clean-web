@@ -54,7 +54,7 @@ const ComboPage = () => {
       loc.neighborhoods && loc.neighborhoods.length
         ? ` including ${loc.neighborhoods.slice(0, 5).join(', ')}`
         : ''
-    }. On a maintenance account the same crew is assigned to your building, so the team learns your layout, your access procedure and your standards instead of rediscovering them every visit.`,
+    }. Your building gets a written scope and a site record — surfaces, methods, access notes — so whoever is scheduled works from it rather than rediscovering your floor.`,
   };
   const allFaqs = [cityFaq, ...svc.faqs];
 

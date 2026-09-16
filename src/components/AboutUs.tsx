@@ -1,7 +1,7 @@
 import React from 'react';
 
 const POINTS = [
-  { title: "Owner on site", body: "Joe runs the walkthroughs. You're talking to the person who prices the job and answers for it." },
+  { title: "Quoted from the floor", body: "Nobody prices your building off a phone call. Whoever comes out has walked the space, and the number is built on what they found." },
   { title: "Insured & background-checked", body: "General liability and workers' comp. Certificate of Insurance on request, every time." },
   { title: "Month to month", body: "No multi-year lock-in. We'd rather earn the renewal than enforce a contract." },
   { title: "We bring the equipment", body: "Machines and chemistry are ours. You supply nothing to get a floor done." },

@@ -31,28 +31,28 @@ const Careers = () => {
     },
     {
       icon: <Calendar className="h-7 w-7 text-phl-blue" />,
-      title: "Consistent Schedule",
-      description: "Set hours at the same accounts each week. No last-minute schedule chaos or scrambled shifts."
+      title: "Scheduled in Advance",
+      description: "Floor work is booked ahead — you get the week's assignments in advance, not a text at four in the afternoon."
     },
     {
       icon: <Clock className="h-7 w-7 text-phl-blue" />,
-      title: "Flexible Shifts",
-      description: "Evening, overnight, and early-morning shifts available. Great fit for parents, students, and second-job seekers."
+      title: "Evenings and Weekends",
+      description: "Most floor work happens after hours or over a closure. Good fit if you want daytime hours free, or a solid second job."
     },
     {
       icon: <GraduationCap className="h-7 w-7 text-phl-blue" />,
       title: "Paid Training",
-      description: "Get trained — and paid — on the techniques and equipment that make our team stand out."
+      description: "Paid time learning extraction, encapsulation, tile and grout work, and VCT finish — on real equipment, not a video."
     },
     {
       icon: <Users className="h-7 w-7 text-phl-blue" />,
       title: "Respect on the Job",
-      description: "We treat crew members the way we treat customers. No nickel-and-diming, no unreasonable expectations."
+      description: "We treat technicians the way we treat customers. No nickel-and-diming, and nobody is asked to rush a cure."
     },
     {
       icon: <CheckCircle className="h-7 w-7 text-phl-blue" />,
       title: "Room to Grow",
-      description: "Crew leads, supervisors, and account managers all started as cleaners. Show up, do good work, advance."
+      description: "Crew leads and estimators here started as technicians. Learn the surfaces, show up, and the work follows."
     }
   ];
 
@@ -133,10 +133,10 @@ const Careers = () => {
           <div className="container-custom relative z-10 py-20 md:py-28">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold text-phl-ink mb-6">
-                Join the PHL Clean Team
+                Floor work is a trade
               </h1>
               <p className="text-lg md:text-xl text-phl-ink-2 mb-8">
-                We're hiring reliable, hard-working people who take pride in a job well done. Steady hours, fair pay, real respect.
+                We're hiring technicians for commercial carpet, tile and grout, and hard surface work across Philadelphia and Bucks. Paid training, work scheduled in advance, and equipment that isn't held together with tape.
               </p>
               <Button asChild size="lg" className="bg-phl-blue hover:bg-phl-navy text-white px-8 py-6 text-lg">
                 <a href="#apply">Apply Now</a>
@@ -152,7 +152,7 @@ const Careers = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-phl-ink mb-4">Why Work With Us</h2>
               <div className="h-1 w-24 bg-phl-blue mx-auto mb-6"></div>
               <p className="text-phl-ink-2 text-lg">
-                Cleaning is honest work, and we treat it that way. Here's what you get when you join the PHL Clean team.
+                Done properly, this is skilled work — knowing which method a floor needs is most of the job. We pay and train like that's true.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -178,25 +178,25 @@ const Careers = () => {
               <div className="border border-phl-rule rounded-lg p-6 hover:border-phl-rule transition-colors">
                 <h3 className="text-xl font-bold text-phl-ink mb-2">Floor Care Technician</h3>
                 <p className="text-sm text-phl-muted mb-3">Part-time / Full-time · Philadelphia, Bucks, Montgomery Counties</p>
-                <p className="text-phl-ink-2 mb-4">Evening or early-morning shifts cleaning offices, banks, and other commercial facilities. Experience preferred but we'll train the right person.</p>
+                <p className="text-phl-ink-2 mb-4">Carpet extraction and encapsulation, tile and grout, and hard surface work. Evenings, weekends and closures. No experience needed — we train, and we pay for the training.</p>
                 <a href="#apply" className="text-phl-blue font-medium hover:underline">Apply for this role &rarr;</a>
               </div>
               <div className="border border-phl-rule rounded-lg p-6 hover:border-phl-rule transition-colors">
-                <h3 className="text-xl font-bold text-phl-ink mb-2">Carpet & Floor Care Technician</h3>
-                <p className="text-sm text-phl-muted mb-3">Full-time · Day shifts</p>
-                <p className="text-phl-ink-2 mb-4">Specialty work using truck-mounted and portable extraction equipment. Carpet, tile, hard-surface experience preferred.</p>
+                <h3 className="text-xl font-bold text-phl-ink mb-2">Experienced Technician</h3>
+                <p className="text-sm text-phl-muted mb-3">Full-time · Evenings and weekends</p>
+                <p className="text-phl-ink-2 mb-4">For someone who already knows truck-mount and portable extraction, VCT strip and finish, and burnishing. IICRC certification is a plus, not a requirement — we'll take demonstrated skill over a card.</p>
                 <a href="#apply" className="text-phl-blue font-medium hover:underline">Apply for this role &rarr;</a>
               </div>
               <div className="border border-phl-rule rounded-lg p-6 hover:border-phl-rule transition-colors">
-                <h3 className="text-xl font-bold text-phl-ink mb-2">Crew Lead / Supervisor</h3>
-                <p className="text-sm text-phl-muted mb-3">Full-time · Evening shift</p>
-                <p className="text-phl-ink-2 mb-4">Lead a small crew across multiple accounts. Quality control, training, customer communication. Prior cleaning leadership experience required.</p>
+                <h3 className="text-xl font-bold text-phl-ink mb-2">Crew Lead</h3>
+                <p className="text-sm text-phl-muted mb-3">Full-time · Evenings and weekends</p>
+                <p className="text-phl-ink-2 mb-4">Run the job on site: brief the crew off the written scope, make the method calls, check the work against that scope before it's handed back, and be the name the client has for the night.</p>
                 <a href="#apply" className="text-phl-blue font-medium hover:underline">Apply for this role &rarr;</a>
               </div>
               <div className="border border-phl-rule rounded-lg p-6 hover:border-phl-rule transition-colors">
                 <h3 className="text-xl font-bold text-phl-ink mb-2">Don't see your role?</h3>
                 <p className="text-sm text-phl-muted mb-3">All experience levels</p>
-                <p className="text-phl-ink-2 mb-4">We're always interested in meeting reliable people. Send us your info and we'll reach out when something matches.</p>
+                <p className="text-phl-ink-2 mb-4">We're always interested in meeting reliable people who'd rather learn a trade than take a job. Send your details and we'll reach out when something matches.</p>
                 <a href="#apply" className="text-phl-blue font-medium hover:underline">Tell us about yourself &rarr;</a>
               </div>
             </div>
@@ -237,9 +237,9 @@ const Careers = () => {
                   <Select value={formData.position} onValueChange={(v) => setFormData(p => ({ ...p, position: v }))} required>
                     <SelectTrigger><SelectValue placeholder="Select a position" /></SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="carpet-technician">Carpet Cleaning Technician</SelectItem>
-                      <SelectItem value="carpet-floor-care">Carpet & Floor Care Technician</SelectItem>
-                      <SelectItem value="crew-lead">Crew Lead / Supervisor</SelectItem>
+                      <SelectItem value="floor-care-technician">Floor Care Technician</SelectItem>
+                      <SelectItem value="experienced-technician">Experienced Technician</SelectItem>
+                      <SelectItem value="crew-lead">Crew Lead</SelectItem>
                       <SelectItem value="other">Other / Open to opportunities</SelectItem>
                     </SelectContent>
                   </Select>

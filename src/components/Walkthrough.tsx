@@ -35,7 +35,7 @@ const LOGISTICS = [
   ["Building access", "Keys, fobs and alarm codes logged and held to a named person. We follow your access procedure rather than inventing our own."],
   ["Your furniture and walls", "Light items moved and replaced. Corner guards and wall protection on hard-surface jobs, because a stripping machine finds every doorframe."],
   ["Safety on site", "Wet floor signage and barriers stay up for the whole cure window, not just while we are standing there."],
-  ["Who turns up", "Background-checked, uniformed, and the same team each visit on a maintenance account."],
+  ["Who turns up", "Background-checked and uniformed, working from your building's written scope. Crews are assigned per job; the method and the record travel with it."],
   ["Documentation", "Product data sheets and service records available whenever your compliance file or your insurer needs them."],
 ];
 

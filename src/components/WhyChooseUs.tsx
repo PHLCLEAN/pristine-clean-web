@@ -23,12 +23,12 @@ const REASONS = [
     body: "Carpet cleaned with an alkaline pre-spray and no neutralizing rinse re-soils faster than before it was cleaned. The rinse is why our work still looks right weeks later, and it is the step most often skipped.",
   },
   {
-    title: "Same crew, your building",
-    body: "The team assigned to your account learns the layout, the problem corners and your access rules. You stop re-explaining the building, and we stop rediscovering it.",
+    title: "Your building has a file",
+    body: "Surfaces, methods, the areas that gave trouble last time, access and alarm notes — written down and kept. Floor work is project work and crews change; what does not change is the record the crew is working from.",
   },
   {
-    title: "You call the owner",
-    body: "Joe prices the work and answers for it. No franchise help desk, no offshore ticket queue, no account manager three states away who has never seen your floor.",
+    title: "You reach ownership",
+    body: "No franchise help desk, no offshore ticket queue, no account manager three states away who has never seen your floor. A direct line to the people who price the work and answer for it.",
   },
 ];
 

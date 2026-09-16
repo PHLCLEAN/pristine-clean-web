@@ -109,7 +109,7 @@ export const locations: LocationData[] = [
       "Hotels and conference space",
       "Managed property common areas",
     ],
-    whyLocal: "Montgomery County accounts get the same crew assignment and the same written interval as our home county. Distance from Bensalem does not change the standard.",
+    whyLocal: "Montgomery County accounts get the same written interval and the same documented scope as our home county. Distance from Bensalem does not change the standard.",
   },
   {
     slug: "delaware-county",
@@ -159,7 +159,7 @@ export const locations: LocationData[] = [
       "Restaurants and food service",
       "Managed property common areas",
     ],
-    whyLocal: "Chester County accounts get the same crew assignment and accountability as our home county. There is no drop-off in standard the further west you go.",
+    whyLocal: "Chester County accounts get the same documented scope and the same accountability as our home county. There is no drop-off in standard the further west you go.",
   },
   {
     slug: "doylestown",

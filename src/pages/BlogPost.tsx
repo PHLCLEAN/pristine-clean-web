@@ -36,12 +36,12 @@ function renderBlock(block: ContentBlock, index: number) {
     case "heading":
       if (block.level === 2)
         return (
-          <h2 key={index} className="text-2xl font-bold text-gray-900 mt-10 mb-4">
+          <h2 key={index} className="text-[26px] font-heading normal-case leading-tight text-phl-ink mt-10 mb-4">
             {block.text}
           </h2>
         );
       return (
-        <h3 key={index} className="text-xl font-semibold text-gray-900 mt-8 mb-3">
+        <h3 key={index} className="text-[20px] font-heading normal-case leading-tight text-phl-ink mt-8 mb-3">
           {block.text}
         </h3>
       );
@@ -187,13 +187,13 @@ const BlogPostPage = () => {
       {/* Breadcrumb */}
       <div className="bg-phl-ground border-b border-phl-rule">
         <div className="container-custom py-3">
-          <nav className="text-sm text-phl-muted flex items-center gap-1.5">
-            <Link to="/" className="hover:text-phl-blue">
+          <nav aria-label="Breadcrumb" className="font-mono text-[11px] uppercase tracking-[0.1em] text-phl-muted flex items-center gap-2">
+            <Link to="/" className="hover:text-phl-blue transition-colors">
               Home
             </Link>
-            <span>/</span>
-            <Link to="/blog" className="hover:text-phl-blue">
-              Blog
+            <span aria-hidden="true">/</span>
+            <Link to="/blog" className="hover:text-phl-blue transition-colors">
+              Field Notes
             </Link>
             <span>/</span>
             <span className="text-phl-ink-2 truncate max-w-[200px] sm:max-w-none">
@@ -211,7 +211,7 @@ const BlogPostPage = () => {
             <span className="text-xs font-semibold uppercase tracking-wider text-phl-blue mb-2 block">
               {post.category}
             </span>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+            <h1 className="text-[clamp(1.9rem,4vw,2.6rem)] font-heading normal-case leading-[1.08] text-phl-ink mb-4">
               {post.title}
             </h1>
             <div className="flex flex-wrap items-center gap-4 text-sm text-phl-muted">

@@ -4,7 +4,7 @@ import TechnicalFigure from './TechnicalFigure';
 const SPECS = [
   { label: "Standard", value: "ANSI/IICRC S100" },
   { label: "Slip", value: "DCOF ≥ 0.42" },
-  { label: "Crew", value: "Same team, every visit" },
+  { label: "Scope", value: "Written before we start" },
 ];
 
 const Hero = () => {

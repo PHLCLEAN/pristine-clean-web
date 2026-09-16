@@ -3,11 +3,11 @@
  * via a deployed Google Apps Script web app.
  *
  * This is a safety net — if Web3Forms is down, leads still land in a
- * spreadsheet Joe can check. Failures are silently swallowed so they
+ * spreadsheet the owner can check. Failures are silently swallowed so they
  * never block the primary form submission.
  */
 
-const SHEETS_ENDPOINT = "https://script.google.com/macros/s/AKfycbzJKk05QjkiUvzoxfttj7oc52Q3wck0cGMs-dx-pSV61pPO3LnMQAFe0kUJ6iiLaSod/exec"; // Populated after Joe deploys the Apps Script
+const SHEETS_ENDPOINT = "https://script.google.com/macros/s/AKfycbzJKk05QjkiUvzoxfttj7oc52Q3wck0cGMs-dx-pSV61pPO3LnMQAFe0kUJ6iiLaSod/exec"; // Populated after the Apps Script is deployed
 
 export function backupToSheets(data: Record<string, string>) {
   if (!SHEETS_ENDPOINT) return; // Skip until endpoint is configured
