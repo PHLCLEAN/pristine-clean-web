@@ -12,15 +12,16 @@ import { getService, services } from '../data/services';
 import { getLocation, locations } from '../data/locations';
 import { useSeo } from '../hooks/use-seo';
 
-/**
- * Service x Location combo page — e.g. /services/tile-grout-cleaning/bensalem.
- *
- * Each page needs enough genuinely unique content that Google doesn't treat
- * the set as doorway pages. Uniqueness comes from: the H1 and meta, the
- * location's own intro (which describes the actual building stock there),
- * the neighborhood list, the location-specific FAQ, and whyLocal. The
- * service's method content is shared, which is fine — it is the same method.
- */
+/** County + home-base combos stay indexable. Town combos stay live for humans. */
+const INDEXABLE_COMBO_LOCATIONS = new Set([
+  'philadelphia',
+  'bensalem',
+  'bucks-county',
+  'montgomery-county',
+  'delaware-county',
+  'chester-county',
+]);
+
 const ComboPage = () => {
   const { serviceSlug, locationSlug } = useParams<{ serviceSlug: string; locationSlug: string }>();
 
@@ -37,8 +38,14 @@ const ComboPage = () => {
   const canonical = valid
     ? `https://phlclean.com/services/${service!.slug}/${location!.slug}/`
     : undefined;
+  const indexCombo = valid && INDEXABLE_COMBO_LOCATIONS.has(location!.slug);
 
-  useSeo({ title, description, canonical });
+  useSeo({
+    title,
+    description,
+    canonical,
+    robots: valid && !indexCombo ? 'noindex, follow' : undefined,
+  });
 
   if (!valid) {
     return <Navigate to="/404" replace />;
@@ -98,7 +105,6 @@ const ComboPage = () => {
       <Navbar />
       <JsonLd data={[breadcrumbSchema, serviceSchema, faqSchema]} />
       <main>
-        {/* Hero */}
         <section className="border-b border-phl-rule">
           <div className="container-custom py-10 md:py-16">
             <nav aria-label="Breadcrumb" className="font-mono text-[11px] uppercase tracking-[0.1em] text-phl-muted mb-6">
@@ -129,7 +135,6 @@ const ComboPage = () => {
           </div>
         </section>
 
-        {/* Local context — the genuinely unique part of the page */}
         <section className="section-padding border-b border-phl-rule">
           <div className="container-custom">
             <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] gap-12 lg:gap-16">
@@ -157,7 +162,6 @@ const ComboPage = () => {
           </div>
         </section>
 
-        {/* Neighborhoods */}
         {loc.neighborhoods && loc.neighborhoods.length > 0 && (
           <section className="section-padding border-b border-phl-rule">
             <div className="container-custom">
@@ -173,7 +177,6 @@ const ComboPage = () => {
           </section>
         )}
 
-        {/* FAQ */}
         <section className="section-padding border-b border-phl-rule">
           <div className="container-custom max-w-4xl">
             <div className="rack-head">Questions we actually get</div>
@@ -192,7 +195,6 @@ const ComboPage = () => {
           </div>
         </section>
 
-        {/* Quote */}
         <section id="quote" className="section-padding border-b border-phl-rule">
           <div className="container-custom">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
@@ -214,7 +216,6 @@ const ComboPage = () => {
           </div>
         </section>
 
-        {/* Cross links */}
         <section className="section-padding">
           <div className="container-custom space-y-10">
             <div>
