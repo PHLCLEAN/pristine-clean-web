@@ -12,6 +12,7 @@ import { locations } from '../data/locations';
 import { blogPosts } from '../data/blog-posts';
 import { useSeo } from '../hooks/use-seo';
 import JsonLd from '../components/JsonLd';
+import JobPhotos from '../components/JobPhotos';
 
 const ServicePage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -90,7 +91,6 @@ const ServicePage = () => {
       <Navbar />
       <JsonLd data={allSchemas} />
       <main>
-        {/* Hero */}
         <section className="border-b border-phl-rule">
           <div className="container-custom py-10 md:py-16">
             <nav aria-label="Breadcrumb" className="font-mono text-[11px] uppercase tracking-[0.1em] text-phl-muted mb-6">
@@ -119,7 +119,6 @@ const ServicePage = () => {
           </div>
         </section>
 
-        {/* What's included */}
         <section className="section-padding border-b border-phl-rule">
           <div className="container-custom">
             <div className="rack-head">What&rsquo;s included</div>
@@ -134,7 +133,6 @@ const ServicePage = () => {
           </div>
         </section>
 
-        {/* Process — genuinely sequential, so the numbering carries information */}
         <section className="section-padding border-b border-phl-rule">
           <div className="container-custom">
             <div className="rack-head">How the job runs</div>
@@ -154,7 +152,8 @@ const ServicePage = () => {
           </div>
         </section>
 
-        {/* Who it's for */}
+        <JobPhotos slug={service.slug} />
+
         <section className="section-padding border-b border-phl-rule">
           <div className="container-custom">
             <div className="rack-head">Who it&rsquo;s for</div>
@@ -171,7 +170,6 @@ const ServicePage = () => {
           </div>
         </section>
 
-        {/* Why choose */}
         <section className="section-padding bg-phl-navy border-b border-phl-rule">
           <div className="container-custom">
             <div className="flex items-baseline gap-4 mb-5 font-mono text-[11px] tracking-[0.14em] uppercase text-phl-blue-soft">
@@ -189,7 +187,6 @@ const ServicePage = () => {
           </div>
         </section>
 
-        {/* FAQ */}
         <section className="section-padding border-b border-phl-rule">
           <div className="container-custom max-w-4xl">
             <div className="rack-head">Questions we actually get</div>
@@ -208,7 +205,6 @@ const ServicePage = () => {
           </div>
         </section>
 
-        {/* Quote */}
         <section id="quote" className="section-padding border-b border-phl-rule">
           <div className="container-custom">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
@@ -231,7 +227,6 @@ const ServicePage = () => {
           </div>
         </section>
 
-        {/* Related services */}
         {related.length > 0 && (
           <section className="section-padding border-b border-phl-rule">
             <div className="container-custom">
@@ -257,7 +252,6 @@ const ServicePage = () => {
           </section>
         )}
 
-        {/* From the field notes */}
         {relatedPosts.length > 0 && (
           <section className="section-padding border-b border-phl-rule">
             <div className="container-custom">
@@ -283,7 +277,6 @@ const ServicePage = () => {
           </section>
         )}
 
-        {/* Coverage */}
         <section className="section-padding">
           <div className="container-custom">
             <div className="rack-head">{service.shortTitle} across our coverage area</div>
