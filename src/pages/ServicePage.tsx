@@ -12,6 +12,7 @@ import { locations } from '../data/locations';
 import { blogPosts } from '../data/blog-posts';
 import { useSeo } from '../hooks/use-seo';
 import JsonLd from '../components/JsonLd';
+import JobPhotos from '../components/JobPhotos';
 
 const ServicePage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -90,7 +91,6 @@ const ServicePage = () => {
       <Navbar />
       <JsonLd data={allSchemas} />
       <main>
-        {/* Hero */}
         <section className="border-b border-phl-rule">
           <div className="container-custom py-10 md:py-16">
             <nav aria-label="Breadcrumb" className="font-mono text-[11px] uppercase tracking-[0.1em] text-phl-muted mb-6">
@@ -100,7 +100,6 @@ const ServicePage = () => {
               <span className="mx-2">/</span>
               <span className="text-phl-ink-2">{service.shortTitle}</span>
             </nav>
-
             <div className="grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] gap-10 xl:gap-14 items-center">
               <div>
                 <h1 className="text-[clamp(1.9rem,4.4vw,3rem)] text-phl-ink">{service.h1}</h1>
@@ -113,13 +112,11 @@ const ServicePage = () => {
                   </a>
                 </div>
               </div>
-
               <TechnicalFigure kind={service.figure} />
             </div>
           </div>
         </section>
 
-        {/* What's included */}
         <section className="section-padding border-b border-phl-rule">
           <div className="container-custom">
             <div className="rack-head">What&rsquo;s included</div>
@@ -134,7 +131,6 @@ const ServicePage = () => {
           </div>
         </section>
 
-        {/* Process — genuinely sequential, so the numbering carries information */}
         <section className="section-padding border-b border-phl-rule">
           <div className="container-custom">
             <div className="rack-head">How the job runs</div>
@@ -154,24 +150,19 @@ const ServicePage = () => {
           </div>
         </section>
 
-        {/* Who it's for */}
+        <JobPhotos slug={service.slug} />
+
         <section className="section-padding border-b border-phl-rule">
           <div className="container-custom">
             <div className="rack-head">Who it&rsquo;s for</div>
             <ul className="flex flex-wrap gap-2.5">
               {service.whoItsFor.map((item, i) => (
-                <li
-                  key={i}
-                  className="bg-phl-surface border border-phl-rule rounded-sm px-4 py-2.5 text-[13.5px] text-phl-ink-2"
-                >
-                  {item}
-                </li>
+                <li key={i} className="bg-phl-surface border border-phl-rule rounded-sm px-4 py-2.5 text-[13.5px] text-phl-ink-2">{item}</li>
               ))}
             </ul>
           </div>
         </section>
 
-        {/* Why choose */}
         <section className="section-padding bg-phl-navy border-b border-phl-rule">
           <div className="container-custom">
             <div className="flex items-baseline gap-4 mb-5 font-mono text-[11px] tracking-[0.14em] uppercase text-phl-blue-soft">
@@ -189,7 +180,6 @@ const ServicePage = () => {
           </div>
         </section>
 
-        {/* FAQ */}
         <section className="section-padding border-b border-phl-rule">
           <div className="container-custom max-w-4xl">
             <div className="rack-head">Questions we actually get</div>
@@ -208,7 +198,6 @@ const ServicePage = () => {
           </div>
         </section>
 
-        {/* Quote */}
         <section id="quote" className="section-padding border-b border-phl-rule">
           <div className="container-custom">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
@@ -231,25 +220,16 @@ const ServicePage = () => {
           </div>
         </section>
 
-        {/* Related services */}
         {related.length > 0 && (
           <section className="section-padding border-b border-phl-rule">
             <div className="container-custom">
               <div className="rack-head">Related work</div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-phl-rule border border-phl-rule rounded-sm overflow-hidden">
                 {related.map(r => (
-                  <Link
-                    key={r.slug}
-                    to={`/services/${r.slug}`}
-                    className="group bg-phl-surface hover:bg-phl-raised transition-colors p-5 pb-6"
-                  >
-                    <h3 className="text-[19px] text-phl-ink group-hover:text-phl-blue transition-colors mb-2">
-                      {r.shortTitle}
-                    </h3>
+                  <Link key={r.slug} to={`/services/${r.slug}`} className="group bg-phl-surface hover:bg-phl-raised transition-colors p-5 pb-6">
+                    <h3 className="text-[19px] text-phl-ink group-hover:text-phl-blue transition-colors mb-2">{r.shortTitle}</h3>
                     <p className="text-[13px] text-phl-ink-2 leading-snug mb-3">{r.heroTagline}</p>
-                    <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-phl-blue inline-flex items-center gap-1.5">
-                      Read more <ArrowRight className="h-3.5 w-3.5" />
-                    </span>
+                    <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-phl-blue inline-flex items-center gap-1.5">Read more <ArrowRight className="h-3.5 w-3.5" /></span>
                   </Link>
                 ))}
               </div>
@@ -257,25 +237,18 @@ const ServicePage = () => {
           </section>
         )}
 
-        {/* From the field notes */}
         {relatedPosts.length > 0 && (
           <section className="section-padding border-b border-phl-rule">
             <div className="container-custom">
               <div className="rack-head">Field notes</div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-phl-rule border border-phl-rule rounded-sm overflow-hidden">
                 {relatedPosts.map(post => (
-                  <Link
-                    key={post.slug}
-                    to={`/blog/${post.slug}`}
-                    className="group bg-phl-surface hover:bg-phl-raised transition-colors p-5 pb-6"
-                  >
+                  <Link key={post.slug} to={`/blog/${post.slug}`} className="group bg-phl-surface hover:bg-phl-raised transition-colors p-5 pb-6">
                     <div className="flex items-center gap-2 font-mono text-[10.5px] uppercase tracking-[0.08em] text-phl-muted mb-3">
                       <Clock className="h-3.5 w-3.5" />
                       <span>{post.readTime}</span>
                     </div>
-                    <h3 className="text-[17px] text-phl-ink group-hover:text-phl-blue transition-colors leading-snug">
-                      {post.title}
-                    </h3>
+                    <h3 className="text-[17px] text-phl-ink group-hover:text-phl-blue transition-colors leading-snug">{post.title}</h3>
                   </Link>
                 ))}
               </div>
@@ -283,17 +256,12 @@ const ServicePage = () => {
           </section>
         )}
 
-        {/* Coverage */}
         <section className="section-padding">
           <div className="container-custom">
             <div className="rack-head">{service.shortTitle} across our coverage area</div>
             <div className="flex flex-wrap gap-2.5">
               {locations.map(l => (
-                <Link
-                  key={l.slug}
-                  to={`/services/${service.slug}/${l.slug}`}
-                  className="bg-phl-surface border border-phl-rule hover:border-phl-blue hover:text-phl-blue rounded-sm px-4 py-2.5 text-[13.5px] text-phl-ink-2 transition-colors"
-                >
+                <Link key={l.slug} to={`/services/${service.slug}/${l.slug}`} className="bg-phl-surface border border-phl-rule hover:border-phl-blue hover:text-phl-blue rounded-sm px-4 py-2.5 text-[13.5px] text-phl-ink-2 transition-colors">
                   {service.shortTitle} in {l.shortName}
                 </Link>
               ))}
