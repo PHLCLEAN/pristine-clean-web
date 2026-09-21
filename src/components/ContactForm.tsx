@@ -21,6 +21,13 @@ const ContactForm = () => {
               We reply within one business day. If it&rsquo;s urgent, the phone is faster than the form.
             </p>
 
+            <ul className="mt-6 font-mono text-[11px] uppercase tracking-[0.06em] text-phl-muted space-y-1.5">
+              <li>ANSI/IICRC S100 · DCOF ≥ 0.42 measured</li>
+              <li>General liability and workers&rsquo; comp · COI on request</li>
+              <li>Month-to-month programs · written scope before we start</li>
+              <li>(215) 550-1414</li>
+            </ul>
+
             <div className="mt-8 pt-8 border-t border-phl-rule">
               <ContactInfo />
             </div>

@@ -5,6 +5,8 @@ interface SeoProps {
   description: string;
   canonical?: string;
   noindex?: boolean;
+  /** Overrides the robots tag. 404s stay noindex,nofollow. Thin combos use noindex,follow. */
+  robots?: string;
 }
 
 /**
@@ -13,7 +15,7 @@ interface SeoProps {
  * twitter title/description, and optional canonical URL.
  * Good enough for Google (which executes JS) without pulling in react-helmet-async.
  */
-export function useSeo({ title, description, canonical, noindex }: SeoProps) {
+export function useSeo({ title, description, canonical, noindex, robots }: SeoProps) {
   useEffect(() => {
     document.title = title;
 
@@ -38,11 +40,12 @@ export function useSeo({ title, description, canonical, noindex }: SeoProps) {
       setMeta('meta[property="og:url"]', 'content', canonical);
     }
 
-    if (noindex) {
-      setMeta('meta[name="robots"]', 'content', 'noindex, nofollow', { tag: 'meta', key: 'name', keyValue: 'robots' });
+    const robotsValue = robots ?? (noindex ? 'noindex, nofollow' : null);
+    if (robotsValue) {
+      setMeta('meta[name="robots"]', 'content', robotsValue, { tag: 'meta', key: 'name', keyValue: 'robots' });
     } else {
       const robotsTag = document.querySelector('meta[name="robots"]');
       if (robotsTag) robotsTag.remove();
     }
-  }, [title, description, canonical, noindex]);
+  }, [title, description, canonical, noindex, robots]);
 }

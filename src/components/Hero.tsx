@@ -5,6 +5,7 @@ const SPECS = [
   { label: "Standard", value: "ANSI/IICRC S100" },
   { label: "Slip", value: "DCOF ≥ 0.42" },
   { label: "Scope", value: "Written before we start" },
+  { label: "Insurance", value: "COI on request" },
 ];
 
 const Hero = () => {
