@@ -89,8 +89,7 @@ const Careers = () => {
       const result = await response.json();
 
       if (result.success) {
-        trackEvent("generate_lead", {
-          form_name: "careers_application",
+        trackEvent("job_application", {
           position: formData.position || "unspecified",
           value: 1,
         });

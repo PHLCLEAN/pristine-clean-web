@@ -50,7 +50,7 @@ const RouteTracker = () => {
 
 
 /**
- * Fires a GA4 generate_lead event whenever any tel: link is clicked,
+ * Fires a GA4 phone_click event whenever any tel: link is clicked,
  * anywhere on the site. One global listener so we don't have to touch
  * every component that renders a phone number.
  */
@@ -62,8 +62,7 @@ const PhoneClickTracker = () => {
       const anchor = target.closest('a[href^="tel:"]') as HTMLAnchorElement | null;
       if (!anchor) return;
       const phone = anchor.getAttribute('href')?.replace(/^tel:/, '') ?? '';
-      trackEvent('generate_lead', {
-        form_name: 'phone_click',
+      trackEvent('phone_click', {
         phone_number: phone,
         page_path: window.location.pathname,
         value: 1,
