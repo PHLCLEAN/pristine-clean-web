@@ -12,7 +12,7 @@ const StickyCta = () => {
   let formHref = '/#contact';
   if (pathname.startsWith('/services/') || pathname.startsWith('/locations/')) {
     formHref = '#quote';
-  } else if (pathname === '/careers') {
+  } else if (pathname.startsWith('/careers')) {
     formHref = '#apply';
   }
 

@@ -5,6 +5,7 @@ import { services } from '@/data/services';
 
 const LOCATIONS = [
   ["philadelphia", "Philadelphia"],
+  ["northeast-philadelphia", "Northeast Philadelphia"],
   ["bensalem", "Bensalem"],
   ["bucks-county", "Bucks County"],
   ["montgomery-county", "Montgomery County"],
@@ -14,9 +15,9 @@ const LOCATIONS = [
 
 const COMPANY = [
   ["/#about", "About"],
-  ["/team", "Our Team"],
-  ["/careers", "Careers"],
-  ["/blog", "Field Notes"],
+  ["/team/", "Our Team"],
+  ["/careers/", "Careers"],
+  ["/blog/", "Field Notes"],
   ["/#contact", "Contact"],
 ] as const;
 
@@ -29,7 +30,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
             <img
-              src="/images/logo.webp"
+              src="/images/logo-320.webp"
               alt="PHL Clean"
               width={760}
               height={443}
@@ -56,7 +57,7 @@ const Footer = () => {
             <ul className="space-y-2.5 text-[13.5px]">
               {services.map(s => (
                 <li key={s.slug}>
-                  <Link to={`/services/${s.slug}`} className="hover:text-phl-blue transition-colors">
+                  <Link to={`/services/${s.slug}/`} className="hover:text-phl-blue transition-colors">
                     {s.shortTitle}
                   </Link>
                 </li>
@@ -80,7 +81,7 @@ const Footer = () => {
             <ul className="space-y-2.5 text-[13.5px]">
               {LOCATIONS.map(([slug, label]) => (
                 <li key={slug}>
-                  <Link to={`/locations/${slug}`} className="hover:text-phl-blue transition-colors">
+                  <Link to={`/locations/${slug}/`} className="hover:text-phl-blue transition-colors">
                     {label}
                   </Link>
                 </li>
@@ -108,8 +109,8 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-3 text-[12.5px] text-phl-muted">
             <p>&copy; {year} PHL Clean LLC. All rights reserved.</p>
             <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
-              <Link to="/privacy" className="hover:text-phl-blue transition-colors">Privacy Policy</Link>
-              <Link to="/terms" className="hover:text-phl-blue transition-colors">Terms of Service</Link>
+              <Link to="/privacy/" className="hover:text-phl-blue transition-colors">Privacy Policy</Link>
+              <Link to="/terms/" className="hover:text-phl-blue transition-colors">Terms of Service</Link>
               <span>Locally owned · Bensalem, PA</span>
             </div>
           </div>

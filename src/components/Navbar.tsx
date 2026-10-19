@@ -4,11 +4,11 @@ import { Phone, Menu, X } from "lucide-react";
 import { cn } from '@/lib/utils';
 
 const NAV_LINKS = [
-  { label: "Carpet", to: "/services/carpet-cleaning" },
-  { label: "Tile & Grout", to: "/services/tile-grout-cleaning" },
-  { label: "Hard Surface", to: "/services/floor-maintenance" },
-  { label: "Programs", to: "/services/carpet-maintenance-programs" },
-  { label: "Field Notes", to: "/blog" },
+  { label: "Carpet", to: "/services/carpet-cleaning/" },
+  { label: "Tile & Grout", to: "/services/tile-grout-cleaning/" },
+  { label: "Hard Surface", to: "/services/floor-maintenance/" },
+  { label: "Programs", to: "/services/carpet-maintenance-programs/" },
+  { label: "Field Notes", to: "/blog/" },
 ];
 
 const Navbar = () => {
@@ -21,7 +21,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between gap-4">
           <Link to="/" className="flex items-center shrink-0" aria-label="PHL Clean — home">
             <img
-              src="/images/logo.webp"
+              src="/images/logo-320.webp"
               alt="PHL Clean"
               width={760}
               height={443}

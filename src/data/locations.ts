@@ -10,6 +10,10 @@ export interface LocationData {
   neighborhoods?: string[];
   industries: string[];
   whyLocal: string;
+  /** Neighborhood pages: the slug of the city page they sit under. */
+  parent?: string;
+  /** Extra long-form sections, each rendered as an H2 with paragraphs. */
+  sections?: { heading: string; paragraphs: string[] }[];
 }
 
 export const locations: LocationData[] = [
@@ -37,6 +41,22 @@ export const locations: LocationData[] = [
       "Restaurants — after-hours kitchen and dining floors",
     ],
     whyLocal: "We work Philadelphia constantly and we plan around it — loading dock windows, freight elevator bookings and after-hours building access are part of the schedule we hand you, not a problem we discover on the night.",
+    sections: [
+      {
+        heading: "Why a Philadelphia floor job runs differently",
+        paragraphs: [
+          "Most of the work in a city job happens before a machine is switched on. Managed buildings usually want a certificate of insurance naming the owner and the management company before anyone is let in. Equipment comes up the freight elevator, which has to be booked, and through a loading dock that has its own hours. Parking a van with an extractor in it is a plan, not an afterthought. None of that is difficult, but all of it has to be in the schedule, and a quote that ignores it is a quote that changes on the night.",
+          "So the walkthrough covers access as well as the floor: where we load in, which elevator, what hours the building allows, who signs us in, and where water can and cannot be drained. That goes into the written scope and into your building's file, so the visit after this one doesn't start from scratch either.",
+        ],
+      },
+      {
+        heading: "Identify the floor before anyone cleans it",
+        paragraphs: [
+          "Philadelphia has a lot of floor that is older than the business sitting on it. Terrazzo under sheet vinyl in a lobby. Quarry tile in a converted warehouse that has been coated for years instead of cleaned. Small ceramic mosaic in the vestibule of a storefront. Each of those needs different chemistry, and each can be damaged by the method that is right for the floor next to it — an acidic cleaner that is fine on porcelain will etch marble and terrazzo.",
+          "We tell you what the floor actually is, what it will look like after the work, and when the honest answer is that it won't come back. Sometimes the cheaper job is the right one. Sometimes what's under the current finish is worth more than the finish.",
+        ],
+      },
+    ],
   },
   {
     slug: "bensalem",
@@ -276,7 +296,265 @@ export const locations: LocationData[] = [
     ],
     whyLocal: "Twelve minutes from Bensalem. Overnight work here is standard, and we hand you an exact time the floor is ready rather than a hopeful one.",
   },
+  // ---------------------------------------------------------------
+  // Philadelphia neighborhoods. Each sits under /locations/philadelphia/
+  // and gets its own page, but not its own service combo pages — the
+  // Philadelphia combos already cover the city, and near-duplicate combo
+  // pages per neighborhood would be thin.
+  // ---------------------------------------------------------------
+  {
+    slug: "northeast-philadelphia",
+    parent: "philadelphia",
+    shortName: "Northeast Philadelphia",
+    longName: "Northeast Philadelphia, PA",
+    h1: "Commercial Floor Care in Northeast Philadelphia",
+    metaTitle: "Commercial Floor Care Northeast Philadelphia | PHL Clean",
+    metaDescription: "Commercial carpet, tile and grout, and VCT floor care in Northeast Philadelphia — Mayfair to Somerton. Free on-site walkthrough — (215) 550-1414.",
+    heroTagline: "The part of Philadelphia that starts where Bensalem ends. Strip centers, medical offices, light industrial and parish buildings — and a short drive from our base.",
+    intro: "Northeast Philadelphia is the closest part of the city to us — Bensalem shares a border with it along the Poquessing Creek. The commercial mix is different from Center City. Strip centers along Roosevelt Boulevard, Cottman Avenue and Frankford Avenue run VCT and tile in entrance zones that take everything the parking lot brings in. Medical and dental offices fill converted storefronts and low-rise buildings. Light industrial parks out toward the airport have sealed concrete on the floor and carpet tile in the office. And the neighborhood's churches, parish halls and schools carry decades-old VCT and terrazzo that are usually worth restoring rather than covering.",
+    neighborhoods: [
+      "Mayfair", "Frankford", "Tacony", "Holmesburg", "Fox Chase", "Rhawnhurst",
+      "Bustleton", "Somerton", "Torresdale", "Oxford Circle", "Castor Gardens", "Parkwood",
+    ],
+    industries: [
+      "Retail and strip centers along the Boulevard and Cottman Avenue",
+      "Medical and dental offices",
+      "Light industrial and warehouse offices",
+      "Churches, parish halls and parochial schools",
+      "Bank and credit union branches",
+      "Restaurants and food service",
+      "Property management portfolios",
+    ],
+    whyLocal: "From our base in Bensalem, most of the Northeast is a short drive. Walkthroughs here are easier to fit in quickly than almost anywhere else in the city, and so is coming back to look at a problem before it turns into a bigger job.",
+    sections: [
+      {
+        heading: "Entrance zones on the Boulevard",
+        paragraphs: [
+          "Shopping-center floors in the Northeast fail from the door inward. Grit and winter salt come in on every pair of shoes, and the first twenty feet of VCT lose their finish months before the rest of the store. The usual response is to strip the whole floor more often. The better answer is usually narrower: proper entry matting, a burnishing cycle that keeps the traffic lanes protected, and a scheduled strip and refinish once a year instead of an emergency one.",
+          "Where the floor is ceramic or quarry tile, the grout at the entrance goes dark first. Pressure extraction gets most of it back. Where it doesn't, color sealing or re-grouting the worst run is cheaper than retiling — we'll tell you which one you are looking at.",
+        ],
+      },
+      {
+        heading: "Older buildings that are worth a closer look",
+        paragraphs: [
+          "A lot of the Northeast was built out in the middle of the last century, and the institutional buildings from that era — parish halls, school corridors, older office buildings — often have terrazzo or durable commercial tile under layers of finish that were applied instead of ever stripping what was there. Those floors usually come back better than anyone expects. They also need identifying before work starts, because the wrong chemistry on terrazzo does damage you can't undo.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "center-city-philadelphia",
+    parent: "philadelphia",
+    shortName: "Center City",
+    longName: "Center City Philadelphia, PA",
+    h1: "Commercial Floor Care in Center City Philadelphia",
+    metaTitle: "Commercial Floor Care Center City Philadelphia | PHL Clean",
+    metaDescription: "Commercial carpet cleaning, carpet tile programs, and lobby tile and terrazzo care in Center City Philadelphia. After-hours. Walkthrough: (215) 550-1414.",
+    heroTagline: "Office floors, lobbies and ground-floor retail — scheduled around building access, freight elevators and the hours your tenants aren't there.",
+    intro: "Center City floor work is mostly two things: carpet tile on office floors, and hard surface in lobbies and ground-floor retail. Office carpet wears in narrow, predictable lanes — elevator lobbies, the run from reception to the kitchen, the corridor past the conference rooms — which makes it the clearest case there is for an interim maintenance program instead of waiting until the whole floor looks tired. Lobbies are often stone, terrazzo or large-format porcelain, and they get judged by every visitor who walks in.",
+    neighborhoods: [
+      "Market East", "Rittenhouse", "Logan Square", "Washington Square West",
+      "Old City", "Society Hill", "Chinatown", "Callowhill",
+    ],
+    industries: [
+      "Office floors in managed buildings",
+      "Building lobbies and common areas",
+      "Ground-floor retail and showrooms",
+      "Law, accounting and professional offices",
+      "Medical and dental suites",
+      "Restaurants — after-hours kitchen and dining floors",
+    ],
+    whyLocal: "Most Center City work happens at night or on weekends, and almost all of it involves a building's own rules — insurance certificates, freight elevator reservations, loading dock windows. We build those into the schedule at the walkthrough so they aren't discovered on the night.",
+    sections: [
+      {
+        heading: "Carpet tile on the office floors",
+        paragraphs: [
+          "Carpet tile in an office suite almost never wears evenly. The lanes go gray first, and the rest of the floor still looks acceptable. Low-moisture encapsulation on those lanes between restorative extractions keeps them from falling behind, and it lets the floor go back into use quickly — which matters when the space is occupied the next morning.",
+          "Interval matters more than the machine. We set it from how your floor is actually used rather than a calendar, and we'll tell you when a tile is past saving and is cheaper to swap than to keep cleaning.",
+        ],
+      },
+      {
+        heading: "Lobbies: identify the stone first",
+        paragraphs: [
+          "Lobby floors are where the wrong product does the most expensive damage. Marble and terrazzo are calcium-based and etch under the acidic cleaners that are perfectly safe on porcelain. We identify the surface before we quote, and the method follows the floor — not the other way around.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "university-city-philadelphia",
+    parent: "philadelphia",
+    shortName: "University City",
+    longName: "University City, Philadelphia, PA",
+    h1: "Commercial Floor Care in University City",
+    metaTitle: "Commercial Floor Care University City Philadelphia",
+    metaDescription: "Carpet, tile and grout, and VCT floor care for offices, labs-adjacent space, retail and food service in University City, Philadelphia. (215) 550-1414.",
+    heroTagline: "Offices, research-adjacent space, student-facing retail and food service — planned around academic calendars and building access rules.",
+    intro: "University City runs on the academic calendar. The best windows for heavy floor work — a VCT strip and refinish, re-grouting a restroom run, restorative carpet extraction across a whole floor — are the breaks, when the buildings empty out. Plan the summer in the spring and it goes smoothly. Plan it in July and you are competing for the same few weeks as everyone else. Around the universities and hospital campuses there are offices, research-adjacent buildings, and a dense strip of restaurants and retail that serve them.",
+    neighborhoods: [
+      "University City", "Powelton Village", "Spruce Hill", "Cedar Park",
+      "Mantua (adjacent)", "West Philadelphia",
+    ],
+    industries: [
+      "Offices and administrative space",
+      "Research-adjacent and science-park buildings",
+      "Student-facing retail",
+      "Restaurants and food service",
+      "Medical and dental practices",
+      "Managed residential common areas",
+    ],
+    whyLocal: "Many buildings here have their own access rules — rooms we won't be allowed into, hours we can work, who needs to escort us. We write the scope around them rather than assuming the whole floor is ours.",
+    sections: [
+      {
+        heading: "Food service floors on a student schedule",
+        paragraphs: [
+          "Restaurant kitchens here are usually quarry tile, and the grout between it goes dark from grease long before the tile does. Pressure extraction with the right degreasing chemistry empties the joint instead of pushing the soil deeper. It's done after close, with the floor back to you before the morning prep — and slip resistance matters more than shine, so we don't put anything on a kitchen floor that makes it slicker.",
+        ],
+      },
+      {
+        heading: "Corridors that take a full semester",
+        paragraphs: [
+          "VCT corridors in busy buildings lose their finish at the doors and down the middle. A burnish and recoat during a short break can buy a full term before a strip is due. We'll tell you which one your floor needs — the bigger job isn't always the right one.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "south-philadelphia",
+    parent: "philadelphia",
+    shortName: "South Philadelphia",
+    longName: "South Philadelphia, PA",
+    h1: "Commercial Floor Care in South Philadelphia & the Navy Yard",
+    metaTitle: "Commercial Floor Care South Philadelphia | PHL Clean",
+    metaDescription: "Carpet, tile and grout, and hard surface floor care for Navy Yard offices, South Philly restaurants and storefronts. Free walkthrough: (215) 550-1414.",
+    heroTagline: "Navy Yard offices, East Passyunk restaurants and corner storefronts — from modern carpet tile to old mosaic tile in the doorway.",
+    intro: "South Philadelphia covers two very different kinds of building. The Navy Yard is a business campus — converted historic naval buildings and newer offices, mostly carpet tile, sealed or polished concrete, and porcelain in the common areas. The neighborhoods north of it are restaurants, corner storefronts and small offices in older buildings, where the floor might be quarry tile in the kitchen, ceramic mosaic in the vestibule, and a century of patching in between.",
+    neighborhoods: [
+      "Navy Yard", "East Passyunk", "Bella Vista", "Queen Village", "Pennsport",
+      "Point Breeze", "Graduate Hospital (adjacent)", "Whitman", "Packer Park",
+    ],
+    industries: [
+      "Navy Yard offices and campus buildings",
+      "Restaurants — kitchens and dining rooms",
+      "Corner retail and storefronts",
+      "Medical and dental practices",
+      "Gyms and fitness studios",
+      "Small professional offices",
+    ],
+    whyLocal: "Restaurant work here happens after close, and storefront work happens when the street parking allows it. We plan load-in at the walkthrough so the night isn't spent looking for somewhere to put the van.",
+    sections: [
+      {
+        heading: "Restaurant kitchens",
+        paragraphs: [
+          "Quarry tile in a working kitchen gets mopped every night and still goes dark at the grout, because a mop moves grease around instead of removing it. Pressure extraction pulls it out of the joint. Where the grout is eroded or missing, cleaning won't fix it, and we'll say so: re-grouting the worst runs is what stops water getting under the tile.",
+          "We never leave a kitchen floor slicker than we found it. The relevant standard is ANSI A137.1, which calls for a wet dynamic coefficient of friction of at least 0.42 on level interior tile that is walked on when wet. Chemistry and any sealer are chosen with that in mind.",
+        ],
+      },
+      {
+        heading: "Old storefronts",
+        paragraphs: [
+          "Plenty of South Philly storefronts still have their original small ceramic mosaic in the entry. It's tougher than it looks and usually cleans up well — the grout is what gives out. Color sealing can give it a uniform look again. Where the joints are failing, re-grouting is the honest fix.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "fishtown-northern-liberties",
+    parent: "philadelphia",
+    shortName: "Fishtown & Northern Liberties",
+    longName: "Fishtown & Northern Liberties, Philadelphia, PA",
+    h1: "Commercial Floor Care in Fishtown, Northern Liberties & the River Wards",
+    metaTitle: "Commercial Floor Care Fishtown & Northern Liberties",
+    metaDescription: "Concrete, quarry tile, carpet tile and grout care for converted warehouses, restaurants and offices in Fishtown and Northern Liberties. (215) 550-1414.",
+    heroTagline: "Converted industrial buildings — sealed concrete, quarry tile that has been coated instead of cleaned, and new offices inside old walls.",
+    intro: "The River Wards are full of industrial buildings with a second life: offices and studios on concrete floors, restaurants and breweries in old factory space, retail along Frankford and Girard Avenues. Concrete is the common thread. Sealed concrete needs neutral chemistry and the right pad, not aggressive cleaning that strips the sealer. Polished concrete needs maintaining, not coating. And under a lot of old finish in these buildings there is quarry tile or terrazzo that has never been properly cleaned.",
+    neighborhoods: [
+      "Fishtown", "Northern Liberties", "Kensington", "Port Richmond",
+      "East Kensington", "Olde Kensington", "Callowhill (adjacent)",
+    ],
+    industries: [
+      "Converted warehouse and loft offices",
+      "Restaurants, bars and breweries",
+      "Retail along Frankford and Girard Avenues",
+      "Studios, gyms and fitness spaces",
+      "Light industrial and maker space",
+      "Managed residential common areas",
+    ],
+    whyLocal: "Old industrial buildings rarely have a straightforward load-in. We check the door widths, the freight elevator if there is one, and where water can be disposed of — at the walkthrough, not on the night.",
+    sections: [
+      {
+        heading: "Concrete: maintain it, don't coat it",
+        paragraphs: [
+          "The most common problem we see on concrete in converted space is buildup — layers of topical finish or the wrong cleaner leaving residue that dulls the floor and holds dirt. The fix is usually to take it back to the sealer or the polish and then maintain it with neutral chemistry and a regular burnish. It's less work than people expect and costs less than another coat.",
+        ],
+      },
+      {
+        heading: "Brewery and kitchen floors",
+        paragraphs: [
+          "Quarry tile and sealed concrete in food and drink spaces take water, sugar, grease and constant traffic. The grout on tile floors is the weak point. Pressure extraction gets most of it back, and failing joints get re-grouted before water gets underneath. Slip resistance comes before appearance, every time.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "northwest-philadelphia",
+    parent: "philadelphia",
+    shortName: "Northwest Philadelphia",
+    longName: "Northwest Philadelphia, PA",
+    h1: "Commercial Floor Care in Manayunk, Chestnut Hill & Northwest Philadelphia",
+    metaTitle: "Commercial Floor Care Manayunk & Chestnut Hill | PHL Clean",
+    metaDescription: "Carpet, tile and grout, and hard surface floor care for storefronts, mill offices and practices in Manayunk, Roxborough, East Falls and Chestnut Hill.",
+    heroTagline: "Main Street and Germantown Avenue storefronts, offices in converted mills, and older buildings with original tile worth keeping.",
+    intro: "Northwest Philadelphia's commercial streets are older and smaller-scale than most of the city. Manayunk's Main Street and Chestnut Hill's Germantown Avenue are lined with storefronts in buildings that have been renovated many times, and the floor often shows it — original tile in one room, VCT in the next, carpet over something nobody has looked at in years. The mill buildings along the Schuylkill in Manayunk and East Falls now hold offices, with concrete and heavy timber alongside newer carpet tile.",
+    neighborhoods: [
+      "Manayunk", "Roxborough", "East Falls", "Chestnut Hill",
+      "Mount Airy", "Germantown", "Wissahickon",
+    ],
+    industries: [
+      "Main Street and Germantown Avenue retail",
+      "Offices in converted mill buildings",
+      "Restaurants and food service",
+      "Medical, dental and therapy practices",
+      "Schools and institutional buildings",
+      "Churches and community buildings",
+    ],
+    whyLocal: "Steep streets and limited parking make load-in the first thing to plan on a Main Street job. We work it out at the walkthrough, and most storefront work is done before opening or after close.",
+    sections: [
+      {
+        heading: "Storefronts with a history",
+        paragraphs: [
+          "Older retail buildings here often have several floors stacked on top of each other. Before quoting a strip, a re-grout or a carpet extraction, we look at what's actually there and whether something underneath is worth more than what's on top. Sometimes the best job is restoring the original tile. Sometimes it's leaving it alone.",
+        ],
+      },
+      {
+        heading: "Mill buildings and mixed floors",
+        paragraphs: [
+          "Offices in converted mills tend to mix carpet tile, sealed concrete and tile in the same suite. Each surface gets its own method — extraction or encapsulation for the carpet, neutral cleaning and burnishing for the concrete, pressure extraction for the tile and grout — on one schedule, so you're not booking three vendors.",
+        ],
+      },
+    ],
+  },
 ];
+
+/** City and county pages — not the Philadelphia neighborhood pages. */
+export const topLevelLocations = locations.filter(l => !l.parent);
+
+/** Locations that get service × location combo pages. */
+export const COMBO_LOCATION_SLUGS = topLevelLocations.map(l => l.slug);
+
+/** County and home-base combos are indexable. Small-town combos stay live but noindexed. */
+export const INDEXED_COMBO_LOCATION_SLUGS = [
+  'philadelphia',
+  'bensalem',
+  'bucks-county',
+  'montgomery-county',
+  'delaware-county',
+  'chester-county',
+];
+
+export function childLocations(slug: string): LocationData[] {
+  return locations.filter(l => l.parent === slug);
+}
 
 export function getLocation(slug: string): LocationData | undefined {
   return locations.find(l => l.slug === slug);

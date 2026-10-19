@@ -46,5 +46,7 @@
 /blog/commercial-cleaning-cost-philadelphia                /blog/questions-ask-commercial-cleaning-contract/   301
 /blog/commercial-cleaning-cost-philadelphia/               /blog/questions-ask-commercial-cleaning-contract/   301
 
-# --- SPA fallback: must stay last so it never shadows the rules above ---
-/*                             /index.html                 200
+# No SPA catch-all. Every real route is prerendered to its own
+# dist/<route>/index.html, so anything without a file is genuinely missing and
+# Cloudflare Pages serves dist/404.html with a real 404 status. A "/* /index.html
+# 200" rule here would turn every bad URL back into a soft 404.

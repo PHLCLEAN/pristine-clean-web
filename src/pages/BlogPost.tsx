@@ -149,7 +149,7 @@ const BlogPostPage = () => {
     headline: post.title,
     description: post.metaDescription,
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.updated ?? post.date,
     articleSection: post.category,
     image: ["https://phlclean.com/og-image.png"],
     author: {"@type": "Organization",
@@ -192,7 +192,7 @@ const BlogPostPage = () => {
               Home
             </Link>
             <span aria-hidden="true">/</span>
-            <Link to="/blog" className="hover:text-phl-blue transition-colors">
+            <Link to="/blog/" className="hover:text-phl-blue transition-colors">
               Field Notes
             </Link>
             <span>/</span>
@@ -254,7 +254,7 @@ const BlogPostPage = () => {
           <div className="mt-10 pt-8 border-t border-phl-rule flex flex-col sm:flex-row justify-between gap-4">
             {prev ? (
               <Link
-                to={`/blog/${prev.slug}`}
+                to={`/blog/${prev.slug}/`}
                 className="flex items-center gap-2 text-sm text-phl-ink-2 hover:text-phl-blue transition-colors"
               >
                 <ArrowLeft className="h-4 w-4" />
@@ -265,7 +265,7 @@ const BlogPostPage = () => {
             )}
             {next ? (
               <Link
-                to={`/blog/${next.slug}`}
+                to={`/blog/${next.slug}/`}
                 className="flex items-center gap-2 text-sm text-phl-ink-2 hover:text-phl-blue transition-colors sm:text-right"
               >
                 <span className="line-clamp-1">{next.title}</span>

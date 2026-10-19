@@ -16,15 +16,16 @@ const Hero = () => {
           <div>
             <div className="flex items-center gap-2.5 mb-4">
               <span className="w-6 h-px bg-phl-blue" aria-hidden="true" />
-              <span className="font-mono text-[11px] tracking-[0.13em] uppercase text-phl-blue">
-                Philadelphia &amp; Surrounding Counties
-              </span>
+              {/* The search-facing H1 is the eyebrow; the big line stays the visual headline. */}
+              <h1 className="font-mono font-normal leading-normal text-[11px] tracking-[0.13em] uppercase text-phl-blue">
+                Commercial carpet, tile &amp; grout floor care &middot; Philadelphia &amp; Bucks County
+              </h1>
             </div>
 
-            <h1 className="text-[clamp(2.1rem,5.2vw,3.55rem)] text-phl-ink">
+            <p className="font-heading uppercase font-bold leading-[0.98] tracking-[0.005em] [text-wrap:balance] text-[clamp(2.1rem,5.2vw,3.55rem)] text-phl-ink">
               Most floors don&rsquo;t need replacing.<br />
               They need <span className="text-phl-blue">somebody who reads them.</span>
-            </h1>
+            </p>
 
             <p className="mt-5 max-w-[46ch] text-phl-ink-2 text-base leading-relaxed">
               Commercial carpet and hard-surface floor care. Extraction, encapsulation, tile and grout

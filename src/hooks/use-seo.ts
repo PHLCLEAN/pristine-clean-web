@@ -9,6 +9,27 @@ interface SeoProps {
   robots?: string;
 }
 
+export interface CollectedSeo {
+  title: string;
+  description: string;
+  canonical?: string;
+  robots?: string;
+}
+
+/**
+ * Build-time collection. During the prerender there is no document, so the
+ * hook records what it was asked to set and scripts/prerender.mjs writes it
+ * into the page head. One source for the meta in both places — the raw HTML
+ * and the live page can no longer disagree.
+ */
+let collecting: CollectedSeo | null | undefined;
+export function beginSeoCollection() { collecting = null; }
+export function endSeoCollection(): CollectedSeo | null {
+  const out = collecting ?? null;
+  collecting = undefined;
+  return out;
+}
+
 /**
  * Lightweight client-side SEO hook.
  * Sets document.title, meta description, OG title/description/url,
@@ -16,6 +37,10 @@ interface SeoProps {
  * Good enough for Google (which executes JS) without pulling in react-helmet-async.
  */
 export function useSeo({ title, description, canonical, noindex, robots }: SeoProps) {
+  if (typeof document === 'undefined' && collecting !== undefined) {
+    collecting = { title, description, canonical, robots: robots ?? (noindex ? 'noindex, nofollow' : undefined) };
+  }
+
   useEffect(() => {
     document.title = title;
 

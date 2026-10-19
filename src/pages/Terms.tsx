@@ -189,7 +189,7 @@ const Terms = () => {
               <p>
                 If any part of these Terms is found to be unenforceable, the rest stays in
                 effect. These Terms, together with our{' '}
-                <Link to="/privacy" className="text-phl-blue underline">Privacy Policy</Link>
+                <Link to="/privacy/" className="text-phl-blue underline">Privacy Policy</Link>
                 , are the entire agreement between you and PHL Clean about your use of the
                 Site. Any other agreements between us (including service agreements with
                 customers) are separate and govern their own subject matter.
@@ -212,7 +212,7 @@ const Terms = () => {
               </p>
 
               <p className="text-sm text-phl-muted mt-10 border-t border-phl-rule pt-6">
-                See also our <Link to="/privacy" className="text-phl-blue underline">Privacy Policy</Link>.
+                See also our <Link to="/privacy/" className="text-phl-blue underline">Privacy Policy</Link>.
               </p>
             </div>
           </div>

@@ -16,7 +16,9 @@ const JobPhotos = ({ slug }: { slug: string }) => {
           {photos.map(p => (
             <li key={p.src + p.caption} className="bg-phl-surface border border-phl-rule rounded-sm overflow-hidden">
               <img
-                src={p.src}
+                src={p.src.replace('.webp', '-800.webp')}
+                srcSet={`${p.src.replace('.webp', '-800.webp')} 800w, ${p.src} 1200w`}
+                sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
                 alt={p.alt}
                 width={1200}
                 height={900}

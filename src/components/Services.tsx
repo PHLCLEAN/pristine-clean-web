@@ -56,7 +56,7 @@ const Services = () => {
             return (
               <Link
                 key={s.slug}
-                to={`/services/${s.slug}`}
+                to={`/services/${s.slug}/`}
                 className="group bg-phl-surface hover:bg-phl-raised transition-colors p-5 pb-6 flex flex-col gap-2"
               >
                 <h3 className="text-[19px] text-phl-ink group-hover:text-phl-blue transition-colors">
@@ -96,7 +96,7 @@ const Services = () => {
                   <tr key={m.name}>
                     <td className="py-3 pr-4 border-b border-phl-rule text-phl-ink font-medium align-top">
                       {m.slug
-                        ? <Link to={`/services/${m.slug}`} className="hover:text-phl-blue transition-colors underline decoration-phl-rule underline-offset-4">{m.name}</Link>
+                        ? <Link to={`/services/${m.slug}/`} className="hover:text-phl-blue transition-colors underline decoration-phl-rule underline-offset-4">{m.name}</Link>
                         : m.name}
                     </td>
                     <td className="py-3 pr-4 border-b border-phl-rule text-phl-ink-2 align-top font-mono text-[12px] whitespace-nowrap">{m.moisture}</td>

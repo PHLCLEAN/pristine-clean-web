@@ -258,7 +258,7 @@ const Privacy = () => {
               </p>
 
               <p className="text-sm text-phl-muted mt-10 border-t border-phl-rule pt-6">
-                See also our <Link to="/terms" className="text-phl-blue underline">Terms of Service</Link>.
+                See also our <Link to="/terms/" className="text-phl-blue underline">Terms of Service</Link>.
               </p>
             </div>
           </div>

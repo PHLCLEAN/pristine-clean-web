@@ -10,7 +10,7 @@ import { Calendar, Clock, ArrowRight } from 'lucide-react';
 const Blog = () => {
   useSeo({
     title: "Field Notes — Commercial Floor Care Insights | PHL Clean",
-    description: "Practical, technical writing on commercial carpet, tile and grout, and hard surface floor care from PHL Clean — serving Philadelphia, Bucks County and surrounding areas.",
+    description: "Practical, technical writing on commercial carpet, tile and grout, and hard surface floor care from PHL Clean in Philadelphia and Bucks County.",
     canonical: "https://phlclean.com/blog/",
   });
 
@@ -54,7 +54,7 @@ const Blog = () => {
               return (
                 <Link
                   key={post.slug}
-                  to={`/blog/${post.slug}`}
+                  to={`/blog/${post.slug}/`}
                   className="group bg-phl-surface border border-phl-rule hover:border-phl-blue rounded-sm transition-colors overflow-hidden flex flex-col"
                 >
                   {/* Color bar */}

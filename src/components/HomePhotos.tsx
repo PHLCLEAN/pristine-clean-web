@@ -28,7 +28,12 @@ const HomePhotos = () => (
       <ul className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {SHOTS.map(s => (
           <li key={s.src} className="bg-phl-surface border border-phl-rule rounded-sm overflow-hidden">
-            <img src={s.src} alt={s.alt} width={800} height={600} loading="lazy" className="w-full aspect-[4/3] object-cover" />
+            <img
+              src={s.src.replace('.webp', '-800.webp')}
+              srcSet={`${s.src.replace('.webp', '-800.webp')} 800w, ${s.src} 1200w`}
+              sizes="(min-width: 768px) 33vw, 100vw"
+              alt={s.alt} width={800} height={600} loading="lazy" className="w-full aspect-[4/3] object-cover"
+            />
             <p className="p-4 text-[13px] text-phl-ink-2 leading-relaxed">{s.caption}</p>
           </li>
         ))}

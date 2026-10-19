@@ -8,7 +8,7 @@ import TechnicalFigure from '../components/TechnicalFigure';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Phone, Check, ArrowRight, Clock } from 'lucide-react';
 import { getService, services } from '../data/services';
-import { locations } from '../data/locations';
+import { topLevelLocations as locations } from '../data/locations';
 import { blogPosts } from '../data/blog-posts';
 import { useSeo } from '../hooks/use-seo';
 import JsonLd from '../components/JsonLd';
@@ -28,15 +28,14 @@ const ServicePage = () => {
     return <Navigate to="/404" replace />;
   }
 
-  const serviceUrl = `https://phlclean.com/services/${service.slug}`;
+  const serviceUrl = `https://phlclean.com/services/${service.slug}/`;
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://phlclean.com/" },
-      { "@type": "ListItem", position: 2, name: "Services", item: "https://phlclean.com/#services" },
-      { "@type": "ListItem", position: 3, name: service.shortTitle, item: serviceUrl },
+      { "@type": "ListItem", position: 2, name: service.shortTitle, item: serviceUrl },
     ],
   };
 
@@ -83,7 +82,7 @@ const ServicePage = () => {
     .filter((s): s is NonNullable<typeof s> => s !== undefined);
 
   const relatedPosts = blogPosts
-    .filter(p => p.relatedLinks.some(l => l.href === `/services/${service.slug}`))
+    .filter(p => p.relatedLinks.some(l => l.href === `/services/${service.slug}/`))
     .slice(0, 3);
 
   return (
@@ -118,7 +117,7 @@ const ServicePage = () => {
         </section>
         <section className="section-padding border-b border-phl-rule">
           <div className="container-custom">
-            <div className="rack-head">What&rsquo;s included</div>
+            <h2 className="rack-head">What&rsquo;s included</h2>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-3.5">
               {service.whatsIncluded.map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
@@ -131,7 +130,7 @@ const ServicePage = () => {
         </section>
         <section className="section-padding border-b border-phl-rule">
           <div className="container-custom">
-            <div className="rack-head">How the job runs</div>
+            <h2 className="rack-head">How the job runs</h2>
             <ol className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-10 gap-y-8">
               {service.process.map((step, i) => (
                 <li key={i} className="flex gap-4">
@@ -148,7 +147,7 @@ const ServicePage = () => {
         <JobPhotos slug={service.slug} />
         <section className="section-padding border-b border-phl-rule">
           <div className="container-custom">
-            <div className="rack-head">Who it&rsquo;s for</div>
+            <h2 className="rack-head">Who it&rsquo;s for</h2>
             <ul className="flex flex-wrap gap-2.5">
               {service.whoItsFor.map((item, i) => (
                 <li key={i} className="bg-phl-surface border border-phl-rule rounded-sm px-4 py-2.5 text-[13.5px] text-phl-ink-2">{item}</li>
@@ -171,7 +170,7 @@ const ServicePage = () => {
         </section>
         <section className="section-padding border-b border-phl-rule">
           <div className="container-custom max-w-4xl">
-            <div className="rack-head">Questions we actually get</div>
+            <h2 className="rack-head">Questions we actually get</h2>
             <Accordion type="single" collapsible className="w-full">
               {service.faqs.map((faq, i) => (
                 <AccordionItem key={i} value={`item-${i}`} className="border-phl-rule">
@@ -198,10 +197,10 @@ const ServicePage = () => {
         {related.length > 0 && (
           <section className="section-padding border-b border-phl-rule">
             <div className="container-custom">
-              <div className="rack-head">Related work</div>
+              <h2 className="rack-head">Related work</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-phl-rule border border-phl-rule rounded-sm overflow-hidden">
                 {related.map(r => (
-                  <Link key={r.slug} to={`/services/${r.slug}`} className="group bg-phl-surface hover:bg-phl-raised transition-colors p-5 pb-6">
+                  <Link key={r.slug} to={`/services/${r.slug}/`} className="group bg-phl-surface hover:bg-phl-raised transition-colors p-5 pb-6">
                     <h3 className="text-[19px] text-phl-ink group-hover:text-phl-blue transition-colors mb-2">{r.shortTitle}</h3>
                     <p className="text-[13px] text-phl-ink-2 leading-snug mb-3">{r.heroTagline}</p>
                     <span className="font-mono text-[11px] uppercase tracking-[0.08em] text-phl-blue inline-flex items-center gap-1.5">Read more <ArrowRight className="h-3.5 w-3.5" /></span>
@@ -214,10 +213,10 @@ const ServicePage = () => {
         {relatedPosts.length > 0 && (
           <section className="section-padding border-b border-phl-rule">
             <div className="container-custom">
-              <div className="rack-head">Field notes</div>
+              <h2 className="rack-head">Field notes</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-phl-rule border border-phl-rule rounded-sm overflow-hidden">
                 {relatedPosts.map(post => (
-                  <Link key={post.slug} to={`/blog/${post.slug}`} className="group bg-phl-surface hover:bg-phl-raised transition-colors p-5 pb-6">
+                  <Link key={post.slug} to={`/blog/${post.slug}/`} className="group bg-phl-surface hover:bg-phl-raised transition-colors p-5 pb-6">
                     <div className="flex items-center gap-2 font-mono text-[10.5px] uppercase tracking-[0.08em] text-phl-muted mb-3"><Clock className="h-3.5 w-3.5" /><span>{post.readTime}</span></div>
                     <h3 className="text-[17px] text-phl-ink group-hover:text-phl-blue transition-colors leading-snug">{post.title}</h3>
                   </Link>
@@ -228,10 +227,10 @@ const ServicePage = () => {
         )}
         <section className="section-padding">
           <div className="container-custom">
-            <div className="rack-head">{service.shortTitle} across our coverage area</div>
+            <h2 className="rack-head">{service.shortTitle} across our coverage area</h2>
             <div className="flex flex-wrap gap-2.5">
               {locations.map(l => (
-                <Link key={l.slug} to={`/services/${service.slug}/${l.slug}`} className="bg-phl-surface border border-phl-rule hover:border-phl-blue hover:text-phl-blue rounded-sm px-4 py-2.5 text-[13.5px] text-phl-ink-2 transition-colors">{service.shortTitle} in {l.shortName}</Link>
+                <Link key={l.slug} to={`/services/${service.slug}/${l.slug}/`} className="bg-phl-surface border border-phl-rule hover:border-phl-blue hover:text-phl-blue rounded-sm px-4 py-2.5 text-[13.5px] text-phl-ink-2 transition-colors">{service.shortTitle} in {l.shortName}</Link>
               ))}
             </div>
           </div>

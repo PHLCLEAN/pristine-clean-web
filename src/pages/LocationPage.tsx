@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import QuoteForm from '../components/QuoteForm';
 import ContactInfo from '../components/ContactInfo';
 import { Phone, MapPin, Check, ArrowRight } from 'lucide-react';
-import { getLocation, locations } from '../data/locations';
+import { getLocation, topLevelLocations, childLocations } from '../data/locations';
 import { services } from '../data/services';
 import { useSeo } from '../hooks/use-seo';
 import JsonLd from '../components/JsonLd';
@@ -24,19 +24,26 @@ const LocationPage = () => {
     return <Navigate to="/404" replace />;
   }
 
-  const locationUrl = `https://phlclean.com/locations/${location.slug}`;
+  const locationUrl = `https://phlclean.com/locations/${location.slug}/`;
+  const parent = location.parent ? getLocation(location.parent) : undefined;
+  const children = childLocations(location.slug);
+  const siblings = parent ? childLocations(parent.slug).filter(l => l.slug !== location.slug) : [];
 
+  const crumbs = [
+    { name: "Home", item: "https://phlclean.com/" },
+    ...(parent ? [{ name: parent.shortName, item: `https://phlclean.com/locations/${parent.slug}/` }] : []),
+    { name: location.shortName, item: locationUrl },
+  ];
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://phlclean.com/" },
-      { "@type": "ListItem", position: 2, name: "Service Areas", item: "https://phlclean.com/#industries" },
-      { "@type": "ListItem", position: 3, name: location.shortName, item: locationUrl },
-    ],
+    itemListElement: crumbs.map((c, i) => ({ "@type": "ListItem", position: i + 1, ...c })),
   };
 
-  const otherLocations = locations.filter(l => l.slug !== location.slug);
+  // Neighborhood pages send service links to the city's combo pages; there
+  // are no per-neighborhood combos.
+  const comboSlug = parent ? parent.slug : location.slug;
+  const otherLocations = topLevelLocations.filter(l => l.slug !== location.slug);
 
   return (
     <div className="min-h-screen bg-phl-ground">
@@ -49,6 +56,12 @@ const LocationPage = () => {
             <nav aria-label="Breadcrumb" className="font-mono text-[11px] uppercase tracking-[0.1em] text-phl-muted mb-6">
               <Link to="/" className="hover:text-phl-blue transition-colors">Home</Link>
               <span className="mx-2">/</span>
+              {parent && (
+                <>
+                  <Link to={`/locations/${parent.slug}/`} className="hover:text-phl-blue transition-colors">{parent.shortName}</Link>
+                  <span className="mx-2">/</span>
+                </>
+              )}
               <span className="text-phl-ink-2">{location.shortName}</span>
             </nav>
 
@@ -75,7 +88,7 @@ const LocationPage = () => {
           <div className="container-custom">
             <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] gap-12 lg:gap-16">
               <div>
-                <div className="rack-head">What we find in {location.shortName}</div>
+                <h2 className="rack-head">What we find in {location.shortName}</h2>
                 <p className="text-phl-ink-2 leading-relaxed text-[15px]">{location.intro}</p>
 
                 <div className="mt-8 bg-phl-surface border-l-2 border-phl-blue rounded-sm p-5">
@@ -85,7 +98,7 @@ const LocationPage = () => {
               </div>
 
               <div>
-                <div className="rack-head">Buildings we work in</div>
+                <h2 className="rack-head">Buildings we work in</h2>
                 <ul className="space-y-2.5">
                   {location.industries.map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
@@ -102,12 +115,12 @@ const LocationPage = () => {
         {/* Services in this location */}
         <section className="section-padding border-b border-phl-rule">
           <div className="container-custom">
-            <div className="rack-head">What we do in {location.shortName}</div>
+            <h2 className="rack-head">What we do in {location.shortName}</h2>
             <div className="grid gap-px bg-phl-rule border border-phl-rule rounded-sm overflow-hidden grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
               {services.map(s => (
                 <Link
                   key={s.slug}
-                  to={`/services/${s.slug}/${location.slug}`}
+                  to={`/services/${s.slug}/${comboSlug}/`}
                   className="group bg-phl-surface hover:bg-phl-raised transition-colors p-5 pb-6 flex flex-col gap-2"
                 >
                   <h3 className="text-[18px] text-phl-ink group-hover:text-phl-blue transition-colors">
@@ -115,7 +128,7 @@ const LocationPage = () => {
                   </h3>
                   <p className="text-[13px] text-phl-ink-2 leading-snug">{s.heroTagline}</p>
                   <span className="mt-auto pt-3 font-mono text-[10.5px] uppercase tracking-[0.08em] text-phl-blue inline-flex items-center gap-1.5">
-                    In {location.shortName} <ArrowRight className="h-3.5 w-3.5" />
+                    In {parent ? parent.shortName : location.shortName} <ArrowRight className="h-3.5 w-3.5" />
                   </span>
                 </Link>
               ))}
@@ -123,11 +136,52 @@ const LocationPage = () => {
           </div>
         </section>
 
+        {/* Long-form sections */}
+        {location.sections && location.sections.length > 0 && (
+          <section className="section-padding border-b border-phl-rule">
+            <div className="container-custom">
+             <div className="max-w-[72ch] space-y-12">
+              {location.sections.map(sec => (
+                <div key={sec.heading}>
+                  <h2 className="text-[clamp(1.4rem,2.6vw,1.9rem)] text-phl-ink mb-5">{sec.heading}</h2>
+                  <div className="space-y-4">
+                    {sec.paragraphs.map((para, i) => (
+                      <p key={i} className="text-phl-ink-2 leading-relaxed text-[15px]">{para}</p>
+                    ))}
+                  </div>
+                </div>
+              ))}
+             </div>
+            </div>
+          </section>
+        )}
+
+        {/* Neighborhood pages under this city */}
+        {children.length > 0 && (
+          <section className="section-padding border-b border-phl-rule">
+            <div className="container-custom">
+              <h2 className="rack-head">{location.shortName} neighborhoods</h2>
+              <div className="grid gap-px bg-phl-rule border border-phl-rule rounded-sm overflow-hidden grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                {children.map(c => (
+                  <Link
+                    key={c.slug}
+                    to={`/locations/${c.slug}/`}
+                    className="group bg-phl-surface hover:bg-phl-raised transition-colors p-5 pb-6 flex flex-col gap-2"
+                  >
+                    <h3 className="text-[18px] text-phl-ink group-hover:text-phl-blue transition-colors">{c.shortName}</h3>
+                    <p className="text-[13px] text-phl-ink-2 leading-snug">{c.heroTagline}</p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Neighborhoods */}
         {location.neighborhoods && location.neighborhoods.length > 0 && (
           <section className="section-padding border-b border-phl-rule">
             <div className="container-custom">
-              <div className="rack-head">Areas we cover around {location.shortName}</div>
+              <h2 className="rack-head">Areas we cover around {location.shortName}</h2>
               <ul className="flex flex-wrap gap-2.5">
                 {location.neighborhoods.map(n => (
                   <li
@@ -167,12 +221,28 @@ const LocationPage = () => {
         {/* Other areas */}
         <section className="section-padding">
           <div className="container-custom">
-            <div className="rack-head">Other areas we cover</div>
+            {siblings.length > 0 && (
+              <>
+                <h2 className="rack-head">More of {parent!.shortName}</h2>
+                <div className="flex flex-wrap gap-2.5 mb-10">
+                  {[parent!, ...siblings].map(l => (
+                    <Link
+                      key={l.slug}
+                      to={`/locations/${l.slug}/`}
+                      className="bg-phl-surface border border-phl-rule hover:border-phl-blue hover:text-phl-blue rounded-sm px-4 py-2.5 text-[13.5px] text-phl-ink-2 transition-colors"
+                    >
+                      {l.slug === parent!.slug ? `All of ${l.shortName}` : l.shortName}
+                    </Link>
+                  ))}
+                </div>
+              </>
+            )}
+            <h2 className="rack-head">Other areas we cover</h2>
             <div className="flex flex-wrap gap-2.5">
-              {otherLocations.map(l => (
+              {otherLocations.filter(l => l.slug !== parent?.slug).map(l => (
                 <Link
                   key={l.slug}
-                  to={`/locations/${l.slug}`}
+                  to={`/locations/${l.slug}/`}
                   className="bg-phl-surface border border-phl-rule hover:border-phl-blue hover:text-phl-blue rounded-sm px-4 py-2.5 text-[13.5px] text-phl-ink-2 transition-colors"
                 >
                   {l.shortName}

@@ -77,18 +77,43 @@ to ~467px and forces a scrollbar.
 ```
 npm run build
 ```
-Runs, in order: meta length check → vite build → sitemap → prerender.
+Runs, in order: meta length check → vite build → SSR build → prerender → dist check.
 
-- `scripts/check-meta.mjs` fails the build if any meta title exceeds 60 chars
-  or any description falls outside 70–158.
-- `scripts/sitemap.mjs` derives every URL from the data files, so the sitemap
-  cannot drift. Blog entries use each post's own date as `lastmod`.
-- `scripts/prerender.mjs` writes static HTML per route with correct meta. It
-  parses the data files **as text**, so keep `slug:`, `metaTitle:` and
-  `metaDescription:` as plain string literals — a helper function or template
-  literal silently breaks it.
+- `scripts/check-meta.mjs` fails the build if any meta title in the data files
+  exceeds 60 chars or any description falls outside 70–158.
+- `vite build --ssr src/entry-server.tsx --outDir dist-ssr` builds a
+  server-side copy of the app used only at build time.
+- `scripts/prerender.mjs` renders every route with React (StaticRouter) and
+  writes `dist/<route>/index.html` with the **full page body** and that page's
+  own title, description, canonical and robots tags — taken from the same
+  `useSeo()` call the live page makes. It also writes `dist/sitemap.xml`
+  (every route that isn't noindexed; `lastmod` only for blog posts, from
+  `updated ?? date`) and `dist/404.html`.
+- `scripts/check-dist.mjs` checks the shipped HTML: non-empty body, exactly
+  one H1, meta lengths (including the homepage and combo pages), JSON-LD
+  parses, and **every internal link ends in a slash and points at a real
+  page**. Cloudflare Pages redirects slashless paths, so a missing slash is a
+  redirect hop on every click.
 
-Routes are code-split; only the homepage is in the initial bundle.
+The browser hydrates the prerendered markup (`hydrateRoot` in `main.tsx`), so
+anything rendered must come out the same on the server and in the browser —
+no `window`, dates or random values in render.
+
+**Every page must call `useSeo()`** with a canonical ending in `/`. The
+prerender fails otherwise.
+
+**There is no SPA catch-all in `public/_redirects`.** Every route has its own
+file, and anything else gets `404.html` with a real 404 status. Don't add
+`/* /index.html 200` back — it turns every bad URL into a soft 404.
+
+### Locations
+
+`src/data/locations.ts`. A location with `parent: "philadelphia"` is a
+neighborhood page: it appears under the Philadelphia page, gets no service
+combo pages of its own (its service links go to the Philadelphia combos), and
+can carry long-form `sections`. Only add a neighborhood when there is
+something specific and true to say about its buildings — pages that differ
+only by place name are worse than no page.
 
 ## Verifying before you push
 
@@ -97,7 +122,7 @@ broken here before — a temporal-dead-zone error that blanked every page, and
 a colour class that made every blog headline invisible on the dark ground.
 
 - Render check: serve `dist/` and load each route type in a real browser.
-  JSDOM cannot resolve the lazy chunks, so it is no longer sufficient alone.
+  Watch the console — a hydration mismatch shows up there as a React error.
 - Contrast: measure computed colours against WCAG AA. `--phl-muted` failed at
   3.84:1 until it was lifted to `#7D8C9E`.
 - Grep for retired vocabulary: `janitor|same crew|same team|every visit`.

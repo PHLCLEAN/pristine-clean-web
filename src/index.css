@@ -96,6 +96,9 @@
   /* Section eyebrow with a trailing rule */
   .rack-head {
     @apply flex items-baseline gap-4 mb-5 font-mono text-[11px] tracking-[0.14em] uppercase text-phl-muted;
+    /* Also used on real <h2>s for document outline; keep the eyebrow look. */
+    font-weight: 400;
+    line-height: 1.5;
   }
   .rack-head::after {
     content: "";

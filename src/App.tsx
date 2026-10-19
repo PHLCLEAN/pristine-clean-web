@@ -3,7 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { useEffect, lazy, Suspense } from "react";
+import React, { useEffect, lazy, Suspense } from "react";
 import Index from "./pages/Index";
 import StickyCta from "./components/StickyCta";
 import { trackPageview, trackEvent } from "./lib/analytics";
@@ -74,12 +74,24 @@ const PhoneClickTracker = () => {
   return null;
 };
 
-const App = () => (
+/** Providers shared by the browser app and the build-time prerender. */
+export const Providers = ({ children }: { children: React.ReactNode }) => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      {children}
+    </TooltipProvider>
+  </QueryClientProvider>
+);
+
+/**
+ * Everything inside the router. The prerender (src/entry-server.tsx) renders
+ * this exact tree with a StaticRouter, so the HTML it writes matches what the
+ * browser hydrates.
+ */
+export const AppRoutes = () => (
+  <>
         <RouteTracker />
         <PhoneClickTracker />
         <Suspense fallback={<RouteFallback />}>
@@ -99,9 +111,15 @@ const App = () => (
         </Routes>
         </Suspense>
         <StickyCta />
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+  </>
+);
+
+const App = () => (
+  <Providers>
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
+  </Providers>
 );
 
 export default App;

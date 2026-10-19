@@ -4,6 +4,7 @@ export interface BlogPost {
   metaTitle: string;
   metaDescription: string;
   date: string;           // ISO date string
+  updated?: string;       // ISO date of the last substantive rewrite, if any
   author: string;
   category: string;
   readTime: string;       // e.g. "6 min read"
@@ -31,9 +32,9 @@ const post1: BlogPost = {
   category: "Carpet & Floor Care",
   readTime: "6 min read",
   relatedLinks: [
-    { label: "Commercial Carpet Cleaning", href: "/services/carpet-cleaning" },
-    { label: "Carpet Cleaning in Philadelphia", href: "/services/carpet-cleaning/philadelphia" },
-    { label: "Carpet Cleaning in Bucks County", href: "/services/carpet-cleaning/bucks-county" },
+    { label: "Commercial Carpet Cleaning", href: "/services/carpet-cleaning/" },
+    { label: "Carpet Cleaning in Philadelphia", href: "/services/carpet-cleaning/philadelphia/" },
+    { label: "Carpet Cleaning in Bucks County", href: "/services/carpet-cleaning/bucks-county/" },
   ],
   body: [
     { type: "paragraph", text: "Commercial carpet takes a beating. Between employee foot traffic, client visits, rolling chairs, and whatever gets tracked in from the parking lot, it's absorbing dirt, allergens, and moisture every single day. The good news? A solid cleaning schedule can keep your carpet looking professional for years longer than you'd expect — and it costs a fraction of what early replacement would run you." },
@@ -97,9 +98,9 @@ const post2: BlogPost = {
   category: "Carpet & Floor Care",
   readTime: "8 min read",
   relatedLinks: [
-    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance" },
-    { label: "Hard Surface Floor Care in Philadelphia", href: "/services/floor-maintenance/philadelphia" },
-    { label: "Hard Surface Floor Care in Bucks County", href: "/services/floor-maintenance/bucks-county" },
+    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance/" },
+    { label: "Hard Surface Floor Care in Philadelphia", href: "/services/floor-maintenance/philadelphia/" },
+    { label: "Hard Surface Floor Care in Bucks County", href: "/services/floor-maintenance/bucks-county/" },
   ],
   body: [
     { type: "paragraph", text: "Vinyl Composition Tile — VCT — is one of the most common flooring materials in commercial buildings across Philadelphia. You'll find it in schools, hospitals, retail stores, office lobbies, and just about every government building you've ever walked through. It's popular for good reason: it's durable, affordable, and it looks great when it's properly maintained." },
@@ -175,9 +176,9 @@ const post3: BlogPost = {
   category: "Carpet & Floor Care",
   readTime: "5 min read",
   relatedLinks: [
-    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance" },
-    { label: "Commercial Carpet Cleaning", href: "/services/carpet-cleaning" },
-    { label: "Carpet Maintenance Programs", href: "/services/carpet-maintenance-programs" },
+    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance/" },
+    { label: "Commercial Carpet Cleaning", href: "/services/carpet-cleaning/" },
+    { label: "Carpet Maintenance Programs", href: "/services/carpet-maintenance-programs/" },
   ],
   body: [
     { type: "paragraph", text: "Nobody sets out to neglect their floors. It usually starts small — pushing back a scheduled cleaning to save a little money this quarter, skipping a strip-and-wax cycle because the floor 'still looks okay,' or cutting the floor care line because it's an easy one to trim. But the costs of that neglect add up quietly, and by the time they become visible, you're usually looking at a much bigger bill than the maintenance would have cost." },
@@ -233,8 +234,8 @@ const post4: BlogPost = {
   category: "Carpet & Floor Care",
   readTime: "5 min read",
   relatedLinks: [
-    { label: "Commercial Carpet Cleaning", href: "/services/carpet-cleaning" },
-    { label: "Carpet Maintenance Programs", href: "/services/carpet-maintenance-programs" },
+    { label: "Commercial Carpet Cleaning", href: "/services/carpet-cleaning/" },
+    { label: "Carpet Maintenance Programs", href: "/services/carpet-maintenance-programs/" },
   ],
   body: [
     { type: "paragraph", text: "You're staring at your office carpet and something's off. Maybe it's the traffic lanes that look permanently gray. Maybe it's a cluster of stains in the break room that nobody's been able to get out. The question bouncing around your head is: do I pay to have this cleaned, or is it time to rip it out and start over?" },
@@ -297,9 +298,9 @@ const post5: BlogPost = {
   category: "Carpet & Floor Care",
   readTime: "7 min read",
   relatedLinks: [
-    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance" },
-    { label: "Hard Surface Floor Care in Philadelphia", href: "/services/floor-maintenance/philadelphia" },
-    { label: "Hard Surface Floor Care in Bucks County", href: "/services/floor-maintenance/bucks-county" },
+    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance/" },
+    { label: "Hard Surface Floor Care in Philadelphia", href: "/services/floor-maintenance/philadelphia/" },
+    { label: "Hard Surface Floor Care in Bucks County", href: "/services/floor-maintenance/bucks-county/" },
   ],
   body: [
     { type: "paragraph", text: "Not every commercial floor is VCT or carpet. Walk through enough buildings in Philadelphia and the surrounding counties and you'll see polished concrete in modern offices and breweries, ceramic and porcelain tile in restrooms and lobbies, and natural stone in upscale lobbies and financial institutions. Each one looks great when it's maintained — and each one has its own set of rules." },
@@ -383,9 +384,9 @@ const post6: BlogPost = {
   category: "Carpet & Floor Care",
   readTime: "5 min read",
   relatedLinks: [
-    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance" },
-    { label: "Commercial Carpet Cleaning", href: "/services/carpet-cleaning" },
-    { label: "Floor Care in Philadelphia", href: "/locations/philadelphia" },
+    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance/" },
+    { label: "Commercial Carpet Cleaning", href: "/services/carpet-cleaning/" },
+    { label: "Floor Care in Philadelphia", href: "/locations/philadelphia/" },
   ],
   body: [
     { type: "paragraph", text: "If you manage a commercial building in Philadelphia, you already know what winter does to your floors. From December through March, every person who walks through your door brings a little bit of the outside in with them — rock salt, calcium chloride, slush, sand, and moisture. It piles up in entryways, gets tracked down hallways, and grinds into carpet fibers and floor finishes all day long." },
@@ -451,8 +452,8 @@ const post9: BlogPost = {
   category: "Carpet & Floor Care",
   readTime: "5 min read",
   relatedLinks: [
-    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance" },
-    { label: "Carpet Maintenance Programs", href: "/services/carpet-maintenance-programs" },
+    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance/" },
+    { label: "Carpet Maintenance Programs", href: "/services/carpet-maintenance-programs/" },
   ],
   body: [
     { type: "paragraph", text: "Restaurant floors take more punishment than almost any other commercial surface. Between grease splatter from the kitchen line, foot traffic from staff hustling through service, and customers tracking in whatever's on the sidewalk, the floor never gets a break. Add in health department inspections, slip-and-fall liability, and the fact that customers can see the front-of-house floor from their table, and you've got a surface that needs serious, consistent attention." },
@@ -494,12 +495,13 @@ const post18: BlogPost = {
   metaTitle: "Warehouse & Industrial Concrete Floor Care | PHL Clean",
   metaDescription: "Warehouse concrete and epoxy floors are a safety system, not a surface. Auto-scrubbing, tire marks, floor markings and OSHA housekeeping.",
   date: "2026-05-20",
+  updated: "2026-09-14",
   author: "PHL Clean",
   category: "Concrete & Industrial",
   readTime: "6 min read",
   relatedLinks: [
-    { label: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning" },
-    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance" },
+    { label: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning/" },
+    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance/" },
   ],
   body: [
     { type: "paragraph", text: "A warehouse floor gets treated as a surface when it is really a safety system. Sealed concrete and epoxy in an industrial building deal with things no office floor ever encounters: machinery residue, forklift tire transfer, pallet dust, loading dock contamination, and safety-critical floor markings that have to stay visible to be worth anything." },
@@ -547,9 +549,9 @@ const post20: BlogPost = {
   category: "Carpet & Floor Care",
   readTime: "6 min read",
   relatedLinks: [
-    { label: "Commercial Carpet Cleaning", href: "/services/carpet-cleaning" },
-    { label: "Carpet Maintenance Programs", href: "/services/carpet-maintenance-programs" },
-    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance" },
+    { label: "Commercial Carpet Cleaning", href: "/services/carpet-cleaning/" },
+    { label: "Carpet Maintenance Programs", href: "/services/carpet-maintenance-programs/" },
+    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance/" },
   ],
   body: [
     { type: "paragraph", text: "Carpet has an odd reputation in indoor air quality conversations. It gets blamed for allergies and it gets credited with trapping dust, and both are partly true — because which one applies depends entirely on how well the carpet is maintained." },
@@ -592,9 +594,9 @@ const post26: BlogPost = {
   category: "Carpet & Floor Care",
   readTime: "6 min read",
   relatedLinks: [
-    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance" },
-    { label: "Carpet Maintenance Programs", href: "/services/carpet-maintenance-programs" },
-    { label: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning" },
+    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance/" },
+    { label: "Carpet Maintenance Programs", href: "/services/carpet-maintenance-programs/" },
+    { label: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning/" },
   ],
   body: [
     { type: "paragraph", text: "A customer forms an opinion of a retail space before they have looked at a single product, and the floor is a large part of what they are reacting to even though almost nobody consciously notices it. A dull main aisle, a gray entrance zone, or a grout line that has gone dark all register as the store being tired — which transfers, unfairly but reliably, to the merchandise." },
@@ -640,9 +642,9 @@ const post11: BlogPost = {
   category: "Buying Floor Care",
   readTime: "8 min read",
   relatedLinks: [
-    { label: "Commercial Carpet Cleaning", href: "/services/carpet-cleaning" },
-    { label: "Carpet Maintenance Programs", href: "/services/carpet-maintenance-programs" },
-    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance" },
+    { label: "Commercial Carpet Cleaning", href: "/services/carpet-cleaning/" },
+    { label: "Carpet Maintenance Programs", href: "/services/carpet-maintenance-programs/" },
+    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance/" },
   ],
   body: [
     { type: "paragraph", text: "Floor care proposals are unusually easy to get wrong, because most of them describe an outcome rather than a process. 'Clean and restore carpet' is not a scope. It is a hope. The questions below are the ones that reliably tell you whether the person quoting has actually assessed your floor or is pricing off a square footage number and a hunch." },
@@ -702,9 +704,9 @@ const post10: BlogPost = {
   category: "Schools & Institutions",
   readTime: "7 min read",
   relatedLinks: [
-    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance" },
-    { label: "Commercial Carpet Cleaning", href: "/services/carpet-cleaning" },
-    { label: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning" },
+    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance/" },
+    { label: "Commercial Carpet Cleaning", href: "/services/carpet-cleaning/" },
+    { label: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning/" },
   ],
   body: [
     { type: "paragraph", text: "School flooring has the hardest duty cycle of any building type we work in. Corridor VCT takes ten months of concentrated foot traffic, road salt gets tracked in for a third of that, cafeteria tile absorbs a year of spills, and then all of it has to be restored inside a summer window that is shorter every year because of camps, construction and staff returning early." },
@@ -752,9 +754,9 @@ const post21: BlogPost = {
   category: "Scheduling & Operations",
   readTime: "6 min read",
   relatedLinks: [
-    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance" },
-    { label: "Commercial Carpet Cleaning", href: "/services/carpet-cleaning" },
-    { label: "Carpet Maintenance Programs", href: "/services/carpet-maintenance-programs" },
+    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance/" },
+    { label: "Commercial Carpet Cleaning", href: "/services/carpet-cleaning/" },
+    { label: "Carpet Maintenance Programs", href: "/services/carpet-maintenance-programs/" },
   ],
   body: [
     { type: "paragraph", text: "Almost all commercial floor work happens at night, and not for the reason most people assume. It is not mainly about staying out of the way. It is that floors need to be left alone after they are worked on, and the only reliable block of time when nobody walks across a building is the middle of the night." },
@@ -804,9 +806,9 @@ const post29: BlogPost = {
   category: "Tile & Grout",
   readTime: "7 min read",
   relatedLinks: [
-    { label: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning" },
-    { label: "Grout Restoration & Re-Grout", href: "/services/grout-restoration" },
-    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance" },
+    { label: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning/" },
+    { label: "Grout Restoration & Re-Grout", href: "/services/grout-restoration/" },
+    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance/" },
   ],
   body: [
     { type: "paragraph", text: "It is one of the most common calls we get. The tile looks perfectly acceptable. The grout between it has gone from light gray to something closer to brown, and it has been getting worse for years despite the floor being mopped several times a week. The building manager assumes the cleaners are cutting corners. Usually they are not." },
@@ -854,9 +856,9 @@ const post30: BlogPost = {
   category: "Carpet & Floor Care",
   readTime: "7 min read",
   relatedLinks: [
-    { label: "Commercial Carpet Cleaning", href: "/services/carpet-cleaning" },
-    { label: "Carpet Maintenance Programs", href: "/services/carpet-maintenance-programs" },
-    { label: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning" },
+    { label: "Commercial Carpet Cleaning", href: "/services/carpet-cleaning/" },
+    { label: "Carpet Maintenance Programs", href: "/services/carpet-maintenance-programs/" },
+    { label: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning/" },
   ],
   body: [
     { type: "paragraph", text: "These two methods get presented as competitors, usually by a contractor who only offers one of them. They are not competitors. They do different jobs, and a building that uses only one of them for years will eventually have a problem that the other one exists to solve." },
@@ -905,9 +907,9 @@ const post31: BlogPost = {
   category: "Tile & Grout",
   readTime: "6 min read",
   relatedLinks: [
-    { label: "Grout Restoration & Re-Grout", href: "/services/grout-restoration" },
-    { label: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning" },
-    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance" },
+    { label: "Grout Restoration & Re-Grout", href: "/services/grout-restoration/" },
+    { label: "Tile & Grout Cleaning", href: "/services/tile-grout-cleaning/" },
+    { label: "Hard Surface Floor Care", href: "/services/floor-maintenance/" },
   ],
   body: [
     { type: "paragraph", text: "These two get quoted against each other constantly, and they are not alternatives. One is a cosmetic treatment for a sound joint. The other is a repair for a failed one. Working out which you have takes about five minutes and saves you either a lot of money or a job that fails in six months." },

@@ -9,32 +9,36 @@ import JsonLd from '../components/JsonLd';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Phone, Check } from 'lucide-react';
 import { getService, services } from '../data/services';
-import { getLocation, locations } from '../data/locations';
+import { getLocation, topLevelLocations, INDEXED_COMBO_LOCATION_SLUGS } from '../data/locations';
 import { useSeo } from '../hooks/use-seo';
 
 /** County + home-base combos stay indexable. Town combos stay live for humans. */
-const INDEXABLE_COMBO_LOCATIONS = new Set([
-  'philadelphia',
-  'bensalem',
-  'bucks-county',
-  'montgomery-county',
-  'delaware-county',
-  'chester-county',
-]);
+const INDEXABLE_COMBO_LOCATIONS = new Set(INDEXED_COMBO_LOCATION_SLUGS);
+
+/** Search results cut descriptions off near 155-160 characters. */
+const DESC_MAX = 158;
 
 const ComboPage = () => {
   const { serviceSlug, locationSlug } = useParams<{ serviceSlug: string; locationSlug: string }>();
 
   const service = serviceSlug ? getService(serviceSlug) : undefined;
-  const location = locationSlug ? getLocation(locationSlug) : undefined;
+  const found = locationSlug ? getLocation(locationSlug) : undefined;
+  // Neighborhood pages have no combos of their own.
+  const location = found && !found.parent ? found : undefined;
   const valid = !!service && !!location;
 
+  const fullTitle = valid ? `${service!.shortTitle} in ${location!.shortName} | PHL Clean` : '';
   const title = valid
-    ? `${service!.shortTitle} in ${location!.shortName} | PHL Clean`
+    ? (fullTitle.length <= 60 ? fullTitle : `${service!.shortTitle} in ${location!.shortName}`)
     : 'Service Not Found | PHL Clean';
-  const description = valid
-    ? `${service!.shortTitle} for commercial buildings in ${location!.longName}. ${service!.heroTagline} Free on-site walkthrough — (215) 550-1414.`
-    : 'Page not found';
+  const lead = valid ? `${service!.shortTitle} for commercial buildings in ${location!.longName}.` : '';
+  const description = !valid
+    ? 'Page not found'
+    : [
+        `${lead} ${service!.heroTagline}`,
+        `${lead} Free on-site walkthrough and a written scope — (215) 550-1414.`,
+        `${lead} Free walkthrough — (215) 550-1414.`,
+      ].find(d => d.length <= DESC_MAX) ?? lead;
   const canonical = valid
     ? `https://phlclean.com/services/${service!.slug}/${location!.slug}/`
     : undefined;
@@ -70,9 +74,8 @@ const ComboPage = () => {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://phlclean.com/" },
-      { "@type": "ListItem", position: 2, name: "Services", item: "https://phlclean.com/#services" },
-      { "@type": "ListItem", position: 3, name: svc.shortTitle, item: `https://phlclean.com/services/${svc.slug}/` },
-      { "@type": "ListItem", position: 4, name: loc.shortName, item: url },
+      { "@type": "ListItem", position: 2, name: svc.shortTitle, item: `https://phlclean.com/services/${svc.slug}/` },
+      { "@type": "ListItem", position: 3, name: loc.shortName, item: url },
     ],
   };
 
@@ -98,7 +101,7 @@ const ComboPage = () => {
   };
 
   const otherServices = services.filter(s => s.slug !== svc.slug);
-  const otherLocations = locations.filter(l => l.slug !== loc.slug).slice(0, 8);
+  const otherLocations = topLevelLocations.filter(l => l.slug !== loc.slug).slice(0, 8);
 
   return (
     <div className="min-h-screen bg-phl-ground">
@@ -110,7 +113,7 @@ const ComboPage = () => {
             <nav aria-label="Breadcrumb" className="font-mono text-[11px] uppercase tracking-[0.1em] text-phl-muted mb-6">
               <Link to="/" className="hover:text-phl-blue transition-colors">Home</Link>
               <span className="mx-2">/</span>
-              <Link to={`/services/${svc.slug}`} className="hover:text-phl-blue transition-colors">{svc.shortTitle}</Link>
+              <Link to={`/services/${svc.slug}/`} className="hover:text-phl-blue transition-colors">{svc.shortTitle}</Link>
               <span className="mx-2">/</span>
               <span className="text-phl-ink-2">{loc.shortName}</span>
             </nav>
@@ -139,7 +142,7 @@ const ComboPage = () => {
           <div className="container-custom">
             <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] gap-12 lg:gap-16">
               <div>
-                <div className="rack-head">{svc.shortTitle} in {loc.shortName}</div>
+                <h2 className="rack-head">{svc.shortTitle} in {loc.shortName}</h2>
                 <p className="text-phl-ink-2 leading-relaxed text-[15px]">{loc.intro}</p>
                 <div className="mt-8 bg-phl-surface border-l-2 border-phl-blue rounded-sm p-5">
                   <p className="spec-label mb-2">Why local matters here</p>
@@ -148,7 +151,7 @@ const ComboPage = () => {
               </div>
 
               <div>
-                <div className="rack-head">What&rsquo;s included</div>
+                <h2 className="rack-head">What&rsquo;s included</h2>
                 <ul className="space-y-2.5">
                   {svc.whatsIncluded.map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
@@ -165,7 +168,7 @@ const ComboPage = () => {
         {loc.neighborhoods && loc.neighborhoods.length > 0 && (
           <section className="section-padding border-b border-phl-rule">
             <div className="container-custom">
-              <div className="rack-head">Covered around {loc.shortName}</div>
+              <h2 className="rack-head">Covered around {loc.shortName}</h2>
               <ul className="flex flex-wrap gap-2.5">
                 {loc.neighborhoods.map(n => (
                   <li key={n} className="bg-phl-surface border border-phl-rule rounded-sm px-3.5 py-2 text-[13px] text-phl-ink-2">
@@ -179,7 +182,7 @@ const ComboPage = () => {
 
         <section className="section-padding border-b border-phl-rule">
           <div className="container-custom max-w-4xl">
-            <div className="rack-head">Questions we actually get</div>
+            <h2 className="rack-head">Questions we actually get</h2>
             <Accordion type="single" collapsible className="w-full">
               {allFaqs.map((faq, i) => (
                 <AccordionItem key={i} value={`item-${i}`} className="border-phl-rule">
@@ -219,12 +222,12 @@ const ComboPage = () => {
         <section className="section-padding">
           <div className="container-custom space-y-10">
             <div>
-              <div className="rack-head">Other work in {loc.shortName}</div>
+              <h2 className="rack-head">Other work in {loc.shortName}</h2>
               <div className="flex flex-wrap gap-2.5">
                 {otherServices.map(s => (
                   <Link
                     key={s.slug}
-                    to={`/services/${s.slug}/${loc.slug}`}
+                    to={`/services/${s.slug}/${loc.slug}/`}
                     className="bg-phl-surface border border-phl-rule hover:border-phl-blue hover:text-phl-blue rounded-sm px-4 py-2.5 text-[13.5px] text-phl-ink-2 transition-colors"
                   >
                     {s.shortTitle} in {loc.shortName}
@@ -234,12 +237,12 @@ const ComboPage = () => {
             </div>
 
             <div>
-              <div className="rack-head">{svc.shortTitle} elsewhere</div>
+              <h2 className="rack-head">{svc.shortTitle} elsewhere</h2>
               <div className="flex flex-wrap gap-2.5">
                 {otherLocations.map(l => (
                   <Link
                     key={l.slug}
-                    to={`/services/${svc.slug}/${l.slug}`}
+                    to={`/services/${svc.slug}/${l.slug}/`}
                     className="bg-phl-surface border border-phl-rule hover:border-phl-blue hover:text-phl-blue rounded-sm px-4 py-2.5 text-[13.5px] text-phl-ink-2 transition-colors"
                   >
                     {l.shortName}

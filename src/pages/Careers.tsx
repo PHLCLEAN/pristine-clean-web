@@ -8,9 +8,15 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { useToast } from '@/hooks/use-toast';
 import { trackEvent } from '@/lib/analytics';
 import { backupToSheets } from "@/lib/form-backup";
+import { useSeo } from '@/hooks/use-seo';
 import { Phone, CheckCircle, Clock, DollarSign, GraduationCap, Calendar, Users } from 'lucide-react';
 
 const Careers = () => {
+  useSeo({
+    title: 'Careers at PHL Clean — Floor Care Technicians',
+    description: 'Now hiring carpet and hard surface floor care technicians in Philadelphia and Bucks County. Competitive pay, consistent hours, real training. Apply today.',
+    canonical: 'https://phlclean.com/careers/',
+  });
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
